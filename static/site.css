@@ -122,3 +122,26 @@
     --bd-callout-bg: rgba(var(--bs-dark-rgb), .075);
     --bd-callout-border: rgba(var(--bs-dark-rgb), .5);
 }
+
+.bd-example-snippet
+{
+    border: solid #dee2e6;
+    border-width: 1px 1px;
+}
+
+.bd-code-snippet
+{
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: .375rem;
+}
+
+.bd-example
+{
+    --bd-example-padding: 1rem;
+    position: relative;
+    padding: var(--bd-example-padding);
+
+    border: solid #dee2e6;
+    border-width: 0px 0 1px 0;
+}
