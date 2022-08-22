@@ -145,3 +145,8 @@
     border: solid #dee2e6;
     border-width: 0px 0 1px 0;
 }
+
+.uppercase
+{
+    text-transform: uppercase;
+}
