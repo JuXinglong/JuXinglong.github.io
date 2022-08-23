@@ -234,7 +234,7 @@ Console.WriteLine(<span style="color:#a31515;">&quot;Let&#39;s&nbsp;start&nbsp;C
                     </thead>
                     <tbody>
                     <tr>
-                        <th scope="row">int
+                        <th scope="row" class="text-danger">int
                         </th>
                         <td>Counting numbers, e.g. 0; 1; 2; 3; 4; 5;
                         </td>
@@ -242,7 +242,7 @@ Console.WriteLine(<span style="color:#a31515;">&quot;Let&#39;s&nbsp;start&nbsp;C
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">double
+                        <th scope="row" class="text-danger">double
                         </th>
                         <td>Real, or numbers with decimal places, e.g. 1.5; 2.5;
                         </td>
@@ -250,7 +250,7 @@ Console.WriteLine(<span style="color:#a31515;">&quot;Let&#39;s&nbsp;start&nbsp;C
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">bool
+                        <th scope="row" class="text-danger">bool
                         </th>
                         <td>Either TRUE or FALSE; Normally the result of a conditional operation
                         </td>
@@ -258,7 +258,7 @@ Console.WriteLine(<span style="color:#a31515;">&quot;Let&#39;s&nbsp;start&nbsp;C
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">char
+                        <th scope="row" class="text-danger">char
                         </th>
                         <td>A single character, e.g. letter on your keyboard; e.g. ‘A’; ‘a’;
                         </td>
@@ -315,13 +315,13 @@ Console.WriteLine(<span style="color:#a31515;">&quot;Let&#39;s&nbsp;start&nbsp;C
                     </tr>
 
                     <tr>
-                        <th scope="row">\n
+                        <th scope="row" class="text-danger">\n
                         </th>
                         <td>New line
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">\t
+                        <th scope="row" class="text-danger">\t
                         </th>
                         <td>Horizontal tab
                         </td>
@@ -394,6 +394,7 @@ Console.WriteLine(age);</pre>
             <div class="mb-3"></div>
 
 
+            <!--            Escape Sequences start-->
             <div class="h4 text-success border-bottom border-success fw-bold border-2">Expressions</div>
 
             <div class="admonition note">
@@ -421,8 +422,10 @@ Console.WriteLine(age);</pre>
                 </p>
 
             </div>
+            <!--   Escape Sequences end         *******************-->
 
 
+            <!--            Precedence (Order of operators) starts-->
             <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
             </div>
 
@@ -442,12 +445,15 @@ Console.WriteLine(age);</pre>
                     <tr>
                         <th scope="row">Highest
                         </th>
-                        <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>, ˜
+                        <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                            ˜
                         </td>
                     </tr>
 
                     <tr>
-                        <th scope="row" rowspan="11" class="align-middle"><i class="fas fa-arrows-alt-v fa-10x text-primary"></i>
+                        <th scope="row" rowspan="11" class="align-middle">
+                            <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                            <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
                         </th>
                         <td><span class="text-danger fw-bold h5">*, /, %</span>
 
@@ -473,7 +479,7 @@ Console.WriteLine(age);</pre>
                     </tr>
 
                     <tr>
-                        <td> <span class="text-danger fw-bold h4">==, !=</span>
+                        <td><span class="text-danger fw-bold h4">==, !=</span>
 
                         </td>
                     </tr>
@@ -525,6 +531,7 @@ Console.WriteLine(age);</pre>
 
             </div>
 
+            <!--            Precedence (Order of operators) ends-->
 
             <!--            Add things here-->
         </div>
