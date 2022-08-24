@@ -27,7 +27,63 @@
                 <li>GitHub</li>
                 <li class="list-group-item"><br/></li>
                 <li class="list-group-item"><span class="text-danger">EXERCISE 1 Contents Continue</span></li>
-                <li>Variables, Expressions & Statements</li>
+                <li>HW1 due September 1, 2022, 5:00 PM</li>
+                <li>How to do well in this course
+                    <ul>
+                        <li>You need to practice, practice and practice</li>
+                        <li>You could not absorb the concepts or gain the programming skills by just watching me
+                            programming.
+                        </li>
+                    </ul>
+                </li>
+                <li>Variables, Expressions & Statements
+
+                    <ul>
+                        <li>Define a variable (integer, double)
+                            <ul>
+                                <li>int age;</li>
+                                <li>double weight;</li>
+                            </ul>
+                        </li>
+                        <li>Variable name rules
+                            <ul>
+                                <li>The first character: @, letter (A,B,C,…,a,b,c,…),_(underscore)</li>
+                                <li> The rest: letter (A,B,C,…,a,b,c,…),_(underscore),number(0,1,2)</li>
+                            </ul>
+
+                        </li>
+                        <li>Assignment operator =
+                            <ul>
+                                <li>age=20;</li>
+                                <li>weight=140.5;</li>
+                                <li>int pricePerUnit=10.2;</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Console.WriteLine();
+                        </li>
+                        <li>
+                            Read user input from console
+                            <ul>
+                                <li>
+                                    string userInputStr=Console.ReadLine();
+                                </li>
+                            </ul>
+
+
+                        </li>
+
+                        <li>Data type conversation
+                            <ul>
+                                <li>
+                                    double userInputDbl=Conversion.ToDouble(userInputStr);
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </li>
             </ul>
         </div>
         <!--        table of contents end-->
@@ -61,7 +117,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">int
+                    <th scope="row" class="text-danger">int
                     </th>
                     <td>Counting numbers, e.g. 0; 1; 2; 3; 4; 5;
                     </td>
@@ -69,7 +125,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">double
+                    <th scope="row" class="text-danger">double
                     </th>
                     <td>Real, or numbers with decimal places, e.g. 1.5; 2.5;
                     </td>
@@ -77,7 +133,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">bool
+                    <th scope="row" class="text-danger">bool
                     </th>
                     <td>Either TRUE or FALSE; Normally the result of a conditional operation
                     </td>
@@ -85,7 +141,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">char
+                    <th scope="row" class="text-danger">char
                     </th>
                     <td>A single character, e.g. letter on your keyboard; e.g. ‘A’; ‘a’;
                     </td>
@@ -100,6 +156,78 @@
                 class="bi bi-box-arrow-up-right text-primary"></span></a>
             </p>
         </div>
+
+
+        <div class="h4 text-success border-bottom border-success fw-bold border-2">Escape Sequences</div>
+        <div class="admonition note">
+            <p class="admonition-title">Escape Sequences (Special Characters)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ESCAPE SEQUENCE
+                    </th>
+                    <th scope="col">CHARACTER PRODUCED
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">\’
+                    </th>
+                    <td>Single quotation mark
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\”
+                    </th>
+                    <td>Double quotation mark
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\\
+                    </th>
+                    <td>Backslash
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\b
+                    </th>
+                    <td>Backspace
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="text-danger">\n
+                    </th>
+                    <td>New line
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-danger">\t
+                    </th>
+                    <td>Horizontal tab
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\v
+                    </th>
+                    <td>Vertical tab
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\r
+                    </th>
+                    <td>Carriage return
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            </p>
+        </div>
+
 
         <div class="h4 text-danger border-bottom border-danger fw-bold border-2">C# Assignment Operator =</div>
 
@@ -149,10 +277,150 @@ Console.WriteLine(age);</pre>
         <div class="mb-3"></div>
 
 
-        <div>
-            When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+        <!--            Escape Sequences start-->
+        <div class="h4 text-success border-bottom border-success fw-bold border-2">Expressions</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">C# Expressions</p>
+            <p>
+            <ul>
+                <li>C# contains a number of operators.</li>
+                <li>By combining the operators with variables and literal values, you can create expressions to
+                    perform computations.
+                </li>
+                <li>Operators can roughly be classified into three categories:
+                    <ul>
+                        <li>Unary – Act on single operands
+                        </li>
+                        <li>Binary – Act on two operands
+                        </li>
+                        <li>Ternary – Act on three operands
+                        </li>
+                    </ul>
+                </li>
+                <li>E.g. +, -, *, /, %
+                </li>
+
+            </ul>
+            </p>
+
         </div>
+        <!--   Escape Sequences end         *******************-->
+
+
+        <!--            Precedence (Order of operators) starts-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                        <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                    </th>
+                    <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+, –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><<, >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>=, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            </p>
+
+        </div>
+
+        <!--            Precedence (Order of operators) ends-->
+
+
+        <!--        <div>-->
+        <!--            When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are-->
+        <!--            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$-->
+        <!--        </div>-->
 
     </div>
 </div>
