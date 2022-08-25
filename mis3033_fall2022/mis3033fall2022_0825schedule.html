@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>August 25 Schedule MIS 3033 Fall 2022</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/site.js"></script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            August 25, 2022 Schedule for MIS 3033
+        </div>
+
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+                <li>TA's Office Hours
+                    <ul>
+                        <li>Name: Andy Xing</li>
+                        <li>TA E-mail: xingqidi@ou.edu</li>
+                        <li>TA Office Hours: Friday, 3:00 PM - 5:00 PM, Adams Hall 3225A</li>
+
+                    </ul>
+                </li>
+
+
+                <li class="list-group-item"><span class="text-danger">EXERCISE 1 Contents Begin</span></li>
+                <li>Variables, Expressions & Statements</li>
+                <li>comparison operators <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators"><span class="bi bi-box-arrow-up-right text-primary"></span></a>, conditional logical operators <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                <li>keyword: const <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                <li>data type converstion: convert.ToDouble convert.ToInt32</li>
+                <li>string interpolation <a target="_blank"
+                                            href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <ul>
+                        <li>string.format("{0} {2}",var1,var2,...)</li>
+                        <li>string.format($"{var1} {var2}")</li>
+                        <li>Standard numeric format strings: F2, C2 <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+
+                    </ul>
+                </li>
+                <li>conditional statement: if ... else if...else</li>
+                <li>loops (break continue)
+                    <ul>
+                        <li>for(;;){}</li>
+                        <li>while(){}</li>
+                        <li>do{}while();</li>
+                    </ul>
+                </li>
+
+                <li>method/function <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <ul>
+                    <li>datatype method_name(optinal parameters){...return datatype_value;}</li>
+                </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <div>
+
+
+            <h3 class="text-danger mb-3">EXERCISE 1 Contents Begin</h3>
+
+
+            <!--            Escape Sequences start-->
+            <div class="h4 text-success border-bottom border-success fw-bold border-2">Expressions</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">C# Expressions</p>
+                <p>
+                <ul>
+                    <li>C# contains a number of operators.</li>
+                    <li>By combining the operators with variables and literal values, you can create expressions to
+                        perform computations.
+                    </li>
+                    <li>Operators can roughly be classified into three categories:
+                        <ul>
+                            <li>Unary – Act on single operands
+                            </li>
+                            <li>Binary – Act on two operands
+                            </li>
+                            <li>Ternary – Act on three operands
+                            </li>
+                        </ul>
+                    </li>
+                    <li>E.g. +, -, *, /, %
+                    </li>
+
+                </ul>
+                </p>
+
+            </div>
+            <!--   Escape Sequences end         *******************-->
+
+
+            <!--            Precedence (Order of operators) starts-->
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Precedence (Order of operators)</p>
+                <p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">PRECEDENCE
+                        </th>
+                        <th scope="col">OPERATORS
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Highest
+                        </th>
+                        <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                            ˜
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="11" class="align-middle">
+                            <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                            <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                        </th>
+                        <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">+, –</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><<, >>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>^
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>|
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">&&</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">||</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>=, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Lowest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+                </p>
+
+            </div>
+
+            <!--            Precedence (Order of operators) ends-->
+
+            <!--            Add things here-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
