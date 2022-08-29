@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>August 29 Lecture Schedule MIS 3013 Fall 2022: Read from keyboard, data type conversion, datatype (string),
+        string interpolation, operators: %, comparison and conditional logical operators: !,>,>=,<,<=,==,!=, simple
+        datatype VS. complex datatype</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+            var i;
+            var n_review_ques = 12;
+            for (i = 1; i <= n_review_ques; i++)
+            {
+                $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            }
+
+        }
+
+        function questionBtnClicked(event)
+        {
+            var sBtn = $("#q" + event.data.i + "btn");
+            var sAns = $("#q" + event.data.i + "ans");
+            if (sBtn.text() == "Show Answer")
+            {
+                sBtn.text("Hide Answer");
+                // sAns.show();
+                sAns.removeClass("invisible");
+            }
+            else
+            {
+                sBtn.text("Show Answer");
+                // sAns.hide();
+                sAns.addClass("invisible");
+            }
+        }
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            August 29, 2022 Lecture Schedule for MIS 3013
+        </div>
+
+        <!--        table of contents start-->
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+                <li class="list-group-item"><span class="text-danger">Office hours this Tuesday and Thursday is changed to from 10:30 AM to 12:00 PM</span></li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li class="list-group-item"><span class="text-danger">EXERCISE 1 Contents Continue</span></li>
+                <li>HW1 due September 1, 2022, 5:00 PM</li>
+                <li>Publish code to GitHub</li>
+
+                <li>Variables, Expressions & Statements
+
+                    <ul>
+                        <li>Binary and decimal (how variables are stored in computer memory, everything is a number)
+                        </li>
+                        <li>Experssions with multiple datatypes</li>
+                        <li>
+                            One complex datatype: string
+                        </li>
+                        <li>
+                            Read user input from console
+                            <ul>
+                                <li>
+                                    string userInputStr=Console.ReadLine();
+                                </li>
+                            </ul>
+
+
+                        </li>
+
+                        <li>Data type conversation
+                            <ul>
+                                <li>
+                                    double userInputDbl=Convert.ToDouble(userInputStr);
+                                </li>
+                                <li>
+                                    int userInputInt=Convert.ToInt32(userInputStr);
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>string interpolation <a target="_blank"
+                                                    href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <ul>
+                                <li>string.format($"The value of var1 is {var1} var 2 is {var2}")</li>
+                                <li>Standard numeric format strings: F2, C2, P3 <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+
+                            </ul>
+                        </li>
+                        <li>Weight example</li>
+                        <li>Bank account example</li>
+                        <li>The differences: Simple datatype VS. Complext datatype</li>
+                        <li>Operator: %</li>
+                        <li>Comparison operators: >,>=,<,<=,==,!=</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--        table of contents end-->
+
+        <h4 class="text-danger fw-bold mb-3 border-bottom border-danger border-2">Review</h4>
+        <div>
+            <ol>
+                <li>A line of C# code or statement ends with
+                    <button id="q1btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q1ans" class="list-group-item invisible">
+                    <span class="text-danger fw-bold">;</span>
+                    <pre><code class="language-csharp">int age = 10;
+Console.WriteLine(age);</code></pre>
+                </li>
+
+
+                <li>Two types of comments
+                    <button id="q2btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q2ans" class="list-group-item invisible">
+                    <span class="text-danger fw-bold">// /**/</span>
+                    <pre><code class="language-csharp">int age = 10;// single line comment, define an interger vairalbe age
+/*
+Multiple line comments
+Print out the age value to console
+ */
+Console.WriteLine(age);</code></pre>
+                </li>
+
+
+                <li>RESERVED KEYWORD
+                    <button id="q3btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q3ans" class="list-group-item invisible">
+                    <span class="text-danger fw-bold">Keywords are predefined, reserved identifiers that have special meanings to the compiler.</span>
+                    <a target="_blank"
+                       href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <pre><code class="language-csharp">int age = 10; // int is a reserved keyword.
+double grade = 90; // double is a reserved keyword.
+char lettergrade = 'A'; // char is a reserved keyword.</code></pre>
+                </li>
+
+
+                <li>Two types of variables (two types of datatypes)
+                    <button id="q4btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q4ans" class="list-group-item invisible">
+                    <span class="text-danger fw-bold">Simple variables (datatypes) & Complex variables (datatypes)</span>
+                </li>
+
+
+                <li>Variable naming rules
+                    <button id="q5btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q5ans" class="list-group-item invisible">
+                    <div class="text-danger fw-bold">The first character: @, letter (A,B,C,…,a,b,c,…),_(underscore)</div>
+                    <div class="text-danger fw-bold">The rest: letter (A,B,C,…,a,b,c,…),_(underscore),number(0,1,2)</div>
+                    <pre><code class="language-csharp">int age = 10; // a whole number
+double _gradeOfExam1 = 90.9; // a number with decimal points
+bool isA = true; // a boolean value, true or false
+char _lettergrade = 'A'; // a character</code></pre>
+                </li>
+
+
+
+                <li>Simple datatype examples
+                    <button id="q6btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q6ans" class="list-group-item invisible">
+                    <span class="text-danger fw-bold">int double bool char</span>
+                    <pre><code class="language-csharp">int age = 10; // a whole number
+double grade = 90.9; // a number with decimal points
+bool isA = true; // a boolean value, true or false
+char lettergrade = 'A'; // a character</code></pre>
+                </li>
+
+
+                <li>How to obtain an actual space in computer memory for <span class="fw-bold">a simple variable</span>?
+                    What is the syntax?
+                    <button id="q7btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q7ans" class="list-group-item invisible">
+                    <span class="text-danger fw-bold">datatype variable_name; // This is the syntax.</span>
+                    <pre><code class="language-csharp">int age = 10; // a whole number
+double grade = 90.9; // a number with decimal points
+bool isA = true; // a boolean value, true or false
+char lettergrade = 'A'; // a character</code></pre>
+                </li>
+
+
+                <li>How to store a value into <span class="fw-bold">a simple variable</span>? How to change the value of <span class="fw-bold">a simple variable</span>?
+                    What operator? What is the syntax?
+                    <button id="q8btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q8ans" class="list-group-item invisible">
+                    <span class="text-danger fw-bold">datatype variable_name = experssion; // This is the syntax.</span>
+                    <pre><code class="language-csharp">int age; // a whole number
+age=20;
+double grade = 90.9; // a number with decimal points
+bool isA = true; // a boolean value, true or false
+char lettergrade = 'A'; // a character</code></pre>
+                </li>
+
+
+                <li>Other operator? What is an expression?
+                    <button id="q9btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q9ans" class="list-group-item invisible">
+                    <div class="text-danger fw-bold">+-*/ </div>
+                    <div class="text-danger fw-bold">2+3.5*2/6.0; // This is an expression. CPU will do the calculation.</div>
+                    <pre><code class="language-csharp">int age; // a whole number
+age=20+2; // 20+2 is an expression
+double grade = 80+20.6/2-1.6; // 80+20.6/2-1.6 is an expression
+</code></pre>
+                </li>
+
+                <li>Console.Write(); VS. Console.WriteLine();
+                    <button id="q10btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q10ans" class="list-group-item invisible">
+                    <div class="text-danger fw-bold">Both will print out in the console window.</div>
+                    <div class="text-danger fw-bold">Console.Write(); WILL NOT go to the next line after printing</div>
+                    <div class="text-danger fw-bold">Console.WriteLine(); WILL go to the next line after printing</div>
+                    <pre><code class="language-csharp">int age = 10;// a whole number
+age = age + 10;
+Console.Write(age);
+Console.Write(age);
+
+Console.WriteLine(age);
+Console.WriteLine(age);
+</code></pre>
+                </li>
+
+                <li>Special character, escape sequence
+                    <button id="q11btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q11ans" class="list-group-item invisible">
+                    <div class="text-danger fw-bold">'\t' tab space</div>
+                    <div class="text-danger fw-bold">'\n' next line</div>
+                    <pre><code class="language-csharp">int age = 10;// a whole number
+age = age + 10;
+char ch = '\t';
+Console.Write(ch);
+Console.Write(age);
+ch = '\n';
+Console.Write(ch);
+Console.Write(age);
+</code></pre>
+                </li>
+
+                <li>Other syntaxes?
+                    <button id="q12btn" class="btn btn-success btn-sm-1">Show Answer</button>
+                </li>
+                <li id="q12ans" class="list-group-item invisible">
+                    <div class="text-danger fw-bold">C# is case-sensitive.</div>
+                    <pre><code class="language-csharp">int age = 10;// a whole number
+int Age = age + 10; // age and Age are two different vairables.</code></pre>
+                </li>
+
+            </ol>
+        </div>
+
+        <h3 class="text-danger mb-3">EXERCISE 1 Contents Continue</h3>
+
+
+        <h4 class="text-primary mb-3">&bull; C# Variables, Expressions & Statements</h4>
+
+
+        <div class="mb-3"></div>
+
+
+
+
+
+
+        <!--            Precedence (Order of operators) starts-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                        <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                    </th>
+                    <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+, –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><<, >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>=, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            </p>
+
+        </div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Binary and Decimal numbers</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">How are variables stored in computer memory? Everything is a number. <a target="_blank" href="https://ryanstutorials.net/binary-tutorial/"><span class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank" href="https://www.youtube.com/watch?v=VLflTjd3lWA"><span class="bi bi-box-arrow-up-right text-primary"></span></a></p>
+            <p>
+            <div class="">In our daily life, we use <span class="fw-bold">Decemal Number System</span>.</div>
+            <div class="">In computer, <span class="fw-bold">Binary Number System</span> is used.</div>
+            <pre><code class="language-csharp">int valueDec = 10;
+string binaryStr = Convert.ToString(valueDec, 2); // convert decimal 10 to binary 1010
+Console.WriteLine(binaryStr);
+
+binaryStr = "111";
+valueDec=Convert.ToInt32(binaryStr,2); // convert binary 111 to decimal 7
+Console.WriteLine(valueDec);</code></pre>
+            <div>In decimal world, \(110=1\times10^2+1\times 10^1+0\times 10^0\)</div>
+            <div>In binary world, \(111=1\times 2^2 +1\times 2^1+1\times 2^0\) </div>
+            </p>
+        </div>
+        <div class="mb-3"></div>
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Experssions with multiple datatypes</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Experssions with multiple datatypes</p>
+            <p>
+                <div class="fw-bold text-danger">integer and integer will result in integer</div>
+                <div class="fw-bold text-danger">integer and double will result in double</div>
+            <pre><code class="language-csharp">Console.WriteLine(3 / 4); // 0 result datatype: integer
+Console.WriteLine(3.2 + 4); // 7.2 result datatype: double</code></pre>
+            </p>
+        </div>
+
+        <!--            Precedence (Order of operators) ends-->
+
+        <div class="mb-3"></div>
+<!--        One complex datatype: string-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">One complex datatype: string <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+
+        <div class="admonition note">
+            <p class="admonition-title">string is a complex datatype</p>
+            <p>
+
+            <div class="fw-bold">string aStr;</div>
+            <div class="fw-bold">aStr="This is a string";</div>
+            <div class="fw-bold">Each element is a char type (a character).</div>
+            <div class="fw-bold">aStr="This \tis \ta \nstring";</div>
+            <pre><code class="language-csharp">string aStr; // define a string variable: aStr
+aStr = "This is a string"; // assign a value
+Console.WriteLine(aStr); // Print it out to console
+aStr = "This \tis \ta \nstring"; // What is this?
+Console.Write(aStr);</code></pre>
+            </p>
+        </div>
+
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Read user input from console</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Console.ReadLine()</p>
+            <p>
+                <div class="fw-bold">Console.ReadLine() is a function <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.console.readline?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a>. It will get the input.</div>
+                <div class="fw-bold">Console.ReadLine() will result in a string variable.</div>
+            <pre><code class="language-csharp">string aStr; // define a string variable: aStr
+aStr=Console.ReadLine(); // Get a string
+Console.WriteLine(aStr);</code></pre>
+            </p>
+
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Data type conversation: Convert <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.convert?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Data type conversation</p>
+            <p>
+            <div class="fw-bold"></div>
+            <pre><code class="language-csharp">string userInputStr; //define a string variable: userInputStr
+userInputStr =Console.ReadLine();
+double userInputDbl = Convert.ToDouble(userInputStr); // convert from string to double
+int userInputInt = Convert.ToInt32(userInputStr); // convert from from string to int
+</code></pre>
+            </p>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
