@@ -492,6 +492,94 @@ int userInputInt = Convert.ToInt32(userInputStr); // convert from from string to
         </div>
 
 
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">string interpolation <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+
+        <div class="admonition note">
+            <p class="admonition-title">string.format() function</p>
+            <p>
+            <div class="fw-bold">string.format($"The value of var1 is {var1} var 2 is {var2}")</div>
+            <div class="fw-bold">Standard numeric format strings: F2, C2, P3</div>
+            <pre><code class="language-csharp">string stuName = "Xinglong Ju";
+int stuAge = 30;
+double stuWeight = 136.6;
+double stuBankBal = 18000.89;
+double stuGradeRatio = 0.909;
+
+string outputStr = string.Format($"The student name is {stuName}\nThe age is {stuAge}\n");
+Console.Write(outputStr);
+// F2: keep 2 digits after decimal points
+// C2: in currency format. keep 2 digits after decimal points
+outputStr = string.Format($"\n\tThe weight is {stuWeight:F2} lbs.\n\tThe bank balance is {stuBankBal:C2}\n");
+Console.Write(outputStr);
+// P3: in percentage format. keep 3 digits after decimal points
+outputStr = string.Format($"\n\tThe grade ratio is {stuGradeRatio:P3}.\n");
+Console.Write(outputStr);</code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Weight example</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Practice: Weight example</p>
+            <p>
+            <div class="">
+            In the example, we get the student's name and the current weight (lb) from the keyboard input. The interest rate is 8% each year. Print out the new account balance information of the following 3 years in the console.
+            <ol>
+                <li>In the console window, prompt the user to input the student's name.</li>
+                <li>Get student's name input from the keyboard.</li>
+                <li>In the console window, prompt the user to input the student's current bank account balance.</li>
+                <li>Get the weight input from the keyboard.</li>
+                <li>Datatype conversion ?</li>
+                <li>Calculate the new balances of the following 3 years.</li>
+                <li>Construct information strings to print out to the console window.</li>
+                <li class="list-group-item">The student's name is Xinglong Ju</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The current balance is $1,000.00.</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The balance will be $1,080.00 in 1 year.</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The balance will be $1,166.40 in 2 years.</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The balance will be $1,259.71 in 3 years.</li>
+            </ol>
+        </div>
+            <div class="fw-bold">The actual values will be based on the user input from the keyborad. Keep 2 digits after the decimal point.</div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Bank account example</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Practice: Bank account example</p>
+            <p>
+            <div class="">
+                In the example, we get the student's name and the current bank account balance ($) from the keyboard input. The student is on a diet. After one month, the weight decrease by 6%. Print out the new weight information of the student in the console.
+                <ol>
+                    <li>In the console window, prompt the user to input the student's name.</li>
+                    <li>Get student's name input from the keyboard.</li>
+                    <li>In the console window, prompt the user to input the student's current weight.</li>
+                    <li>Get the weight input from the keyboard.</li>
+                    <li>Datatype conversion ?</li>
+                    <li>Calculate the new weight after one month.</li>
+                    <li>Construct information strings to print out to the console window.</li>
+                    <li class="list-group-item">The student's name is Xinglong Ju</li>
+                    <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The current weight is 136.60 lbs.</li>
+                    <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The student will lose 8.20 lbs in the one month.</li>
+                    <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The new weight will be  128.40 lbs in one month.</li>
+                </ol>
+            </div>
+            <div class="fw-bold">The actual values will be based on the user input from the keyborad. Keep 2 digits after the decimal point.</div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+<!--insert new div here-->
     </div>
 </div>
 
