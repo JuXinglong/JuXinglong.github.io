@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>August 31 Lecture Schedule MIS 3013 Fall 2022: Practice of read from keyboard, data type conversion, datatype (string),
+        string interpolation, operators: %, comparison and conditional logical operators: !,>,>=,<,<=,==,!=, simple
+        datatype VS. complex datatype</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+            var i;
+            var n_review_ques = 0;
+            for (i = 1; i <= n_review_ques; i++)
+            {
+                $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            }
+
+        }
+
+        function questionBtnClicked(event)
+        {
+            var sBtn = $("#q" + event.data.i + "btn");
+            var sAns = $("#q" + event.data.i + "ans");
+            if (sBtn.text() == "Show Answer")
+            {
+                sBtn.text("Hide Answer");
+                // sAns.show();
+                sAns.removeClass("invisible");
+            }
+            else
+            {
+                sBtn.text("Show Answer");
+                // sAns.hide();
+                sAns.addClass("invisible");
+            }
+        }
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            August 31, 2022 Lecture Schedule for MIS 3013
+        </div>
+
+        <!--        table of contents start-->
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+                <li class="list-group-item"><span class="text-danger">Office hours this Thursday is changed to from 10:30 AM to 12:00 PM</span></li>
+                <li class="list-group-item"><span class="text-danger">Assign the attendance sheet</span></li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li class="list-group-item"><span class="text-danger">EXERCISE 1 Contents Continue</span></li>
+                <li>HW1 due September 6, 2022, 5:00 PM</li>
+                <li>Exercise 1 September 12, 2022, Lecture Time
+                <ul>
+                    <li>Assigned Seats</li>
+                    <li>Bring your own computer</li>
+
+                    <li>ONE coding problem in Exercise 1 on Variables, Expressions & Statements.</li>
+                    <li>The problems or questions will be similar to Homework 1 Problem and Exercise 1 Practice Problem</li>
+
+
+                    <li>Photo ID (OU student ID, driver license, or other photo ID with date birth)</li>
+                    <li>On campus only</li>
+                    <li>No website exploring other than this Exercise Canvas page</li>
+                    <li>No electronic materials (You could NOT look at your previous code on your computer)</li>
+                    <li>Open notes, open book. You can bring printed codes.</li>
+                </ul>
+                </li>
+                <li>Publish code to GitHub</li>
+                <li class="fw-bold text-danger">Exercise 1 Practice Problem: This practice problem won't count toward your final. </li>
+                <li>Variables, Expressions & Statements
+
+
+                    <ul>
+                        <li>keyword: const</li>
+                        <li>string interpolation <a target="_blank"
+                                                    href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <ul>
+                                <li>string.format($"The value of var1 is {var1} var 2 is {var2}")</li>
+                                <li>Standard numeric format strings: F2, C2, P3 <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+
+                            </ul>
+                        </li>
+                        <li>Weight example</li>
+                        <li>Bank account example</li>
+                    </ul>
+                </li>
+
+
+
+                <li class="list-group-item"><span class="text-danger fw-bold">EXERCISE 1 Contents End</span>
+
+                    <ul>
+                        <li>The differences: Simple datatype VS. Complex datatype</li>
+                        <li>Operator: %</li>
+                        <li>Comparison operators: >,>=,<,<=,==,!=</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--        table of contents end-->
+
+
+
+        <h3 class="text-danger mb-3">EXERCISE 1 Contents Continue</h3>
+
+
+        <h4 class="text-primary mb-3">&bull; C# Variables, Expressions & Statements</h4>
+
+
+        <div class="mb-3"></div>
+
+
+
+
+
+
+        <!--            Precedence (Order of operators) starts-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                        <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                    </th>
+                    <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+, –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><<, >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>=, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            </p>
+
+        </div>
+
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">string interpolation <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+
+        <div class="admonition note">
+            <p class="admonition-title">string.format() function</p>
+            <p>
+            <div class="fw-bold">string.format($"The value of var1 is {var1} var 2 is {var2}")</div>
+            <div class="fw-bold">Standard numeric format strings: F2, C2, P3</div>
+            <pre><code class="language-csharp">string stuName = "Xinglong Ju";
+int stuAge = 30;
+double stuWeight = 136.6;
+double stuBankBal = 18000.89;
+double stuGradeRatio = 0.909;
+
+string outputStr = string.Format($"The student name is {stuName}\nThe age is {stuAge}\n");
+Console.Write(outputStr);
+// F2: keep 2 digits after decimal points
+// C2: in currency format. keep 2 digits after decimal points
+outputStr = string.Format($"\n\tThe weight is {stuWeight:F2} lbs.\n\tThe bank balance is {stuBankBal:C2}\n");
+Console.Write(outputStr);
+// P3: in percentage format. keep 3 digits after decimal points
+outputStr = string.Format($"\n\tThe grade ratio is {stuGradeRatio:P3}.\n");
+Console.Write(outputStr);</code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Weight example</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Practice: Weight example</p>
+            <p>
+            <div class="">
+            In the example, we get the student's name and the current weight (lb) from the keyboard input. The interest rate is 8% each year. Print out the new account balance information of the following 3 years in the console.
+            <ol>
+                <li>In the console window, prompt the user to input the student's name.</li>
+                <li>Get student's name input from the keyboard.</li>
+                <li>In the console window, prompt the user to input the student's current bank account balance.</li>
+                <li>Get the weight input from the keyboard.</li>
+                <li>Datatype conversion ?</li>
+                <li>Calculate the new balances of the following 3 years.</li>
+                <li>Construct information strings to print out to the console window.</li>
+                <li class="list-group-item">The student's name is Xinglong Ju</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The current balance is $1,000.00.</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The balance will be $1,080.00 in 1 year.</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The balance will be $1,166.40 in 2 years.</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The balance will be $1,259.71 in 3 years.</li>
+            </ol>
+        </div>
+            <div class="fw-bold">The actual values will be based on the user input from the keyborad. Keep 2 digits after the decimal point.</div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Bank account example</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Practice: Bank account example</p>
+            <p>
+            <div class="">
+                In the example, we get the student's name and the current bank account balance ($) from the keyboard input. The student is on a diet. After one month, the weight decrease by 6%. Print out the new weight information of the student in the console.
+                <ol>
+                    <li>In the console window, prompt the user to input the student's name.</li>
+                    <li>Get student's name input from the keyboard.</li>
+                    <li>In the console window, prompt the user to input the student's current weight.</li>
+                    <li>Get the weight input from the keyboard.</li>
+                    <li>Datatype conversion ?</li>
+                    <li>Calculate the new weight after one month.</li>
+                    <li>Construct information strings to print out to the console window.</li>
+                    <li class="list-group-item">The student's name is Xinglong Ju</li>
+                    <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The current weight is 136.60 lbs.</li>
+                    <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The student will lose 8.20 lbs in the one month.</li>
+                    <li class="list-group-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The new weight will be  128.40 lbs in one month.</li>
+                </ol>
+            </div>
+            <div class="fw-bold">The actual values will be based on the user input from the keyborad. Keep 2 digits after the decimal point.</div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables VS. complex
+            variables
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Simple VS. Complex</p>
+            <p>
+            <div class="fw-bold">
+                <ul>
+                    <li>Simple variable
+                        <ol>
+                            <li class="list-group-item">int i;</li>
+                            <li>The computer created a simple room card i. The card type is int.</li>
+                            <li>The computer automatically created an int space (room) in the computer memory. The space address (room number is stored in this card.)</li>
+                            <li>The room number in this card is unchangeable (immutable).</li>
+                            <li>assignment operation. The value in this space (room) is changed.</li>
+                        </ol>
+                    </li>
+                    <li>Complex variable
+                        <ol>
+                            <li class="list-group-item">DateTime j;</li>
+                            <li>The computer created a complex room card j. The card type is DateTime.</li>
+                            <li>The computer did NOT create any space (room) in computer memory. The space address (room number) in this card is null.</li>
+                            <li>The room number in this card is changeable (mutable).  </li>
+                            <li>assignment operation. The address (room number) in this card is changed.</li>
+                            <li class="list-group-item text-danger">The only way to create a complex variable in the memory is to call the new Datatype(...) constructor function.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+<!--insert new div here-->
+    </div>
+</div>
+
+</body>
+</html>
