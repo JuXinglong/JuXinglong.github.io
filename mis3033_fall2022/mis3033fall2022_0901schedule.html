@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>September 1 Lecture Schedule MIS 3033 Fall 2022: Simple variable VS. complex variable,
+        collections, Class</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro() {
+            hljs.highlightAll();
+
+
+        }
+
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            September 1, 2022 Lecture Schedule for MIS 3033
+        </div>
+
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+                <li class="list-group-item"><span class="text-danger">Office hours this Thursday is changed to from 10:30 AM to 12:00 PM</span>
+                </li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+
+                <li class="list-group-item"><span class="text-danger">EXERCISE 2 Contents Start</span></li>
+
+
+                <li>Simple variables VS. Complex variables</li>
+                <li>Collections
+                    <ul>
+                        <li>Array <a target="_blank" href="https://www.w3schools.com/cs/cs_arrays.php"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                             href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        <li>List <a target="_blank" href="https://www.c-sharpcorner.com/article/c-sharp-list/"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                             href="https://www.tutorialsteacher.com/csharp/csharp-list"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        <li>Dictionary <a target="_blank"
+                                          href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-6.0"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                             href="https://www.geeksforgeeks.org/c-sharp-dictionary-with-examples/"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    </ul>
+                </li>
+
+                <li>Class
+                    <ul>
+                        <li>namespace</li>
+                        <li>keyword: new</li>
+                        <li>constructor function</li>
+                        <li>member data fields</li>
+                        <li>member function</li>
+                        <li>static function</li>
+                        <li>inherit</li>
+                        <li>override</li>
+                        <li>overload</li>
+                        <li>interface</li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <div>
+
+
+            <h3 class="text-danger mb-3">EXERCISE 1 Contents Begin</h3>
+
+
+            <!--            Precedence (Order of operators) starts-->
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Precedence (Order of operators)</p>
+                <p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">PRECEDENCE
+                        </th>
+                        <th scope="col">OPERATORS
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Highest
+                        </th>
+                        <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                            ˜
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="11" class="align-middle">
+                            <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                            <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                        </th>
+                        <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">+, –</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><<, >>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>^
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>|
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">&&</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">||</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>=, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Lowest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+                </p>
+
+            </div>
+
+            <!--            Precedence (Order of operators) ends-->
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables VS. complex
+                variables
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Simple VS. Complex</p>
+                <p>
+                <div class="fw-bold">
+                    <ul>
+                        <li>Simple variable
+                            <ol>
+                                <li class="list-group-item">int i;</li>
+                                <li>The computer created a simple room card i. The card type is int.</li>
+                                <li>The computer automatically created an int space (room) in the computer memory. The
+                                    space address (room number is stored in this card.)
+                                </li>
+                                <li>The room number in this card is unchangeable (immutable).</li>
+                                <li>assignment operation. The value in this space (room) is changed.</li>
+                            </ol>
+                        </li>
+                        <li>Complex variable
+                            <ol>
+                                <li class="list-group-item">DateTime j;</li>
+                                <li>The computer created a complex room card j. The card type is DateTime.</li>
+                                <li>The computer did NOT create any space (room) in computer memory. The space address
+                                    (room number) in this card is null.
+                                </li>
+                                <li>The room number in this card is changeable (mutable).</li>
+                                <li>assignment operation. The address (room number) in this card is changed.</li>
+                                <li class="list-group-item text-danger">The only way to create a complex variable in the
+                                    memory is to call the new Datatype(...) constructor function.
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <pre><code class="language-csharp"></code></pre>
+                </p>
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">string (String): a complex datatype</p>
+                <p>
+                <div class="fw-bold">
+                    string (String) <a target="_blank"
+                                       href="https://witscad.com/course/csharp-basics/chapter/string-manipulations"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                </div>
+                <pre><code class="language-csharp">String manipulation
+In C#, String and string are the same
+@: a verbatim string literal, escape sequence is ignored
+[]: indexer operator []
+Property: Length
+Functions(Methods)
+String.Format()
+Substring(startIndex, count)
+ToUpper()
+ToLower()
+Trim()
+Split()
+Replace()
+IndexOf()
+LastIndexOf()
+Contains()
++ operator
+</code></pre>
+                </p>
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">ASCII Table</p>
+                <p>
+                <div class="fw-bold">
+                    ASCII Table <a target="_blank" href="https://en.wikipedia.org/wiki/ASCII"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                     href="https://ascii.cl/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                </div>
+                <div>
+                    <table class="table table-striped ">
+                        <thead>
+                        <tr>
+                            <th><strong>Character</strong></th>
+                            <th><strong>Character Name</strong></th>
+                            <th><strong>ASCII code</strong></th>
+                            <th>&nbsp;</th>
+                            <th><strong>Character</strong></th>
+                            <th><strong>Character Name</strong></th>
+                            <th><strong>ASCII code</strong></th>
+                            <th>&nbsp;</th>
+                            <th><strong>Character</strong></th>
+                            <th><strong>Character Name</strong></th>
+                            <th><strong>ASCII code</strong></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>!</td>
+                            <td>Exclamation point</td>
+                            <td>33</td>
+                            <td><div class="bg-success">&nbsp;</div></td>
+                            <td>A</td>
+                            <td>Uppercase a</td>
+                            <td>65</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>a</td>
+                            <td>Lowercase a</td>
+                            <td>97</td>
+                        </tr>
+                        <tr>
+                            <td>“</td>
+                            <td>Double quotation</td>
+                            <td>34</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>B</td>
+                            <td>Uppercase b</td>
+                            <td>66</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>b</td>
+                            <td>Lowercase b</td>
+                            <td>98</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>Number sign</td>
+                            <td>35</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>C</td>
+                            <td>Uppercase c</td>
+                            <td>67</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>c</td>
+                            <td>Lowercase c</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>$</td>
+                            <td>Dollar sign</td>
+                            <td>36</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>D</td>
+                            <td>Uppercase d</td>
+                            <td>68</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>d</td>
+                            <td>Lowercase d</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Percent sign</td>
+                            <td>37</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>E</td>
+                            <td>Uppercase e</td>
+                            <td>69</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>e</td>
+                            <td>Lowercase e</td>
+                            <td>101</td>
+                        </tr>
+                        <tr>
+                            <td>&amp;</td>
+                            <td>ampersand</td>
+                            <td>38</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>F</td>
+                            <td>Uppercase f</td>
+                            <td>70</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>f</td>
+                            <td>Lowercase f</td>
+                            <td>102</td>
+                        </tr>
+                        <tr>
+                            <td>‘</td>
+                            <td>apostrophe</td>
+                            <td>39</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>G</td>
+                            <td>Uppercase g</td>
+                            <td>71</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>g</td>
+                            <td>Lowercase g</td>
+                            <td>103</td>
+                        </tr>
+                        <tr>
+                            <td>(</td>
+                            <td>Left parenthesis</td>
+                            <td>40</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>H</td>
+                            <td>Uppercase h</td>
+                            <td>72</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>h</td>
+                            <td>Lowercase h</td>
+                            <td>104</td>
+                        </tr>
+                        <tr>
+                            <td>)</td>
+                            <td>Right parenthesis</td>
+                            <td>41</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>I</td>
+                            <td>Uppercase i</td>
+                            <td>73</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>i</td>
+                            <td>Lowercase i</td>
+                            <td>105</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>asterisk</td>
+                            <td>42</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>J</td>
+                            <td>Uppercase j</td>
+                            <td>74</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>j</td>
+                            <td>Lowercase j</td>
+                            <td>106</td>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>Plus sign</td>
+                            <td>43</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>K</td>
+                            <td>Uppercase k</td>
+                            <td>75</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>k</td>
+                            <td>Lowercase k</td>
+                            <td>107</td>
+                        </tr>
+                        <tr>
+                            <td>,</td>
+                            <td>comma</td>
+                            <td>44</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>L</td>
+                            <td>Uppercase l</td>
+                            <td>76</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>l</td>
+                            <td>Lowercase l</td>
+                            <td>108</td>
+                        </tr>
+                        <tr>
+                            <td>–</td>
+                            <td>hyphen</td>
+                            <td>45</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>M</td>
+                            <td>Uppercase m</td>
+                            <td>77</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>m</td>
+                            <td>Lowercase m</td>
+                            <td>109</td>
+                        </tr>
+                        <tr>
+                            <td>.</td>
+                            <td>period</td>
+                            <td>46</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>N</td>
+                            <td>Uppercase n</td>
+                            <td>78</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>n</td>
+                            <td>Lowercase n</td>
+                            <td>110</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>slash</td>
+                            <td>47</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>O</td>
+                            <td>Uppercase o</td>
+                            <td>79</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>o</td>
+                            <td>Lowercase o</td>
+                            <td>111</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>zero</td>
+                            <td>48</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>P</td>
+                            <td>Uppercase p</td>
+                            <td>80</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>p</td>
+                            <td>Lowercase p</td>
+                            <td>112</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>one</td>
+                            <td>49</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>Q</td>
+                            <td>Uppercase q</td>
+                            <td>81</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>q</td>
+                            <td>Lowercase q</td>
+                            <td>113</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>two</td>
+                            <td>50</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>R</td>
+                            <td>Uppercase r</td>
+                            <td>82</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>r</td>
+                            <td>Lowercase r</td>
+                            <td>114</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>three</td>
+                            <td>51</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>S</td>
+                            <td>uppercases</td>
+                            <td>83</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>s</td>
+                            <td>Lowercase s</td>
+                            <td>115</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>four</td>
+                            <td>52</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>T</td>
+                            <td>Uppercase t</td>
+                            <td>84</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>t</td>
+                            <td>Lowercase t</td>
+                            <td>116</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>five</td>
+                            <td>53</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>U</td>
+                            <td>Uppercase u</td>
+                            <td>85</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>u</td>
+                            <td>Lowercase u</td>
+                            <td>117</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>six</td>
+                            <td>54</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>V</td>
+                            <td>Uppercase v</td>
+                            <td>86</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>v</td>
+                            <td>Lowercase v</td>
+                            <td>118</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>seven</td>
+                            <td>55</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>W</td>
+                            <td>Uppercase w</td>
+                            <td>87</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>w</td>
+                            <td>Lowercase w</td>
+                            <td>119</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>eight</td>
+                            <td>56</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>X</td>
+                            <td>Uppercase x</td>
+                            <td>88</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>x</td>
+                            <td>Lowercase x</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>nine</td>
+                            <td>57</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>Y</td>
+                            <td>Uppercase y</td>
+                            <td>89</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>y</td>
+                            <td>Lowercase y</td>
+                            <td>121</td>
+                        </tr>
+                        <tr>
+                            <td>:</td>
+                            <td>colon</td>
+                            <td>58</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>Z</td>
+                            <td>Uppercase z</td>
+                            <td>90</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>z</td>
+                            <td>Lowercase z</td>
+                            <td>122</td>
+                        </tr>
+                        <tr>
+                            <td>;</td>
+                            <td>semi-colon</td>
+                            <td>59</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>[</td>
+                            <td>Left square bracket</td>
+                            <td>91</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>{</td>
+                            <td>Left curly brace</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;</td>
+                            <td>Less-than sign</td>
+                            <td>60</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>\</td>
+                            <td>backslash</td>
+                            <td>92</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>|</td>
+                            <td>Vertical bar</td>
+                            <td>124</td>
+                        </tr>
+                        <tr>
+                            <td>=</td>
+                            <td>Equals sign</td>
+                            <td>61</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>]</td>
+                            <td>Right square bracket</td>
+                            <td>93</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>}</td>
+                            <td>Right curly brace</td>
+                            <td>125</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;</td>
+                            <td>Greater-than sign</td>
+                            <td>62</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>^</td>
+                            <td>caret</td>
+                            <td>94</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>~</td>
+                            <td>tilde</td>
+                            <td>126</td>
+                        </tr>
+                        <tr>
+                            <td>?</td>
+                            <td>Question mark</td>
+                            <td>63</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>_</td>
+                            <td>underscore</td>
+                            <td>95</td>
+                             <td><div class="">&nbsp;</div></td>
+                             <td><div class="">&nbsp;</div></td>
+                             <td><div class="">&nbsp;</div></td>
+                             <td><div class="">&nbsp;</div></td>
+                        </tr>
+                        <tr>
+                            <td>@</td>
+                            <td>At sign</td>
+                            <td>64</td>
+                             <td><div class="bg-success">&nbsp;</div></td>
+                            <td>`</td>
+                            <td>Grave accent</td>
+                            <td>96</td>
+                             <td><div class="">&nbsp;</div></td>
+                             <td><div class="">&nbsp;</div></td>
+                             <td><div class="">&nbsp;</div></td>
+                             <td><div class="">&nbsp;</div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre><code class="language-csharp">
+</code></pre>
+                </p>
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Collections</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Array</p>
+                <p>
+                <div class="fw-bold"></div>
+                <pre><code class="language-csharp">Array (Fixed size, N)
+datatype[] arrayName;
+arrayName=new datatype[N]; // create 10 room cards
+double[] grades;
+grades=new double[10];
+grades[0]=90.6;
+grades[9]=80.6;// grades.Length  grades.GetLength(0)
+
+int[,] seatMatrix=new int[3,4];
+seatMatrix[0,0]
+</code></pre>
+                </p>
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">List</p>
+                <p>
+                <div class="fw-bold"></div>
+                <pre><code class="language-csharp">List (Flexible size)
+List&#60;datatype&#62; listName;
+listName=new List&#60;datatype&#62;();// 0 null empty
+List&#60;double&#62; gradesList;
+gradesList=new List&#60;double&#62;();// we created an empty list, each element is double
+gradeList.Add(90.6);// when Add(), we did an assignment operation
+double g=80.6;
+gradesList.Add(g);
+gradesList[0]// grades.Count
+</code></pre>
+                </p>
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">Dictionary</p>
+                <p>
+                <div class="fw-bold"></div>
+                <pre><code class="language-csharp">Dictionary (Flexible size)
+Dictionary&#60;TKey, TValue&#62; dict;
+dict=new Dictionary&#60;TKey, TValue&#62;();
+
+dict.Add(key,value);// Add new element, Again the dictionary created two cards, key and value, then assignment operation
+
+dict[key]=newValue;// Access value
+dict[“xinglongJU”] arr[0]
+dict.ContainsKey(key);// return true or false
+
+dict.Count// number of elements in the dictionary
+
+dict.Keys
+dict.Values
+dict.ElementAt(i).Key
+dict.ElementAt(i).Value
+
+dict.Keys.ElementAt(i)
+dict.Values.ElementAt(i)
+
+For list and dictionary:// remove elements
+dict.Remove(key)
+list.Remove(value)
+list.RemoveAt(i)//
+
+A special for loop:
+foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
+{
+    ele.Key;
+    ele.Value;
+}
+</code></pre>
+                </p>
+            </div>
+
+
+            <!--            Add things here-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
