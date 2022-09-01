@@ -50,7 +50,23 @@
 
                 <li class="list-group-item"><span class="text-danger">EXERCISE 2 Contents Start</span></li>
 
+                <li>HW1 due September 6, 2022, 5:00 PM</li>
+                <li>Exercise 1 September 8, 2022, Lecture Time
+                    <ul>
+                        <li>Assigned Seats</li>
+                        <li>Bring your own computer</li>
 
+                        <li>ONE coding problem in Exercise 1.</li>
+                        <li>The problems or questions will be similar to Homework 1 Problem</li>
+
+
+                        <li>Photo ID (OU student ID, driver license, or other photo ID with date birth)</li>
+                        <li>On campus only</li>
+                        <li>No website exploring other than this Exercise Canvas page</li>
+                        <li>No electronic materials (You could NOT look at your previous code on your computer)</li>
+                        <li>Open notes, open book. You can bring printed codes.</li>
+                    </ul>
+                </li>
                 <li>Simple variables VS. Complex variables</li>
                 <li>Collections
                     <ul>
@@ -92,7 +108,7 @@
         <div>
 
 
-            <h3 class="text-danger mb-3">EXERCISE 1 Contents Begin</h3>
+            <h3 class="text-danger mb-3">EXERCISE 2 Contents Begin</h3>
 
 
             <!--            Precedence (Order of operators) starts-->
@@ -242,10 +258,79 @@
                         </li>
                     </ul>
                 </div>
-                <pre><code class="language-csharp"></code></pre>
+                <pre><code class="language-csharp">Simple: int double bool char
+Complex: string and all data types defined by key word class…
+
+1 int age; // room number 101
+2 string name1; // room number 0. Not a valid room number in computer
+A room card age is created.
+A room number is assigned to card age.
+A room card name1 is created.
+No room number is assigned to card name1 yet.
+
+3 age=20; // room number on card age is still 101
+4 name1=new string(“Xinglong Ju”); // room number 102
+The value 20 is copied (stored) to age room (room 101).
+new string(“Xinglong Ju”) // A room is created with content “Xinglong Ju” in it. Room number 103
+Room number 103 is copied to card name1.
+5 string name2=“James Brodie”;// name2=new string(“James Brodie”); // Room number 104
+6 name1=name2;// copy the room number 104 to card nam1
+                                // Now both cards nam1 and name2 have access to the same room 104
+</code></pre>
                 </p>
             </div>
 
+
+
+            <div class="admonition note">
+                <p class="admonition-title">Define a complex datatype using class keyword</p>
+                <p>
+                <div class="fw-bold">
+                    string (String) <a target="_blank"
+                                       href="https://witscad.com/course/csharp-basics/chapter/string-manipulations"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                </div>
+                <pre><code class="language-csharp">Define a new complex data type Student using class
+class member
+class NewDataTypeName
+{
+}
+Member functions
+static
+this
+namespace
+
+Data fields in the new data type
+. : new operator, member access operator
+Public: access modifier
+
+
+Student xingStu=new Student();
+xingStu.name = "Xinglong Ju";
+xingStu.finalGrade = 90.6;
+double fg = xingStu.CalFinalGrade();
+class Student
+{
+    public string name;
+    public string id;
+    public int age;
+    public double finalGrade;
+    public double exam1Grade;
+    public double exam2Grade;
+    public double exam3Grade;
+
+    public char CalLetterGrade()
+    {
+        return 'A';
+    }
+
+    public double CalFinalGrade()
+    {
+        return finalGrade;
+    }
+}</code></pre>
+                </p>
+            </div>
 
             <div class="admonition note">
                 <p class="admonition-title">string (String): a complex datatype</p>
@@ -804,6 +889,61 @@ foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
     ele.Key;
     ele.Value;
 }
+</code></pre>
+                </p>
+            </div>
+
+
+
+            <div class="admonition note">
+                <p class="admonition-title">More about class</p>
+                <p>
+<div class="fw-bold">
+                <ul>
+                    <li>get, set <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/properties"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>class inherit <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                     <li>base: (parent)</li>
+                    <li>class inherit <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <ul>
+                        <li>abstract for class and method <a target="_blank" href="https://www.c-sharpcorner.com/UploadFile/93126e/importance-and-use-of-versioning-in-C-Sharp/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        </li>
+                        <li>virtual for method only
+                        </li>
+                    </ul>
+                    </li>
+                    <li>override, overload functions
+                        <ul>
+                            <li>overload <a target="_blank" href="https://www.geeksforgeeks.org/c-sharp-method-overloading/"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>ToString() function <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>Equals() function <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        interface (a concept in OOP, it is like a tag, not the user interface)
+                        <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    </li>
+                    <li>Terminology: polymorphism
+                    </li>
+
+                </ul>
+            </div>
+
+
+                <pre><code class="language-csharp">Terminology:
+Encapsulation
+Object-oriented programming (OOP) vs Procedural Programming
+Member functions:
+static:
+this
+Constructor function
+overload: https://www.geeksforgeeks.org/c-sharp-method-overloading/
+Namespace
+Unified Modeling Language (UML)
+members accessibility (public, private)
+
 </code></pre>
                 </p>
             </div>
