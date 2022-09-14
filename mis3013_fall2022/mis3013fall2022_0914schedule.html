@@ -495,6 +495,43 @@ double aveGrade=sumOfGrade/counter;            </code></pre>
             </p>
         </div>
 
+        <div class="mb-3"></div>
+
+
+
+        <div class="admonition note">
+            <p class="admonition-title">Coin Toss Example</p>
+            <p>
+            <div>
+            Prompt the user to pick heads or tails, and then generate a random number, using the Random  class <a target="_blank" href="https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp"><span class="bi bi-box-arrow-up-right text-primary"></span></a>, generate a random number that has a range of just two numbers (e.g. it should just be random between 0 and 1 or 1 and 2 so that you have two options, heads or tails).<br/>
+            <br/>
+
+            Tell the user what side the coin landed on (heads or tails) and then whether or not their guess was right or wrong.<br/><br/>
+
+            Repeat the process 3 times, store the number of right guesses and calculate the right guess percentage. Print out these information.<br/><br/>
+
+            Example code how to generate a random integer number:<br/><br/>
+            Random rnd = new Random();
+            int randomNum = rnd.Next(3, 5); // Generate a random integer and store it into variable randomNum.<br/><br/>
+            // rnd.Next(3, 5); will result only result in 3 or 4<br/>
+            // rnd.Next(0, 2); will result only result in 0 or 1<br/>
+            // rnd.Next(0, 3); will result only result in 0, 1, or 2<br/>
+            Console.WriteLine(randomNum);<br/><br/>
+            <p>Please take a guess (Head or Tail): H<br/>
+                Your guess is wrong!<br/>
+                Please take a guess (Head or Tail): T<br/>
+                Your guess is correct!<br/>
+                Please take a guess (Head or Tail): T<br/>
+                Your guess is correct!<br/>
+                2 out of 3 are correct!<br/>
+                The correct percentage is 66.67%</p>
+        </div>
+            <div class="fw-bold"></div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+
 
         <div class="mb-3"></div>
 
