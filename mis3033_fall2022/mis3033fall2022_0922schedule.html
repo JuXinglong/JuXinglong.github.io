@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>September 22 Lecture Schedule MIS 3033 Fall 2022: lambda expression, JSON, Entity framework</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro() {
+            hljs.highlightAll();
+
+
+        }
+
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            September 22, 2022 Lecture Schedule for MIS 3033
+        </div>
+
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+
+                <li class="list-group-item"><span class="text-danger">Sign the attendance sheet</span></li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li class="list-group-item"><span class="text-danger">EXERCISE 3 Contents Start</span></li>
+
+
+<!--                <li>HW2 due September 14, 2022, 5:00 PM</li>-->
+                <li>Exercise 2 September 27, 2022, Lecture Time
+                    <ul>
+                        <li>Assigned Seats</li>
+                        <li>Bring your own computer <span class="text-danger fw-bold">(charger)</span></li>
+
+                        <li>ONE coding problem in Exercise 1.</li>
+                        <li>The problems or questions will be similar to Homework 2 task 3</li>
+                        <li>One problem, multiple questions</li>
+
+
+                        <li>Photo ID (OU student ID, driver license, or other photo ID with date birth)</li>
+                        <li>On campus only</li>
+                        <li>No website exploring other than this Exercise Canvas page</li>
+                        <li>No electronic materials (You could NOT look at your previous code on your computer)</li>
+                        <li>Open notes, open book. You can bring printed codes.</li>
+                    </ul>
+                </li>
+
+
+
+                <li>lambda expression</li>
+                <li>extension function</li>
+                <li>keyword: var</li>
+                <li>anonymous class type (anonymous data type)</li>
+                <li>JSON: JavaScript Object Notation</li>
+                <li>Entity framework</li>
+
+
+            </ul>
+        </div>
+
+        <div>
+
+
+            <h3 class="text-danger mb-3">EXERCISE 3 Contents Start</h3>
+
+
+            <!--            Precedence (Order of operators) starts-->
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Precedence (Order of operators)</p>
+                <p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">PRECEDENCE
+                        </th>
+                        <th scope="col">OPERATORS
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Highest
+                        </th>
+                        <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                            ˜
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="11" class="align-middle">
+                            <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                            <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                        </th>
+                        <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">+, –</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><<, >>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>^
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>|
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">&&</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">||</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>=, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Lowest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <!--            Precedence (Order of operators) ends-->
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">interface
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">interface</p>
+                <p>
+                <div class="fw-bold">
+                interface (a concept in OOP, it is like a tag, not the user interface)
+                <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+<br/>
+                <span class="text-danger">Ctrl + . </span> to auto implement interface
+            </div>
+                <pre><code class="language-csharp">public interface IMIS3033
+{
+    public double finalGrade { get; set; }
+    public double finishHomeWorkOne();
+    public char mis3013LGCh { get; set; }
+}
+
+public class Student : IMIS3033
+{
+    public string name { get; set; }
+    public double finalGrade { get; set; }
+    public char mis3013LGCh { get; set; }
+
+    public double finishHomeWorkOne()
+    {
+        // finish homework
+        Console.WriteLine(this.name + "is finishing MIS 3033 homework");
+        return 80;
+    }
+}</code></pre>
+
+            </div>
+
+
+            <div class="mb-3"></div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">extra syntax</p>
+                <p>
+                <div class="fw-bold">
+                      </div>
+                <pre><code class="language-csharp">Person p1;
+Student stu1;
+
+p1=new Person() { age=20, name="xinglong ju"};
+
+stu1 = new Student() { age=20,name="aiden tom",stuID="at2145"};
+
+Person p2;
+
+p2 = stu1;
+
+Student stu2;
+stu2 = (Student)p2;
+
+stu2=(Student)p1;// Error
+
+string numStr = "123";
+int numInt=Convert.ToInt32(numStr);
+
+
+public class Person
+{
+    public string name { get; set; }
+    public int age { get; set; }
+}
+
+public class Student:Person
+{
+    public string stuID { get; set; }
+}</code></pre>
+
+            </div>
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">delegate, lambda expression, event
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">delegate, lambda expression, event</p>
+                <p>
+                <div class="fw-bold">
+                delegate, lambda expression, event<br/>
+                Watch the following video tutorial<br/>
+                <span class="text-danger">A very good tutorial on these three topics, about 30 minutes</span>
+
+
+
+                    <a target="_blank"
+                                       href="https://www.linkedin.com/learning/c-sharp-delegates-events-and-lambdas-14503458/using-lambdas-as-delegates"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <br/>
+                delegate
+                <a target="_blank"
+                   href="https://www.c-sharpcorner.com/UploadFile/Ashush/delegates-in-C-Sharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <br/>
+                event
+                <a target="_blank"
+                   href="https://www.c-sharpcorner.com/UploadFile/Ashush/events-in-C-Sharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <br/>
+                <span class="text-danger">lambda expression</span>
+                <a target="_blank"
+                   href="https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+            </div>
+                <pre><code class="language-csharp"> </code></pre>
+
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">delegate</p>
+                <p>
+                <div class="fw-bold">
+
+                    delegate
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/delegates-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-csharp">delegate
+// a delegate a blueprint for a function
+//This delegate can point to any method,
+//taking two integers and returning an
+//integer.
+MyDelegateName del1 = new MyDelegateName(Add);
+del1 = Add;
+
+Console.WriteLine(del1(3,4));
+
+del1 = new MyDelegateName(Multiply);
+del1 = Multiply;
+
+Console.WriteLine(del1(3, 4));
+
+
+int Add(int x, int y)
+{
+    return x + y;
+}
+int Multiply(int x, int y)
+{
+    return x * y;
+}
+
+public delegate int MyDelegateName(int x, int y);               </code></pre>
+
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">lambda expression</p>
+                <p>
+                <div class="fw-bold">
+
+                    <span class="text-danger">lambda expression</span>
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-csharp">lambda expression
+// Lambda expression is one way to create anonymous functions (usually short functions).
+Parameter => expression
+Parameter-list => expression
+Count => count + 2;
+Sum => sum + 2;
+n => n % 2 == 0
+
+MyDelegateName del1;
+
+del1 = x => x +2;
+
+
+Console.WriteLine(del1(3));
+
+
+public delegate int MyDelegateName(int x);                </code></pre>
+
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">event</p>
+                <p>
+                <div class="fw-bold">
+
+                    event
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/events-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                </div>
+                <pre><code class="language-csharp">event
+// Events enable a class or object to notify other classes or objects when something of interest occurs.
+public class MyClass
+{
+    public delegate void MyDelegate(string message);
+    public event MyDelegate MyEvent;
+}
+
+if (MyEvent != null)
+    MyEvent(message);
+
+MyClass myClass1 = new MyClass();
+MyClass.MyDelegate del = new MyClass.MyDelegate(myClass1_MyEvent);
+
+// you need to know how to add an event handler function as follows
+myClass1.MyEvent += del;
+                </code></pre>
+
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">example</p>
+                <p>
+                <div class="fw-bold">
+                IComparer.Compare <a target="_blank"
+                                     href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.icomparer.compare?view=net-6.0"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                </div>
+                <pre><code class="language-csharp">
+string longStr = @"stu1 = new Student() { age=20,name=""aiden tom"",stuID=""at2145""};";
+
+Console.WriteLine(longStr.Count((x) => { return 'a' == x; }));
+Console.WriteLine(longStr.Count((x) => { return "abcd".Contains(x); }));
+
+
+List&#60;double&#62; gradesList = new List&#60;double&#62;();
+gradesList.Add(96.6);
+gradesList.Add(80.6);
+gradesList.Add(79.6);
+gradesList.Add(90.6);
+gradesList.Add(86.0);
+gradesList.Add(70.6);
+
+// sort from the smallest to largest
+gradesList.Sort((a, b) =>
+{
+    if (a > b) { return 1; }
+    else if (a < b) { return -1; }
+    else { return 0; }
+}
+);
+
+foreach(var grade in gradesList)
+{
+    Console.WriteLine(grade);
+}
+
+Console.WriteLine(gradesList.Max(x => x));
+                </code></pre>
+
+            </div>
+
+
+
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">extension function, var, anonymous type</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">extension function, var, anonymous type</p>
+                <p>
+                <div class="fw-bold">extension function <a target="_blank" href="https://dotnettutorials.net/lesson/extension-methods-csharp/"><span class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                var <a target="_blank" href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/declarations#var"><span class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank" href="https://www.c-sharpcorner.com/article/what-does-var-mean-in-c-sharp/"><span class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                anonymous type <a target="_blank" href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+                <pre><code class="language-csharp">
+// extension function/method example
+string testStr = "xinglong Ju";
+var a =ExtString.firstletter(testStr);
+
+a = testStr.firstletter();
+
+
+Console.WriteLine(a);
+
+public static class ExtString
+{
+    public static char firstletter(this string s)
+    {
+        return s[0];
+    }
+}
+
+//anonymous type
+var test = new { first_name = "xinglong ju", age = 20 };
+Console.WriteLine(test.first_name);
+                </code></pre>
+                </p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">JSON: JavaScript Object Notation
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">JSON</p>
+                <p>
+                <div class="fw-bold">
+                    JSON: JavaScript Object Notation
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+
+                </div>
+                <pre><code class="language-json">
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+
+                </code></pre>
+
+
+                <pre><code class="language-csharp">
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+File.Exists()
+
+// save to json file
+JsonSerializerOptions serialOption = new JsonSerializerOptions();
+serialOption.WriteIndented=true;
+string jsonStr = JsonSerializer.Serialize(students, serialOption);
+string filename = "students.json";
+File.WriteAllText(filename,jsonStr);
+
+// read from json file
+String filename = "students.json";
+string jsonStr=File.ReadAllText(filename);
+List&#60;Student&#62; stu = JsonSerializer.Deserialize&#60;List&#60;Student&#62;&#62;(jsonStr);
+
+
+                </code>
+                </pre>
+
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Entity framework
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Entity framework
+                </p>
+                <p>
+                <div class="fw-bold">
+                Entity framework (EF)
+                <a target="_blank" href=""><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+            <br/>
+            A set of predefined classes to help to connect to and manipulate databases
+
+                <div class="alert alert-info">
+SQLite is a light-weight database. <a target="_blank" href="https://www.sqlite.org/index.html"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <br/>
+                    SQLiteStudio <a target="_blank" href="https://sqlitestudio.pl/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>  <a class="btn btn-sm btn-primary" href="https://github.com/pawelsalawa/sqlitestudio/releases/download/3.3.3/sqlitestudio-3.3.3.zip" target="_blank"> Download SQLiteStudio</a></div>
+
+
+
+            </div>
+
+
+
+                <div class="alert-info alert fw-bold">
+                    Enable EF
+                <ul>
+                    <li>Right click the project name->Manage NuGet Packages…
+<img src="../static/img/ef1.png" style="width: 500px;"/>
+                    </li>
+                    <li>Browse-> microsoft.entityframeworkcore->
+
+                        <img src="../static/img/ef2.png" style="width: 500px;"/>
+                        <img src="../static/img/ef3.png" style="width: 500px;"/>
+                         </li>
+                </ul>
+                </div>
+
+                <pre><code class="language-csharp">
+
+// define database tables
+namespace eftest
+{
+    public class Student
+    {
+        public int Id { get; set; }
+        public string name { get; set; } = "";
+        public int age { get; set; } = 0;
+    }
+}
+
+
+// define database connect class
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace eftest
+{
+    public class MyDBContext:DbContext
+    {
+        public DbSet&#60;Student&#62; Students { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+
+            options.UseSqlite($"Data Source=Students.db");
+        }
+
+    }
+}
+
+
+                </code></pre>
+
+
+
+
+                <div class="alert-info alert fw-bold">
+                    Create Databases based on defined classes
+                    <ul>
+
+                        <li>View->Other Windows->Package Manager Console
+
+
+                           <img src="../static/img/ef4.png" style="width: 500px;"/>
+                        </li>
+                    </ul>
+                    Create and update the database
+                    <div class="bg-warning ui-corner-all p-3">
+
+
+                        add-migration any_valid_NAME<br/>
+                        update-database
+
+                    </div>
+                </div>
+
+                <pre><code class="language-csharp">
+// Save to Database
+using MyDBContext _db = new MyDBContext();
+Student stu = new Student() { name = "xinglong Ju", Id = 123, age = 35 };
+_db.Students.Add(stu);
+_db.SaveChanges();
+
+
+// Read from Database
+using MyDBContext _db = new MyDBContext();
+Student[] stus = _db.Students.ToArray&#60;Student&#62;();
+                </code></pre>
+                </p>
+            </div>
+
+            <!--            Add things here-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
