@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>September 21 Lecture Schedule MIS 3013 Fall 2022: loops</title>
+    <title>September 26 Lecture Schedule MIS 3013 Fall 2022: loops, function & method</title>
     <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
     <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
@@ -59,7 +59,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            September 21, 2022 Lecture Schedule for MIS 3013
+            September 26, 2022 Lecture Schedule for MIS 3013
         </div>
 
         <!--        table of contents start-->
@@ -93,8 +93,8 @@
                                 class="bi bi-box-arrow-up-right text-primary"></span></a></li>
                     </ul>
                 </li>
-
-
+                <li class="list-group-item"><span class="text-danger">EXERCISE 3 Contents Start</span></li>
+                <li> function & method</li>
             </ul>
 
 
@@ -261,9 +261,6 @@
         </div>
 
 
-
-
-
         <div class="mb-3"></div>
 
         <div class="h4 text-danger border-bottom border-danger fw-bold border-2">counter, accumulator</div>
@@ -272,11 +269,11 @@
             <p class="admonition-title">counter, accumulator</p>
             <p>
             <div class="fw-bold">
-            int counter=0;<br/>
-            double accumulator=0;
-            <br/>
-            ++ operator
-        </div>
+                int counter=0;<br/>
+                double accumulator=0;
+                <br/>
+                ++ operator
+            </div>
             <pre><code class="language-csharp">
 int i=0;
 i=i+1;
@@ -307,8 +304,6 @@ double aveGrade=sumOfGrade/counter;            </code></pre>
         </div>
 
 
-
-
         <div class="mb-3"></div>
 
         <div class="h4 text-danger border-bottom border-danger fw-bold border-2">loops</div>
@@ -316,17 +311,19 @@ double aveGrade=sumOfGrade/counter;            </code></pre>
         <div class="admonition note">
             <p class="admonition-title">for loop</p>
             <p>
-            <div class="fw-bold">loops (<span class="text-danger">break continue</span> <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
-                class="bi bi-box-arrow-up-right text-primary"></span></a>)
-            <ul>
-                <li><span class="text-danger">for(;;){} </span> <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-            </ul>
-        </div>
+            <div class="fw-bold">loops (<span class="text-danger">break continue</span> <a target="_blank"
+                                                                                           href="https://www.w3schools.com/cs/cs_break.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>)
+                <ul>
+                    <li><span class="text-danger">for(;;){} </span> <a target="_blank"
+                                                                       href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                </ul>
+            </div>
             <div class="border border-1"><img src="../static/img/forloops.svg" style="width: 500px;"/></div>
             <div class="border border-1"><img src="../static/img/forloops2.svg" style="width: 500px;"/></div>
             <pre><code class="language-csharp">Loops
@@ -369,20 +366,20 @@ for (int i = 0; i < 10; i++)
         </div>
 
 
-
-
         <div class="mb-3"></div>
 
 
         <div class="admonition note">
             <p class="admonition-title">while loop</p>
             <p>
-            <div class="fw-bold">loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
+            <div class="fw-bold">loops (break continue <a target="_blank"
+                                                          href="https://www.w3schools.com/cs/cs_break.php"><span
                     class="bi bi-box-arrow-up-right text-primary"></span></a>)
                 <ul>
                     <li>for(;;){} <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
                             class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                    <li><span class="text-danger">while(){}</span> <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                    <li><span class="text-danger">while(){}</span> <a target="_blank"
+                                                                      href="https://www.w3schools.com/cs/cs_while_loop.php"><span
                             class="bi bi-box-arrow-up-right text-primary"></span></a></li>
                     <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
                             class="bi bi-box-arrow-up-right text-primary"></span></a></li>
@@ -409,22 +406,22 @@ while (counter < 10)
         </div>
 
 
-
-
         <div class="mb-3"></div>
 
 
         <div class="admonition note">
             <p class="admonition-title">do while loop</p>
             <p>
-            <div class="fw-bold">loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
+            <div class="fw-bold">loops (break continue <a target="_blank"
+                                                          href="https://www.w3schools.com/cs/cs_break.php"><span
                     class="bi bi-box-arrow-up-right text-primary"></span></a>)
                 <ul>
                     <li>for(;;){} <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
                             class="bi bi-box-arrow-up-right text-primary"></span></a></li>
                     <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
                             class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                    <li><span class="text-danger">do{}while();</span> <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                    <li><span class="text-danger">do{}while();</span> <a target="_blank"
+                                                                         href="https://www.w3schools.com/cs/cs_while_loop.php"><span
                             class="bi bi-box-arrow-up-right text-primary"></span></a></li>
                 </ul>
             </div>
@@ -449,70 +446,143 @@ do
         </div>
 
 
-
-
         <div class="mb-3"></div>
 
 
         <div class="admonition note">
-            <p class="admonition-title">Grades Example</p>
+            <p class="admonition-title">Age Example</p>
             <p>
             <div>
 
-            You are asked to create a C# console application to help the instructor to analyze the grade information. The app will prompt the instructor to input the grade of each student.
-            <br/>
-            <br/>
-            The instructor is interested in how many students' grades will fall into 5 letter grades, and the app will help to collect the number of students in each letter grade. After entering the grade of one student, the app will show the corresponding letter grade.
-            <br/>
-            <br/>
-            After entering the grade of one student, the app will ask the instructor if there is another student's grade to enter. If the instructor types in yes, the app will prompt for another student's grade. If no, the app will show the summary information, such as the total number of students, the average grade of all students,  the number of students in each letter grade and the ratio information.
-            <br/>
-            <br/>
-            For double datatype values, show 2 digits after the decimal point. Text messages DO NOT need to be exactly the same. The texts in red are the inputs from the keyboard.
+                You are asked to create a C# console application to help analyze the age
+                information. The app will prompt the user to input the age of each student.
+                <br/>
+                <br/>
+                The user is interested in how many ages will fall into 3 categories, and the app
+                will help to collect the number of students in each category. After entering the age of one
+                student, the app will show the corresponding age category.
+                <br/>
+                <br/>
+                After entering the age of one student, the app will ask the user if there is another student's
+                age to enter. If the user types in yes, the app will prompt for another student's age. If no,
+                the app will show the summary information, such as the total number of students, the average age of
+                all students, the number of students in each age category and the ratio information.
+                <br/>
+                <br/>
+                For double datatype values, show 2 digits after the decimal point. Text messages DO NOT need to be
+                exactly the same. The texts in red are the inputs from the keyboard.
+                <br/>
+                <table class="table table-bordered" style="width: 400px;">
+                    <thead>
+                    <tr>
+                        <th scope="col">Age category</th>
+                        <th scope="col">Age range</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Category <span class="fw-bold">1</span></td>
+                        <td>\(\mbox{age}<20\)</td>
+                    </tr>
+                    <tr>
+                        <td>Category <span class="fw-bold">2</span></td>
+                        <td>\(20\leqslant \mbox{age} \leqslant 25\)</td>
+                    </tr>
+                    <tr>
+                        <td>Category <span class="fw-bold">3</span></td>
+                        <td>\(\mbox{age}>25\)</td>
+                    </tr>
+                    </tbody>
+                </table>
+
             </div>
             <div class="mb-3"></div>
-            <div class="bg-light">student 1 grade: <span class="text-danger fw-bold">90.6</span><br/>
-                The letter grade is A!<br/>
+            <div class="bg-light">student 1 age: <span class="text-danger fw-bold">20</span><br/>
+                Category 2!<br/>
                 <br/>
-                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span><br/>
+                Do you want to enter another student's age? (yes/no) <span class="text-danger fw-bold">yes</span><br/>
                 <br/>
-                student 2 grade: <span class="text-danger fw-bold">70.2</span><br/>
-                The letter grade is C!<br/>
+                student 2 age: <span class="text-danger fw-bold">19</span><br/>
+                Category 1!<br/>
                 <br/>
-                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span>
+                Do you want to enter another student's age? (yes/no) <span class="text-danger fw-bold">yes</span>
                 <br/><br/>
-                student 3 grade: <span class="text-danger fw-bold">56.6</span><br/>
-                The letter grade is F!<br/>
+                student 3 age: <span class="text-danger fw-bold">22</span><br/>
+                Category 2!<br/>
                 <br/>
-                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span>
+                Do you want to enter another student's age? (yes/no) <span class="text-danger fw-bold">yes</span>
                 <br/><br/>
-                student 4 grade: <span class="text-danger fw-bold">80.6</span><br/>
-                The letter grade is B!<br/>
+                student 4 age: <span class="text-danger fw-bold">26</span><br/>
+                Category 3!<br/>
                 <br/>
-                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span>
+                Do you want to enter another student's age? (yes/no) <span class="text-danger fw-bold">yes</span>
                 <br/><br/>
-                student 5 grade: <span class="text-danger fw-bold">66.0</span><br/>
-                The letter grade is D!<br/>
+                student 5 age: <span class="text-danger fw-bold">35</span><br/>
+                Category 3!<br/>
                 <br/>
-                        Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span>
+                Do you want to enter another student's age? (yes/no) <span class="text-danger fw-bold">yes</span>
                 <br/><br/>
-                student 6 grade: <span class="text-danger fw-bold">96.0</span><br/>
-                The letter grade is A!<br/>
+                student 6 age: <span class="text-danger fw-bold">24</span><br/>
+                Category 2!<br/>
                 <br/>
-                            Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">no</span>
+                Do you want to enter another student's age? (yes/no) <span class="text-danger fw-bold">no</span>
                 <br/><br/>
                 Summary information<br/>
                 Number of students is: 6<br/>
-                The average final of students is: 76.67<br/>
-                Letter grade A: 2/6, 33.33%<br/>
-                Letter grade B: 1/6, 16.67%<br/>
-                Letter grade C: 1/6, 16.67%<br/>
-                Letter grade D: 1/6, 16.67%<br/>
-                Letter grade F: 1/6, 16.67%</div>
+                The average age of students is: 24.33<br/>
+                Category 1: 1/6, 16.67%<br/>
+                Category 2: 3/6, 50.00%<br/>
+                Category 3: 2/6, 33.33%
+            </div>
             <pre><code class="language-csharp"></code></pre>
 
         </div>
 
+
+        <div class="mb-3"></div>
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">function & method</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">function & method</p>
+
+            <p>
+            <pre><code class="language-csharp">Basic syntax to define a function
+//function is self-enclosed. Variables defined inside it are not visible to the outside scope (world).
+// variables can be redefined inside a function
+datatype function_name(datatype1 var1,datatype var2)// (*) are called parameters
+{
+  ……
+return datatype_variable;
+}
+
+void
+
+char GetLetterGrade(double grade)
+{
+char letterGrade=‘G’;
+if(grade>90)
+{
+	letterGrade=‘A’;
+}
+else
+{
+	letterGrade=‘B’;
+}
+return letterGrade;
+}
+
+How to use it?
+function_name(…);
+
+
+char lg1=GetLetterGrade(90.6);
+double grade2=96.9;
+char lg2=GetLetterGrade(grade2);
+Console.Write(GetLetterGrade(70.6));
+</code></pre>
+            </p>
+
+        </div>
         <!--insert new div here-->
     </div>
 </div>
