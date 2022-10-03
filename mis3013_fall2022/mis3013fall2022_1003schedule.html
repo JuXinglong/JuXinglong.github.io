@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>October 3 Lecture Schedule MIS 3013 Fall 2022: function & method, simple variable VS. complex variable,
+        class</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+            var i;
+            var n_review_ques = 0;
+            for (i = 1; i <= n_review_ques; i++)
+            {
+                $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            }
+
+        }
+
+        function questionBtnClicked(event)
+        {
+            var sBtn = $("#q" + event.data.i + "btn");
+            var sAns = $("#q" + event.data.i + "ans");
+            if (sBtn.text() == "Show Answer")
+            {
+                sBtn.text("Hide Answer");
+                // sAns.show();
+                sAns.removeClass("invisible");
+            }
+            else
+            {
+                sBtn.text("Show Answer");
+                // sAns.hide();
+                sAns.addClass("invisible");
+            }
+        }
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            October 3, 2022 Lecture Schedule for MIS 3013
+        </div>
+
+        <!--        table of contents start-->
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+
+                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>
+                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>
+                </li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+
+                <li class="list-group-item"><span class="text-danger">EXERCISE 3 Contents Start</span></li>
+                <li> function & method</li>
+                <li>The differences: Simple datatype VS. Complex datatype</li>
+                <li>Use class to define a complex datatype</li>
+            </ul>
+
+
+        </div>
+        <!--        table of contents end-->
+
+
+
+
+
+        <div class="mb-3"></div>
+
+
+        <!--            Precedence (Order of operators) starts-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                        <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                    </th>
+                    <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+, –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><<, >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">=</span>, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+        <div class="mb-3"></div>
+
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">function & method</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">function & method</p>
+
+            <p>
+            <pre><code class="language-csharp">Basic syntax to define a function
+//function is self-enclosed. Variables defined inside it are not visible to the outside scope (world).
+// variables can be redefined inside a function
+datatype function_name(datatype1 var1,datatype var2)// (*) are called parameters
+{
+  ……
+return datatype_variable;
+}
+
+void
+
+char GetLetterGrade(double grade)
+{
+char letterGrade=‘G’;
+if(grade>90)
+{
+	letterGrade=‘A’;
+}
+else
+{
+	letterGrade=‘B’;
+}
+return letterGrade;
+}
+
+How to use it?
+function_name(…);
+
+
+char lg1=GetLetterGrade(90.6);
+double grade2=96.9;
+char lg2=GetLetterGrade(grade2);
+Console.Write(GetLetterGrade(70.6));
+</code></pre>
+            </p>
+
+        </div>
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables VS. complex
+            variables
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Simple VS. Complex</p>
+            <p>
+            <div class="fw-bold">
+                <img src="../static/img/room_card.jpg" style="height: 300px;"/>
+                <img src="../static/img/roomaccess.jpg" style="height: 300px;"/>
+                <img src="../static/img/cards.jpg" style="height: 300px;"/>
+                <ul>
+                    <li>Simple variable
+                        <ol>
+                            <li class="list-group-item">int i;</li>
+                            <li>The computer created a simple room card i. The card type is int.</li>
+                            <li>The computer automatically created an int space (room) in the computer memory. The
+                                space address (room number is stored in this card.)
+                            </li>
+                            <li>The room number in this card is unchangeable (immutable).</li>
+                            <li>assignment operation. The value in this space (room) is changed.</li>
+                        </ol>
+                    </li>
+                    <li>Complex variable
+                        <ol>
+                            <li class="list-group-item">DateTime j;</li>
+                            <li>The computer created a complex room card j. The card type is DateTime.</li>
+                            <li>The computer did NOT create any space (room) in computer memory. The space address
+                                (room number) in this card is null.
+                            </li>
+                            <li>The room number in this card is changeable (mutable).</li>
+                            <li>assignment operation. The address (room number) in this card is changed.</li>
+                            <li class="list-group-item text-danger">The only way to create a complex variable in the
+                                memory is to call the new Datatype(...) constructor function.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <pre><code class="language-csharp">Simple: int double bool char
+Complex: string and all data types defined by key word class…
+
+1 int age; // room number 101
+2 string name1; // room number 0. Not a valid room number in computer
+A room card age is created.
+A room number is assigned to card age.
+A room card name1 is created.
+No room number is assigned to card name1 yet.
+
+3 age=20; // room number on card age is still 101
+4 name1=new string(“Xinglong Ju”); // room number 102
+The value 20 is copied (stored) to age room (room 101).
+new string(“Xinglong Ju”) // A room is created with content “Xinglong Ju” in it. Room number 103
+Room number 103 is copied to card name1.
+5 string name2=“James Brodie”;// name2=new string(“James Brodie”); // Room number 104
+6 name1=name2;// copy the room number 104 to card nam1
+                                // Now both cards nam1 and name2 have access to the same room 104
+</code></pre>
+            </p>
+        </div>
+
+
+
+        <div class="admonition note">
+            <p class="admonition-title">Define a complex datatype using class keyword</p>
+            <p>
+            <div class="fw-bold">
+                class <a target="_blank"
+                         href="https://www.w3schools.com/cs/cs_oop.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_classes.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_class_members.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_constructors.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_access_modifiers.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_properties.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_inheritance.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_polymorphism.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_abstract.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_interface.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+            </div>
+            <pre><code class="language-csharp">Define a new complex data type Student using class
+class member
+class NewDataTypeName
+{
+}
+Member functions
+static
+this
+namespace
+
+Data fields in the new data type
+. : new operator, member access operator
+Public: access modifier
+
+
+Student xingStu=new Student();
+xingStu.name = "Xinglong Ju";
+xingStu.finalGrade = 90.6;
+double fg = xingStu.CalFinalGrade();
+class Student
+{
+    public string name;
+    public string id;
+    public int age;
+    public double finalGrade;
+    public double exam1Grade;
+    public double exam2Grade;
+    public double exam3Grade;
+
+    public char CalLetterGrade()
+    {
+        return 'A';
+    }
+
+    public double CalFinalGrade()
+    {
+        return finalGrade;
+    }
+}</code></pre>
+            </p>
+        </div>
+
+        <!--insert new div here-->
+    </div>
+</div>
+
+</body>
+</html>
