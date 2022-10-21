@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MISPB Rules</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+            var i;
+            var n_review_ques = 0;
+            for (i = 1; i <= n_review_ques; i++)
+            {
+                $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            }
+
+        }
+
+        function questionBtnClicked(event)
+        {
+            var sBtn = $("#q" + event.data.i + "btn");
+            var sAns = $("#q" + event.data.i + "ans");
+            if (sBtn.text() == "Show Answer")
+            {
+                sBtn.text("Hide Answer");
+                // sAns.show();
+                sAns.removeClass("invisible");
+            }
+            else
+            {
+                sBtn.text("Show Answer");
+                // sAns.hide();
+                sAns.addClass("invisible");
+            }
+        }
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md" style="">
+        <div class=" h3 pb-2" >
+            MISPB 2022 Round 1 October 21 Guidelines
+        </div>
+
+         <ul class="h4">
+             <li>Contest time:  9:00 AM to 10:45 AM</li>
+             <li>10 Problems</li>
+             <li>Access code is on the second page of problem papers.</li>
+             <li>Awards Ceremony & Lunch at Adams Hall 150, from 11:00 AM to 12:30 PM. Please go to Adams Hall 150 after you finish the contest</li>
+
+             <li>This contest is open book & open notes. You can bring hard-copy notes and textbooks. You could not search the internet during the contest. You could not open your previous codes on your laptop.</li>
+            <li>You can use IDE like Visual Studio, PyCharm, Eclipse, etc. to write code.</li>
+             <li>You can submit the solution for one problem multiple times. The limit for each problem is 50 times. The highest grade will be kept.</li>
+             <li>November 4, 2022 - Round 2: Winners on October 21 will be invited to participate in two person teams on November 4. Once again, good prizes will be awarded!</li>
+             <li>There will be a variety of questions, ranging in complexity from simple to challenging. Participants will have a fixed amount of time to finish the contest.</li>
+            <li>An individual will be ranked overall based on the time it took to solve the questions and the correctness of the solution.</li>
+            <li>The submitted answers to problems by each participant will be evaluated using multiple test cases, and credits will be assigned according to the outcomes from the test cases. The submission will receive partial credit if only certain parts of the test cases are passed.</li>
+            <li>Each participant must bring his/her computer to the competition. The programming language supported include Java, C, C++, C#, and Python. A maximum of 50 submissions will be allowed per problem.</li>
+            <li>We expect award winners to be present to receive the prizes from sponsors.</li>
+        </ul>
+
+    </div>
+</div>
+</body>
+</html>
