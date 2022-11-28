@@ -372,6 +372,41 @@ class Student
         <div class="mb-3"></div>
 
         <div class="admonition note">
+            <p class="admonition-title">DateTime & TimeSpan</p>
+            <p>
+            <div class="fw-bold">
+                DateTime & TimeSpan <a target="_blank"
+                                       href="https://www.c-sharpcorner.com/article/datetime-in-c-sharp/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank"
+                   href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+            </div>
+            <pre><code class="language-csharp">DateTime dt1 = new DateTime(2022, 5, 4, 13, 20, 0);
+DateTime dt2 = new DateTime(2022, 1, 18, 12, 30, 0);
+DateTime today = DateTime.Now;
+
+Console.WriteLine(dt1.Year);
+Console.WriteLine(dt1.Day);
+
+Console.WriteLine(dt2);
+Console.WriteLine(dt2.ToString());
+Console.WriteLine(dt1.ToString("MMMM dd, yyyy"));
+
+
+TimeSpan ts=dt1 - dt2;
+ts.Days // int
+ts.Minutes // int
+ts.TotalDays // double
+</code></pre>
+            </p>
+        </div>
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="admonition note">
             <p class="admonition-title">More about class</p>
             <p>
             <div class="fw-bold">
