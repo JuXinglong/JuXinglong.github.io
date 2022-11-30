@@ -556,7 +556,56 @@ public class Student:Person
 }</code></pre>
 
         </div>
+
+
+
         <div class="mb-3"></div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">November 30, 2022 start code</p>
+            <p>
+            <div class="fw-bold">
+            </div>
+            <pre><code class="language-csharp">public class Person
+{
+    public string ssn { get; set; }
+    public string name { get; set; }
+    public int age { get; set; }
+    public double weight { get; set; }
+
+    private string pri { get; set; }
+
+    public Person() { }
+
+    public Person(string ssn, string name, int age, double weight)
+    {
+        this.ssn = ssn;
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
+
+
+    public string GetInfoOne()
+    {
+        return string.Format($"P: {name}-{age}-{weight:F2}");
+    }
+
+    public string GetInfoTwo()
+    {
+        return string.Format($"P: {name}-{age}");
+    }
+}</code></pre>
+
+        </div>
+
+
+
+        <div class="mb-3"></div>
+
+
+
 
         <!--insert new div here-->
     </div>
