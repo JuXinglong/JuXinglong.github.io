@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>January 18 Lecture Schedule MIS 3013: Syllabus, C# syntax, comments, statements, variable naming rules</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/site.js"></script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            January 18, 2023 Lecture Schedule for MIS 3013
+        </div>
+        <div class="alert alert-warning h3">
+            <span>Welcome to MIS 3013 !</span>
+        </div>
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+                <li>Syllabus
+                    <ul>
+                        <li>Lecture time and location</li>
+                        <li>Final exam time and location</li>
+                        <li>Textbook</li>
+                        <li>Visual Studio 2022</li>
+                        <li>Office hours</li>
+                        <li><a href="https://teams.microsoft.com/l/chat/0/0?users=xinglong.ju@ou.edu" target="_blank">MicroSoft Teams: Everyone leaves a message on MS Teams</a></li>
+                        <li class="text-danger">Grading
+<!--                            <ul>-->
+<!--                                <li class="text-danger">Retake: 3 times</li>-->
+<!--                            </ul>-->
+                        </li>
+                        <li>Schedule</li>
+                    </ul>
+                </li>
+                <li>Assignments submit method
+                    <ul>
+                        <li>ZIP a folder</li>
+                    </ul>
+                </li>
+
+
+                <li>C# programming language</li>
+                <li>How to do well in this course?</li>
+                <li class="list-group-item"><br/></li>
+                <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Begin</span></li>
+                <li>First C# program</li>
+                <li>Variables, Expressions & Statements</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>&bull; C# programming language</h4>
+            <ul>
+                <li>C# (pronounced "See Sharp") is a modern, object-oriented, and type-safe programming language. <a
+                        target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                <li>Developer: Mads Torgersen (Microsoft) in 2000 <a target="_blank"
+                                                                     href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                <li>To compete with Java <a target="_blank"
+                                            href="https://www.softwaretestinghelp.com/csharp-vs-cpp-vs-java/#:~:text=C%23%20is%20also%20an%20object,becoming%20famous%20for%20mobile%20development."><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                     href="https://en.wikipedia.org/wiki/Java_(programming_language)"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                <li>Other programming languages:
+                    B (1969) <a target="_blank" href="https://en.wikipedia.org/wiki/B_(programming_language)"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>,
+                    C (1972) <a target="_blank" href="https://en.wikipedia.org/wiki/C_(programming_language)"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>,
+                    C++ (1987) <a target="_blank" href="https://en.wikipedia.org/wiki/C%2B%2B"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>,
+                    Java (1995) <a target="_blank"
+                                   href="https://en.wikipedia.org/wiki/Java_(programming_language)"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>,
+                    Python (1991) <a target="_blank" href="https://en.wikipedia.org/wiki/Python_(programming_language)"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    JavaScript (1995, was called LiveScript) <a target="_blank"
+                                                                href="https://en.wikipedia.org/wiki/JavaScript"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                </li>
+                <li>We are going to learn C# in .NET 6. <a target="_blank"
+                                                           href="https://en.wikipedia.org/wiki/.NET"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+            </ul>
+
+            <h3 class="text-danger mb-3">EXERCISE 1 Contents Begin</h3>
+
+            <h4 class="text-primary">&bull; First C# program</h4>
+
+            <div class="border border-dark rounded-3 p-3 mb-3 border-opacity-50">
+                <pre style="font-family:Consolas;font-size:19px;color:black;background:white;"><span
+                        style="color:green;">//&nbsp;MIS&nbsp;3013&nbsp;First&nbsp;Program</span>
+Console.WriteLine(<span style="color:#a31515;">&quot;Welcome&nbsp;to&nbsp;MIS&nbsp;3013!&quot;</span>);</pre>
+            </div>
+
+            <h4 class="text-primary mb-3">&bull; C# Variables, Expressions & Statements</h4>
+
+            <div class="h4 text-success border-bottom border-success fw-bold border-2">C# Syntax</div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">C# Syntax</p>
+                <p>
+                <ul>
+                    <li>C-Derived language.</li>
+                    <li>Compilers ignore additional spacing in code.</li>
+                <li>Code is made up of a series of <span class="text-danger fw-bold">statement</span>s, each of which <span class="text-danger fw-bold">is terminated with a semicolon</span>.</li>
+                <li>C# is a block-structured language, meaning statements are part of a block of code, which are
+                        delimited by curly brackets ( { and } ).
+                    </li>
+                <li><span class="text-danger fw-bold">C# code is case-sensitive</span>.</li>
+                </ul>
+                </p>
+
+
+            </div>
+
+            <div class="bd-example-snippet bd-code-snippet">
+                <div class="bd-example fw-bold">C# Syntax Example</div>
+                <div class="p-3">
+                <pre style="font-family:Consolas;font-size:19px;color:black;background:white;"><span
+                        style="color:green;">//&nbsp;MIS&nbsp;3013&nbsp;First&nbsp;Program</span>
+Console.WriteLine(<span style="color:#a31515;">&quot;Welcome&nbsp;to&nbsp;MIS&nbsp;3013!&quot;</span>);&nbsp;Console.WriteLine(<span
+                            style="color:#a31515;">&quot;This&nbsp;is&nbsp;the&nbsp;second&nbsp;line&nbsp;of&nbsp;code.&quot;</span>);
+Console.WriteLine(<span style="color:#a31515;">&quot;This&nbsp;is&nbsp;the&nbsp;second&nbsp;line&nbsp;of&nbsp;code.&quot;</span>);
+
+<span style="color:green;">//&nbsp;AdamAge&nbsp;and&nbsp;adamAge&nbsp;are&nbsp;two&nbsp;different&nbsp;things.</span>
+<span style="color:blue;">int</span>&nbsp;<span style="color:#1f377f;">AdamAge</span>&nbsp;=&nbsp;20;
+<span style="color:blue;">int</span>&nbsp;<span style="color:#1f377f;">adamAge</span>&nbsp;=&nbsp;30;</pre>
+                </div>
+            </div>
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-success border-bottom border-success fw-bold border-2">C# Comments</div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">C# Comments</p>
+                <p>
+                <ul>
+                    <li>Comments enable you to add a description to your code, which can serve as reminders for what the
+                        code is trying to accomplish.
+                    </li>
+                    <li>There are two ways of adding comments.
+                    </li>
+                <li><span class="text-danger fw-bold">Single line comments</span> can be added by prefixing the statement with <span class="text-danger fw-bold">//</span>
+                    </li>
+                <li><span class="text-danger fw-bold">Multiple line comments</span> can be enclosed within <span class="text-danger fw-bold">/* and */</span>
+                    </li>
+                </ul>
+                </p>
+
+            </div>
+
+            <div class="bd-example-snippet bd-code-snippet">
+                <div class="bd-example fw-bold">C# Comments Example</div>
+                <div class="p-3">
+                <pre style="font-family:Consolas;font-size:19px;color:black;background:white;"><span
+                        style="color:green;">//&nbsp;single&nbsp;line&nbsp;comment</span>
+<span style="color:green;">//&nbsp;MIS&nbsp;3013&nbsp;First&nbsp;Program</span>
+Console.WriteLine(<span style="color:#a31515;">&quot;Welcome&nbsp;to&nbsp;MIS&nbsp;3013!&quot;</span>);&nbsp;
+
+<span style="color:green;">/*&nbsp;This&nbsp;is&nbsp;a&nbsp;multiple-line&nbsp;
+&nbsp;comment.*/</span>
+<span style="color:green;">/*This&nbsp;is&nbsp;another&nbsp;example.*/</span>
+Console.WriteLine(<span style="color:#a31515;">&quot;Let&#39;s&nbsp;start&nbsp;C#&nbsp;programming&nbsp;journey.&quot;</span>);</pre>
+                </div>
+            </div>
+
+            <div class="mb-3"></div>
+
+            <!--end of C# comments            -->
+            <div class="h4 text-success border-bottom border-success fw-bold border-2">C# Variables</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">C# Variables</p>
+                <p>
+                <ul>
+                    <li>Variables are used to store the data.
+                    </li>
+                    <li>In order to use the variables, we need to declare them. We can assign them a name, provided it
+                        is not a <a class="text-decoration-none"
+                                    href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/"
+                                    target="_blank"><span class="uppercase fw-bold text-danger">reserved keyword</span></a>.
+                    </li>
+                <li><span class="text-danger fw-bold">There are Simple types of variables</span>, such as numbers, and Boolean values. <span class="text-danger fw-bold">Complex types</span> are
+                        comprised of 1 or many simple types and you can create them yourself!
+                    </li>
+                    <li class="text-danger fw-bold">
+                        The basic naming rules are:
+                        <ul>
+                            <li>
+                                The first character of a variable name must be either a letter, an underscore
+                                character(_), or the at symbol (@).
+                            </li>
+                            <li>The subsequent characters may be letters, underscore characters, or numbers.</li>
+                        </ul>
+                    </li>
+
+                </ul>
+                </p>
+
+            </div>
+            <div class="mb-3"></div>
+            <!--            end of C# variables-->
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">C# Simple/Primitive Data Types
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">C# Simple/Primitive Data Types</p>
+                <p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Data Type
+                        </th>
+                        <th scope="col">Example Value
+                        </th>
+                        <th scope="col">Size
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">int
+                        </th>
+                        <td>Counting numbers, e.g. 0; 1; 2; 3; 4; 5;
+                        </td>
+                        <td>4-bytes
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">double
+                        </th>
+                        <td>Real, or numbers with decimal places, e.g. 1.5; 2.5;
+                        </td>
+                        <td>8-bytes
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">bool
+                        </th>
+                        <td>Either TRUE or FALSE; Normally the result of a conditional operation
+                        </td>
+                        <td>0.125-bytes
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">char
+                        </th>
+                        <td>A single character, e.g. letter on your keyboard;  e.g. ‘A’; ‘a’;
+                        </td>
+                        <td>2-bytes
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                1 B = 1 byte = 8 bits, 1 KB = 1024 B, 1 MB =1024 KB, 1 GB = 1024 MB,
+                1 TB = 1024 GB <a target="_blank" href="https://kb.iu.edu/d/ackw"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                </p>
+            </div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">C# Assignment Operator =</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">C# Assignment Operator =</p>
+                <p>
+                    <span class="text-danger fw-bold">The assignment operator = assigns the value of its right-hand operand to a variable</span>, a property, or an indexer element <span class="text-danger fw-bold">given by its left-hand operand.</span> The result of an assignment expression is the value assigned to the left-hand operand. The type of the right-hand operand must be the same as the type of the left-hand operand or implicitly convertible to it.
+                </p>
+
+            </div>
+
+
+
+            <div>
+                <img src="../static/img/memory.jpg" style="width:300px" alt="Computer Memory"/>
+                Computer Memory (16 GB, 32 GB, ... NOT Hard Drive)
+            </div>
+            <div>
+                <a href="https://www.log2base2.com/C/pointer/computer-memory-address-basics.html">
+                <img src="../static/img/computer-memory-address.png" style="width:500px" alt="Computer Memory"/>
+                </a>
+                    Computer Memory
+            </div>
+            <div class="mb-3"></div>
+            <div class="bd-example-snippet bd-code-snippet">
+                <div class="bd-example fw-bold text-danger">C# Example of Variables, Simple/Primitive Data Types, and Assignment Operator =</div>
+                <div class="p-3">
+                    <pre style="font-family:Consolas;font-size:19px;color:black;background:white;"><span style="color:blue;">int</span>&nbsp;<span style="color:#1f377f;">age</span>;&nbsp;<span style="color:green;">//&nbsp;We&nbsp;obtain&nbsp;a&nbsp;4-byte&nbsp;space&nbsp;in&nbsp;memory.&nbsp;In&nbsp;this&nbsp;space&nbsp;we&nbsp;can&nbsp;store&nbsp;a&nbsp;integer.</span>
+<span style="color:blue;">int</span>&nbsp;<span style="color:#1f377f;">numOfStudents</span>;
+
+<span style="color:blue;">double</span>&nbsp;<span style="color:#1f377f;">weight</span>;<span style="color:green;">//&nbsp;in&nbsp;lbs</span>
+<span style="color:blue;">char</span>&nbsp;<span style="color:#1f377f;">letterGrade</span>;
+<span style="color:blue;">bool</span>&nbsp;<span style="color:#1f377f;">isStudent</span>;
+
+age&nbsp;=&nbsp;20;&nbsp;<span style="color:green;">//&nbsp;We&nbsp;store&nbsp;the&nbsp;value&nbsp;to&nbsp;20&nbsp;into&nbsp;the&nbsp;memory</span>
+
+<span style="color:green;">//&nbsp;We&nbsp;obtain&nbsp;a&nbsp;integer&nbsp;space&nbsp;in&nbsp;memory.&nbsp;We&nbsp;store&nbsp;the&nbsp;value&nbsp;30&nbsp;into&nbsp;memory&nbsp;and&nbsp;into&nbsp;the&nbsp;variable.</span>
+<span style="color:blue;">int</span>&nbsp;<span style="color:#1f377f;">numberOfApples</span>&nbsp;=&nbsp;30;
+
+age&nbsp;=&nbsp;30;
+
+Console.WriteLine(age);</pre>
+                </div>
+            </div>
+
+            <div class="mb-3"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
