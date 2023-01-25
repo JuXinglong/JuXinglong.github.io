@@ -334,12 +334,17 @@ Console.Write(GetLetterGrade(70.6));
                 <p class="admonition-title">Simple VS. Complex</p>
                 <p>
                 <div class="fw-bold">
+                    <img src="../static/img/room_card.jpg" style="height: 300px;"/>
+                    <img src="../static/img/roomaccess.jpg" style="height: 300px;"/>
+                    <img src="../static/img/cards.jpg" style="height: 300px;"/>
                     <ul>
                         <li>Simple variable
                             <ol>
                                 <li class="list-group-item">int i;</li>
                                 <li>The computer created a simple room card i. The card type is int.</li>
-                                <li>The computer automatically created an int space (room) in the computer memory. The space address (room number is stored in this card.)</li>
+                                <li>The computer automatically created an int space (room) in the computer memory. The
+                                    space address (room number is stored in this card.)
+                                </li>
                                 <li>The room number in this card is unchangeable (immutable).</li>
                                 <li>assignment operation. The value in this space (room) is changed.</li>
                             </ol>
@@ -348,17 +353,40 @@ Console.Write(GetLetterGrade(70.6));
                             <ol>
                                 <li class="list-group-item">DateTime j;</li>
                                 <li>The computer created a complex room card j. The card type is DateTime.</li>
-                                <li>The computer did NOT create any space (room) in computer memory. The space address (room number) in this card is null.</li>
-                                <li>The room number in this card is changeable (mutable).  </li>
+                                <li>The computer did NOT create any space (room) in computer memory. The space address
+                                    (room number) in this card is null.
+                                </li>
+                                <li>The room number in this card is changeable (mutable).</li>
                                 <li>assignment operation. The address (room number) in this card is changed.</li>
-                                <li class="list-group-item text-danger">The only way to create a complex variable in the memory is to call the new Datatype(...) constructor function.</li>
+                                <li class="list-group-item text-danger">The only way to create a complex variable in the
+                                    memory is to call the new Datatype(...) constructor function.
+                                </li>
                             </ol>
                         </li>
- </ul>
+                    </ul>
                 </div>
-                <pre><code class="language-csharp"></code></pre>
+                <pre><code class="language-csharp">Simple: int double bool char
+Complex: string and all data types defined by key word class…
+
+1 int age; // room number 101
+2 string name1; // room number 0. Not a valid room number in computer
+A room card age is created.
+A room number is assigned to card age.
+A room card name1 is created.
+No room number is assigned to card name1 yet.
+
+3 age=20; // room number on card age is still 101
+4 name1=new string(“Xinglong Ju”); // room number 102
+The value 20 is copied (stored) to age room (room 101).
+new string(“Xinglong Ju”) // A room is created with content “Xinglong Ju” in it. Room number 103
+Room number 103 is copied to card name1.
+5 string name2=“James Brodie”;// name2=new string(“James Brodie”); // Room number 104
+6 name1=name2;// copy the room number 104 to card nam1
+                                // Now both cards nam1 and name2 have access to the same room 104
+</code></pre>
                 </p>
             </div>
+
 
 
 
