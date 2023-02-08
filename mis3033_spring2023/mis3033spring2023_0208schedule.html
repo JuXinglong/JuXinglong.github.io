@@ -810,7 +810,13 @@ namespace eftest
 
 
                         add-migration any_valid_NAME<br/>
-                        update-database
+                        update-database<br/>
+                        &lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;<br/>
+
+
+                        add-migration initdb -context DBConnect<br/>
+
+                        update-database -context DBConnect
 
                     </div>
                 </div>
