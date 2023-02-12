@@ -105,12 +105,13 @@
                 <li>loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
                         class="bi bi-box-arrow-up-right text-primary"></span></a>)
                     <ul>
-                        <li>for(;;){} <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                        <li><a href="#for">for(;;){}</a> <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
                                 class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                        <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                        <li><a href="#while">while(){} </a><a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
                                 class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                        <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                        <li><a href="#dowhile">do{}while();</a> <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
                                 class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        <li><a href="#example">example</a></li>
                     </ul>
                 </li>
 
@@ -331,20 +332,20 @@ double aveGrade=sumOfGrade/counter;            </code></pre>
 
         <div class="h4 text-danger border-bottom border-danger fw-bold border-2">loops</div>
 
-        <div class="admonition note">
+        <div id="for" class="admonition note">
             <p class="admonition-title">for loop</p>
             <p>
             <div class="fw-bold">loops (<span class="text-danger">break continue</span> <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
-                class="bi bi-box-arrow-up-right text-primary"></span></a>)
-            <ul>
-                <li><span class="text-danger">for(;;){} </span> <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-            </ul>
-        </div>
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>)
+                <ul>
+                    <li><span class="text-danger">for(;;){} </span> <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                </ul>
+            </div>
             <div class="border border-1"><img src="../static/img/forloops.svg" style="width: 500px;"/></div>
             <div class="border border-1"><img src="../static/img/forloops2.svg" style="width: 500px;"/></div>
             <pre><code class="language-csharp">Loops
@@ -392,7 +393,7 @@ for (int i = 0; i < 10; i++)
         <div class="mb-3"></div>
 
 
-        <div class="admonition note">
+        <div id="while" class="admonition note">
             <p class="admonition-title">while loop</p>
             <p>
             <div class="fw-bold">loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
@@ -432,7 +433,7 @@ while (counter < 10)
         <div class="mb-3"></div>
 
 
-        <div class="admonition note">
+        <div id="dowhile" class="admonition note">
             <p class="admonition-title">do while loop</p>
             <p>
             <div class="fw-bold">loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
@@ -472,21 +473,21 @@ do
         <div class="mb-3"></div>
 
 
-        <div class="admonition note">
+        <div id="example" class="admonition note">
             <p class="admonition-title">Grades Example</p>
             <p>
             <div>
 
-            You are asked to create a C# console application to help the instructor to analyze the grade information. The app will prompt the instructor to input the grade of each student.
-            <br/>
-            <br/>
-            The instructor is interested in how many students' grades will fall into 5 letter grades, and the app will help to collect the number of students in each letter grade. After entering the grade of one student, the app will show the corresponding letter grade.
-            <br/>
-            <br/>
-            After entering the grade of one student, the app will ask the instructor if there is another student's grade to enter. If the instructor types in yes, the app will prompt for another student's grade. If no, the app will show the summary information, such as the total number of students, the average grade of all students,  the number of students in each letter grade and the ratio information.
-            <br/>
-            <br/>
-            For double datatype values, show 2 digits after the decimal point. Text messages DO NOT need to be exactly the same. The texts in red are the inputs from the keyboard.
+                You are asked to create a C# console application to help the instructor to analyze the grade information. The app will prompt the instructor to input the grade of each student.
+                <br/>
+                <br/>
+                The instructor is interested in how many students' grades will fall into 5 letter grades, and the app will help to collect the number of students in each letter grade. After entering the grade of one student, the app will show the corresponding letter grade.
+                <br/>
+                <br/>
+                After entering the grade of one student, the app will ask the instructor if there is another student's grade to enter. If the instructor types in yes, the app will prompt for another student's grade. If no, the app will show the summary information, such as the total number of students, the average grade of all students,  the number of students in each letter grade and the ratio information.
+                <br/>
+                <br/>
+                For double datatype values, show 2 digits after the decimal point. Text messages DO NOT need to be exactly the same. The texts in red are the inputs from the keyboard.
             </div>
             <div class="mb-3"></div>
             <div class="bg-light">student 1 grade: <span class="text-danger fw-bold">90.6</span><br/>
