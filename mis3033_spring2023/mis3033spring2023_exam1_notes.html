@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>February 22 Lecture Schedule MIS 3033: Exam 1 notes</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro() {
+            hljs.highlightAll();
+
+
+        }
+
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            February 22, 2023 Exam 1 Notes for MIS 3033
+        </div>
+
+
+        <div>
+
+
+            <h3 class="text-danger mb-3">EXAM 1 Notes</h3>
+
+
+            <!--            Precedence (Order of operators) starts-->
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Precedence (Order of operators)</p>
+                <p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">PRECEDENCE
+                        </th>
+                        <th scope="col">OPERATORS
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Highest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">[] () .</span> ->  ++ −− (used as prefixes) + – (unary), <span class="text-danger fw-bold h5">!</span>,
+                            ˜
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="11" class="align-middle">
+                            <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                            <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                        </th>
+                        <td><span class="text-danger fw-bold h5">* / %</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">+ –</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><< >>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">< > <= >=
+                        </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">== !=</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>^
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>|
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">&&</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">||</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">=</span> *= /= %= += −= <<= >>= &= ^= |=
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Lowest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">++ ––</span> (used as suffixes)
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <!--            Precedence (Order of operators) ends-->
+
+
+
+
+
+
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">collection extension functions</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">collection extension functions</p>
+                <p>
+                <div class="fw-bold">
+                collection extension methods <a target="_blank" href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+<br/>
+                These methods can help you to avoid writing loop to find min, max value, to order and to select, from a collection.
+                <br/>
+                Min()<br/>
+            Max()<br/>
+            MinBy()<br/>
+            MaxBy()<br/>
+            OrderBy() Ascending order<br/>
+                OrderByDescending()<br/>
+            Where()<br/>
+                Select()
+            </div>
+                <pre><code class="language-csharp"></code></pre>
+                </p>
+            </div>
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Language-Integrated Query (LINQ)</div>
+
+            <div id="linq" class="admonition note">
+                <p class="admonition-title">LINQ</p>
+                <p>
+                <div class="fw-bold">Language-Integrated Query (LINQ) <a target="_blank" href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                <br/>
+                </div>
+                <pre><code class="language-csharp">var result = from s in students
+             where s.name == "xinglong3" & s.age == 22
+             orderby s.name descending
+             //select s;
+             select new {n=s.name,};</code></pre>
+                </p>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div id="ef" class="h4 text-danger border-bottom border-danger fw-bold border-2">Entity framework
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Entity framework
+                </p>
+                <p>
+
+
+
+
+                <div class="alert-info alert fw-bold">
+                    <ul>
+                        <li>Left click the project name in Solution Explorer
+                            <img src="../static/img/xml_i.jpg" style="width: 1000px;"/>
+                        </li>
+
+                    </ul>
+                    Add one line<br/>
+
+                    &lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;
+
+                </div>
+
+                <div class="alert-info alert fw-bold">
+                    Enable EF
+                    <ul>
+                        <li>Right click the project name->Manage NuGet Packages…
+                            <img src="../static/img/ef1.png" style="width: 500px;"/>
+                        </li>
+                        <li>Browse-> microsoft.entityframeworkcore->
+
+                            <img src="../static/img/sqlite_pks.jpg" style="width: 800px;"/>
+<!--                            <img src="../static/img/ef2.png" style="width: 500px;"/>-->
+<!--                            <img src="../static/img/ef3.png" style="width: 500px;"/>-->
+                        </li>
+                    </ul>
+                    SQLite packages (Nuget packages):<br/>
+                    Microsoft.EntityFrameworkCore.Design<br/>
+                    Microsoft.EntityFrameworkCore.Tools<br/>
+                    Npgsql.EntityFrameworkCore.PostgreSQL<br/>
+
+                    Package Manager Console<br/>
+                    add-migration initdb -context DBConnect<br/>
+
+                    update-database -context DBConnect
+
+                </div>
+
+                <div class="alert-info alert fw-bold">
+                    Create Databases based on defined classes
+                    <ul>
+
+                        <li>View->Other Windows->Package Manager Console
+
+
+                            <img src="../static/img/ef4.png" style="width: 500px;"/>
+                        </li>
+                    </ul>
+                    Create and update the database
+                    <div class="bg-warning ui-corner-all p-3">
+
+
+
+
+                        add-migration any_valid_NAME -context DBConnect<br/>
+
+                        update-database -context DBConnect
+
+                    </div>
+                </div>
+
+
+
+                <pre><code class="language-csharp">
+
+// define database tables
+namespace eftest
+{
+    public class Student
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]// Auto increment
+        public int Id { get; set; }
+        public string name { get; set; } = "";
+        public int age { get; set; } = 0;
+    }
+}
+
+
+// define database connect class
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace eftest
+{
+    public class MyDBContext:DbContext
+    {
+        public DbSet&#60;Student&#62; Students { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+
+            options.UseSqlite(@"Data Source=Students.db");
+        }
+
+    }
+}
+
+
+                </code></pre>
+
+                <pre><code class="language-csharp">
+// Save to Database
+using MyDBContext _db = new MyDBContext();
+Student stu = new Student() { name = "xinglong Ju", Id = 123, age = 35 };
+_db.Students.Add(stu);
+_db.SaveChanges();
+
+
+// Read from Database
+using MyDBContext _db = new MyDBContext();
+Student[] stus = _db.Students.ToArray&#60;Student&#62;();
+
+// delete
+var r=stuDB.Students.Where(x => x.stuID == 1238).FirstOrDefault();
+_db.Remove(r);
+_db.SaveChanges();
+
+// modify
+var r=stuDB.Students.Where(x => x.stuID == 1238).FirstOrDefault();
+r.weight = 200;
+_db.SaveChanges();
+                </code></pre>
+
+
+
+
+
+
+
+            </div>
+
+
+
+            <!--            Add things here-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

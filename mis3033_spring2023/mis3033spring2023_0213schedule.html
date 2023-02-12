@@ -831,7 +831,7 @@ namespace eftest
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
 
-            options.UseSqlite($"Data Source=Students.db");
+            options.UseSqlite(@"Data Source=Students.db");
         }
 
     }
