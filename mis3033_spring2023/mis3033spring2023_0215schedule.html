@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>February 8 Lecture Schedule MIS 3033: var, anonymous type, collection extension functions</title>
+    <title>February 15 Lecture Schedule MIS 3033: LINQ, entity framework (database operations)</title>
     <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
     <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
@@ -37,7 +37,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            February 8, 2023 Lecture Schedule for MIS 3033
+            February 15, 2023 Lecture Schedule for MIS 3033
         </div>
 
         <div class="border-1 border border-dark rounded-3 mb-3">
@@ -50,9 +50,9 @@
 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
 
                 <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>
-                <li>HW2 due February 10, 2023, 5:00 PM</li>
+<!--                <li>HW2 due February 10, 2023, 5:00 PM</li>-->
                 <li>HW3 due February 20, 2023, 5:00 PM</li>
-                <li><span class="text-danger">Exam 1 February 22, 2023, 1:00 PM to 2:45 PM</span>
+                <li><span class="text-danger">Exam 1 February 22, 2023, 1:30 PM to 2:45 PM</span>
                     <ul>
 <!--                        <li>variables, operators, expressions</li>-->
 <!--                        <li>if else conditional</li>-->
@@ -82,11 +82,12 @@
 
 
 
-                <li>keyword: var</li>
-                <li>anonymous class type (anonymous data type)</li>
-                <li>collection extension functions & LINQ</li>
-                <li>JSON: JavaScript Object Notation</li>
-                <li>Entity framework</li>
+<!--                <li>keyword: var</li>-->
+<!--                <li>anonymous class type (anonymous data type)</li>-->
+<!--                <li>collection extension functions & LINQ</li>-->
+<!--                <li>JSON: JavaScript Object Notation</li>-->
+                <li><a href="#ef">Entity framework (use C# to communicate with Database)</a></li>
+                <li><a href="#linq">Language-Integrated Query (LINQ)</a></li>
 
 
             </ul>
@@ -526,50 +527,7 @@ Console.WriteLine(test.first_name);
 
 
 
-            <div class="mb-3"></div>
 
-            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Pre Code</div>
-
-            <div class="admonition note">
-                <p class="admonition-title">Pre Code</p>
-                <p>
-                <pre><code class="language-csharp">
-public class Student
-{
-    public string name { get; set; }
-    public int age { get; set; }
-    public double weight { get; set; }
-    public double grade { get; set; }
-}
-                </code></pre>
-
-                <pre><code class="language-csharp">
-List&lt;Student&gt; stuList;
-stuList = new List &lt;Student&gt;();
-Student stu;
-
-stu = new Student() { name="aiden",age=19,weight=120.8,grade=90.8};
-stuList.Add(stu);
-
-stu = new Student() { name = "tom", age = 25, weight = 130.8, grade = 69.8 };
-stuList.Add(stu);
-
-stu = new Student() { name = "rose", age = 28, weight = 160.8, grade = 70.8 };
-stuList.Add(stu);
-
-stu = new Student() { name = "emily", age = 18, weight = 110.8, grade = 80.8 };
-stuList.Add(stu);
-
-stu = new Student() { name = "jackie", age = 30, weight = 100.8, grade = 75.8 };
-stuList.Add(stu);
-
-stu = new Student() { name = "masha", age = 23, weight = 180.8, grade = 88.8 };
-stuList.Add(stu);
-
-stu = new Student() { name = "dav", age = 19, weight = 170.8, grade = 92.8 };
-stuList.Add(stu);
-                </code></pre>
-            </div>
 
 
 
@@ -603,7 +561,7 @@ stuList.Add(stu);
 
             <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Language-Integrated Query (LINQ)</div>
 
-            <div class="admonition note">
+            <div id="linq" class="admonition note">
                 <p class="admonition-title">LINQ</p>
                 <p>
                 <div class="fw-bold">Language-Integrated Query (LINQ) <a target="_blank" href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
@@ -711,8 +669,45 @@ List&#60;Student&#62; stu = JsonSerializer.Deserialize&#60;List&#60;Student&#62;
 
 
             <div class="mb-3"></div>
+            <div class="mb-3"></div>
 
-            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Entity framework
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Pre Code</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Pre Code</p>
+                <p>
+                <pre><code class="language-csharp">
+public class Student
+{
+    public string name { get; set; }
+    public int age { get; set; }
+    public double weight { get; set; }
+    public double grade { get; set; }
+}
+                </code></pre>
+
+                <pre><code class="language-csharp">
+
+Student stu;
+
+stu = new Student() { name="aiden",age=19,weight=120.8,grade=90.8};
+
+stu = new Student() { name = "tom", age = 25, weight = 130.8, grade = 69.8 };
+
+stu = new Student() { name = "rose", age = 28, weight = 160.8, grade = 70.8 };
+
+stu = new Student() { name = "emily", age = 18, weight = 110.8, grade = 80.8 };
+
+stu = new Student() { name = "jackie", age = 30, weight = 100.8, grade = 75.8 };
+
+stu = new Student() { name = "masha", age = 23, weight = 180.8, grade = 88.8 };
+
+stu = new Student() { name = "dav", age = 19, weight = 170.8, grade = 92.8 };
+
+                </code></pre>
+            </div>
+
+            <div id="ef" class="h4 text-danger border-bottom border-danger fw-bold border-2">Entity framework
             </div>
 
             <div class="admonition note">
@@ -720,36 +715,67 @@ List&#60;Student&#62; stu = JsonSerializer.Deserialize&#60;List&#60;Student&#62;
                 </p>
                 <p>
                 <div class="fw-bold">
-                Entity framework (EF)
-                <a target="_blank" href=""><span class="bi bi-box-arrow-up-right text-primary"></span></a>
-            <br/>
-            A set of predefined classes to help to connect to and manipulate databases
+                    Entity framework (EF)
+                    <a target="_blank" href="https://www.linkedin.com/learning/introducing-entity-framework/working-with-an-existing-database"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    A set of predefined classes to help to connect to and manipulate databases
 
-                <div class="alert alert-info">
-SQLite is a light-weight database. <a target="_blank" href="https://www.sqlite.org/index.html"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
-                <br/>
-                    SQLiteStudio <a target="_blank" href="https://sqlitestudio.pl/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>  <a class="btn btn-sm btn-primary" href="https://github.com/pawelsalawa/sqlitestudio/releases/download/3.3.3/sqlitestudio-3.3.3.zip" target="_blank"> Download SQLiteStudio</a></div>
+                    <div class="alert alert-info">
+                        SQLite is a light-weight database. <a target="_blank" href="https://www.sqlite.org/index.html"><span class="bi bi-box-arrow-up-right text-primary"></span></a>                <br/>
+                        <br/>
+                        DBeaver Community Version <a target="_blank" href="https://dbeaver.io/download/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>  <a class="btn btn-sm btn-primary" href="https://dbeaver.io/download/" target="_blank"> Download DBeaver</a>
+
+                        <br/>
+                        SQLiteStudio <a target="_blank" href="https://sqlitestudio.pl/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>  <a class="btn btn-sm btn-primary" href="https://sqlitestudio.pl/" target="_blank"> Download SQLiteStudio</a>
 
 
+                        <br/>
+                        DataGrip
+                        <a target="_blank" href="https://www.jetbrains.com/datagrip/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>  <a class="btn btn-sm btn-primary" href="https://www.jetbrains.com/datagrip/download/" target="_blank"> Download DataGrip</a>
 
-            </div>
+                    </div>
 
 
+                </div>
 
 
 
                 <div class="alert-info alert fw-bold">
-                    Enable EF
-                <ul>
-                    <li>Right click the project name->Manage NuGet Packages…
-<img src="../static/img/ef1.png" style="width: 500px;"/>
-                    </li>
-                    <li>Browse-> microsoft.entityframeworkcore->
+                    <ul>
+                        <li>Left click the project name in Solution Explorer
+                            <img src="../static/img/xml_i.jpg" style="width: 1000px;"/>
+                        </li>
 
-                        <img src="../static/img/ef2.png" style="width: 500px;"/>
-                        <img src="../static/img/ef3.png" style="width: 500px;"/>
-                         </li>
-                </ul>
+                    </ul>
+                    Add one line<br/>
+
+                    &lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;
+
+                </div>
+
+                <div class="alert-info alert fw-bold">
+                    Enable EF
+                    <ul>
+                        <li>Right click the project name->Manage NuGet Packages…
+                            <img src="../static/img/ef1.png" style="width: 500px;"/>
+                        </li>
+                        <li>Browse-> microsoft.entityframeworkcore->
+
+                            <img src="../static/img/sqlite_pks.jpg" style="width: 800px;"/>
+<!--                            <img src="../static/img/ef2.png" style="width: 500px;"/>-->
+<!--                            <img src="../static/img/ef3.png" style="width: 500px;"/>-->
+                        </li>
+                    </ul>
+                    SQLite packages (Nuget packages):<br/>
+                    Microsoft.EntityFrameworkCore.Design<br/>
+                    Microsoft.EntityFrameworkCore.Tools<br/>
+                    Npgsql.EntityFrameworkCore.PostgreSQL<br/>
+
+                    Package Manager Console<br/>
+                    add-migration initdb -context DBConnect<br/>
+
+                    update-database -context DBConnect
+
                 </div>
 
                 <pre><code class="language-csharp">
@@ -759,6 +785,8 @@ namespace eftest
 {
     public class Student
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]// Auto increment
         public int Id { get; set; }
         public string name { get; set; } = "";
         public int age { get; set; } = 0;
@@ -792,35 +820,6 @@ namespace eftest
 
                 </code></pre>
 
-
-
-
-                <div class="alert-info alert fw-bold">
-                    Create Databases based on defined classes
-                    <ul>
-
-                        <li>View->Other Windows->Package Manager Console
-
-
-                           <img src="../static/img/ef4.png" style="width: 500px;"/>
-                        </li>
-                    </ul>
-                    Create and update the database
-                    <div class="bg-warning ui-corner-all p-3">
-
-
-                        add-migration any_valid_NAME<br/>
-                        update-database<br/>
-                        &lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;<br/>
-
-
-                        add-migration initdb -context DBConnect<br/>
-
-                        update-database -context DBConnect
-
-                    </div>
-                </div>
-
                 <pre><code class="language-csharp">
 // Save to Database
 using MyDBContext _db = new MyDBContext();
@@ -832,9 +831,171 @@ _db.SaveChanges();
 // Read from Database
 using MyDBContext _db = new MyDBContext();
 Student[] stus = _db.Students.ToArray&#60;Student&#62;();
+
+// delete
+var r=stuDB.Students.Where(x => x.stuID == 1238).FirstOrDefault();
+_db.Remove(r);
+_db.SaveChanges();
+
+// modify
+var r=stuDB.Students.Where(x => x.stuID == 1238).FirstOrDefault();
+r.weight = 200;
+_db.SaveChanges();
                 </code></pre>
 
+
+                <div class="alert-info alert fw-bold">
+                    Different DB provider connections strings
+                    <a target="_blank" href="https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank" href="https://khalidabuhakmeh.com/entity-framework-core-connectionstrings-for-dotnet-apps"><span class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                    <div class="bg-warning ui-corner-all p-3">
+                        SQL Server Database
+                    </div>
+                    <pre><code class="language-csharp">
+//SQL Server Standard Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            .UseSqlServer("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
+}
+
+//SQL Server Connection With Port
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            // change the port number
+            .UseSqlServer("Server=myServerAddress,11433;Database=myDataBase;User Id=myUsername;Password=myPassword;");
+}
+
+//SQL Server LocalDB Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            .UseSqlServer("Server=(localdb)\v11.0;Initial Catalog=myDataBase;Integrated Security=true;");
+}
+
+                </code></pre>
+
+
+
+                    <div class="bg-warning ui-corner-all p-3">
+                        SQLite Data Provider
+                    </div>
+                    <pre><code class="language-csharp">
+// Microsoft.EntityFrameworkCore.Sqlite
+//SQLite Standard Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            .UseSqlite("Data Source=database.db");
+}
+
+//SQLite with Password Protection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            .UseSqlite("Data Source=database.db; Password = securePassword");
+}
+                </code></pre>
+
+
+                    <div class="bg-warning ui-corner-all p-3">
+                        PostgreSQL Data Provider
+                    </div>
+                    <pre><code class="language-csharp">
+// Npgsql.EntityFrameworkCore.PostgreSQL
+// PostgreSQL Standard Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseNpgsql("Host=my_host;Database=my_db;Username=my_user;Password=my_pw");
+}
+
+// PostgreSQL with Port Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseNpgsql("Host=my_host;Database=my_db;Port=5432;Username=my_user;Password=my_pw");
+}
+                </code></pre>
+
+
+                    <div class="bg-warning ui-corner-all p-3">
+                        MySQL Data Provider
+                    </div>
+                    <pre><code class="language-csharp">
+// Pomelo.EntityFrameworkCore.MySQL
+// MySQL Standard Connection
+// The Pomelo data provider supports both MySQL and MariaDB, and this means we need to tell it which database we are using through either MySqlServerVersion or MariaDbServerVersion.
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        var serverVersion = new MySqlServerVersion(new Version(8, 0, 21));
+        optionsBuilder.UseMySql(
+            "Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;",
+            serverVersion
+        );
+    }
+}
+                </code></pre>
+                </div>
+
+
+
+
+
+                <div class="alert-info alert fw-bold">
+                    Create Databases based on defined classes
+                    <ul>
+
+                        <li>View->Other Windows->Package Manager Console
+
+
+                            <img src="../static/img/ef4.png" style="width: 500px;"/>
+                        </li>
+                    </ul>
+                    Create and update the database
+                    <div class="bg-warning ui-corner-all p-3">
+
+
+                        add-migration any_valid_NAME<br/>
+                        update-database
+
+                    </div>
+                </div>
+
+
+                <div class="alert-info alert fw-bold">
+                    Create classes based on existing Databases <a target="_blank" href="https://learn.microsoft.com/en-us/ef/core/cli/powershell"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <ul>
+
+                        <li>View->Other Windows->Package Manager Console
+
+
+                            <img src="../static/img/ef4.png" style="width: 500px;"/>
+                        </li>
+                    </ul>
+                    Generate C# classes
+                    <div class="bg-warning ui-corner-all p-3">
+
+
+                        Scaffold-DbContext "Data Source=J:\Fall2022MIS3033\HW3_Pre\HW3_Pre\HW3_PreStudents.db" Microsoft.EntityFrameworkCore.Sqlite -OutputDir Models  -ContextDir Data -Context StudentDbContext -DataAnnotations
+
+                    </div>
+                </div>
+
+
+
             </div>
+
+
 
             <!--            Add things here-->
         </div>
