@@ -44,7 +44,9 @@
         <div class="border-1 border border-dark rounded-3 mb-3">
             <ul style="font-weight: bold;">
 
-                <li><span class="text-primary h-1 fw-bold">Create a C# console app: MIS3033_Feb20_RegularExpression</span></li>
+                <li><span
+                        class="text-primary h-1 fw-bold">Create a C# console app: MIS3033_Feb20_RegularExpression</span>
+                </li>
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
 
@@ -54,7 +56,7 @@
 
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
 
-<!--                <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>-->
+                <!--                <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>-->
                 <!--                <li>HW2 due February 10, 2023, 5:00 PM</li>-->
                 <li>HW3 due February 20, 2023, 5:00 PM</li>
                 <li><span class="text-danger">Exam 1 February 22, 2023, 1:30 PM to 2:45 PM</span>
@@ -87,8 +89,8 @@
                 <!--                <li>anonymous class type (anonymous data type)</li>-->
                 <!--                <li>collection extension functions & LINQ</li>-->
                 <!--                <li>JSON: JavaScript Object Notation</li>-->
-                <li><a href="#ef">Entity framework (use C# to communicate with Database)</a></li>
-                <li><a href="#linq">Language-Integrated Query (LINQ)</a></li>
+                <!--                <li><a href="#ef">Entity framework (use C# to communicate with Database)</a></li>-->
+                <!--                <li><a href="#linq">Language-Integrated Query (LINQ)</a></li>-->
 
 
             </ul>
@@ -97,7 +99,7 @@
         <div>
 
 
-<!--            <h3 class="text-danger mb-3">EXERCISE 3 Contents Continue</h3>-->
+            <!--            <h3 class="text-danger mb-3">EXERCISE 3 Contents Continue</h3>-->
 
 
             <!--            Precedence (Order of operators) starts-->
@@ -231,11 +233,17 @@
                        href="https://www.c-sharpcorner.com/article/c-sharp-regex-examples/"><span>C# Regex class</span></a>
                     <a target="_blank" class="btn btn-sm btn-success"
                        href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference"><span>Regular Expression Easy Reference</span></a>
-                    <a target="_blank" class="btn btn-sm btn-info" href="https://www.python-engineer.com/posts/regular-expressions/"><span
-                        class="">Regular Expression Notes</span></a>
+                    <a target="_blank" class="btn btn-sm btn-info"
+                       href="https://www.python-engineer.com/posts/regular-expressions/"><span
+                            class="">Regular Expression Notes</span></a>
+
+                    <a target="_blank" class="btn btn-sm btn-warning"
+                       href="https://www.rexegg.com/regex-quickstart.html"><span
+                            class="">Regular Expression Quickstart</span></a>
 
 
-                <a target="_blank" href="https://www.tutorialspoint.com/csharp/csharp_regular_expressions.htm"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank" href="https://www.tutorialspoint.com/csharp/csharp_regular_expressions.htm"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
                     <br/>
                 </div>
                 <div>
@@ -281,44 +289,53 @@
                     </ul>
 
                     <table class="table table-bordered">
-                        <tbody><tr>
+                        <tbody>
+                        <tr>
                             <th style="text-align:center;">Sr.No.</th>
                             <th style="text-align:center;">Methods &amp; Description</th>
                         </tr>
                         <tr>
                             <td class="ts">1</td>
                             <td><p><b>public bool IsMatch(string input)</b></p>
-                                <p>Indicates whether the regular expression specified in the Regex constructor finds a match in a specified input string.</p></td>
+                                <p>Indicates whether the regular expression specified in the Regex constructor finds a
+                                    match in a specified input string.</p></td>
                         </tr>
                         <tr>
                             <td class="ts">2</td>
                             <td><p><b>public bool IsMatch(string input, int startat)</b></p>
-                                <p>Indicates whether the regular expression specified in the Regex constructor finds a match in the specified input string, beginning at the specified starting position in the string.</p>
+                                <p>Indicates whether the regular expression specified in the Regex constructor finds a
+                                    match in the specified input string, beginning at the specified starting position in
+                                    the string.</p>
                             </td>
                         </tr>
                         <tr>
                             <td class="ts">3</td>
                             <td><p><b>public static bool IsMatch(string input, string pattern)</b></p>
-                                <p>Indicates whether the specified regular expression finds a match in the specified input string.</p>
+                                <p>Indicates whether the specified regular expression finds a match in the specified
+                                    input string.</p>
                             </td>
                         </tr>
                         <tr>
                             <td class="ts">4</td>
                             <td><p><b>public MatchCollection Matches(string input)</b></p>
-                                <p>Searches the specified input string for all occurrences of a regular expression.</p></td>
+                                <p>Searches the specified input string for all occurrences of a regular expression.</p>
+                            </td>
                         </tr>
                         <tr>
                             <td class="ts">5</td>
                             <td><p><b>public string Replace(string input, string replacement)</b></p>
-                                <p>In a specified input string, replaces all strings that match a regular expression pattern with a specified replacement string.</p>
+                                <p>In a specified input string, replaces all strings that match a regular expression
+                                    pattern with a specified replacement string.</p>
                             </td>
                         </tr>
                         <tr>
                             <td class="ts">6</td>
                             <td><p><b>public string[] Split(string input)</b></p>
-                                <p>Splits an input string into an array of substrings at the positions defined by a regular expression pattern specified in the Regex constructor.</p></td>
+                                <p>Splits an input string into an array of substrings at the positions defined by a
+                                    regular expression pattern specified in the Regex constructor.</p></td>
                         </tr>
-                        </tbody></table>
+                        </tbody>
+                    </table>
                 </div>
 
 
