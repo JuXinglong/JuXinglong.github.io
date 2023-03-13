@@ -25,6 +25,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"></script>
 
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
 
     <script src="../static/site.js"></script>
     <script>
@@ -576,9 +580,30 @@ console.log('Hello world');
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span
                         class="na">src</span><span class="o">=</span><span class="s">"https://unpkg.com/gridjs/dist/gridjs.umd.js"</span><span
                         class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code>
-                </pre>
+</span></span></code></pre>
+                <button id="tblbtn" class="btn btn-sm btn-danger">Show Table</button>
+                <div id="tbl1"></div>
 
+                <script>
+                    document.querySelector("#tblbtn").addEventListener("click",(e)=>{showTbl();});
+
+                    function showTbl()
+                    {
+                        new gridjs.Grid({
+                            sort: true,
+                            search: true,
+                            columns: ["Name", "Email", "Phone Number"],
+                            data: [
+                                ["John", "john@example.com", "405 222 3333"],
+                                ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
+                            ]
+                        }).render(document.querySelector("#tbl1"));
+                    }
+                </script>
+
+
+
+                <div class="mb-3"></div>
                 <div class="fw-bold">
                     <span class="">animejs
 </span>
