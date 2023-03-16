@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>February 27 Lecture Schedule MIS 3013: function & method</title>
+    <title>March 20 Lecture Schedule MIS 3013: string manipulation</title>
     <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
     <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
@@ -60,7 +60,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            February 27, 2023 Lecture Schedule for MIS 3013
+            March 20, 2023 Lecture Schedule for MIS 3013
         </div>
 
         <!--        table of contents start-->
@@ -70,13 +70,28 @@
 <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
 <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
 <!--                </li>-->
-                <li><span class="text-primary h-1 fw-bold">Create a C# console app: MIS3013_Feb27_functions</span></li>
-                                <li>HW4 due March 7, 2023, 5:00 PM</li>
+                <li><span class="text-primary h-1 fw-bold">Create a C# console app: MIS3013_Mar20_string_manipulation</span></li>
+                <li><span class="text-primary h-1 fw-bold"><a target="_blank" class="btn btn-sm btn-danger" href="../static/file/GetAddress.cs">Download "GetAddress.cs"</a> from canvas. Copy and paste it into the project in Visual Studio Solution Explorer. </span></li>
+                <li><span class="text-primary h-1 fw-bold">Read HW 6 Tasks 1&2&3</span></li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li><span class="text-primary h-1 fw-bold">One handout (3 pages) Exam 2 Practice 1</span></li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <!--                                <li>HW4-Functions due March 7, 2023, 5:00 PM</li>-->
+<!--                                <li>HW5-Functions due March 10, 2023, 5:00 PM</li>-->
+                                <li>HW6-class-string due March 27, 2023, 5:00 PM (Exam 3 contents)</li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                                <li>Exam 2: March 29, 2023, 8:00 AM - 9:15 AM</li>
+                <li>Exam 2 Contents: Functions (HW4&5)</li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li>March 22, Exam 2 Review and Practice 1</li>
+                <li>March 27, Exam 2 Review and Practice 2</li>
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
 
 
-                <li class="list-group-item"><span class="text-danger">EXAM 2 Contents Start</span></li>
+                <li class="list-group-item"><span class="text-danger">EXAM 3 Contents Start</span></li>
 <!--                <li>HW4 due October 7, 2022, 5:00 PM</li>-->
 <!--                <li>Exercise 3 October 19, 2022, Lecture Time-->
 <!--                    <ul>-->
@@ -85,16 +100,25 @@
 <!--                        <li>string manipulation ???</li>-->
 <!--                    </ul>-->
 <!--                </li>-->
-                <li><a href="#funs"> function & method</a></li>
-                <li><a href="#funcprac"> function & method example</a></li>
+<!--                <li><a href="#funs"> function & method</a></li>-->
+<!--                <li><a href="#funcprac"> function & method example</a></li>-->
 
-                <li><a href="#simplevscomplex"> The differences: Simple datatype VS. Complex datatype</a></li>
-                <li><a href="#defineclass"> Use class to define a complex datatype</a></li>
-                <li><a href="#stringmani"> string manipulations</a></li>
+                <li><a href="#simplevscomplex" > The differences: Simple datatype VS. Complex datatype</a></li>
+                <li><a href="#defineclass" > Use class to define a complex datatype</a></li>
+                <li><a href="#stringmani" class="btn btn-sm btn-success"> string manipulations</a></li>
+                <li>Collections
+                <ul>
+                    <li>Array</li>
+                    <li>List</li>
+                    <li>Dictionary</li>
+                </ul>
+                </li>
+                <li>class</li>
             </ul>
 
 
         </div>
+        <img style="width:100%" src="../static/img/getaddress.png"/>
         <!--        table of contents end-->
 
 
@@ -212,107 +236,8 @@
 
 
         <div class="mb-3"></div>
-        <h3 class="text-danger mb-3">EXAM 2 Contents Start</h3>
 
-        <div id="funs" class="h4 text-danger border-bottom border-danger fw-bold border-2">function & method</div>
-
-        <div class="admonition note">
-            <p class="admonition-title">function & method</p>
-            <div>
-                <img src="../static/img/kitchen.jpg" style="height: 300px;"/>
-                <img src="../static/img/pancake.jpg" style="height: 300px;"/>
-                <img src="../static/img/cookmachine.jpg" style="height: 300px;"/>
-            </div>
-            <div class="fw-bold h2 text-danger">
-                Programming language terms:<br/>
-                Encapsulation<br/>Reuse
-            </div>
-            <div>Raise power function practice, two integer parameters, return an integer</div>
-            <p>
-            <pre><code class="language-csharp">Basic syntax to define a function
-//function is self-enclosed. Variables defined inside it are not visible to the outside scope (world).
-// variables can be redefined inside a function
-datatype function_name(datatype1 var1,datatype var2)// (*) are called parameters
-{
-  ……
-return datatype_variable;
-}
-
-void
-
-char GetLetterGrade(double grade)
-{
-char letterGrade=‘G’;
-if(grade>90)
-{
-	letterGrade=‘A’;
-}
-else
-{
-	letterGrade=‘B’;
-}
-return letterGrade;
-}
-
-How to use it?
-function_name(…);
-
-
-char lg1=GetLetterGrade(90.6);
-double grade2=96.9;
-char lg2=GetLetterGrade(grade2);
-Console.Write(GetLetterGrade(70.6));
-</code></pre>
-            </p>
-
-        </div>
-
-
-
-<!--        <div class="mb-3"></div>-->
-
-        <div class="mb-3"></div>
-
-
-        <div id="funcprac" class="h4 text-danger border-bottom border-danger fw-bold border-2">function/method practice</div>
-
-        <div class="admonition note">
-            <p class="admonition-title">function/method practice</p>
-            <p>
-            <div class="fw-bold"></div>
-
-            <ol>
-                <li> Define a function named "<span class="fw-bold">SumOfOddNumbers</span>" to calculate the summation of odd numbers. This function has <span class="fw-bold">two parameters (both are integers)</span>. This function will <span class="fw-bold">return an integer</span>.
-                    <br/>
-                    For example, if the two parameters are 2 and 8, this function will return <span class="fw-bold">15</span>, because the odd number between 2 and 8 are 3, 5 and 7, and \(3+5+7=15\)
-
-                </li>
-
-                <li> Define a function named "<span class="fw-bold">SumOfOddNumbersFormula</span>" to get the formula of the summation of odd numbers. This function has <span class="fw-bold">two parameters (both are integers)</span>. This function will <span class="fw-bold">return a formula string</span>.
-                    <br/>
-                    For example, if the two parameters are 2 and 8, this function will return \(3+5+7\), because the odd number between 2 and 8 are 3, 5 and 7.
-
-                </li>
-
-
-                <li> Define a function named "<span class="fw-bold">ProductOfEvenNumbers</span>" to calculate the product of even numbers. This function has <span class="fw-bold">two parameters (both are integers)</span>. This function will <span class="fw-bold">return an integer</span>.
-                    <br/>
-                    For example, if the two parameters are 2 and 8, this function will return <span class="fw-bold">384</span>, because the even number between 2 and 8 are 2, 4, 6 and 8, and \(2\times4\times6\times8=384\)
-
-                </li>
-
-                <li> Define a function named "<span class="fw-bold">ProductOfEvenNumbersFormula</span>" to get the formula of the product of even numbers. This function has <span class="fw-bold">two parameters (both are integers)</span>. This function will <span class="fw-bold">return a string</span>.
-                    <br/>
-                    For example, if the two parameters are 2 and 8, this function will return <span class="fw-bold text-danger">\(2\times4\times6\times8\)</span>, because the even number between 2 and 8 are 2, 4, 6 and 8.
-
-                </li>
-            </ol>
-
-
-
-            <pre><code class="language-csharp"></code></pre>
-            </p>
-        </div>
+        <h3 class="text-danger mb-3">EXAM 3 Contents Start</h3>
 
         <div id="simplevscomplex" class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables VS. complex
             variables
