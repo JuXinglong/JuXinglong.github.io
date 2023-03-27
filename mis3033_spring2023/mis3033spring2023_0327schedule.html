@@ -421,7 +421,10 @@ console.log('Hello world');
 
 
                 </div>
-                <pre><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- CSS only --&gt;</span>
+                <pre><code class="language-html" data-lang="html">btn btn-sm btn-primary
+alert alert-primary
+badge rounded-pill text-bg-primary
+<span class="line"><span class="cl"><span class="c">&lt;!-- CSS only --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span
                         class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"</span> <span
                         class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
@@ -690,6 +693,30 @@ console.log('Hello world');
             targets: document.querySelector( "#chartdiv" ),
             translateX: 270
         } );
+        anime( {
+                    targets: document.querySelectorAll( "div" ),
+                    translateX: {
+                        value: 200,
+                        duration: 2000,
+                    },
+                    rotate: {
+                        value: 180,
+                        duration: 3000,
+                    },
+                    scale: {
+                        value: 2,
+                        duration: 3000,
+                    },
+                    keyframes: [
+                        { translateY: -40 },
+                        { translateX: 250 },
+                        { translateY: 40 },
+                        { translateX: 0 },
+                        { translateY: 0 }
+                    ],
+                    duration: 4000,
+                    //loop: true,
+                } );
     }
 
     function moveMap ()
