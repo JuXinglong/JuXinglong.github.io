@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>April 3 Lecture Schedule MIS 3033: JavaScript 1</title>
+    <title>April 3 Lecture Schedule MIS 3033: JavaScript 4</title>
     <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
     <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
@@ -47,7 +47,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            March 20, 2023 Lecture Schedule for MIS 3033
+            April 3, 2023 Lecture Schedule for MIS 3033
         </div>
 
         <div class="border-1 border border-dark rounded-3 mb-3">
@@ -55,19 +55,19 @@
                 <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
                 <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
                 <!--                </li>-->
-                <li class="fw-bold text-danger h5">From today, we are using the new classroom: Devon Energy Hall 130
+                <li class="fw-bold text-danger h5">We are using the new classroom: Devon Energy Hall 130
                 </li>
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
 
-                <li>HW4 due March 21, 2023, 5:00 PM</li>
-                <li>HW5 due March 27, 2023, 5:00 PM</li>
-                <li>Exam 2: March 29, 2023, 1:30 PM - 2:45 PM</li>
+<!--                <li>HW4 due March 21, 2023, 5:00 PM</li>-->
+<!--                <li>HW5 due March 27, 2023, 5:00 PM</li>-->
+<!--                <li>Exam 2: March 29, 2023, 1:30 PM - 2:45 PM</li>-->
 
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
 
-                <li class="list-group-item"><span class="text-danger">Exam 3 Contents Start</span></li>
+                <li class="list-group-item"><span class="text-danger">Exam 3 Contents Continue</span></li>
 
                 <li>JavaScript &nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                                         class="btn btn-sm btn-primary">JavaScript Reference</a>&nbsp;<a target="_blank"
@@ -85,12 +85,39 @@
 
 
             </ul>
+            <div>
+            <pre><code class="language-html" data-lang="html">
+&lt;!-- Bootstrap --&gt;
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- charts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+
+&lt;!-- Data table --&gt;
+&lt;link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"&gt;&lt;/script&gt;
+
+&lt;!-- Animation --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- Map --&gt;
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"&gt;&lt;/script&gt;
+            </code></pre>
+            </div>
+        </div>
+
+        <div style="position:fixed;top: 50px;right:10px;display: flex;flex-direction: column;align-items: end;">
+            <a href="#js" style="margin-bottom: 5px;" class="btn btn-sm btn-outline-primary">JavaScript</a>
+            <a href="#bootstrap"  style="margin-bottom: 5px;" class="btn btn-sm btn-outline-danger">Bootstrap</a>
+            <a href="#anime" class="btn btn-sm btn-outline-warning">anime</a>
         </div>
 
         <div>
 
 
-            <h3 class="text-danger mb-3">Exam 3 Contents Start</h3>
+            <h3 class="text-danger mb-3">Exam 3 Contents Continue</h3>
 
 
             <!--            Precedence (Order of operators) starts-->
@@ -219,7 +246,7 @@
                     </ul>
                 </div>
 
-                <pre><code class="language-javascript">'use strict';
+                <pre id="js"><code class="language-javascript">'use strict';
 
 // define a variable
 const age = 10;// constant
@@ -408,7 +435,7 @@ console.log('Hello world');
             <div class="admonition note">
                 <p class="admonition-title">Famous/Polular CSS & JavaScript libraries</p>
                 <p>
-                <div class="fw-bold">
+                <div id="bootstrap" class="fw-bold">
 
 
                     <span class="">Bootstrap (UI library)
@@ -421,7 +448,10 @@ console.log('Hello world');
 
 
                 </div>
-                <pre><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- CSS only --&gt;</span>
+                <pre><code class="language-html" data-lang="html">btn btn-sm btn-primary
+alert alert-primary
+badge rounded-pill text-bg-primary
+<span class="line"><span class="cl"><span class="c">&lt;!-- CSS only --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span
                         class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"</span> <span
                         class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
@@ -538,41 +568,41 @@ console.log('Hello world');
 &lt;/script&gt;
 </code></pre>
 
-<button id="addchart" class="btn btn-sm btn-danger" style="margin-top: 0px;">Show Chart</button>
-<div id="chartdiv" style="width: 300px; height: 250px;">
-    <canvas id="myChart">
-    </canvas>
-</div>
-<script>
-    var mychart = null;
-    document.querySelector("#addchart").addEventListener("click", (e) =>
-    {
-        AddChart();
-    });
-    function AddChart()
-    {
-        const ctx = document.querySelector('#myChart');
-        if (mychart != null)
-        {
-            mychart.destroy();
-        }
-        ca = ctx.getContext('2d');
-        ca.clearRect(0, 0, ctx.width, ctx.height);
-        // ctx.innerHTML="";
-        mychart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1
-                }]
-            },
-            options: {}
-        });
-    }
-</script>
+                <button id="addchart" class="btn btn-sm btn-danger" style="margin-top: 0px;">Show Chart</button>
+                <div id="chartdiv" style="width: 300px; height: 250px;">
+                    <canvas id="myChart">
+                    </canvas>
+                </div>
+                <script>
+                    var mychart = null;
+                    document.querySelector("#addchart").addEventListener("click", (e) =>
+                    {
+                        AddChart();
+                    });
+                    function AddChart()
+                    {
+                        const ctx = document.querySelector('#myChart');
+                        if (mychart != null)
+                        {
+                            mychart.destroy();
+                        }
+                        ca = ctx.getContext('2d');
+                        ca.clearRect(0, 0, ctx.width, ctx.height);
+                        // ctx.innerHTML="";
+                        mychart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                datasets: [{
+                                    label: '# of Votes',
+                                    data: [12, 19, 3, 5, 2, 3],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {}
+                        });
+                    }
+                </script>
 
                 <div class="fw-bold">
                     <span class="">DataTable library
@@ -640,30 +670,30 @@ console.log('Hello world');
 &lt;/script&gt;</code></pre>
 
 
-<button id="tblbtn" class="btn btn-sm btn-danger">Show Table</button>
-<div id="tbl1"></div>
+                <button id="tblbtn" class="btn btn-sm btn-danger">Show Table</button>
+                <div id="tbl1"></div>
 
-<script>
-    document.querySelector("#tblbtn").addEventListener("click",(e)=>{showTbl();});
+                <script>
+                    document.querySelector("#tblbtn").addEventListener("click",(e)=>{showTbl();});
 
-    function showTbl()
-    {
-        new gridjs.Grid({
-            sort: true,
-            search: true,
-            columns: ["Name", "Email", "Phone Number"],
-            data: [
-                ["John", "john@example.com", "405 222 3333"],
-                ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-            ]
-        }).render(document.querySelector("#tbl1"));
-    }
-</script>
+                    function showTbl()
+                    {
+                        new gridjs.Grid({
+                            sort: true,
+                            search: true,
+                            columns: ["Name", "Email", "Phone Number"],
+                            data: [
+                                ["John", "john@example.com", "405 222 3333"],
+                                ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
+                            ]
+                        }).render(document.querySelector("#tbl1"));
+                    }
+                </script>
 
 
 
                 <div class="mb-3"></div>
-                <div class="fw-bold">
+                <div id="anime" class="fw-bold">
                     <span class="">animejs
 </span>
                     <a target="_blank" class="btn btn-sm btn-primary"
@@ -690,6 +720,30 @@ console.log('Hello world');
             targets: document.querySelector( "#chartdiv" ),
             translateX: 270
         } );
+        anime( {
+                    targets: document.querySelectorAll( "div" ),
+                    translateX: {
+                        value: 200,
+                        duration: 2000,
+                    },
+                    rotate: {
+                        value: 180,
+                        duration: 3000,
+                    },
+                    scale: {
+                        value: 2,
+                        duration: 3000,
+                    },
+                    keyframes: [
+                        { translateY: -40 },
+                        { translateX: 250 },
+                        { translateY: 40 },
+                        { translateX: 0 },
+                        { translateY: 0 }
+                    ],
+                    duration: 4000,
+                    //loop: true,
+                } );
     }
 
     function moveMap ()
@@ -702,29 +756,29 @@ console.log('Hello world');
 &lt;/script&gt;
 </code></pre>
 
-<button id="moveChart" class="btn btn-sm btn-danger">Move Chart</button>
-<button id="moveMap" class="btn btn-sm btn-danger" style="margin-left: 10px">Move Map</button>
-<script>
+                <button id="moveChart" class="btn btn-sm btn-danger">Move Chart</button>
+                <button id="moveMap" class="btn btn-sm btn-danger" style="margin-left: 10px">Move Map</button>
+                <script>
 
-    "use strict";
-    document.querySelector("#moveChart").addEventListener("click",(e)=>{move();});
-    document.querySelector("#moveMap").addEventListener("click",(e)=>{moveMap();});
-    function move ()
-    {
-        anime( {
-            targets: document.querySelector( "#chartdiv" ),
-            translateX: 270
-        } );
-    }
+                    "use strict";
+                    document.querySelector("#moveChart").addEventListener("click",(e)=>{move();});
+                    document.querySelector("#moveMap").addEventListener("click",(e)=>{moveMap();});
+                    function move ()
+                    {
+                        anime( {
+                            targets: document.querySelector( "#chartdiv" ),
+                            translateX: 270
+                        } );
+                    }
 
-    function moveMap ()
-    {
-        anime( {
-            targets: document.querySelector( "#mapdiv" ),
-            translateX: 270
-        } );
-    }
-</script>
+                    function moveMap ()
+                    {
+                        anime( {
+                            targets: document.querySelector( "#mapdiv" ),
+                            translateX: 270
+                        } );
+                    }
+                </script>
 
                 <div class="fw-bold">
                     <span class="">leafletjs map library
@@ -753,34 +807,34 @@ console.log('Hello world');
     document.querySelector("#showmap").addEventListener("click",(e)=&gt;{drawmap();});
     function drawmap()
     {
-        map = L.map( 'mapdiv', { attributionControl: false, } ).setView( [ 35.33443889141701, -97.07270547900498 ], 12 );
+        let map = L.map( 'mapdiv', { attributionControl: false, } ).setView( [ 35.33443889141701, -97.07270547900498 ], 12 );
         L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: ''
         } ).addTo( map );
 
-        marker = L.marker( [ 35.33443889141701, -97.07270547900498 ] ).addTo( map );
+        let marker = L.marker( [ 35.33443889141701, -97.07270547900498 ] ).addTo( map );
         marker.bindPopup( "&lt;b&gt;This is a lake&lt;/b&gt;&lt;br&gt;I work very hard!" ).openPopup();
     }
 &lt;/script&gt;</code></pre>
 
-<button id="showmap" class="btn btn-sm btn-danger">Show Map</button>
+                <button id="showmap" class="btn btn-sm btn-danger">Show Map</button>
 
-<div style="height: 100px;width: 200px" id="mapdiv"></div>
-<script>
-    document.querySelector("#showmap").addEventListener("click",(e)=>{drawmap();});
-    function drawmap()
-    {
-        map = L.map( 'mapdiv', { attributionControl: false, } ).setView( [ 35.33443889141701, -97.07270547900498 ], 12 );
-        L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: ''
-        } ).addTo( map );
+                <div style="height: 100px;width: 200px" id="mapdiv"></div>
+                <script>
+                    document.querySelector("#showmap").addEventListener("click",(e)=>{drawmap();});
+                    function drawmap()
+                    {
+                        let map = L.map( 'mapdiv', { attributionControl: false, } ).setView( [ 35.33443889141701, -97.07270547900498 ], 12 );
+                        L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 19,
+                            attribution: ''
+                        } ).addTo( map );
 
-        marker = L.marker( [ 35.33443889141701, -97.07270547900498 ] ).addTo( map );
-        marker.bindPopup( "<b>This is a lake</b><br>I work very hard!" ).openPopup();
-    }
-</script>
+                        let marker = L.marker( [ 35.33443889141701, -97.07270547900498 ] ).addTo( map );
+                        marker.bindPopup( "<b>This is a lake</b><br>I work very hard!" ).openPopup();
+                    }
+                </script>
 
                 <!--                <pre><code class="code"></code>-->
                 <!--                </pre>-->
