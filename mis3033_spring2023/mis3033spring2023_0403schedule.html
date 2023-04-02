@@ -35,7 +35,14 @@
         function initPro()
         {
             hljs.highlightAll();
+            let floatpanel = document.querySelector("#floatpanel");
+            anime({
+                targets: floatpanel,
+                scale: {
+                    value: 0.5,
+                }
 
+            });
 
         }
 
@@ -108,10 +115,59 @@
             </div>
         </div>
 
-        <div style="position:fixed;top: 50px;right:10px;display: flex;flex-direction: column;align-items: end;">
-            <a href="#js" style="margin-bottom: 5px;" class="btn btn-sm btn-outline-primary">JavaScript</a>
-            <a href="#bootstrap" style="margin-bottom: 5px;" class="btn btn-sm btn-outline-danger">Bootstrap</a>
-            <a href="#anime" class="btn btn-sm btn-outline-warning">anime</a>
+        <div id="floatpanel"
+             style="position:fixed;top: 50px;right:10px;display: flex;flex-direction: column;align-items: end;">
+            <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
+            </button>
+            <script>
+                {
+                    "use strict";
+                    var m = 1;
+                    let foldbtn = document.querySelector("#foldbtn");
+                    foldbtn.addEventListener("click", (e) =>
+                    {
+                        let floatmenu = document.querySelector("#floatmenu");
+                        anime({
+                            targets: floatmenu,
+                            scale: {
+                                value: 0.0,
+                            }
+                        });
+                        //floatmenu.style.display = "none";
+                        let expandbtn = document.querySelector("#expandbtn");
+                        expandbtn.style.display = "block";
+                        foldbtn.style.display = "none";
+                    });
+                }
+            </script>
+            <button id="expandbtn" class="btn btn-sm btn-outline-secondary" style="display: none;"><i
+                    class="bi bi-chevron-double-down"></i></button>
+            <script>
+                {
+                    "use strict";
+                    let expandbtn = document.querySelector("#expandbtn");
+
+                    expandbtn.addEventListener("click", (e) =>
+                    {
+                        let floatmenu = document.querySelector("#floatmenu");
+                        anime({
+                            targets: floatmenu,
+                            scale: {
+                                value: 1.0,
+                            }
+                        });
+                        //floatmenu.style.display = "block";
+                        let foldbtn = document.querySelector("#foldbtn");
+                        foldbtn.style.display = "block";
+                        expandbtn.style.display = "none";
+                    });
+                }
+            </script>
+            <div id="floatmenu" style="display: flex;flex-direction: column;">
+                <a href="#js" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-primary">JavaScript</a>
+                <a href="#bootstrap" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-danger">Bootstrap</a>
+                <a href="#anime" class="btn btn-sm btn-outline-warning">anime</a>
+            </div>
         </div>
 
         <div>
@@ -867,9 +923,6 @@ badge rounded-pill text-bg-primary
 
             <!--                <pre><code class="code"></code>-->
             <!--                </pre>-->
-
-
-
 
 
         </div>
