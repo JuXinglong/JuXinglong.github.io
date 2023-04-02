@@ -20,18 +20,34 @@
     <script src="../static/jquery-ui.min.js"></script>
     <script src="../static/highlight/highlight.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"></script>
+
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
     <script src="../static/site.js"></script>
     <script>
         function initPro()
         {
             hljs.highlightAll();
-            var i;
-            var n_review_ques = 0;
-            for (i = 1; i <= n_review_ques; i++)
-            {
-                $("#q" + i + "btn").click({i: i}, questionBtnClicked);
-            }
+            let floatpanel=document.querySelector("#floatpanel");
+            anime({
+                targets: floatpanel,
+                scale: {
+                    value: 0.5,}
+
+            });
+            // var i;
+            // var n_review_ques = 0;
+            // for (i = 1; i <= n_review_ques; i++)
+            // {
+            //     $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            // }
 
         }
 
@@ -67,70 +83,116 @@
         <div id="top" class="border-1 border border-dark rounded-3 mb-3">
             <ul style="font-weight: bold;">
 
-<!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
-<!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
-<!--                </li>-->
+                <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
+                <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
+                <!--                </li>-->
                 <li><span class="text-primary h-1 fw-bold">Create a C# console app: MIS3013_Apr05_array</span></li>
-                <li><span class="text-primary h-1 fw-bold"><a target="_blank" class="btn btn-sm btn-danger" href="../static/file/GetAddress.cs">Download "GetAddress.cs"</a> from canvas. Copy and paste it into the project in Visual Studio Solution Explorer. </span></li>
-<!--                <li><span class="text-primary h-1 fw-bold">Read HW 6 Tasks 1&2&3</span></li>-->
+                <li><span class="text-primary h-1 fw-bold"><a target="_blank" class="btn btn-sm btn-danger"
+                                                              href="../static/file/GetAddress.cs">Download "GetAddress.cs"</a> from canvas. Copy and paste it into the project in Visual Studio Solution Explorer. </span>
+                </li>
+                <!--                <li><span class="text-primary h-1 fw-bold">Read HW 6 Tasks 1&2&3</span></li>-->
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
-<!--                <li><span class="text-primary h-1 fw-bold">One handout (3 pages) Exam 2 Practice 1</span></li>-->
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li><span class="text-primary h-1 fw-bold">One handout (3 pages) Exam 2 Practice 1</span></li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
                 <!--                                <li>HW4-Functions due March 7, 2023, 5:00 PM</li>-->
-<!--                                <li>HW5-Functions due March 10, 2023, 5:00 PM</li>-->
-<!--                                <li>HW6-class-string due March 27, 2023, 5:00 PM (Exam 3 contents)</li>-->
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-<!--                                <li>Exam 2: March 29, 2023, 8:00 AM - 9:15 AM</li>-->
-<!--                <li>Exam 2 Contents: Functions (HW4&5)</li>-->
+                <!--                                <li>HW5-Functions due March 10, 2023, 5:00 PM</li>-->
+                <!--                                <li>HW6-class-string due March 27, 2023, 5:00 PM (Exam 3 contents)</li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                                <li>Exam 2: March 29, 2023, 8:00 AM - 9:15 AM</li>-->
+                <!--                <li>Exam 2 Contents: Functions (HW4&5)</li>-->
 
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-<!--                <li>March 22, Exam 2 Review and Practice 1</li>-->
-<!--                <li>March 27, Exam 2 Review and Practice 2</li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li>March 22, Exam 2 Review and Practice 1</li>-->
+                <!--                <li>March 27, Exam 2 Review and Practice 2</li>-->
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
 
 
                 <li class="list-group-item"><span class="text-danger">EXAM 3 Contents Continue</span></li>
-<!--                <li>HW4 due October 7, 2022, 5:00 PM</li>-->
-<!--                <li>Exercise 3 October 19, 2022, Lecture Time-->
-<!--                    <ul>-->
-<!--                        <li>function/method</li>-->
-<!--                        <li>use class to define a complex datatype</li>-->
-<!--                        <li>string manipulation ???</li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-<!--                <li><a href="#funs"> function & method</a></li>-->
-<!--                <li><a href="#funcprac"> function & method example</a></li>-->
+                <!--                <li>HW4 due October 7, 2022, 5:00 PM</li>-->
+                <!--                <li>Exercise 3 October 19, 2022, Lecture Time-->
+                <!--                    <ul>-->
+                <!--                        <li>function/method</li>-->
+                <!--                        <li>use class to define a complex datatype</li>-->
+                <!--                        <li>string manipulation ???</li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+                <!--                <li><a href="#funs"> function & method</a></li>-->
+                <!--                <li><a href="#funcprac"> function & method example</a></li>-->
 
-                <li><a href="#simplevscomplex" > The differences: Simple datatype VS. Complex datatype</a></li>
-                <li><a href="#defineclass" > Use class to define a complex datatype</a></li>
+                <li><a href="#simplevscomplex"> The differences: Simple datatype VS. Complex datatype</a></li>
+                <li><a href="#defineclass"> Use class to define a complex datatype</a></li>
                 <li><a href="#stringmani" class=""> string manipulations</a></li>
-                <li ><a href="#collections" class="btn btn-sm btn-primary">Collections</a>
-                <ul>
-                    <li><a href="#array" class="btn btn-sm btn-warning">Array</a></li>
-                    <li ><a href="#list" class="btn btn-sm btn-danger">List</a></li>
-                    <li ><a href="#dictionary" class="btn btn-sm btn-info">Dictionary</a></li>
-                </ul>
+                <li><a href="#collections" class="btn btn-sm btn-primary">Collections</a>
+                    <ul>
+                        <li><a href="#array" class="btn btn-sm btn-warning">Array</a></li>
+                        <li><a href="#list" class="btn btn-sm btn-danger">List</a></li>
+                        <li><a href="#dictionary" class="btn btn-sm btn-info">Dictionary</a></li>
+                    </ul>
                 </li>
                 <li>class</li>
             </ul>
 
 
-            <div style="position: fixed;right:0px;top:50px;display: flex;flex-direction: column;align-items: end;justify-content: start;">
-                <a href="#top" style="margin: 5px;"  class="btn btn-sm btn-outline-dark">Go to Top</a>
-                <a href="#collections" style="margin: 5px;"  class="btn  btn-sm btn-outline-primary">Collections</a>
-                <a href="#array" style=""  class="btn btn-sm btn-outline-warning">Array</a>
-<!--                <a href="#list" style=""  class="btn btn-sm btn-outline-danger">List</a><br/>-->
-<!--                <a href="#dictionary" style="width: 100px;"  class="btn btn-sm btn-outline-info">Dictionary</a>-->
+            <div id="floatpanel"
+                 style="position: fixed;right:0px;top:50px;display: flex;flex-direction: column;align-items: end;justify-content: start;">
+                <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
+                </button>
+                <script>
+                    {
+                        "use strict";
+                        var m=1;
+                        let foldbtn = document.querySelector("#foldbtn");
+                        foldbtn.addEventListener("click", (e) =>
+                        {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 0.0,}
+                            });
+                            //floatmenu.style.display = "none";
+                            let expandbtn = document.querySelector("#expandbtn");
+                            expandbtn.style.display = "block";
+                            foldbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <button id="expandbtn" class="btn btn-sm btn-outline-secondary" style="display: none;"><i
+                        class="bi bi-chevron-double-down"></i></button>
+                <script>
+                    {
+                        "use strict";
+                        let expandbtn = document.querySelector("#expandbtn");
+
+                        expandbtn.addEventListener("click", (e) =>
+                        {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 1.0,}
+                            });
+                            //floatmenu.style.display = "block";
+                            let foldbtn = document.querySelector("#foldbtn");
+                            foldbtn.style.display = "block";
+                            expandbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <div id="floatmenu" style="display: flex;flex-direction: column;">
+                    <a href="#top" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-dark">Go to Top</a>
+                    <a href="#collections" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-primary">Collections</a>
+                    <a href="#array" style="" class="btn btn-sm btn-outline-warning">Array</a>
+                </div>
+                <!--                <a href="#list" style=""  class="btn btn-sm btn-outline-danger">List</a><br/>-->
+                <!--                <a href="#dictionary" style="width: 100px;"  class="btn btn-sm btn-outline-info">Dictionary</a>-->
             </div>
 
         </div>
         <img style="width:100%" src="../static/img/getaddress.png"/>
         <!--        table of contents end-->
-
-
-
 
 
         <div class="mb-3"></div>
@@ -156,7 +218,8 @@
                 <tr>
                     <th scope="row">Highest
                     </th>
-                    <td><span class="text-danger fw-bold h4">[] () .</span> ->  ++ −− (used as prefixes) + – (unary), <span class="text-danger fw-bold h5">!</span>,
+                    <td><span class="text-danger fw-bold h4">[] () .</span> -> ++ −− (used as prefixes) + – (unary),
+                        <span class="text-danger fw-bold h5">!</span>,
                         ˜
                     </td>
                 </tr>
@@ -247,10 +310,10 @@
 
         <h3 class="text-danger mb-3">EXAM 3 Contents Continue</h3>
 
-        <div id="simplevscomplex" class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables VS. complex
+        <div id="simplevscomplex" class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables
+            VS. complex
             variables
         </div>
-
 
 
         <div class="admonition note">
@@ -311,9 +374,9 @@ Room number 103 is copied to card name1.
         </div>
 
 
-
         <div class="mb-3"></div>
-        <div id="defineclass" class="h4 text-danger border-bottom border-danger fw-bold border-2">Use class to define a complex datatype
+        <div id="defineclass" class="h4 text-danger border-bottom border-danger fw-bold border-2">Use class to define a
+            complex datatype
         </div>
 
         <div class="admonition note">
@@ -405,7 +468,8 @@ class Student
 
 
         <div class="mb-3"></div>
-        <div id="stringmani" class="h4 text-danger border-bottom border-danger fw-bold border-2">string manipulation</div>
+        <div id="stringmani" class="h4 text-danger border-bottom border-danger fw-bold border-2">string manipulation
+        </div>
         <div class="admonition note">
             <p class="admonition-title">string (String): a complex datatype</p>
             <p>
@@ -467,11 +531,15 @@ Contains()
                         <td>!</td>
                         <td>Exclamation point</td>
                         <td>33</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>A</td>
                         <td>Uppercase a</td>
                         <td>65</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>a</td>
                         <td>Lowercase a</td>
                         <td>97</td>
@@ -480,11 +548,15 @@ Contains()
                         <td>“</td>
                         <td>Double quotation</td>
                         <td>34</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>B</td>
                         <td>Uppercase b</td>
                         <td>66</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>b</td>
                         <td>Lowercase b</td>
                         <td>98</td>
@@ -493,11 +565,15 @@ Contains()
                         <td>#</td>
                         <td>Number sign</td>
                         <td>35</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>C</td>
                         <td>Uppercase c</td>
                         <td>67</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>c</td>
                         <td>Lowercase c</td>
                         <td>99</td>
@@ -506,11 +582,15 @@ Contains()
                         <td>$</td>
                         <td>Dollar sign</td>
                         <td>36</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>D</td>
                         <td>Uppercase d</td>
                         <td>68</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>d</td>
                         <td>Lowercase d</td>
                         <td>100</td>
@@ -519,11 +599,15 @@ Contains()
                         <td>%</td>
                         <td>Percent sign</td>
                         <td>37</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>E</td>
                         <td>Uppercase e</td>
                         <td>69</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>e</td>
                         <td>Lowercase e</td>
                         <td>101</td>
@@ -532,11 +616,15 @@ Contains()
                         <td>&amp;</td>
                         <td>ampersand</td>
                         <td>38</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>F</td>
                         <td>Uppercase f</td>
                         <td>70</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>f</td>
                         <td>Lowercase f</td>
                         <td>102</td>
@@ -545,11 +633,15 @@ Contains()
                         <td>‘</td>
                         <td>apostrophe</td>
                         <td>39</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>G</td>
                         <td>Uppercase g</td>
                         <td>71</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>g</td>
                         <td>Lowercase g</td>
                         <td>103</td>
@@ -558,11 +650,15 @@ Contains()
                         <td>(</td>
                         <td>Left parenthesis</td>
                         <td>40</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>H</td>
                         <td>Uppercase h</td>
                         <td>72</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>h</td>
                         <td>Lowercase h</td>
                         <td>104</td>
@@ -571,11 +667,15 @@ Contains()
                         <td>)</td>
                         <td>Right parenthesis</td>
                         <td>41</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>I</td>
                         <td>Uppercase i</td>
                         <td>73</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>i</td>
                         <td>Lowercase i</td>
                         <td>105</td>
@@ -584,11 +684,15 @@ Contains()
                         <td>*</td>
                         <td>asterisk</td>
                         <td>42</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>J</td>
                         <td>Uppercase j</td>
                         <td>74</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>j</td>
                         <td>Lowercase j</td>
                         <td>106</td>
@@ -597,11 +701,15 @@ Contains()
                         <td>+</td>
                         <td>Plus sign</td>
                         <td>43</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>K</td>
                         <td>Uppercase k</td>
                         <td>75</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>k</td>
                         <td>Lowercase k</td>
                         <td>107</td>
@@ -610,11 +718,15 @@ Contains()
                         <td>,</td>
                         <td>comma</td>
                         <td>44</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>L</td>
                         <td>Uppercase l</td>
                         <td>76</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>l</td>
                         <td>Lowercase l</td>
                         <td>108</td>
@@ -623,11 +735,15 @@ Contains()
                         <td>–</td>
                         <td>hyphen</td>
                         <td>45</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>M</td>
                         <td>Uppercase m</td>
                         <td>77</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>m</td>
                         <td>Lowercase m</td>
                         <td>109</td>
@@ -636,11 +752,15 @@ Contains()
                         <td>.</td>
                         <td>period</td>
                         <td>46</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>N</td>
                         <td>Uppercase n</td>
                         <td>78</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>n</td>
                         <td>Lowercase n</td>
                         <td>110</td>
@@ -649,11 +769,15 @@ Contains()
                         <td>/</td>
                         <td>slash</td>
                         <td>47</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>O</td>
                         <td>Uppercase o</td>
                         <td>79</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>o</td>
                         <td>Lowercase o</td>
                         <td>111</td>
@@ -662,11 +786,15 @@ Contains()
                         <td>0</td>
                         <td>zero</td>
                         <td>48</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>P</td>
                         <td>Uppercase p</td>
                         <td>80</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>p</td>
                         <td>Lowercase p</td>
                         <td>112</td>
@@ -675,11 +803,15 @@ Contains()
                         <td>1</td>
                         <td>one</td>
                         <td>49</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>Q</td>
                         <td>Uppercase q</td>
                         <td>81</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>q</td>
                         <td>Lowercase q</td>
                         <td>113</td>
@@ -688,11 +820,15 @@ Contains()
                         <td>2</td>
                         <td>two</td>
                         <td>50</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>R</td>
                         <td>Uppercase r</td>
                         <td>82</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>r</td>
                         <td>Lowercase r</td>
                         <td>114</td>
@@ -701,11 +837,15 @@ Contains()
                         <td>3</td>
                         <td>three</td>
                         <td>51</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>S</td>
                         <td>uppercases</td>
                         <td>83</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>s</td>
                         <td>Lowercase s</td>
                         <td>115</td>
@@ -714,11 +854,15 @@ Contains()
                         <td>4</td>
                         <td>four</td>
                         <td>52</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>T</td>
                         <td>Uppercase t</td>
                         <td>84</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>t</td>
                         <td>Lowercase t</td>
                         <td>116</td>
@@ -727,11 +871,15 @@ Contains()
                         <td>5</td>
                         <td>five</td>
                         <td>53</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>U</td>
                         <td>Uppercase u</td>
                         <td>85</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>u</td>
                         <td>Lowercase u</td>
                         <td>117</td>
@@ -740,11 +888,15 @@ Contains()
                         <td>6</td>
                         <td>six</td>
                         <td>54</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>V</td>
                         <td>Uppercase v</td>
                         <td>86</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>v</td>
                         <td>Lowercase v</td>
                         <td>118</td>
@@ -753,11 +905,15 @@ Contains()
                         <td>7</td>
                         <td>seven</td>
                         <td>55</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>W</td>
                         <td>Uppercase w</td>
                         <td>87</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>w</td>
                         <td>Lowercase w</td>
                         <td>119</td>
@@ -766,11 +922,15 @@ Contains()
                         <td>8</td>
                         <td>eight</td>
                         <td>56</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>X</td>
                         <td>Uppercase x</td>
                         <td>88</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>x</td>
                         <td>Lowercase x</td>
                         <td>120</td>
@@ -779,11 +939,15 @@ Contains()
                         <td>9</td>
                         <td>nine</td>
                         <td>57</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>Y</td>
                         <td>Uppercase y</td>
                         <td>89</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>y</td>
                         <td>Lowercase y</td>
                         <td>121</td>
@@ -792,11 +956,15 @@ Contains()
                         <td>:</td>
                         <td>colon</td>
                         <td>58</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>Z</td>
                         <td>Uppercase z</td>
                         <td>90</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>z</td>
                         <td>Lowercase z</td>
                         <td>122</td>
@@ -805,11 +973,15 @@ Contains()
                         <td>;</td>
                         <td>semi-colon</td>
                         <td>59</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>[</td>
                         <td>Left square bracket</td>
                         <td>91</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>{</td>
                         <td>Left curly brace</td>
                         <td>123</td>
@@ -818,11 +990,15 @@ Contains()
                         <td>&lt;</td>
                         <td>Less-than sign</td>
                         <td>60</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>\</td>
                         <td>backslash</td>
                         <td>92</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>|</td>
                         <td>Vertical bar</td>
                         <td>124</td>
@@ -831,11 +1007,15 @@ Contains()
                         <td>=</td>
                         <td>Equals sign</td>
                         <td>61</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>]</td>
                         <td>Right square bracket</td>
                         <td>93</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>}</td>
                         <td>Right curly brace</td>
                         <td>125</td>
@@ -844,11 +1024,15 @@ Contains()
                         <td>&gt;</td>
                         <td>Greater-than sign</td>
                         <td>62</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>^</td>
                         <td>caret</td>
                         <td>94</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>~</td>
                         <td>tilde</td>
                         <td>126</td>
@@ -857,27 +1041,47 @@ Contains()
                         <td>?</td>
                         <td>Question mark</td>
                         <td>63</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>_</td>
                         <td>underscore</td>
                         <td>95</td>
-                        <td><div class="">&nbsp;</div></td>
-                        <td><div class="">&nbsp;</div></td>
-                        <td><div class="">&nbsp;</div></td>
-                        <td><div class="">&nbsp;</div></td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
                     </tr>
                     <tr>
                         <td>@</td>
                         <td>At sign</td>
                         <td>64</td>
-                        <td><div class="bg-success">&nbsp;</div></td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
                         <td>`</td>
                         <td>Grave accent</td>
                         <td>96</td>
-                        <td><div class="">&nbsp;</div></td>
-                        <td><div class="">&nbsp;</div></td>
-                        <td><div class="">&nbsp;</div></td>
-                        <td><div class="">&nbsp;</div></td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -891,8 +1095,6 @@ Contains()
         <div class="mb-3"></div>
 
         <div id="collections" class="h4 text-danger border-bottom border-danger fw-bold border-2">Collections</div>
-
-
 
 
         <div class="admonition note">
@@ -912,7 +1114,8 @@ Contains()
             <div class="fw-bold">Collections: array, list, dictionary
                 <br/>
                 double[] stuGrades;<br/>
-                stuGrades=new double[29];</div>
+                stuGrades=new double[29];
+            </div>
 
             <div>
 
@@ -922,19 +1125,14 @@ Contains()
         </div>
 
 
-
-
-
-
-
-
-
-
-
         <div id="array" class="admonition note">
             <p class="admonition-title">Array</p>
             <p>
-            <div class="fw-bold">Array <a target="_blank" href="https://www.c-sharpcorner.com/article/working-with-arrays-in-C-Sharp/"><span class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div class="fw-bold">Array <a target="_blank"
+                                          href="https://www.c-sharpcorner.com/article/working-with-arrays-in-C-Sharp/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                 href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
             <pre><code class="language-csharp">Array (Fixed size, N)
 datatype[] arrayName;
 arrayName=new datatype[N]; // create 10 room cards
@@ -948,7 +1146,10 @@ seatMatrix[0,0]
 </code></pre>
             </p>
             <span class="fw-bold">In-class practice</span><br/>
-            1. Create arrays, one will have the course subject (e.g. MIS, MATH, etc.), one will hold course numbers (e.g. 3033, 3013, etc.) and the third one will host the grades.  Ask the user to input 3 for each, store them in the array.  Then use a different loop to output the results to the user concatenated together (e.g. MIS3033, MATH3013) and print out the grade level.
+            1. Create arrays, one will have the course subject (e.g. MIS, MATH, etc.), one will hold course numbers
+            (e.g. 3033, 3013, etc.) and the third one will host the grades. Ask the user to input 3 for each, store them
+            in the array. Then use a different loop to output the results to the user concatenated together (e.g.
+            MIS3033, MATH3013) and print out the grade level.
 
             <pre><code class="language-csharp">Grade	            Level
 Grade>=80	    Level 1
@@ -956,14 +1157,18 @@ Grade>=80	    Level 1
 60>Grade	    Level 3
 
 </code></pre>
-            2. Ask the user to enter all of their exam grades. There are 10 grades.  Once they are done, calculate the minimum score, the maximum score and the average score for all of their scores.  Perform this using at least 2 Loops (can be the same type of loop) and not any built-in functions.
+            2. Ask the user to enter all of their exam grades. There are 10 grades. Once they are done, calculate the
+            minimum score, the maximum score and the average score for all of their scores. Perform this using at least
+            2 Loops (can be the same type of loop) and not any built-in functions.
 
         </div>
 
         <div id="list" class="admonition note">
             <p class="admonition-title">List</p>
             <p>
-            <div class="fw-bold">List <a target="_blank" href="https://www.c-sharpcorner.com/article/c-sharp-list/"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div class="fw-bold">List <a target="_blank"
+                                         href="https://www.c-sharpcorner.com/article/c-sharp-list/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
             <pre><code class="language-csharp">List (Flexible size)
 List&#60;datatype&#62; listName;
 listName=new List&#60;datatype&#62;();// 0 null empty
@@ -982,8 +1187,11 @@ gradesList[0]// grades.Count
             grade: double<br/>
             2. Keep prompting the user if they have another student's information to enter until they say 'no'.
             Ask the user to enter all of students' information, ID, name and grade.<br/>
-            3. Once they are done, calculate the minimum score, the maximum score and the average score for all of their scores. Perform this using at least 2 Loops (can be the same type of loop) and not any built in functions.<br/>
-            4. Output the list in the normal order. Output the list in the reverse order. Output every other entry in the list (ex: 1, 3)
+            3. Once they are done, calculate the minimum score, the maximum score and the average score for all of their
+            scores. Perform this using at least 2 Loops (can be the same type of loop) and not any built in
+            functions.<br/>
+            4. Output the list in the normal order. Output the list in the reverse order. Output every other entry in
+            the list (ex: 1, 3)
 
             </p>
         </div>
@@ -992,7 +1200,9 @@ gradesList[0]// grades.Count
         <div id="dictionary" class="admonition note">
             <p class="admonition-title">Dictionary</p>
             <p>
-            <div class="fw-bold">Dictionary <a target="_blank" href="https://www.c-sharpcorner.com/UploadFile/mahesh/dictionary-in-C-Sharp/"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div class="fw-bold">Dictionary <a target="_blank"
+                                               href="https://www.c-sharpcorner.com/UploadFile/mahesh/dictionary-in-C-Sharp/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
             <pre><code class="language-csharp">Dictionary (Flexible size)
 Dictionary&#60;TKey, TValue&#62; dict;
 dict=new Dictionary&#60;TKey, TValue&#62;();
@@ -1032,14 +1242,17 @@ foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
             name: string<br/>
             grade: double<br/>
 
-            2. Keep prompting the user if the user has another student's information to enter until the user types in 'no'.
+            2. Keep prompting the user if the user has another student's information to enter until the user types in
+            'no'.
             Ask the user to enter all of students' information, ID, name and grade.<br/>
 
             3. Then your application should output all of the students' names.<br/>
 
-            4. Ask the user whose information the user would like to see (ask for the ID not the name), and output the name and the grade for that student.<br/>
+            4. Ask the user whose information the user would like to see (ask for the ID not the name), and output the
+            name and the grade for that student.<br/>
 
-            5. Calculate the minimum score, the maximum score and the average score for all of the students’ scores. Perform this using at least 2 Loops (can be the same type of loop) and not any built-in functions.<br/>
+            5. Calculate the minimum score, the maximum score and the average score for all of the students’ scores.
+            Perform this using at least 2 Loops (can be the same type of loop) and not any built-in functions.<br/>
 
             </p>
         </div>
