@@ -71,6 +71,29 @@
 
         $(document).ready(initPro);
     </script>
+
+
+    <style>
+        .eleDiv
+        {
+            width:30px;
+            height: 30px;
+            border: 1px solid black;
+            background-color: dodgerblue;
+        }
+
+        .indDiv
+        {
+            display: flex;
+            flex-direction: row;
+            width:30px;
+            height: 30px;
+
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
 </head>
 <body>
 <div class="container-md">
@@ -1145,6 +1168,41 @@ int[,] seatMatrix=new int[3,4];
 seatMatrix[0,0]
 </code></pre>
             </p>
+            <div class="m-bd-callout m-bd-callout-danger">
+                <div>
+                    <button id="createArrBtn" class="btn btn-sm btn-primary">Create int[10]</button>
+                </div>
+                <div>
+                    <div id="arrdivs" style="display: flex;"></div>
+                    <div id="arrinds"></div>
+                </div>
+                <script>
+                    {
+                        "use strict;"
+
+                        function createArrBtnClicked(e)
+                        {
+                            let arrdiv=document.querySelector("#arrdivs");
+                            let n=10;
+                            for(let i=0;i<n;i++)
+                            {
+                                let newdiv=document.createElement("div");
+                                newdiv.classList.add("eleDiv");
+                                arrdiv.append(newdiv);
+                            }
+                        }
+
+                        let createArrBtn=document.querySelector("#createArrBtn");
+                        createArrBtn.addEventListener("click",createArrBtnClicked);
+
+
+
+
+
+                    }
+                </script>
+
+            </div>
             <span class="fw-bold">In-class practice</span><br/>
             1. Create arrays, one will have the course subject (e.g. MIS, MATH, etc.), one will hold course numbers
             (e.g. 3033, 3013, etc.) and the third one will host the grades. Ask the user to input 3 for each, store them
