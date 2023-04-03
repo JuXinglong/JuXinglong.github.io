@@ -93,6 +93,14 @@
             justify-content: center;
             align-items: center;
         }
+
+        .st1
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 
 </head>
@@ -1175,6 +1183,10 @@ seatMatrix[0,0]
                     <button id="createArrBtn" class="btn btn-sm btn-primary">Create array int[]</button>
                     <button id="indexBtn" class="btn btn-sm btn-success">Show index</button>
 
+                    Index: <input id="indextext" type="text" value="2" class="" style="width: 50px;" placeholder="10"/>
+                    Value: <input id="newvaluetext" type="text" value="6" class="" style="width: 50px;" placeholder="10"/>
+                    <button id="setValueBtn" class="btn btn-sm btn-primary">Set value</button>
+
                 </div>
                 <div>
                     <div id="arrdivs" style="display: flex;"></div>
@@ -1196,6 +1208,8 @@ seatMatrix[0,0]
                             {
                                 let newdiv=document.createElement("div");
                                 newdiv.classList.add("eleDiv");
+                                newdiv.classList.add("st1");
+                                newdiv.setAttribute("id","arrdiv"+i);
                                 arrdiv.append(newdiv);
                             }
                         }
@@ -1213,11 +1227,22 @@ seatMatrix[0,0]
                             }
                         }
 
+                        function setvalueBtnClicked()
+                        {
+                            let i=Number(document.querySelector("#indextext").value);
+                            let divid="arrdiv"+i;
+                            let selecteddiv=document.querySelector("#"+divid);
+                            selecteddiv.innerText=document.querySelector("#newvaluetext").value;
+                        }
+
                         let createArrBtn=document.querySelector("#createArrBtn");
                         createArrBtn.addEventListener("click",createArrBtnClicked);
 
                         let indexBtn=document.querySelector("#indexBtn");
                         indexBtn.addEventListener("click",indexBtnClicked);
+
+                        let setvalueBtn=document.querySelector("#setValueBtn");
+                        setvalueBtn.addEventListener("click",setvalueBtnClicked);
 
 
 
