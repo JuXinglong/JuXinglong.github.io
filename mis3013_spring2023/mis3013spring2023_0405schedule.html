@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>April 5 Lecture Schedule MIS 3013: collections</title>
+    <title>April 5 Lecture Schedule MIS 3013: array</title>
     <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
     <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
@@ -71,6 +71,38 @@
 
         $(document).ready(initPro);
     </script>
+
+
+    <style>
+        .eleDiv
+        {
+            width:30px;
+            height: 30px;
+            border: 1px solid black;
+            background-color: dodgerblue;
+        }
+
+        .indDiv
+        {
+            display: flex;
+            flex-direction: row;
+            width:30px;
+            height: 30px;
+            border: 1px solid gray;
+            background-color:lightskyblue;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .st1
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
 </head>
 <body>
 <div class="container-md">
@@ -95,7 +127,7 @@
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <!--                <li><span class="text-primary h-1 fw-bold">One handout (3 pages) Exam 2 Practice 1</span></li>-->
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-                <!--                                <li>HW4-Functions due March 7, 2023, 5:00 PM</li>-->
+                                                <li>HW7-Array due April 10, 2023, 5:00 PM</li>
                 <!--                                <li>HW5-Functions due March 10, 2023, 5:00 PM</li>-->
                 <!--                                <li>HW6-class-string due March 27, 2023, 5:00 PM (Exam 3 contents)</li>-->
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
@@ -1145,6 +1177,88 @@ int[,] seatMatrix=new int[3,4];
 seatMatrix[0,0]
 </code></pre>
             </p>
+            <div class="m-bd-callout m-bd-callout-danger">
+                <div class="">
+                    Array size: <input id="sizetext" type="text" value="10" class="" style="width: 50px;" placeholder="10"/>
+                    <button id="createArrBtn" class="btn btn-sm btn-primary">Create array int[]</button>
+                    <button id="indexBtn" class="btn btn-sm btn-success">Show index</button>
+
+                    Index: <input id="indextext" type="text" value="2" class="" style="width: 50px;" placeholder="10"/>
+                    Value: <input id="newvaluetext" type="text" value="6" class="" style="width: 50px;" placeholder="10"/>
+                    <button id="setValueBtn" class="btn btn-sm btn-primary">Set value</button>
+
+                </div>
+                <div>
+                    <div id="arrdivs" style="display: flex;"></div>
+                    <div id="arrinds" style="display: flex;"></div>
+                </div>
+                <script>
+                    {
+                        "use strict;"
+                        let n=0;
+                        function createArrBtnClicked(e)
+                        {
+                            let arrindsdiv=document.querySelector("#arrinds");
+                            arrindsdiv.innerHTML="";
+
+                            let arrdiv=document.querySelector("#arrdivs");
+                            arrdiv.innerHTML="";
+                            n=Number(document.querySelector("#sizetext").value);
+                            for(let i=0;i<n;i++)
+                            {
+                                let newdiv=document.createElement("div");
+                                newdiv.classList.add("eleDiv");
+                                newdiv.classList.add("st1");
+                                newdiv.setAttribute("id","arrdiv"+i);
+                                arrdiv.append(newdiv);
+                            }
+                        }
+
+                        function indexBtnClicked()
+                        {
+                            let arrindsdiv=document.querySelector("#arrinds");
+                            //arrindsdiv.innerHTML="";
+                            for(let i=0;i<n;i++)
+                            {
+                                let newdiv=document.createElement("div");
+                                newdiv.classList.add("indDiv");
+                                newdiv.setAttribute("id","inddiv"+i);
+                                newdiv.innerText=String(i);
+                                arrindsdiv.append(newdiv);
+                            }
+                        }
+
+                        function setvalueBtnClicked()
+                        {
+                            let i=Number(document.querySelector("#indextext").value);
+                            let divid="arrdiv"+i;
+                            let selecteddiv=document.querySelector("#"+divid);
+                            selecteddiv.innerText=document.querySelector("#newvaluetext").value;
+                            anime({targets:selecteddiv,scale:[{value:1.2,duration:5000},{value:1.0,duration:5000}],rotate:[{value:360,duration:5000}]});
+
+                            let inddivid="inddiv"+i;
+                            let selectedinddiv=document.querySelector("#"+inddivid);
+                            anime({targets:selectedinddiv,scale:[{value:0.8,duration:5000},{value:1.0,duration:5000}],rotate:[{value:360,duration:5000}]});
+
+                        }
+
+                        let createArrBtn=document.querySelector("#createArrBtn");
+                        createArrBtn.addEventListener("click",createArrBtnClicked);
+
+                        let indexBtn=document.querySelector("#indexBtn");
+                        indexBtn.addEventListener("click",indexBtnClicked);
+
+                        let setvalueBtn=document.querySelector("#setValueBtn");
+                        setvalueBtn.addEventListener("click",setvalueBtnClicked);
+
+
+
+
+
+                    }
+                </script>
+
+            </div>
             <span class="fw-bold">In-class practice</span><br/>
             1. Create arrays, one will have the course subject (e.g. MIS, MATH, etc.), one will hold course numbers
             (e.g. 3033, 3013, etc.) and the third one will host the grades. Ask the user to input 3 for each, store them
