@@ -1180,7 +1180,7 @@ seatMatrix[0,0]
             <div class="m-bd-callout m-bd-callout-danger">
                 <div class="">
                     Array size: <input id="sizetext" type="text" value="10" class="" style="width: 50px;" placeholder="10"/>
-                    <button id="createArrBtn" class="btn btn-sm btn-primary">Create array int[]</button>
+                    <button id="createArrBtn" class="btn btn-sm btn-primary">Create array int[] arr</button>
                     <button id="indexBtn" class="btn btn-sm btn-success">Show index</button>
 
                     Index: <input id="indextext" type="text" value="2" class="" style="width: 50px;" placeholder="10"/>
@@ -1191,6 +1191,7 @@ seatMatrix[0,0]
                 <div>
                     <div id="arrdivs" style="display: flex;"></div>
                     <div id="arrinds" style="display: flex;"></div>
+                    <div><pre><code id="arrcode" class="language-csharp"></code></pre></div>
                 </div>
                 <script>
                     {
@@ -1212,6 +1213,10 @@ seatMatrix[0,0]
                                 newdiv.setAttribute("id","arrdiv"+i);
                                 arrdiv.append(newdiv);
                             }
+
+                            let arrcode=document.querySelector("#arrcode");
+                            arrcode.innerHTML=`int[] arr;<br/>arr=new int[${n}];`;
+
                         }
 
                         function indexBtnClicked()
@@ -1233,13 +1238,16 @@ seatMatrix[0,0]
                             let i=Number(document.querySelector("#indextext").value);
                             let divid="arrdiv"+i;
                             let selecteddiv=document.querySelector("#"+divid);
-                            selecteddiv.innerText=document.querySelector("#newvaluetext").value;
+                            let val=document.querySelector("#newvaluetext").value;
+                            selecteddiv.innerText=val;
                             anime({targets:selecteddiv,scale:[{value:1.2,duration:5000},{value:1.0,duration:5000}],rotate:[{value:360,duration:5000}]});
 
                             let inddivid="inddiv"+i;
                             let selectedinddiv=document.querySelector("#"+inddivid);
                             anime({targets:selectedinddiv,scale:[{value:0.8,duration:5000},{value:1.0,duration:5000}],rotate:[{value:360,duration:5000}]});
 
+                            let arrcode=document.querySelector("#arrcode");
+                            arrcode.innerHTML=`int[] arr;<br/>arr=new int[${n}];<br/>arr[${i}]=${val};`;
                         }
 
                         let createArrBtn=document.querySelector("#createArrBtn");
