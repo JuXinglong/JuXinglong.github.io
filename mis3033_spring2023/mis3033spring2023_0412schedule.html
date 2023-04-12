@@ -1558,6 +1558,37 @@ map.setView( [ city.lat, city.lon ], 12 );
 city.marker.openPopup();
 </code></pre>
 
+                <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" target="_blank" class="btn btn-sm btn-danger">Tile Layers</a>
+
+                <pre><code>Streets
+
+googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+Hybrid:
+
+googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+Satellite:
+
+googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+Terrain
+
+googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+
+map.removeLayer(grayscale);
+map.addLayer(streets);
+</code></pre>
+
 <!--                <span class="badge text-bg-primary"></span>-->
 <!--                <pre><code></code></pre>-->
 
