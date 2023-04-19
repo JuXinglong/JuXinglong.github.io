@@ -186,7 +186,21 @@
                         <li><a href="#dictionary" class="btn btn-sm btn-info">Dictionary</a></li>
                     </ul>
                 </li>
-                <li>class</li>
+                <li><a class="btn btn-sm btn-success" href="#class">Class</a><a class="btn btn-sm btn-primary" href="#moreclass">More about Class</a>
+                    <ul>
+                        <li>namespace</li>
+                        <li>keyword: new</li>
+                        <li>constructor function</li>
+                        <li>member data fields</li>
+                        <li>member function</li>
+                        <li>static function</li>
+                        <li>inherit</li>
+                        <li>override</li>
+                        <li>overload</li>
+                        <li><a class="btn btn-sm btn-secondary" href="#interface">interface</a></li>
+                        <li><a class="btn btn-sm btn-dark" href="#dt">DateTime & TimeSpane</a></li>
+                    </ul>
+                </li>
             </ul>
 
 
@@ -244,6 +258,7 @@
                     <a href="#array" style="" class="btn btn-sm btn-outline-warning">Array</a>
                     <a href="#list" style="" class="btn btn-sm btn-danger">List</a>
                     <a href="#dictionary" style="" class="btn btn-sm btn-info">Dictionary</a>
+                    <a class="btn btn-sm btn-success" href="#class">Class</a>
 
                 </div>
                 <!--                <a href="#list" style=""  class="btn btn-sm btn-outline-danger">List</a><br/>-->
@@ -2326,7 +2341,301 @@ Average grade: 79.77</code></pre>
                 </div>
             </div>
 
+
+
             <!--insert new div here-->
+        </div>
+        <div class="mb-3"></div>
+
+
+        <div class="admonition note" id="class">
+            <p class="admonition-title">Define a complex datatype using class keyword</p>
+            <p>
+            <div class="fw-bold">
+                class <a target="_blank"
+                         href="https://www.w3schools.com/cs/cs_oop.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_classes.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_class_members.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_constructors.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_access_modifiers.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_properties.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_inheritance.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_polymorphism.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_abstract.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_interface.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+            </div>
+            <pre><code class="language-csharp">Define a new complex data type Student using class
+class member
+class NewDataTypeName
+{
+}
+Member functions
+static
+this
+namespace
+
+Data fields in the new data type
+. : new operator, member access operator
+Public: access modifier
+
+
+Student xingStu=new Student();
+xingStu.name = "Xinglong Ju";
+xingStu.finalGrade = 90.6;
+double fg = xingStu.CalFinalGrade();
+class Student
+{
+    public string name;
+    public string id;
+    public int age;
+    public double finalGrade;
+    public double exam1Grade;
+    public double exam2Grade;
+    public double exam3Grade;
+
+    public char CalLetterGrade()
+    {
+        return 'A';
+    }
+
+    public double CalFinalGrade()
+    {
+        return finalGrade;
+    }
+}</code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+        <div class="admonition note" id="dt">
+            <p class="admonition-title">DateTime & TimeSpan</p>
+            <p>
+            <div class="fw-bold">
+                DateTime & TimeSpan <a target="_blank"
+                                       href="https://www.c-sharpcorner.com/article/datetime-in-c-sharp/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank"
+                   href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+            </div>
+            <pre><code class="language-csharp">DateTime dt1 = new DateTime(2022, 5, 4, 13, 20, 0);
+DateTime dt2 = new DateTime(2022, 1, 18, 12, 30, 0);
+DateTime today = DateTime.Now;
+
+Console.WriteLine(dt1.Year);
+Console.WriteLine(dt1.Day);
+
+Console.WriteLine(dt2);
+Console.WriteLine(dt2.ToString());
+Console.WriteLine(dt1.ToString("MMMM dd, yyyy"));
+
+
+TimeSpan ts=dt1 - dt2;
+ts.Days // int
+ts.Minutes // int
+ts.TotalDays // double
+</code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="admonition note" id="moreclass">
+            <p class="admonition-title">More about class</p>
+            <p>
+            <div class="fw-bold">
+                <ul>
+                    <li>get, set <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/properties"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <ul>
+                            <li>public string FirstName { get; set; }</li>
+                            <li>public string FirstName
+                                {
+                                get { return _firstName; }
+                                set { _firstName = value; }
+                                }</li>
+                        </ul>
+                    </li>
+
+                    <li>class inherit <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <ul>
+                            <li>Object datatype(class) <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        </ul>
+                    </li>
+
+                    <li>base: (parent)</li>
+                    <li>class inherit <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <ul>
+                            <li>abstract for class and method <a target="_blank" href="https://www.c-sharpcorner.com/UploadFile/93126e/importance-and-use-of-versioning-in-C-Sharp/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            </li>
+                            <li>virtual for method only <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>override, overload functions
+                        <ul>
+                            <li>overload <a target="_blank" href="https://www.geeksforgeeks.org/c-sharp-method-overloading/"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>ToString() function <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>Equals() function <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        interface (a concept in OOP, it is like a tag, not the user interface)
+                        <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    </li>
+                    <li>Terminology: polymorphism
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <pre><code class="language-csharp">Terminology:
+Encapsulation
+Object-oriented programming (OOP) vs Procedural Programming
+Member functions:
+static:
+this
+Constructor function
+overload: https://www.geeksforgeeks.org/c-sharp-method-overloading/
+Namespace
+Unified Modeling Language (UML)
+members accessibility (public, private)
+
+</code></pre>
+            </p>
+        </div>
+        <div class="mb-3"></div>
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">interface
+        </div>
+
+        <div class="admonition note" id="interface">
+            <p class="admonition-title">interface</p>
+            <p>
+            <div class="fw-bold">
+                interface (a concept in OOP, it is like a tag, not the user interface)
+                <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <br/>
+                <span class="text-danger">Ctrl + . </span> to auto implement interface
+            </div>
+            <pre><code class="language-csharp">public interface IMIS3033
+{
+    public double finalGrade { get; set; }
+    public double finishHomeWorkOne();
+    public char mis3013LGCh { get; set; }
+}
+
+public class Student : IMIS3033
+{
+    public string name { get; set; }
+    public double finalGrade { get; set; }
+    public char mis3013LGCh { get; set; }
+
+    public double finishHomeWorkOne()
+    {
+        // finish homework
+        Console.WriteLine(this.name + "is finishing MIS 3033 homework");
+        return 80;
+    }
+}</code></pre>
+
+        </div>
+
+
+        <div class="mb-3"></div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">extra syntax</p>
+            <p>
+            <div class="fw-bold">
+            </div>
+            <pre><code class="language-csharp">Person p1;
+Student stu1;
+
+p1=new Person() { age=20, name="xinglong ju"};
+
+stu1 = new Student() { age=20,name="aiden tom",stuID="at2145"};
+
+Person p2;
+
+p2 = stu1;
+
+Student stu2;
+stu2 = (Student)p2;
+
+stu2=(Student)p1;// Error
+
+string numStr = "123";
+int numInt=Convert.ToInt32(numStr);
+
+
+public class Person
+{
+    public string name { get; set; }
+    public int age { get; set; }
+}
+
+public class Student:Person
+{
+    public string stuID { get; set; }
+}</code></pre>
+
+        </div>
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">More about C#</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">More about C#</p>
+            <p>
+            <div class="fw-bold">
+
+                Data structure & algorithms
+                (A good course on LinkedInLearning <a target="_blank" href="https://www.linkedin.com/learning/c-sharp-algorithms/reverse-an-array-in-c-sharp"><span class="bi bi-box-arrow-up-right text-primary"></span></a>)<br/>
+                Big tech company interview questions: https://leetcode.com/problemset/all/
+                <a target="_blank" href="https://leetcode.com/problemset/all/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+            </div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
         </div>
     </div>
 </div>
