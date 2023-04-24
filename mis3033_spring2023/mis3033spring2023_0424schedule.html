@@ -261,6 +261,10 @@ Microsoft.EntityFrameworkCore.Design
 Microsoft.EntityFrameworkCore.Tools
 Npgsql.EntityFrameworkCore.PostgreSQL
 
+[Key]
+[DatabaseGenerated(DatabaseGeneratedOption.Identity)]// Auto increment
+public int ID { get;set; }
+
 public class DbCon:DbContext// Change DbCon to your own database connect class name
 {
         public DbSet&lt;Student&gt; Students { get; set; }// Define a table in the database. The table name here is: Students
