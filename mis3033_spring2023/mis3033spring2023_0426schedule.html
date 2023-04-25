@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>April 26 Lecture Schedule MIS 3033: ASP.NET MVC (Model View Controller)</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"></script>
+
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <!-- charts -->
+
+
+    <!-- Animation -->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>-->
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro() {
+            hljs.highlightAll();
+            let floatpanel = document.querySelector("#floatpanel");
+            anime({
+                targets: floatpanel,
+                scale: {
+                    value: 0.5,
+                }
+
+            });
+
+        }
+
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md" id="top">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            April 26, 2023 Lecture Schedule for MIS 3033
+        </div>
+
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+                <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
+                <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
+                <!--                </li>-->
+                <li class="fw-bold text-danger h5">We are using the new classroom: Devon Energy Hall 130
+                </li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li><a target="_blank" href="https://ses.ou.edu" class="text-danger h3">Finish Student Experience Survey https://ses.ou.edu</a>
+                </li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+<!--                <li><span class="text-primary h-1 fw-bold">Create an ASP.NET MVC app: MIS3033_Apr24_ef_multi_YourName</span></li>-->
+
+
+                <!--                <li>HW_MVC due Apirl 3, 2023, 5:00 PM</li>-->
+                <!--                <li>HW5 due March 27, 2023, 5:00 PM</li>-->
+                <!--                <li>Exam 2: March 29, 2023, 1:30 PM - 2:45 PM</li>-->
+                <!--                <a target="_blank" href="us-cities-top-1k.csv" class="btn btn-danger">Download US-TOP-1K-City.csv</a>-->
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li class="list-group-item"><span class="text-danger">Exam 3 Contents Continue</span></li>
+
+                <!--                <li>JavaScript &nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"-->
+                <!--                                        class="btn btn-sm btn-primary">JavaScript Reference</a>&nbsp;<a target="_blank"-->
+                <!--                                                                                                        href="https://www.linkedin.com/learning/javascript-essential-training"-->
+                <!--                                                                                                        class="btn btn-sm btn-success">JavaScript-->
+                <!--                    Tutorial</a>-->
+                <!--                    <ul>-->
+                <!--                        <li><a href="#javascriptbasics">JavaScript Basics</a></li>-->
+                <!--                        <li><a href="#dom">DOM: Document Object Model</a></li>-->
+                <!--                        <li><a href="#event">Event & Event Listenser</a></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+                <!--                <li>ASP.NET MVC-->
+                <!--                    <ul>-->
+                <!--                        <li><a href="#mvc">MVC</a></li>-->
+                <!--                        <li><a href="#razor">Razor</a></li>-->
+                <!--                        <li><a href="#famous">Famous CSS & JavaScript libraries</a></li>-->
+                <!--                        <li><a href="#balert">Bootstrap: alert</a></li>-->
+                <!--                        <li><a href="#bcard">Bootstrap: card</a></li>-->
+                <!--                        <li><a href="#bbadge">Bootstrap: badge</a></li>-->
+                <!--                        <li><a href="#bd-callout">bd-callout</a></li>-->
+                <!--                        <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                        <li><a href="#PostgreSQL" class="btn btn-sm btn-info">PostgreSQL</a></li>-->
+                <!--                        <li><a href="#DataGrip" class="btn btn-sm btn-primary">DataGrip</a></li>-->
+                <!--                        <li><a href="#Codes" class="btn btn-sm btn-danger">Code</a></li>-->
+                <!--                        <li><a href="#chartjs" class="btn btn-sm btn-warning">Chart.js</a></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+
+            </ul>
+            <div>
+            <pre><code class="language-html" data-lang="html">
+&lt;!-- Bootstrap --&gt;
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- charts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+
+&lt;!-- Data table --&gt;
+&lt;link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"&gt;&lt;/script&gt;
+
+&lt;!-- Animation --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- Map --&gt;
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"&gt;&lt;/script&gt;
+
+&lt;link href="https://juxinglong.github.io/mis3033_spring2023/mis3033css.css" rel="stylesheet"/&gt;
+            </code></pre>
+            </div>
+        </div>
+
+        <div id="floatpanel"
+             style="position:fixed;top: 50px;right:10px;display: flex;flex-direction: column;align-items: end;">
+            <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
+            </button>
+            <script>
+                {
+                    "use strict";
+                    var m = 1;
+                    let foldbtn = document.querySelector("#foldbtn");
+                    foldbtn.addEventListener("click", (e) => {
+                        let floatmenu = document.querySelector("#floatmenu");
+                        anime({
+                            targets: floatmenu,
+                            scale: {
+                                value: 0.0,
+                            }
+                        });
+                        //floatmenu.style.display = "none";
+                        let expandbtn = document.querySelector("#expandbtn");
+                        expandbtn.style.display = "block";
+                        foldbtn.style.display = "none";
+                    });
+                }
+            </script>
+            <button id="expandbtn" class="btn btn-sm btn-outline-secondary" style="display: none;"><i
+                    class="bi bi-chevron-double-down"></i></button>
+            <script>
+                {
+                    "use strict";
+                    let expandbtn = document.querySelector("#expandbtn");
+
+                    expandbtn.addEventListener("click", (e) => {
+                        let floatmenu = document.querySelector("#floatmenu");
+                        anime({
+                            targets: floatmenu,
+                            scale: {
+                                value: 1.0,
+                            }
+                        });
+                        //floatmenu.style.display = "block";
+                        let foldbtn = document.querySelector("#foldbtn");
+                        foldbtn.style.display = "block";
+                        expandbtn.style.display = "none";
+                    });
+                }
+            </script>
+            <div id="floatmenu" style="display: flex;flex-direction: column;">
+                <a href="#top" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-primary">TOP</a>
+                <a href="#top" class="btn btn-sm btn-primary">CSS JS Libs</a>
+                <a href="#demo" class="btn btn-sm btn-secondary">APP Demo</a>
+                <a href="#er" class="btn btn-sm btn-info">ER Diagram</a>
+                <a href="#programcs" class="btn btn-sm btn-warning">Program.cs</a>
+                <a href="#cs" class="btn btn-sm btn-danger">C#</a>
+                <a href="#fetch" class="btn btn-sm btn-primary">fetch()</a>
+                <a href="#sql" class="btn btn-sm btn-success">PostgreSQL</a>
+                <a href="#tabs" class="btn btn-sm btn-dark">Tab Navigation</a>
+                <a href="#forminput" class="btn btn-sm btn-outline-dark">Form Inputs</a>
+                <a href="#tbljs" class="btn btn-sm btn-outline-primary">Table</a>
+                <a href="#mapjs" class="btn btn-sm btn-outline-warning">Map</a>
+                <a href="#chart" class="btn btn-sm btn-outline-danger">Chart</a>
+<!--                <a href="#mvc" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-danger">MVC</a>-->
+<!--                <a href="#razor" style="margin-bottom: 1px;display: block;"-->
+<!--                   class="btn btn-sm btn-outline-dark">Razor</a>-->
+<!--                <a href="#famous" style="margin-bottom: 1px;display: block;"-->
+<!--                   class="btn btn-sm btn-dark">Famous Libs</a>-->
+<!--                <a href="#balert" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-warning">Bootstrap:-->
+<!--                    alert</a>-->
+<!--                <a href="#bcard" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-info">Bootstrap:-->
+<!--                    card</a>-->
+<!--                <a href="#bbadge" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-light">Bootstrap:-->
+<!--                    badge</a>-->
+<!--                <a href="#bd-callout" style="margin-bottom: 1px;display: block;"-->
+<!--                   class="btn btn-sm btn-outline-secondary">bd-callout style</a>-->
+<!--                <a href="#PostgreSQL" class="btn btn-sm btn-info">PostgreSQL</a>-->
+<!--                <a href="#DataGrip" class="btn btn-sm btn-primary">DataGrip</a>-->
+<!--                <a href="#Codes" class="btn btn-sm btn-danger">Code</a>-->
+<!--                <a href="#chartjs" class="btn btn-sm btn-warning">Chart.js</a>-->
+            </div>
+            <!--            <a href="#anime" class="btn btn-sm btn-outline-warning">anime</a>-->
+        </div>
+
+        <div>
+
+
+            <h3 class="text-danger mb-3">Exam 3 Contents Continue</h3>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Entity Framework Table Relationships
+            </div>
+
+            <a href="https://learn.microsoft.com/en-us/ef/core/modeling/relationships/one-to-one" target="_blank" class="btn btn-lg btn-danger">Entity Framework Table Relationships Tutorial</a>
+
+            <img id="demo" src="../static/img/Demo.gif" style="width: 1000px;"/>
+            <img id="er" src="../static/img/ER2.png" style="width: 800px;"/>
+            <img src="../static/img/ER1.svg" style="width: 800px;"/>
+
+            <div class="admonition note">
+                <p id="programcs" class="admonition-title">Program.cs</p>
+                <p>
+                <div class="fw-bold">
+                <img src="../static/img/programcs.png" style="width: 800px;"/>
+                <pre><code class="language-csharp">builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);</code></pre>
+
+
+                </div>
+            </div>
+
+
+            <div class="mb-3"></div>
+            <div class="admonition note">
+                <p class="admonition-title">PostgreSQL</p>
+                <p>
+                <div class="fw-bold">
+                <span id="sql">Use the email that you received!</span>
+<!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-csharp">Nuget packages:
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.Tools
+Npgsql.EntityFrameworkCore.PostgreSQL
+
+[Key]
+[DatabaseGenerated(DatabaseGeneratedOption.Identity)]// Auto increment
+public int ID { get;set; }
+
+public class DbCon:DbContext// Change DbCon to your own database connect class name
+{
+        public DbSet&lt;Student&gt; Students { get; set; }// Define a table in the database. The table name here is: Students
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+                optionsBuilder.UseNpgsql("Host=******;Database=YOUR_DATABASE_NAME_HERE;Port=5432;Username=*******;Password=*****");
+        }
+}
+
+add-migration initdb -context DbCon
+update-database -context DbCon
+</code></pre>
+                </div>
+            </div>
+
+
+            <div class="mb-3"></div>
+            <div class="admonition note">
+                <p id="cs" class="admonition-title">C#</p>
+                <p>
+                <div class="fw-bold">
+
+                    <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-csharp">created=created.ToUniversalTime();
+</code></pre>
+                </div>
+            </div>
+
+
+            <div class="mb-3"></div>
+            <div class="admonition note">
+                <p id="fetch" class="admonition-title">JS fetch()</p>
+                <p>
+                <div class="fw-bold">
+
+                    <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-javascript">async function addbtnClicked ( e )
+{
+    let fd = new FormData();
+    fd.append( "sid", document.querySelector( "#ss" ).value );
+    fd.append( "weight", document.querySelector( "#weight" ).value );
+    fd.append( "height", document.querySelector( "#height" ).value );
+    fd.append( "color", document.querySelector( "#color" ).value );
+    fd.append( "ha", document.querySelector( "#ha" ).value );
+    fd.append( "lat", document.querySelector( "#lat" ).value );
+    fd.append( "lon", document.querySelector( "#lon" ).value );
+
+    let r = await fetch( "/home/addprofile", { method: "post", cache: "no-store", body: fd } );
+
+    let rj = await r.json();
+
+    let status = document.querySelector( "#status" );
+    if ( rj.status == "success" )
+    {
+        status.classList.remove( "text-bg-danger" );
+        status.classList.add( "text-bg-success" );
+        status.innerHTML = rj.mes;
+
+        getStus();
+    }
+    else
+    {
+        status.classList.remove( "text-bg-success" );
+        status.classList.add( "text-bg-danger" );
+        status.innerHTML = "Failed to add student!!!";
+    }
+
+}
+</code></pre>
+                </div>
+            </div>
+
+            <div class="mb-3"></div>
+            <div class="admonition note">
+                <p id="tabs" class="admonition-title">Tab Navigation</p>
+                <p>
+                <div class="fw-bold">
+
+                <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank">Bootstrap Tabs and Navs</a>
+<!--                    <span>Use the email that you received!</span>-->
+                    <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-html">&lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="/home/index" target="_self"&gt;Add Student&lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="/home/profile" target="_self"&gt;Add Profile&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+</code></pre>
+                </div>
+            </div>
+
+
+            <div class="mb-3"></div>
+            <div class="admonition note">
+                <p class="admonition-title">Form Input</p>
+                <p>
+                <div id="forminput" class="fw-bold">
+
+                    <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/forms/input-group/" target="_blank">Bootstrap Input group</a>
+                    <!--                    <span>Use the email that you received!</span>-->
+                    <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-html">&lt;div class="input-group"&gt;
+    &lt;label class="input-group-text"&gt;Weight (lb):&lt;/label&gt;
+    &lt;input id="weight" type="text" class="form-control" placeholder="fav place" value="150" /&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group"&gt;
+    &lt;label class="input-group-text"&gt;Favorite color:&lt;/label&gt;
+    &lt;input id="color" type="color" class="form-control  form-control-color" placeholder="fav place" value="" /&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group"&gt;
+    &lt;label class="input-group-text"&gt;Date of birth:&lt;/label&gt;
+    &lt;input id="dob" type="date" class="form-control" /&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group"&gt;
+    &lt;label class="input-group-text"&gt;Created Time:&lt;/label&gt;
+    &lt;input id="created" type="datetime-local" class="form-control" /&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+
+            <div class="mb-3"></div>
+            <div class="admonition note">
+                <p id="tbljs" class="admonition-title">Grid.js table</p>
+                <p>
+                <div class="fw-bold">
+
+<!--                    <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank">Bootstrap Tabs and Navs</a>-->
+                    <!--                    <span>Use the email that you received!</span>-->
+                    <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-javascript">let tbl = document.querySelector( "#tbl" );
+if ( grid != null )
+{
+    grid.destroy();
+}
+tbl.innerHTML = "";
+grid = new gridjs.Grid( {
+    columns: [ { id: "id", name: "Student ID" }, { id: "name", name: "Name" }, { id: "dob", name: "Date of birth" }, { id: "fn", name: "Favorite place" }, { id: "lat", name: "Latitude" }, { id: "lon", name: "Longidue" } ],
+    data: rj,
+    width: 1200,
+    sort: true,
+    search: true,
+    pagination: { limit: 10, },
+} );
+
+grid.render( tbl );
+
+grid.on("rowClick",(...args)=>{gridRowClicked(args);});
+</code></pre>
+                </div>
+            </div>
+
+            <div class="mb-3"></div>
+            <div class="admonition note">
+                <p id="mapjs" class="admonition-title">leafletjs map</p>
+                <p>
+                <div class="fw-bold">
+
+                    <!--                    <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank">Bootstrap Tabs and Navs</a>-->
+                    <!--                    <span>Use the email that you received!</span>-->
+                    <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-javascript">var map = L.map( 'mapdiv', { attributionControl: false, } ).setView( [ 35.33443889141701, -97.07270547900498 ], 12 );
+
+L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: ''
+} ).addTo( map );
+
+map.on("click",function(e){
+    t=e;
+    document.querySelector( "#lat" ).value =e.latlng.lat;
+    document.querySelector( "#lon" ).value =e.latlng.lng;
+
+    if(marker!=null)
+    {
+        map.removeLayer(marker);
+        marker=null;
+    }
+    marker = L.marker( [ e.latlng.lat, e.latlng.lng ] );
+    marker.addTo(map);
+
+});
+
+let sid = args[ 1 ]._cells[ 0 ].data;
+
+if(marker!=null)
+{
+    map.removeLayer(marker);
+    marker=null;
+}
+
+marker = L.marker( [ stuDict[ sid ].lat, stuDict[ sid ].lon] );
+marker.bindPopup( `${ stuDict[ sid ].fn }<br/>Student ID: ${ stuDict[ sid ].id }<br/>Student Name: ${ stuDict[ sid ].name }` );
+marker.addTo(map);
+
+map.setView( [ stuDict[ sid ].lat, stuDict[ sid ].lon ] ,12);
+marker.openPopup();
+</code></pre>
+                </div>
+            </div>
+
+            <div class="mb-3"></div>
+            <div id="chart" class="admonition note">
+                <p class="admonition-title">Chart.js</p>
+                <p>
+                <div class="fw-bold">
+
+                    <!--                    <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank">Bootstrap Tabs and Navs</a>-->
+                    <!--                    <span>Use the email that you received!</span>-->
+                    <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-javascript">&lt;canvas id="c1"&gt;&lt;/canvas&gt;
+
+if(chart1!=null)
+{
+    chart1.destroy();
+}
+
+chart1=new Chart(c1,{
+type:"pie",
+data:{
+        labels: rj.map(x=>x.lg),
+        datasets:[
+            {
+                label:`Number`,
+                data:rj.map(x=>x.n),
+            },
+        ],
+}
+});
+</code></pre>
+                </div>
+            </div>
+
+            <!--            Precedence (Order of operators) starts-->
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">JavaScript
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">JavaScript</p>
+                <p>
+                <div class="fw-bold">
+
+                    <!--                    text-align: center;<br/>-->
+                    <!--                    line-height: 200px;<br/>-->
+                    <!--                    <br/>-->
+
+
+                    The notes for today:<br/>
+                    <span id="javascriptbasics" class="text-danger">JavaScript:</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/"><span>JavaScript Tutorial</span></a>
+                    <a target="_blank" class="btn btn-sm btn-success"
+                       href="https://htmlcheatsheet.com/js/"><span>JavaScript</span></a>
+
+
+                    <!--                    <br/>-->
+                    <!--                    <br/>-->
+
+
+                    <!--                    <span class="text-danger">JQuery </span>: jQuery is a fast, small, and feature-rich JavaScript-->
+                    <!--                    library. <br/>-->
+                    <!--                    <a target="_blank" class="btn btn-sm btn-primary"-->
+                    <!--                       href="https://gist.github.com/davidmigloz/1772732d7d0d063884c3"><span>jQuery cheat sheet</span></a>-->
+                    <!--                    <a target="_blank" class="btn btn-sm btn-success"-->
+                    <!--                       href="https://www.geeksforgeeks.org/jquery-cheat-sheet-a-basic-guide-to-jquery/"><span>jQuery</span></a>-->
+                    <!--                    <a target="_blank" class="btn btn-sm btn-info"-->
+                    <!--                       href="https://api.jquery.com/"><span>jQuery Official Document</span></a>-->
+
+                    <!--                    <br/>-->
+                </div>
+
+
+                <div>
+                    <ul class="leftBarList">
+                        <div class="leftbar-dropdown">
+                            <div class="dropdown-title" style="font-size:15px;padding:15px">JavaScript Cheat Sheet – A
+                                Basic Guide to JavaScript<span class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                            <ul style="display:none"></ul>
+                        </div>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/?ref=lbp">JS
+                                Cheat Sheet</a></li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Fundamentals">Fundamentals</a>
+                        </li>
+                        <li class="currentpage"><a target="_blank"
+                                                   href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Variables">Variables</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Datatypes">Datatypes</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Operators">Operators</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Scope">Scope
+                                and Scope chain</a></li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Functions">Functions</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Arrays">Arrays</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Loops">Loops</a>
+                        </li>
+                        <li class=""><a target="_blank"
+                                        href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#If-else">If-else</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Strings">Strings</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Regular%20Expressions">Regular
+                                Expressions</a></li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Data%20Transformation">Data
+                                Transformation</a></li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Date%20objects">Date
+                                objects</a></li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#DOM">DOM</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Numbers">Numbers
+                                and Maths</a></li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Events">Events</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Errors">Errors</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#Window%20Properties">Window
+                                Properties</a></li>
+                    </ul>
+                </div>
+
+                <pre id="js"><code class="language-javascript">'use strict';
+
+// define a variable
+const age = 10;// constant
+let weight = 128.8;// local variable
+var name = "Aiden";// global variable
+
+
+// define a function
+//
+function f1 (n1,n2)
+{
+    let n = n1 + n2;
+    return n;
+}
+console.log( f1( 20, 30 ) );
+
+let f2 = function ( n1, n2 )
+{
+    return n1 * n2;
+}
+console.log( f2( 3.0, 4.0 ) );
+
+let f3 = ( n1, n2 ) => n1 - n2;
+console.log( f3( 6, 2 ) );
+
+
+// object
+let stu1 = {
+    name: "aiden", age: 19,
+    getInfor: function () { return `Name:${ this.name },Age${ this.age }`; }
+};
+console.log( stu1.age );
+console.log( stu1.getInfor() );
+
+// Date
+let dt1 = new Date();
+console.log( dt1 );
+
+
+// string
+
+let str1 = "aiden";
+let str2 = "hello";
+let str3 = str2 + str1;
+
+// `${var}`
+let str4 = `Name is ${ str1 } ${ weight.toFixed( 2 ) }`;
+console.log( str3 );
+console.log( str4 );
+
+
+// array
+let ages = [ 18, 19, 22, 36 ];
+console.log( ages[ 1 ] );
+ages.push( 26, 27 ); // add to the end of the array
+ages.pop();// remove the last element of the array
+ages.unshift( 19 );
+console.log( ages );
+
+// array
+// forEach()
+// map()
+
+ages.forEach( ( item ) => { console.log( `After one year, age is ${ item + 1 }` ); } );
+
+let r = ages.map(
+    function( item )
+    {
+        return `After one year, age is ${ item + 1 }`;
+    }
+)
+console.log( r );
+
+// if(){}
+// if(){} else{}
+// if(){} else if(){} else{}
+let grade = 98;
+if ( grade >= 90 )
+{
+    console.log( "A" );
+}
+else
+{
+    console.log( "NOT A" );
+}
+
+
+// for(;;){}
+// for(of){}// array
+// for(in){}// object
+for ( let i = 0; i < ages.length; i++ )
+{
+    console.log( ages[ i ] );
+}
+
+for ( let item of ages )
+{
+    console.log( item );
+}
+
+for ( let key in stu1 )
+{
+    console.log( key );
+    console.log( stu1[ key ] );
+}
+
+console.log('Hello world');
+                </code></pre>
+
+                <img src="../static/img/keyboard.png" style="width: 800px;"/>
+
+                <div class="mb-3"></div>
+                <div id="dom">
+                    <a class="btn btn-sm btn-primary" target="_blank"
+                       href="https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/#DOM">DOM:
+                        Document Object Model</a>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector()</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
+                               target="_blank"
+                               style="margin-bottom: 8px;margin-top: 8px;">document.querySelectorAll()</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank"
+                               style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector("#main").classList.add("style1")</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank"
+                               style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector("#main").classList.remove("style1")</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank"
+                               style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector("#main").classList.toggle("style1")</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttribute"
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main").hasAttribute("id")</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute"
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;" class="b">document.querySelector("#main").getAttribute("id")</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute"
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector("#main").setAttribute("id","main2")</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute"
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main2").removeAttribute("id")</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank"
+                               style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main").style.color="red";</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;">let
+                            newEle=document.createElement("div");</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank"
+                               style="margin-bottom: 8px;margin-top: 8px;">newEle.innerHTML="<b>Hello</b>";</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText"
+                               target="_blank"
+                               style="margin-bottom: 8px;margin-top: 8px;">newEle.innerText="<b>Hello</b>";</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append" target="_blank"
+                               style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main").append(newEle);</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="mb-3"></div>
+                <div id="event">
+                    <a class="btn btn-sm btn-primary" target="_blank"
+                       href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event">Event & Event
+                        Listenser</a>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main").addEventListener("click",(e)=>{alert(e);console.log(e);});</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!--                <pre><code class="code"></code>-->
+                <!--                </pre>-->
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2" id="famous">Famous CSS & JavaScript
+                libraries
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Famous/Polular CSS & JavaScript libraries</p>
+                <p>
+                <div id="bootstrap" class="fw-bold">
+
+
+                    <span class="">Bootstrap (UI library)
+</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://getbootstrap.com/"><span>Bootstrap</span></a>
+
+                    <a target="_blank" class="btn btn-sm btn-warning"
+                       href="https://getbootstrap.com/docs/5.2/customize/color/"><span>Example</span></a>
+
+
+                </div>
+                <pre><code class="language-html" data-lang="html">btn btn-sm btn-primary
+alert alert-primary
+badge rounded-pill text-bg-primary
+<span class="line"><span class="cl"><span class="c">&lt;!-- CSS only --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span
+                            class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"</span> <span
+                            class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
+                            class="p">/&gt;</span>
+</span></span>
+<span class="line"><span class="cl"><span class="c">&lt;!-- JavaScript Bundle with Popper --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span
+                            class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"</span><span
+                            class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code>
+                </pre>
+
+
+                <div class="fw-bold">
+
+
+                    <span class="">jQuery (javascript library)
+</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://jquery.com/"><span>jQuery</span></a>
+
+                    <a target="_blank" class="btn btn-sm btn-warning"
+                       href="https://api.jquery.com/jQuery/#jQuery1"><span>Example</span></a>
+
+
+                </div>
+                <pre><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span
+                        class="na">src</span><span class="o">=</span><span class="s">"https://code.jquery.com/jquery-3.6.4.min.js"</span><span
+                        class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code>
+                </pre>
+
+                <div class="fw-bold">
+                    <span class="">jQuery UI (a UI library)
+</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://jqueryui.com/"><span>jQuery UI</span></a>
+
+                    <a target="_blank" class="btn btn-sm btn-warning"
+                       href="https://api.jqueryui.com/hide/"><span>Example</span></a>
+
+
+                </div>
+                <pre><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span
+                        class="nt">link</span> <span
+                        class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"</span> <span
+                        class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
+                        class="p">/&gt;</span>
+</span></span>
+<span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span
+        class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/theme.min.css"</span> <span
+        class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
+        class="p">/&gt;</span>
+</span></span>
+<span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span
+        class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"</span><span
+        class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code>
+                </pre>
+
+
+                <div id="chartjs" class="fw-bold">
+                    <span class="">Chart.js (Show charts)
+</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://www.chartjs.org/docs/latest/"><span>Chart.js</span></a>
+                    <a target="_blank" class="btn btn-sm btn-warning"
+                       href="https://www.chartjs.org/docs/latest/samples/bar/vertical.html"><span>Example</span></a>
+
+
+                </div>
+                <pre><code class="language-html" data-lang="html"><span class="line"><span
+                        class="cl"></span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span
+                        class="nt">script</span> <span
+                        class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/chart.js"</span><span
+                        class="p">&gt;&lt;/</span><span class="nt">script</span><span
+                        class="p">&gt;</span></span></span></code></pre>
+
+                <pre><code class="language-html">&lt;button id="addchart" class="btn btn-sm btn-danger" style="margin-top: 0px;"&gt;Show Chart&lt;/button&gt;
+
+&lt;div id="chartdiv" style="width: 300px; height: 250px;"&gt;
+
+    &lt;canvas id="myChart"&gt;
+    &lt;/canvas&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    var mychart = null;
+    document.querySelector("#addchart").addEventListener("click", (e) =&gt;
+    {
+        AddChart();
+    });
+    function AddChart()
+    {
+        const ctx = document.querySelector('#myChart');
+        if (mychart != null)
+        {
+            mychart.destroy();
+        }
+        ca = ctx.getContext('2d');
+        ca.clearRect(0, 0, ctx.width, ctx.height);
+        // ctx.innerHTML="";
+        mychart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {}
+        });
+    }
+&lt;/script&gt;
+</code></pre>
+
+                <button id="addchart" class="btn btn-sm btn-danger" style="margin-top: 0px;">Show Chart</button>
+                <div id="chartdiv" style="width: 300px; height: 250px;">
+                    <canvas id="myChart">
+                    </canvas>
+                </div>
+                <script>
+                    var mychart = null;
+                    document.querySelector("#addchart").addEventListener("click", (e) => {
+                        AddChart();
+                    });
+
+                    function AddChart() {
+                        const ctx = document.querySelector('#myChart');
+                        if (mychart != null) {
+                            mychart.destroy();
+                        }
+                        ca = ctx.getContext('2d');
+                        ca.clearRect(0, 0, ctx.width, ctx.height);
+                        // ctx.innerHTML="";
+                        mychart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                datasets: [{
+                                    label: '# of Votes',
+                                    data: [12, 19, 3, 5, 2, 3],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {}
+                        });
+                    }
+                </script>
+
+                <div class="fw-bold">
+                    <span class="">DataTable library
+</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://datatables.net/"><span>DataTable library</span></a>
+                    <a target="_blank" class="btn btn-sm btn-warning"
+                       href="https://datatables.net/manual/installation#Non-jQuery-initialisation"><span>Example</span></a>
+
+
+                </div>
+                <pre><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span
+                        class="nt">link</span> <span
+                        class="na">href</span><span class="o">=</span><span class="s">"https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css"</span> <span
+                        class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
+                        class="p">/&gt;</span>
+</span></span>                    <span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span
+                        class="na">src</span><span class="o">=</span><span class="s">"https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"</span><span
+                        class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code>
+                </pre>
+
+
+                <div class="fw-bold">
+                    <span class="">Grid.js table library
+</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://gridjs.io/"><span>Grid.js Table library</span></a>
+                    <a target="_blank" class="btn btn-sm btn-warning"
+                       href="https://gridjs.io/docs/hello-world"><span>Example</span></a>
+
+
+                </div>
+                <pre><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span
+                        class="nt">link</span> <span
+                        class="na">href</span><span class="o">=</span><span class="s">"https://unpkg.com/gridjs/dist/theme/mermaid.min.css"</span> <span
+                        class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
+                        class="p">/&gt;</span>
+</span></span>                    <span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span
+                        class="na">src</span><span class="o">=</span><span class="s">"https://unpkg.com/gridjs/dist/gridjs.umd.js"</span><span
+                        class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre>
+
+                <pre><code class="language-html">&lt;button id="tblbtn" class="btn btn-sm btn-danger"&gt;Show Table&lt;/button&gt;
+
+&lt;div id="tbl1"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    document.querySelector("#tblbtn").addEventListener("click",(e)=&gt;{showTbl();});
+
+    function showTbl()
+    {
+        new gridjs.Grid({
+            sort: true,
+            search: true,
+            columns: ["Name", "Email", "Phone Number"],
+            data: [
+                ["John", "john@example.com", "405 222 3333"],
+                ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
+            ]
+        }).render(document.querySelector("#tbl1"));
+    }
+&lt;/script&gt;</code></pre>
+
+
+                <button id="tblbtn" class="btn btn-sm btn-danger">Show Table</button>
+                <div id="tbl1"></div>
+
+                <script>
+                    document.querySelector("#tblbtn").addEventListener("click", (e) => {
+                        showTbl();
+                    });
+
+                    function showTbl() {
+                        new gridjs.Grid({
+                            sort: true,
+                            search: true,
+                            columns: ["Name", "Email", "Phone Number"],
+                            data: [
+                                ["John", "john@example.com", "405 222 3333"],
+                                ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
+                            ]
+                        }).render(document.querySelector("#tbl1"));
+                    }
+                </script>
+
+
+                <div class="mb-3"></div>
+                <div id="anime" class="fw-bold">
+                    <span class="">animejs
+</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://animejs.com/"><span>animejs</span></a> <a target="_blank"
+                                                                               class="btn btn-sm btn-warning"
+                                                                               href="https://animejs.com/documentation/#round"><span>Example</span></a>
+
+
+                </div>
+                <pre><code class="language-html" data-lang="html"><span class="line"><span
+                        class="cl"></span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span
+                        class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"</span><span
+                        class="p">&gt;&lt;/</span><span class="nt">script</span><span
+                        class="p">&gt;</span></span></span></code></pre>
+
+                <pre><code class="language-html" data-lang="html">&lt;button id="moveChart" class="btn btn-sm btn-danger"&gt;Move Chart&lt;/button&gt;
+
+&lt;button id="moveMap" class="btn btn-sm btn-danger" style="margin-left: 10px"&gt;Move Map&lt;/button&gt;
+
+&lt;script&gt;
+
+    "use strict";
+    document.querySelector("#moveChart").addEventListener("click",(e)=&gt;{move();});
+    document.querySelector("#moveMap").addEventListener("click",(e)=&gt;{moveMap();});
+    function move ()
+    {
+        anime( {
+            targets: document.querySelector( "#chartdiv" ),
+            translateX: 270
+        } );
+        anime( {
+                    targets: document.querySelectorAll( "div" ),
+                    translateX: {
+                        value: 200,
+                        duration: 2000,
+                    },
+                    rotate: {
+                        value: 180,
+                        duration: 3000,
+                    },
+                    scale: {
+                        value: 2,
+                        duration: 3000,
+                    },
+                    keyframes: [
+                        { translateY: -40 },
+                        { translateX: 250 },
+                        { translateY: 40 },
+                        { translateX: 0 },
+                        { translateY: 0 }
+                    ],
+                    duration: 4000,
+                    //loop: true,
+                } );
+    }
+
+    function moveMap ()
+    {
+        anime( {
+            targets: document.querySelector( "#mapdiv" ),
+            translateX: 270
+        } );
+    }
+&lt;/script&gt;
+</code></pre>
+
+                <button id="moveChart" class="btn btn-sm btn-danger">Move Chart</button>
+                <button id="moveMap" class="btn btn-sm btn-danger" style="margin-left: 10px">Move Map</button>
+                <script>
+
+                    "use strict";
+                    document.querySelector("#moveChart").addEventListener("click", (e) => {
+                        move();
+                    });
+                    document.querySelector("#moveMap").addEventListener("click", (e) => {
+                        moveMap();
+                    });
+
+                    function move() {
+                        anime({
+                            targets: document.querySelector("#chartdiv"),
+                            translateX: 270
+                        });
+                    }
+
+                    function moveMap() {
+                        anime({
+                            targets: document.querySelector("#mapdiv"),
+                            translateX: 270
+                        });
+                    }
+                </script>
+
+                <div class="fw-bold">
+                    <span class="">leafletjs map library
+</span>
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://leafletjs.com/"><span>leafletjs map library</span></a>
+                    <a target="_blank" class="btn btn-sm btn-warning"
+                       href="https://leafletjs.com/examples/quick-start/"><span>Example</span></a>
+
+
+                </div>
+                <pre><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span
+                        class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css"</span> <span
+                        class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
+                        class="p">/&gt;</span>
+</span></span>                    <span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span
+                        class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"</span><span
+                        class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre>
+
+
+                <pre><code class="language-html" data-lang="html">&lt;button id="showmap" class="btn btn-sm btn-danger"&gt;Show Map&lt;/button&gt;
+
+&lt;div style="height: 100px;width: 200px" id="mapdiv"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    document.querySelector("#showmap").addEventListener("click",(e)=&gt;{drawmap();});
+    function drawmap()
+    {
+        let map = L.map( 'mapdiv', { attributionControl: false, } ).setView( [ 35.33443889141701, -97.07270547900498 ], 12 );
+        L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: ''
+        } ).addTo( map );
+
+        let marker = L.marker( [ 35.33443889141701, -97.07270547900498 ] ).addTo( map );
+        marker.bindPopup( "&lt;b&gt;This is a lake&lt;/b&gt;&lt;br&gt;I work very hard!" ).openPopup();
+    }
+&lt;/script&gt;</code></pre>
+
+                <button id="showmap" class="btn btn-sm btn-danger">Show Map</button>
+
+                <div style="height: 100px;width: 200px" id="mapdiv"></div>
+                <script>
+                    document.querySelector("#showmap").addEventListener("click", (e) => {
+                        drawmap();
+                    });
+
+                    function drawmap() {
+                        let map = L.map('mapdiv', {attributionControl: false,}).setView([35.33443889141701, -97.07270547900498], 12);
+                        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 19,
+                            attribution: ''
+                        }).addTo(map);
+
+                        let marker = L.marker([35.33443889141701, -97.07270547900498]).addTo(map);
+                        marker.bindPopup("<b>This is a lake</b><br>I work very hard!").openPopup();
+                    }
+                </script>
+
+                <!--                <pre><code class="code"></code>-->
+                <!--                </pre>-->
+            </div>
+
+
+            <!--                <pre><code class="code"></code>-->
+            <!--                </pre>-->
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">ASP.NET MVC
+            </div>
+
+            <div class="admonition note" id="mvc">
+                <p class="admonition-title">ASP.NET MVC (Model View Controller)</p>
+                <p>
+                <div class="fw-bold">
+                    <span class="">static VS dynamic webpage
+<a target="_blank"
+   href="https://www.javatpoint.com/website-static-vs-dynamic"><span
+        class="bi bi-box-arrow-up-right text-primary"></span></a>
+</span>
+                    <br/>
+                    MVC <a class="btn btn-sm btn-danger"
+                           href="https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-6.0&tabs=visual-studio"
+                           target="_blank">MVC Tutorial</a><br/>
+                    M: model<br/>
+                    V:view<br/>
+                    C:controller
+                </div>
+                <pre><code class="language-csharp">Default page
+return new ContentResult{Content="..."};
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+[Route("...")]
+&lt;a href="@Url.Action("Index","Second")" class="link-danger"&gt;second page&lt;/a&gt;
+ViewBag.Name = "Xinglong Ju";
+ViewBag.Weight = "130";
+@ViewBag.Name
+@model WebApplication7.Models.Student
+@Model.CreatedDate
+@RenderBody()
+@{
+    Layout = "_Layout";
+}
+Body
+@RenderSection("header",false)
+@section header
+{
+    &lt;div class="alert alert-warning"&gt;
+        This is header
+        &lt;p&gt;
+            @ViewBag.Name @Model.CreatedDate
+        &lt;/p&gt;
+    &lt;/div&gt;
+}</code></pre>
+
+
+                <!--                <div class="fw-bold">-->
+                <!--                    <span class="">static VS dynamic webpage-->
+                <!--<a target="_blank"-->
+                <!--   href="https://www.javatpoint.com/website-static-vs-dynamic"><span-->
+                <!--        class="bi bi-box-arrow-up-right text-primary"></span></a>-->
+                <!--</span>-->
+
+                <!--                </div>-->
+                <!--                <pre><code class="language-html" data-lang="html">btn btn-sm btn-primary-->
+                <!--alert alert-primary-->
+                <!--badge rounded-pill text-bg-primary-->
+                <!--<span class="line"><span class="cl"><span class="c">&lt;!&#45;&#45; CSS only &#45;&#45;&gt;</span>-->
+                <!--</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span-->
+                <!--                            class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"</span> <span-->
+                <!--                            class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span-->
+                <!--                            class="p">/&gt;</span>-->
+                <!--</span></span>-->
+                <!--<span class="line"><span class="cl"><span class="c">&lt;!&#45;&#45; JavaScript Bundle with Popper &#45;&#45;&gt;</span>-->
+                <!--</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span-->
+                <!--                            class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"</span><span-->
+                <!--                            class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>-->
+                <!--</span></span></code>-->
+                <!--                </pre>-->
+
+
+                <!--                <pre><code class="code"></code>-->
+                <!--                </pre>-->
+            </div>
+
+
+            <div id="razor">
+                <div><span class="badge text-bg-danger fs-6">Razor syntax</span></div>
+                <div class="m-bd-callout m-bd-callout-danger">
+                    <a class="btn btn-outline-danger btn-sm"
+                       href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-6.0"
+                       target="_blank"><span>Razor syntax</span></a>
+                    <pre><code class="language-csharp">
+&lt;a href="@Url.Action("Index","Second",new{id=123,name="aiden"})" class="link-danger"&gt;second page&lt;/a&gt;
+
+@foreach (Student stu in ViewBag.students)
+{
+    &lt;div class="bd-callout"&gt;Grade: @stu.Grade.ToString("F2")&lt;/div&gt;
+}
+
+@if (false)
+{
+    &lt;span class="badge bg-warning rounded-pill"&gt;True&lt;/span&gt;
+}
+else
+{
+    &lt;span class="badge bg-primary rounded-pill"&gt;False&lt;/span&gt;
+}
+
+@{
+    string filename = "Data/students.json";
+    List&lt;Student&gt; students = new List&lt;Student&gt;();
+    string jsonStr;
+    if (System.IO.File.Exists(filename))
+    {
+        jsonStr = System.IO.File.ReadAllText(filename);
+        students = JsonSerializer.Deserialize&lt;List&lt;Student&gt;&gt;(jsonStr);
+    }
+}
+[HttpGet]
+public IActionResult Index()
+{
+    return View();
+}
+
+
+[HttpPost]
+public IActionResult Index(Student stu)
+{
+    return View();
+}
+
+
+public class Student
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public double Grade { get; set; }
+}
+
+
+&lt;fieldset&gt;
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+    @Html.LabelFor(x=&gt;x.Id)
+    @Html.TextBoxFor(x=&gt;x.Id)
+    &lt;br /&gt;
+    @Html.LabelFor(x=&gt;x.Name)
+    @Html.TextBoxFor(x=&gt;x.Name)
+    &lt;br /&gt;
+    @Html.LabelFor(x=&gt;x.Grade)
+    @Html.TextBoxFor(x=&gt;x.Grade)
+    &lt;br /&gt;
+    &lt;input type="submit" name="Add" /&gt;
+    }
+&lt;/fieldset&gt;
+
+</code></pre>
+
+                    <div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="balert">
+                <div><span class="badge text-bg-primary fs-6">Bootstrap: alert </span></div>
+                <div class="m-bd-callout m-bd-callout-primary">
+                    <a class="btn btn-outline-primary btn-sm"
+                       href="https://getbootstrap.com/docs/5.2/components/alerts/" target="_blank"><span>Bootstrap: alert</span></a>
+                    <pre><code class="language-html">&lt;div class="alert alert-primary"&gt;
+  A simple primary alert—check it out!
+&lt;/div&gt;</code></pre>
+
+                    <div>
+
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            A simple success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            A simple warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            A simple info alert—check it out!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            A simple light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            A simple dark alert—check it out!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="bcard">
+                <div><span class="badge text-bg-success fs-6">Bootstrap: card</span></div>
+                <div class="m-bd-callout m-bd-callout-success">
+                    <a class="btn btn-outline-success btn-sm" href="https://getbootstrap.com/docs/5.2/components/card/"
+                       target="_blank"><span>Bootstrap: card</span></a>
+                    <pre><code class="language-html">&lt;div class="card text-white bg-secondary border-primary" &gt;
+  &lt;div class="card-header"&gt;Header&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Secondary card title&lt;/h5&gt;
+    &lt;h5 class="card-subtitle"&gt;Secondary card title&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer bg-transparent border-success"&gt;Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                    <div class="">
+
+                        <div class="card border-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">Primary card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body text-secondary">
+                                <h5 class="card-title">Secondary card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card border-success mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body text-success">
+                                <h5 class="card-title">Success card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card border-danger mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body text-danger">
+                                <h5 class="card-title">Danger card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card border-warning mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Warning card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card border-info mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Info card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card border-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Light card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card border-dark mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body text-dark">
+                                <h5 class="card-title">Dark card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="bbadge">
+                <div><span class="badge text-bg-warning fs-6">Bootstrap: badge</span></div>
+                <div class="m-bd-callout m-bd-callout-warning">
+                    <a class="btn btn-outline-warning btn-sm" href="https://getbootstrap.com/docs/5.2/components/badge/"
+                       target="_blank"><span>Bootstrap: badge</span></a>
+                    <pre><code class="language-html">&lt;span class="badge bg-primary rounded-pill"&gt;+@ViewBag.students.Count&lt;/span&gt;</code></pre>
+
+
+                    <div>
+                        <div class="bd-example-snippet bd-code-snippet">
+                            <div class="bd-example">
+
+                                <span class="badge text-bg-primary">Primary</span>
+                                <span class="badge text-bg-secondary">Secondary</span>
+                                <span class="badge text-bg-success">Success</span>
+                                <span class="badge text-bg-danger">Danger</span>
+                                <span class="badge text-bg-warning">Warning</span>
+                                <span class="badge text-bg-info">Info</span>
+                                <span class="badge text-bg-light">Light</span>
+                                <span class="badge text-bg-dark">Dark</span>
+                            </div>
+                            <div class="d-flex align-items-center highlight-toolbar bg-light ps-3 pe-2 py-1">
+                            </div>
+                            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html"
+                                                                                          data-lang="html"><span
+                                    class="line"><span class="cl"><span class="p">&lt;</span><span
+                                    class="nt">span</span> <span class="na">class</span><span class="o">=</span><span
+                                    class="s">"badge text-bg-primary"</span><span class="p">&gt;</span>Primary<span
+                                    class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                    class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-secondary"</span><span
+                                    class="p">&gt;</span>Secondary<span class="p">&lt;/</span><span
+                                    class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                    class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-success"</span><span
+                                    class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">span</span><span
+                                    class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                    class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-danger"</span><span
+                                    class="p">&gt;</span>Danger<span class="p">&lt;/</span><span
+                                    class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                    class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-warning"</span><span
+                                    class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">span</span><span
+                                    class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                    class="na">class</span><span class="o">=</span><span
+                                    class="s">"badge text-bg-info"</span><span class="p">&gt;</span>Info<span class="p">&lt;/</span><span
+                                    class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                    class="na">class</span><span class="o">=</span><span
+                                    class="s">"badge text-bg-light"</span><span class="p">&gt;</span>Light<span
+                                    class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                    class="na">class</span><span class="o">=</span><span
+                                    class="s">"badge text-bg-dark"</span><span class="p">&gt;</span>Dark<span class="p">&lt;/</span><span
+                                    class="nt">span</span><span class="p">&gt;</span></span></span></code></pre>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="bd-callout">
+                <div><span class="badge text-bg-info fs-6">bd-callout style class</span></div>
+                <div class="m-bd-callout m-bd-callout-info">
+                    <a class="btn btn-outline-info btn-sm" href="https://bootsnipp.com/snippets/yNK5E "
+                       target="_blank"><span>Bootstrap: badge</span></a>
+                    <pre><code class="language-css hljs">.m-bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.m-bd-callout-secondary
+{
+    border-left-color: #6c757d;
+}
+
+.m-bd-callout-primary
+{
+    border-left-color:#007bff ;
+}
+
+.m-bd-callout-success
+{
+    border-left-color:#28a745 ;
+}
+
+.m-bd-callout-info
+{
+    border-left-color:#5bc0de ;
+}
+
+.m-bd-callout-warning
+{
+    border-left-color:#f0ad4e ;
+}
+
+.m-bd-callout-danger
+{
+    border-left-color:#d9534f ;
+}
+
+.m-bd-callout-light
+{
+    border-left-color:#f8f9fa ;
+}
+
+.m-bd-callout-dark
+{
+    border-left-color:#212529 ;
+}</code></pre>
+                    <div class="mt-3"></div>
+                    <pre><code class="language-css hljs"></code></pre>
+
+                    <div>
+                        <div class="container">
+
+                            <div class="m-bd-callout m-bd-callout-secondary">
+                                <h4>Secondary Callout</h4>
+                                This is a secondary callout.
+                            </div>
+
+                            <div class="m-bd-callout m-bd-callout-primary">
+                                <h4>Primary Callout</h4>
+                                This is a primary callout.
+                            </div>
+
+                            <div class="m-bd-callout m-bd-callout-success">
+                                <h4>Success Callout</h4>
+                                This is a success callout.
+                            </div>
+
+                            <div class="m-bd-callout m-bd-callout-info">
+                                <h4>Info Callout</h4>
+                                This is an info callout.
+                            </div>
+
+                            <div class="m-bd-callout m-bd-callout-warning">
+                                <h4>Warning Callout</h4>
+                                This is a warning callout.
+                            </div>
+
+                            <div class="m-bd-callout m-bd-callout-danger">
+                                <h4>Danger Callout</h4>
+                                This is a danger callout.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="PostgreSQL" class="badge text-bg-info fs-6">PostgreSQL</div>
+            <div class="m-bd-callout m-bd-callout-info">
+                <a class="btn btn-primary">PostgreSQL?</a><br/>
+                PostgreSQL is a powerful, open source object-relational database system with over 35 years of active
+                development that has earned it a strong reputation for reliability, feature robustness, and performance.
+
+                <div class="alert alert-danger h3">
+                    Microsoft.EntityFrameworkCore.Design<br/>
+                    Microsoft.EntityFrameworkCore.Tools<br/>
+                    Npgsql.EntityFrameworkCore.PostgreSQL<br/>
+                    <img style="width:600px;" src="../static/img/postgres.png"/>
+
+                    <div>
+                        <pre><code>public class DbCon:DbContext// Change DbCon to your own database connect class name
+{
+        public DbSet&lt;Student&gt; Students { get; set; }// Define a table in the database. The table name here is: Students
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+                optionsBuilder.UseNpgsql("Host=IP****;Database=YOUR_DATABASE_NAME_HERE;Port=5432;Username=mis3033*****;Password=********");
+        }
+}</code></pre>
+                    </div>
+
+                    <img style="width:600px;" src="../static/img/pmc.png"/>
+                    <div>
+                        <pre><code>add-migration initdb -context DbCon<br/>
+update-database -context DbCon</code></pre>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="DataGrip" class="badge text-bg-info fs-6">DataGrip</div>
+            <div class="m-bd-callout m-bd-callout-info">
+                DataGrip
+                <a target="_blank" href="https://www.jetbrains.com/datagrip/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a> <a
+                    class="btn btn-sm btn-primary" href="https://www.jetbrains.com/datagrip/download/"
+                    target="_blank"> Download DataGrip</a>
+                <br/>
+                <a class="btn btn-warning" target="_blank" href="https://www.jetbrains.com/shop/eform/students">Use OU
+                    email to apply for a license.</a>
+            </div>
+
+            <div id="Codes" class="badge text-bg-danger fs-6">Code</div>
+            <div class="m-bd-callout m-bd-callout-danger">
+                <span class="badge text-bg-primary">City Class</span>
+                <pre><code>public class City
+{
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]// Auto increment
+    public int ID { get;set; }
+
+    public string Name { get; set; }
+    public string State { get; set; }
+    public long Population { get; set; }
+    public double lat { get; set; }
+    public double lon { get; set; }
+}</code></pre>
+
+
+                <span class="badge text-bg-success">Database connection class</span>
+                <pre><code>public class DbCon:DbContext// Change DbCon to your own database connect class name
+{
+    public DbSet&lt;Student&gt; Students { get; set; }// Define a table in the database. The table name here is: Students
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseNpgsql("Host=IP****;Database=YOUR_DATABASE_NAME_HERE;Port=5432;Username=mis3033*****;Password=********");
+    }
+}</code></pre>
+
+                <span class="badge text-bg-warning">JavaScript Fetch function</span>
+                <pre><code>async function addCityFun ( e )
+{
+    let formData = new FormData();
+
+    formData.append( 'id', String( id ) );
+
+    const url = "/home/deleteCity";// controller name and action name
+    try
+    {
+        const response = await fetch( url, {
+            method: 'post',
+            cache: "no-store",
+            body: formData
+        } );
+
+        const result = await response.json();
+        if ( result.status == "success" )
+        {
+
+        }
+        else
+        {
+
+        }
+    }
+    catch ( error )
+    {
+        alert( error );
+    }
+}</code></pre>
+
+
+                <span id="Gridjstable" class="badge text-bg-primary">Gridjs table</span>
+                <br/>
+                <a target="_blank" href="https://gridjs.io/docs/examples/event-handler" class="btn btn-sm btn-warning">Gridjs
+                    Event</a>
+                <pre><code>const grid = new gridjs.Grid({
+  columns: ['Name', 'Email', 'Phone Number'],
+  data: [
+    { name: 'John', email: 'john@example.com', phoneNumber: '(353) 01 222 3333' },
+    { name: 'Mark', email: 'mark@gmail.com', phoneNumber: '(01) 22 888 4444' },
+  ]
+});
+grid.render( document.querySelector( "#tbl1" ) )
+
+grid.on( 'rowClick', ( ...args ) => { tblClicked( args ); });</code></pre>
+
+
+                <span id="leafletjsmap" class="badge text-bg-secondary">leafletjs map</span>
+                <pre><code>var map = L.map( 'mapdiv', { attributionControl: false, } ).setView( [ 35.33443889141701, -97.07270547900498 ], 4 );
+L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: ''
+} ).addTo( map );
+
+
+let city = cityDict[ row[ 1 ]._cells[ 0 ].data ];
+map.setView( [ city.lat, city.lon ], 12 );
+city.marker.openPopup();
+
+
+let marker = L.marker( [ result[ i ].lat, result[ i ].lon ] ).addTo( map );
+marker.bindPopup( `${ result[ i ].name } <br/> Population: ${ result[ i ].population } ` );
+
+
+map.setView( [ city.lat, city.lon ], 12 );
+city.marker.openPopup();
+</code></pre>
+
+                <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" target="_blank"
+                   class="btn btn-sm btn-danger">Tile Layers</a>
+
+                <pre><code>Streets
+
+googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+Hybrid:
+
+googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+Satellite:
+
+googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+Terrain
+
+googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+
+map.removeLayer(grayscale);
+map.addLayer(streets);
+</code></pre>
+
+                <!--                <span class="badge text-bg-primary"></span>-->
+                <!--                <pre><code></code></pre>-->
+
+                <!--                <span class="badge text-bg-primary"></span>-->
+                <!--                <pre><code></code></pre>-->
+
+
+            </div>
+
+
+            <!--            Add things here-->
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
