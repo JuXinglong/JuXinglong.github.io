@@ -207,6 +207,7 @@
                 <a href="#tbljs" class="btn btn-sm btn-outline-primary">Table</a>
                 <a href="#mapjs" class="btn btn-sm btn-outline-warning">Map</a>
                 <a href="#chart" class="btn btn-sm btn-outline-danger">Chart</a>
+                <a href="#action" class="btn btn-sm btn-outline-info">Action</a>
 <!--                <a href="#mvc" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-danger">MVC</a>-->
 <!--                <a href="#razor" style="margin-bottom: 1px;display: block;"-->
 <!--                   class="btn btn-sm btn-outline-dark">Razor</a>-->
@@ -487,6 +488,50 @@ data:{
         ],
 }
 });
+</code></pre>
+                </div>
+            </div>
+
+
+
+            <div class="mb-3"></div>
+            <div id="action" class="admonition note">
+                <p class="admonition-title">Controller Action</p>
+                <p>
+                <div class="fw-bold">
+
+                    <!--                    <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank">Bootstrap Tabs and Navs</a>-->
+                    <!--                    <span>Use the email that you received!</span>-->
+                    <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                    <pre><code class="language-csharp">public class HomeController : Controller
+{
+    DbCon1 db1 = new DbCon1();
+    public IActionResult Index()
+    {
+        return View();
+    }
+
+    public IActionResult Chart()
+    {
+        return View();
+    }
+
+    public JsonResult Add(string id, string name, DateTime dob, string fn, double lat, double lon)
+    {
+        dob = dob.ToUniversalTime();
+        Student stu = new Student() { Id = id, Name = name, DOB = dob, favPlace = fn, lat = lat, lon = lon };
+        db1.Students.Add(stu);
+        db1.SaveChanges();
+
+        return Json(new { status = "success", mes = "Student added successfully!" });
+    }
+
+    public JsonResult GetStus()
+    {
+        var r = db1.Students.Select(s => new { id = s.Id, name = s.Name, dob = s.DOB.ToLocalTime().ToString("MM/dd/yyyy"), entrolls = s.entrollments, fn = s.favPlace, lat = s.lat, lon = s.lon });
+        return Json(r);
+    }
+}
 </code></pre>
                 </div>
             </div>
