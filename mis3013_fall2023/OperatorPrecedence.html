@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Precedence</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+            var i;
+            var n_review_ques = 0;
+            for (i = 1; i <= n_review_ques; i++)
+            {
+                $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            }
+
+        }
+
+        function questionBtnClicked(event)
+        {
+            var sBtn = $("#q" + event.data.i + "btn");
+            var sAns = $("#q" + event.data.i + "ans");
+            if (sBtn.text() == "Show Answer")
+            {
+                sBtn.text("Hide Answer");
+                // sAns.show();
+                sAns.removeClass("invisible");
+            }
+            else
+            {
+                sBtn.text("Show Answer");
+                // sAns.hide();
+                sAns.addClass("invisible");
+            }
+        }
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+<!--                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>-->
+                                                <img src="../static/img/double-arrow.png" style="height: 50px;"/>
+                    </th>
+                    <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+, –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><<, >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">=</span>, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            </p>
+
+        </div>
+
+
+        <!--insert new div here-->
+    </div>
+</div>
+
+</body>
+</html>

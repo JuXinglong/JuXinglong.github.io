@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>February 13 Lecture Schedule MIS 3013: while and do while loops</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+            var i;
+            var n_review_ques = 0;
+            for (i = 1; i <= n_review_ques; i++)
+            {
+                $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            }
+
+        }
+
+        function questionBtnClicked(event)
+        {
+            var sBtn = $("#q" + event.data.i + "btn");
+            var sAns = $("#q" + event.data.i + "ans");
+            if (sBtn.text() == "Show Answer")
+            {
+                sBtn.text("Hide Answer");
+                // sAns.show();
+                sAns.removeClass("invisible");
+            }
+            else
+            {
+                sBtn.text("Show Answer");
+                // sAns.hide();
+                sAns.addClass("invisible");
+            }
+        }
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            February 13, 2023 Lecture Schedule for MIS 3013
+        </div>
+
+        <!--        table of contents start-->
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+
+<!--                <li class="list-group-item"><span class="text-danger">Sign the attendance sheet</span></li>-->
+                <li><span class="text-primary h-1 fw-bold">Create a C# console app: MIS3013_Feb13_while_loops</span></li>
+                <li><span class="text-danger fw-bold">Proposal: </span>
+                    <ul class="text-primary h-1 fw-bold"><li>You can retake or resubmit 3 of your Homework, and Exams.</li>
+                        <li>Homework retaking will be closed-book and closed-notes.
+For homework resubmission, you need to explain the codes line by line and I will ask questions. </li>
+                        <li>The higher or highest grade will be kept.</li>
+                        <li>The above 2 rules DO NOT apply to those Homework, or Exams involved in Academic Integrity violations. You DO NOT have the change to retake or resubmit Homework, or Exams involved in Academic Integrity violations.</li>
+</ul></li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>
+<!--                <li>HW3 due September 26, 2022, 5:00 PM</li>-->
+                <li>HW2 due February 13, 2023, 10:00 PM</li>
+
+                <li>HW3 due February 20, 2023, 5:00 PM</li>
+
+                <li>Exam 1 Sample</li>
+                <li><span class="text-danger">Exam 1 February 22, 2023, 8:00 AM to 9:15 AM</span>
+                    <ul>
+                        <li>variables, operators, expressions</li>
+                        <li>if else conditional</li>
+                        <li>loops</li>
+                        <li class="list-group-item"><span>&nbsp;</span> </li>
+                        <li>Closed-book and closed-notes</li>
+                        <li>Problems similar to HW1&2&3 (Coding problems)</li>
+                        <li>Assigned Seats</li>
+                        <li>Bring your own computer (Bring the charger)</li>
+
+<!--                        <li>ONE coding problem in Exercise 1 on Variables, Expressions & Statements.</li>-->
+<!--                        <li>The problems or questions will be similar to Homework 1 Problem and Exercise 1 Practice Problem</li>-->
+
+
+                        <li>Photo ID (OU student ID, driver license, or other photo ID with date birth)</li>
+                        <li>On campus only</li>
+                        <li>No website exploring other than this Exam Canvas page</li>
+                        <li>No electronic materials (You could NOT look at your previous code on your computer)</li>
+
+                    </ul>
+                </li>
+                <li>Publish code to GitHub</li>
+
+
+                <li>The differences: Simple datatype VS. Complex datatype</li>
+                <li>loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>)
+                    <ul>
+                        <li><a href="#for">for(;;){}</a> <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        <li><a href="#while">while(){} </a><a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        <li><a href="#dowhile">do{}while();</a> <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        <li><a href="#example">example</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+        <!--        table of contents end-->
+
+
+        <h3 class="text-danger mb-3">EXAM 1 Contents Continue</h3>
+
+
+        <h4 class="text-primary mb-3">&bull; loops</h4>
+
+
+        <div class="mb-3"></div>
+
+
+        <!--            Precedence (Order of operators) starts-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                        <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                    </th>
+                    <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+, –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><<, >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">=</span>, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            </p>
+
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables VS. complex
+            variables
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Simple VS. Complex</p>
+            <p>
+            <div class="fw-bold">
+                <ul>
+                    <li>Simple variable
+                        <ol>
+                            <li class="list-group-item">int i;</li>
+                            <li>The computer created a simple room card i. The card type is int.</li>
+                            <li>The computer automatically created an int space (room) in the computer memory. The space
+                                address (room number is stored in this card.)
+                            </li>
+                            <li>The room number in this card is unchangeable (immutable).</li>
+                            <li>assignment operation. The value in this space (room) is changed.</li>
+                        </ol>
+                    </li>
+                    <li>Complex variable
+                        <ol>
+                            <li class="list-group-item">DateTime j;</li>
+                            <li>The computer created a complex room card j. The card type is DateTime.</li>
+                            <li>The computer did NOT create any space (room) in computer memory. The space address (room
+                                number) in this card is null.
+                            </li>
+                            <li>The room number in this card is changeable (mutable).</li>
+                            <li>assignment operation. The address (room number) in this card is changed.</li>
+                            <li class="list-group-item text-danger">The only way to create a complex variable in the
+                                memory is to call the new Datatype(...) constructor function.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">counter, accumulator</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">counter, accumulator</p>
+            <p>
+            <div class="fw-bold">
+            int counter=0;<br/>
+            double accumulator=0;
+            <br/>
+            ++ operator
+        </div>
+            <pre><code class="language-csharp">
+int i=0;
+i=i+1;
+i++;
+i=i+2;
+
+int counter=0;
+double sumOfGrade=0;
+
+double grade1=89.9;
+counter++;
+sumOfGrade=sumOfGrade+grade1;
+
+double grade2=70.9;
+counter++;
+sumOfGrade=sumOfGrade+grade2;
+
+double grade3=80.9;
+counter++;
+sumOfGrade=sumOfGrade+grade3;
+
+double grade4=90.9;
+counter++;
+sumOfGrade=sumOfGrade+grade4;
+
+double aveGrade=sumOfGrade/counter;            </code></pre>
+            </p>
+        </div>
+
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">loops</div>
+
+        <div id="for" class="admonition note">
+            <p class="admonition-title">for loop</p>
+            <p>
+            <div class="fw-bold">loops (<span class="text-danger">break continue</span> <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
+                class="bi bi-box-arrow-up-right text-primary"></span></a>)
+            <ul>
+                <li><span class="text-danger">for(;;){} </span> <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+            </ul>
+        </div>
+            <div class="border border-1"><img src="../static/img/forloops.svg" style="width: 500px;"/></div>
+            <div class="border border-1"><img src="../static/img/forloops2.svg" style="width: 500px;"/></div>
+            <pre><code class="language-csharp">Loops
+int i;
+for(int i=0;i<10;i++;)
+{
+    //loop body
+}
+
+for (int i = 0; i < 5; i++)
+{
+  Console.WriteLine(i);
+}
+
+
+for (int i = 0; i <= 10; i = i + 2)
+{
+  Console.WriteLine(i);
+}
+
+
+for (int i = 0; i < 10; i++)
+{
+  if (i == 4)
+  {
+    break;
+  }
+  Console.WriteLine(i);
+}
+
+for (int i = 0; i < 10; i++)
+{
+  if (i == 4)
+  {
+    continue;
+  }
+  Console.WriteLine(i);
+}</code></pre>
+            </p>
+        </div>
+
+
+
+
+        <div class="mb-3"></div>
+
+
+        <div id="while" class="admonition note">
+            <p class="admonition-title">while loop</p>
+            <p>
+            <div class="fw-bold">loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>)
+                <ul>
+                    <li>for(;;){} <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li><span class="text-danger">while(){}</span> <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                </ul>
+            </div>
+            <div class="border border-1"><img src="../static/img/whileloops.svg" style="width: 500px;"/></div>
+            <div class="border border-1"><img src="../static/img/whileloops2.svg" style="width: 500px;"/></div>
+            <pre><code class="language-csharp">while(){} loop
+
+while(i<10)
+{
+    //loop body
+    i++;// may vary
+}
+
+int counter = 0;
+while (counter < 10)
+{
+    Console.WriteLine($"Hello World! The counter is {counter}");
+    counter++;
+}
+</code></pre>
+            </p>
+        </div>
+
+
+
+
+        <div class="mb-3"></div>
+
+
+        <div id="dowhile" class="admonition note">
+            <p class="admonition-title">do while loop</p>
+            <p>
+            <div class="fw-bold">loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>)
+                <ul>
+                    <li>for(;;){} <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li><span class="text-danger">do{}while();</span> <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                </ul>
+            </div>
+            <div class="border border-1"><img src="../static/img/dowhileloops.svg" style="width: 500px;"/></div>
+            <div class="border border-1"><img src="../static/img/dowhileloops2.svg" style="width: 500px;"/></div>
+            <pre><code class="language-csharp">do{}while(); loop
+do
+{
+    //loop body
+    i++;// may vary
+}
+while(i<10);
+
+int counter = 0;
+do
+{
+    Console.WriteLine($"Hello World! The counter is {counter}");
+    counter++;
+} while (counter < 10);
+</code></pre>
+            </p>
+        </div>
+
+
+
+
+        <div class="mb-3"></div>
+
+
+        <div id="example" class="admonition note">
+            <p class="admonition-title">Grades Example</p>
+            <p>
+            <div>
+
+            You are asked to create a C# console application to help the instructor to analyze the grade information. The app will prompt the instructor to input the grade of each student.
+            <br/>
+            <br/>
+            The instructor is interested in how many students' grades will fall into 5 letter grades, and the app will help to collect the number of students in each letter grade. After entering the grade of one student, the app will show the corresponding letter grade.
+            <br/>
+            <br/>
+            After entering the grade of one student, the app will ask the instructor if there is another student's grade to enter. If the instructor types in yes, the app will prompt for another student's grade. If no, the app will show the summary information, such as the total number of students, the average grade of all students,  the number of students in each letter grade and the ratio information.
+            <br/>
+            <br/>
+            For double datatype values, show 2 digits after the decimal point. Text messages DO NOT need to be exactly the same. The texts in red are the inputs from the keyboard.
+            </div>
+            <div class="mb-3"></div>
+            <div class="bg-light">student 1 grade: <span class="text-danger fw-bold">90.6</span><br/>
+                The letter grade is A!<br/>
+                <br/>
+                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span><br/>
+                <br/>
+                student 2 grade: <span class="text-danger fw-bold">70.2</span><br/>
+                The letter grade is C!<br/>
+                <br/>
+                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span>
+                <br/><br/>
+                student 3 grade: <span class="text-danger fw-bold">56.6</span><br/>
+                The letter grade is F!<br/>
+                <br/>
+                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span>
+                <br/><br/>
+                student 4 grade: <span class="text-danger fw-bold">80.6</span><br/>
+                The letter grade is B!<br/>
+                <br/>
+                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span>
+                <br/><br/>
+                student 5 grade: <span class="text-danger fw-bold">66.0</span><br/>
+                The letter grade is D!<br/>
+                <br/>
+                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">yes</span>
+                <br/><br/>
+                student 6 grade: <span class="text-danger fw-bold">96.0</span><br/>
+                The letter grade is A!<br/>
+                <br/>
+                Do you want to enter another student's grade? (yes/no) <span class="text-danger fw-bold">no</span>
+                <br/><br/>
+                Summary information<br/>
+                Number of students is: 6<br/>
+                The average final of students is: 76.67<br/>
+                Letter grade A: 2/6, 33.33%<br/>
+                Letter grade B: 1/6, 16.67%<br/>
+                Letter grade C: 1/6, 16.67%<br/>
+                Letter grade D: 1/6, 16.67%<br/>
+                Letter grade F: 1/6, 16.67%</div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+        <!--insert new div here-->
+    </div>
+</div>
+
+</body>
+</html>

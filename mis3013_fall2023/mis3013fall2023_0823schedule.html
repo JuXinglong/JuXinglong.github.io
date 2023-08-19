@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>August 23 Lecture Schedule MIS 3013: Variables, simple data types (int, double, bool, char), assignment operator (=), operators: +-*/</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            August 23, 2023 Lecture Schedule for MIS 3013
+        </div>
+
+        <!--        table of contents start-->
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+<!--                <li>GitHub</li>-->
+<!--                <li class="list-group-item"><br/></li>-->
+                <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>
+<!--                <li>HW1 due January 31, 2023, 5:00 PM</li>-->
+                <li>How to do well in this course
+                    <ul>
+                        <li>You need to practice, practice and practice</li>
+                        <li>You could not absorb the concepts or gain the programming skills by just watching me
+                            programming.
+                        </li>
+                    </ul>
+                </li>
+                <li>Variables, Expressions & Statements
+
+                    <ul>
+                        <li>Define a variable (integer, double)
+                            <ul>
+                                <li>int age;</li>
+                                <li>double weight;</li>
+                            </ul>
+                        </li>
+                        <li>Variable name rules
+                            <ul>
+                                <li>The first character: @, letter (A,B,C,…,a,b,c,…),_(underscore)</li>
+                                <li> The rest: letter (A,B,C,…,a,b,c,…),_(underscore),number(0,1,2)</li>
+                            </ul>
+
+                        </li>
+                        <li>Assignment operator =
+                            <ul>
+                                <li>age=20;</li>
+                                <li>weight=140.5;</li>
+                                <li>int pricePerUnit=10.2;</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Console.WriteLine(); VS. Console.Write();
+                        </li>
+                        <li>
+                            Read user input from console
+                            <ul>
+                                <li>
+                                    string userInputStr=Console.ReadLine();
+                                </li>
+                            </ul>
+
+
+                        </li>
+
+                        <li>Data type conversation
+                            <ul>
+                                <li>
+                                    double userInputDbl=Conversion.ToDouble(userInputStr);
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--        table of contents end-->
+
+
+        <h3 class="text-danger mb-3">EXAM 1 Contents Continue</h3>
+
+
+        <h4 class="text-primary mb-3">&bull; C# Variables, Expressions & Statements</h4>
+
+
+        <div class="mb-3"></div>
+
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">C# Simple/Primitive Data Types
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">C# Simple/Primitive Data Types</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Data Type
+                    </th>
+                    <th scope="col">Example Value
+                    </th>
+                    <th scope="col">Size
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row" class="text-danger">int
+                    </th>
+                    <td>Counting numbers, e.g. 0; 1; 2; 3; 4; 5;
+                    </td>
+                    <td>4-bytes
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-danger">double
+                    </th>
+                    <td>Real, or numbers with decimal places, e.g. 1.5; 2.5;
+                    </td>
+                    <td>8-bytes
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-danger">bool
+                    </th>
+                    <td>Either <span class="fw-bold text-danger h4">true</span> or <span class="fw-bold text-danger h4">false</span>; Normally the result of a conditional operation
+                    </td>
+                    <td>0.125-bytes
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-danger">char
+                    </th>
+                    <td>A single character, e.g. letter on your keyboard; e.g. ‘A’; ‘a’;
+                    </td>
+                    <td>2-bytes
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            1 B = 1 byte = 8 bits, 1 KB = 1024 B, 1 MB =1024 KB, 1 GB = 1024 MB,
+            1 TB = 1024 GB <a target="_blank" href="https://kb.iu.edu/d/ackw"><span
+                class="bi bi-box-arrow-up-right text-primary"></span></a>
+            </p>
+        </div>
+
+
+        <div class="h4 text-success border-bottom border-success fw-bold border-2">Escape Sequences</div>
+        <div class="admonition note">
+            <p class="admonition-title">Escape Sequences (Special Characters)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ESCAPE SEQUENCE
+                    </th>
+                    <th scope="col">CHARACTER PRODUCED
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">\’
+                    </th>
+                    <td>Single quotation mark
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\”
+                    </th>
+                    <td>Double quotation mark
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\\
+                    </th>
+                    <td>Backslash
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\b
+                    </th>
+                    <td>Backspace
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="text-danger">\n
+                    </th>
+                    <td>New line
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-danger">\t
+                    </th>
+                    <td>Horizontal tab
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\v
+                    </th>
+                    <td>Vertical tab
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\r
+                    </th>
+                    <td>Carriage return
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            </p>
+        </div>
+
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">C# Assignment Operator =</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">C# Assignment Operator =</p>
+            <p>
+                <span class="text-danger fw-bold">The assignment operator = assigns the value of its right-hand operand to a variable</span>,
+                a property, or an indexer element <span
+                    class="text-danger fw-bold">given by its left-hand operand.</span> The result of an assignment
+                expression is the value assigned to the left-hand operand. The type of the right-hand operand must
+                be the same as the type of the left-hand operand or implicitly convertible to it.
+            </p>
+
+        </div>
+
+
+        <div>
+            <img src="../static/img/memory.jpg" style="width:300px" alt="Computer Memory"/>
+            Computer Memory (16 GB, 32 GB, ... NOT Hard Drive)
+        </div>
+        <div>
+            <a style="text-decoration: none;" href="https://www.log2base2.com/C/pointer/computer-memory-address-basics.html">
+                <img src="../static/img/computer-memory-address.png" style="width:500px" alt="Computer Memory"/>
+            </a>
+            Computer Memory
+        </div>
+
+
+        <div class="mb-3"></div>
+        <div class="bd-example-snippet bd-code-snippet">
+            <div class="bd-example fw-bold text-danger">C# Example of Variables, Simple/Primitive Data Types, and
+                Assignment Operator =
+            </div>
+            <div class="p-3">
+                    <pre style="font-family:Consolas;font-size:19px;color:black;background:white;"><span
+                            style="color:blue;">int</span>&nbsp;<span style="color:#1f377f;">age</span>;&nbsp;<span
+                            style="color:green;">//&nbsp;We&nbsp;obtain&nbsp;a&nbsp;4-byte&nbsp;space&nbsp;in&nbsp;memory.&nbsp;In&nbsp;this&nbsp;space&nbsp;we&nbsp;can&nbsp;store&nbsp;a&nbsp;integer.</span>
+<span style="color:blue;">int</span>&nbsp;<span style="color:#1f377f;">numOfStudents</span>;
+
+<span style="color:blue;">double</span>&nbsp;<span style="color:#1f377f;">weight</span>;<span style="color:green;">//&nbsp;in&nbsp;lbs</span>
+<span style="color:blue;">char</span>&nbsp;<span style="color:#1f377f;">letterGrade</span>;
+<span style="color:blue;">bool</span>&nbsp;<span style="color:#1f377f;">isStudent</span>;
+
+age&nbsp;=&nbsp;20;&nbsp;<span style="color:green;">//&nbsp;We&nbsp;store&nbsp;the&nbsp;value&nbsp;to&nbsp;20&nbsp;into&nbsp;the&nbsp;memory</span>
+
+<span style="color:green;">//&nbsp;We&nbsp;obtain&nbsp;a&nbsp;integer&nbsp;space&nbsp;in&nbsp;memory.&nbsp;We&nbsp;store&nbsp;the&nbsp;value&nbsp;30&nbsp;into&nbsp;memory&nbsp;and&nbsp;into&nbsp;the&nbsp;variable.</span>
+<span style="color:blue;">int</span>&nbsp;<span style="color:#1f377f;">numberOfApples</span>&nbsp;=&nbsp;30;
+
+age&nbsp;=&nbsp;30;
+
+Console.WriteLine(age);</pre>
+            </div>
+        </div>
+
+        <div class="mb-3"></div>
+
+
+        <!--            Escape Sequences start-->
+        <div class="h4 text-success border-bottom border-success fw-bold border-2">Expressions</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">C# Expressions</p>
+            <p>
+            <ul>
+                <li>C# contains a number of operators.</li>
+                <li>By combining the operators with variables and literal values, you can create expressions to
+                    perform computations.
+                </li>
+                <li>Operators can roughly be classified into three categories:
+                    <ul>
+                        <li>Unary – Act on single operands
+                        </li>
+                        <li>Binary – Act on two operands
+                        </li>
+                        <li>Ternary – Act on three operands
+                        </li>
+                    </ul>
+                </li>
+                <li>E.g. +, -, *, /, %
+                </li>
+
+            </ul>
+            </p>
+
+        </div>
+        <!--   Escape Sequences end         *******************-->
+
+
+        <!--            Precedence (Order of operators) starts-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                        <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                    </th>
+                    <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+, –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><<, >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>=, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            </p>
+
+        </div>
+
+<!--        <div class="mb-3"></div>-->
+
+<!--        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Lecture Codes</div>-->
+
+<!--        <div class="admonition note">-->
+<!--            <p class="admonition-title">Lecture Codes</p>-->
+<!--            <p>-->
+
+<!--            <pre><code class="language-csharp">Console.Write(outputStr);-->
+<!--</code></pre>-->
+<!--            </p>-->
+<!--        </div>-->
+
+        <!--            Precedence (Order of operators) ends-->
+
+
+        <!--        <div>-->
+        <!--            When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are-->
+        <!--            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$-->
+        <!--        </div>-->
+
+    </div>
+</div>
+
+</body>
+</html>
