@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>January 25 Lecture Schedule MIS 3013: Read from keyboard, data type conversion, datatype (string),
+    <title>August 30 Lecture Schedule MIS 3013: Practice of read from keyboard, data type conversion, datatype (string),
         string interpolation, operators: %, comparison and conditional logical operators: !,>,>=,<,<=,==,!=</title>
     <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
 
     <link rel="stylesheet" href="../static/site.css"/>
+
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
 
 
     <script src="../static/jquery-3.6.0.min.js"></script>
@@ -60,7 +63,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            January 25, 2023 Lecture Schedule for MIS 3013
+            August 30, 2023 Lecture Schedule for MIS 3013
         </div>
 
         <!--        table of contents start-->
@@ -69,7 +72,12 @@
 
 
                 <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>
-                <li>HW1 due February 3, 2023, 5:00 PM</li>
+<!--                <li><a target="_blank" href="https://canvas.ou.edu/courses/351409/pages/apply-for-a-github-account?module_item_id=5608168" class="h5 fw-bold btn btn-primary">Apply for a github account</a></li>-->
+                <li><span class="text-primary h5 fw-bold">Create a C# console app: MIS3013_005_LC_0830_YourName</span></li>
+
+                <li class="list-group-item"><br/></li>
+                <li><span class="text-primary h5 fw-bold">HW1 due September 1, 2023, 5:00 PM</span></li>
+
                 <li>Publish code to GitHub</li>
 
                 <li>Variables, Expressions & Statements
@@ -409,7 +417,7 @@ int Age = age + 10; // age and Age are two different vairables.</code></pre>
         <div class="admonition note">
             <p class="admonition-title">How are variables stored in computer memory? Everything is a number.</p>
             <p>
-            <div class="">In our daily life, we use <span class="fw-bold">Decemal Number System</span>.</div>
+            <div class="">In our daily life, we use <span class="fw-bold">Decimal Number System</span>.</div>
             <div class="">In computer, <span class="fw-bold">Binary Number System</span> is used.</div>
             <pre><code class="language-csharp">int valueDec = 10;
 string binaryStr = Convert.ToString(valueDec, 2); // convert decimal 10 to binary 1010
@@ -429,6 +437,7 @@ Console.WriteLine(valueDec);</code></pre>
             <p class="admonition-title">Experssions with multiple datatypes</p>
             <p>
                 <div class="fw-bold text-danger">integer and integer will result in integer</div>
+            <div class="fw-bold text-danger">double and double will result in double</div>
                 <div class="fw-bold text-danger">integer and double will result in double</div>
             <pre><code class="language-csharp">Console.WriteLine(3 / 4); // 0 result datatype: integer
 Console.WriteLine(3.2 + 4); // 7.2 result datatype: double</code></pre>
@@ -526,7 +535,7 @@ Console.Write(outputStr);</code></pre>
             <p class="admonition-title">Practice: Weight example</p>
             <p>
             <div class="">
-            In the example, we get the student's name and the current weight (lb) from the keyboard input. The student is on a diet. After one month, the weight decrease by 6%. Print out the new weight information of the student in the console.
+            In this example, we get the student's name and the current weight (lb) from the keyboard input. The student is on a diet. After one month, the weight decrease by 6%. Print out the new weight information of the student in the console.
             <ol>
                 <li>In the console window, prompt the user to input the student's name.</li>
                 <li>Get student's name input from the keyboard.</li>
@@ -557,7 +566,7 @@ Console.Write(outputStr);</code></pre>
             <p class="admonition-title">Practice: Bank account example</p>
             <p>
             <div class="">
-                In the example, we get the student's name and the current bank account balance ($) from the keyboard input. The interest rate is 8% each year. Print out the new account balance information of the following 3 years in the console.
+                In this example, we get the student's name and the current bank account balance ($) from the keyboard input. The interest rate is 8% each year. Print out the new account balance information of the following 3 years in the console.
             <ol>
                 <li>In the console window, prompt the user to input the student's name.</li>
                 <li>Get student's name input from the keyboard.</li>
@@ -579,18 +588,7 @@ Console.Write(outputStr);</code></pre>
         </div>
 
 
-        <div class="mb-3"></div>
 
-        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Lecture Codes</div>
-
-        <div class="admonition note">
-            <p class="admonition-title">Lecture Codes</p>
-            <p>
-
-            <pre><code class="language-csharp">Console.Write(outputStr);
-</code></pre>
-            </p>
-        </div>
 
 <!--insert new div here-->
     </div>
