@@ -412,6 +412,57 @@ int Age = age + 10; // age and Age are two different vairables.</code></pre>
 
         </div>
 
+        <div class="mb-3"></div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">Comparison operators >,<,>=,<=,==,!=</p>
+            <p>
+            <div class="fw-bold">Comparison operators >,<,>=,<=,==,!= <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators"><span class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators"><span class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank" href="https://www.completecsharptutorial.com/basic/comparison-operators.php"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div class="fw-bold">Less than operator <</div>
+            <div class="fw-bold">Greater than operator ></div>
+            <div class="fw-bold">Less than or equal operator <=</div>
+            <div class="fw-bold">Greater than or equal operator >=</div>
+            <div class="fw-bold">Equality operator ==</div>
+            <div class="fw-bold">Inequality operator !=</div>
+            <div>They will result in a boolean data.</div>
+            <pre><code class="language-csharp">Console.WriteLine(7.0 < 5.1);   // output: False
+Console.WriteLine(5.1 < 5.1);   // output: False
+Console.WriteLine(0.0 < 5.1);   // output: True
+
+Console.WriteLine(7.0 > 5.1);   // output: True
+Console.WriteLine(5.1 > 5.1);   // output: False
+Console.WriteLine(0.0 > 5.1);   // output: False
+
+Console.WriteLine(7.0 <= 5.1);   // output: False
+Console.WriteLine(5.1 <= 5.1);   // output: True
+Console.WriteLine(0.0 <= 5.1);   // output: True
+
+Console.WriteLine(7.0 >= 5.1);   // output: True
+Console.WriteLine(5.1 >= 5.1);   // output: True
+Console.WriteLine(0.0 >= 5.1);   // output: False
+
+int a = 1 + 2 + 3;
+int b = 6;
+Console.WriteLine(a == b);  // output: True
+
+char c1 = 'a';
+char c2 = 'A';
+Console.WriteLine(c1 == c2);  // output: False
+Console.WriteLine(c1 == char.ToLower(c2));  // output: True
+
+
+a = 1 + 1 + 2 + 3;
+b = 6;
+Console.WriteLine(a != b);  // output: True
+
+string s1 = "Hello";
+string s2 = "Hello";
+Console.WriteLine(s1 != s2);  // output: False</code></pre>
+            </p>
+        </div>
+
+
         <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Binary and Decimal numbers <a target="_blank" href="https://ryanstutorials.net/binary-tutorial/"><span class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank" href="https://www.youtube.com/watch?v=VLflTjd3lWA"><span class="bi bi-box-arrow-up-right text-primary"></span></a></div>
 
         <div class="admonition note">
