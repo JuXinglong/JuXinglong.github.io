@@ -34,8 +34,7 @@
 
     <script src="../static/site.js"></script>
     <script>
-        function initPro()
-        {
+        function initPro() {
             hljs.highlightAll();
             let floatpanel = document.querySelector("#floatpanel");
             anime({
@@ -54,18 +53,14 @@
 
         }
 
-        function questionBtnClicked(event)
-        {
+        function questionBtnClicked(event) {
             var sBtn = $("#q" + event.data.i + "btn");
             var sAns = $("#q" + event.data.i + "ans");
-            if (sBtn.text() == "Show Answer")
-            {
+            if (sBtn.text() == "Show Answer") {
                 sBtn.text("Hide Answer");
                 // sAns.show();
                 sAns.removeClass("invisible");
-            }
-            else
-            {
+            } else {
                 sBtn.text("Show Answer");
                 // sAns.hide();
                 sAns.addClass("invisible");
@@ -77,16 +72,14 @@
 
 
     <style>
-        .eleDiv
-        {
+        .eleDiv {
             width: 30px;
             height: 30px;
             border: 1px solid black;
             background-color: dodgerblue;
         }
 
-        .indDiv
-        {
+        .indDiv {
             display: flex;
             flex-direction: row;
             width: 30px;
@@ -97,29 +90,25 @@
             align-items: center;
         }
 
-        .st1
-        {
+        .st1 {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
         }
 
-        .arrRow
-        {
+        .arrRow {
             display: flex;
             flex-direction: row;
         }
 
-        .listDiv
-        {
+        .listDiv {
             border: 2px dashed #841617;
             height: 30px;
             margin-top: 20px;
         }
 
-        .dictDiv
-        {
+        .dictDiv {
             border: 2px dashed #841617;
             height: 64px;
         }
@@ -140,7 +129,8 @@
                 <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
                 <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
                 <!--                </li>-->
-                <li><span class="text-primary h6 fw-bold">Create a C# console app: MIS3033_002_LC_0830_YourName</span></li>
+                <li><span class="text-primary h6 fw-bold">Create a C# console app: MIS3033_002_LC_0830_YourName</span>
+                </li>
                 <!--                <li><span class="text-primary h-1 fw-bold"><a target="_blank" class="btn btn-sm btn-danger"-->
                 <!--                                                              href="../static/file/GetAddress.cs">Download "GetAddress.cs"</a> from canvas. Copy and paste it into the project in Visual Studio Solution Explorer. </span>-->
                 <!--                </li>-->
@@ -156,13 +146,13 @@
 
 
                 <li class="list-group-item"><br/></li>
-<!--                <li>Course format: In-person</li>-->
-<!--                <li>Assignment submission: zip and github</li>-->
-<!--                <li class="list-group-item"><br/></li>-->
+                <!--                <li>Course format: In-person</li>-->
+                <!--                <li>Assignment submission: zip and github</li>-->
+                <!--                <li class="list-group-item"><br/></li>-->
                 <!--                <li><span class="text-primary h-1 fw-bold">One handout (3 pages) Exam 2 Practice 1</span></li>-->
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-<!--                <li>HW8-List due April 17, 2023, 5:00 PM</li>-->
-<!--                <li>HW9-Dictionary due April 24, 2023, 5:00 PM</li>-->
+                <!--                <li>HW8-List due April 17, 2023, 5:00 PM</li>-->
+                <!--                <li>HW9-Dictionary due April 24, 2023, 5:00 PM</li>-->
 
                 <!--                                <li>HW5-Functions due March 10, 2023, 5:00 PM</li>-->
                 <!--                                <li>HW6-class-string due March 27, 2023, 5:00 PM (Exam 3 contents)</li>-->
@@ -174,10 +164,10 @@
                 <!--                <li>March 22, Exam 2 Review and Practice 1</li>-->
                 <!--                <li>March 27, Exam 2 Review and Practice 2</li>-->
 
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
 
                 <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>
-<!--                <li class="list-group-item"><span class="text-danger">EXAM 3 Contents Continue</span></li>-->
+                <!--                <li class="list-group-item"><span class="text-danger">EXAM 3 Contents Continue</span></li>-->
                 <!--                <li>HW4 due October 7, 2022, 5:00 PM</li>-->
                 <!--                <li>Exercise 3 October 19, 2022, Lecture Time-->
                 <!--                    <ul>-->
@@ -190,8 +180,8 @@
                 <!--                <li><a href="#funcprac"> function & method example</a></li>-->
 
                 <li><a href="#datetime" class="btn btn-sm btn-outline-success">DateTime</a></li>
-                <li><a href="#funs" >Functions</a></li>
-                <li><a href="#simplevscomplex" > The differences: Simple datatype VS. Complex datatype</a></li>
+                <li><a href="#funs">Functions</a></li>
+                <li><a href="#simplevscomplex"> The differences: Simple datatype VS. Complex datatype</a></li>
                 <li><a href="#defineclass"> Use class to define a complex datatype</a></li>
                 <li><a href="#stringmani" class=""> string manipulations</a></li>
                 <li><a href="#collections" class="btn btn-sm btn-primary">Collections</a>
@@ -201,7 +191,8 @@
                         <li><a href="#dictionary" class="btn btn-sm btn-info">Dictionary</a></li>
                     </ul>
                 </li>
-                <li><a class="btn btn-sm btn-success" href="#class">Class</a><a class="btn btn-sm btn-primary" href="#moreclass">More about Class</a>
+                <li><a class="btn btn-sm btn-success" href="#class">Class</a><a class="btn btn-sm btn-primary"
+                                                                                href="#moreclass">More about Class</a>
                     <ul>
                         <li>namespace</li>
                         <li>keyword: new</li>
@@ -228,8 +219,7 @@
                         "use strict";
                         var m = 1;
                         let foldbtn = document.querySelector("#foldbtn");
-                        foldbtn.addEventListener("click", (e) =>
-                        {
+                        foldbtn.addEventListener("click", (e) => {
                             let floatmenu = document.querySelector("#floatmenu");
                             anime({
                                 targets: floatmenu,
@@ -251,8 +241,7 @@
                         "use strict";
                         let expandbtn = document.querySelector("#expandbtn");
 
-                        expandbtn.addEventListener("click", (e) =>
-                        {
+                        expandbtn.addEventListener("click", (e) => {
                             let floatmenu = document.querySelector("#floatmenu");
                             anime({
                                 targets: floatmenu,
@@ -271,8 +260,9 @@
                     <a href="#top" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-dark">Go to Top</a>
                     <a href="#datetime" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-success">DateTime</a>
                     <a href="#funs" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-danger">Functions</a>
-                    <a href="#simplevscomplex" style="margin-bottom: 1px;" class="btn  btn-sm btn-primary" > Class</a>
-                    <a href="#stringmani" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-secondary" class=""> string</a>
+                    <a href="#simplevscomplex" style="margin-bottom: 1px;" class="btn  btn-sm btn-primary"> Class</a>
+                    <a href="#stringmani" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-secondary"
+                       class=""> string</a>
                     <a href="#collections" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-primary">Collections</a>
 
                     <a href="#array" style="" class="btn btn-sm btn-outline-warning">Array</a>
@@ -458,7 +448,6 @@ Console.Write(GetLetterGrade(70.6));
             </p>
 
         </div>
-
 
 
         <div id="simplevscomplex" class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables
@@ -717,7 +706,6 @@ Contains()
 
             </p>
         </div>
-
 
 
         <div class="admonition note">
@@ -1397,8 +1385,7 @@ seatMatrix[0,0]
 
                         let created1darray = false;
 
-                        function createArrBtnClicked(e)
-                        {
+                        function createArrBtnClicked(e) {
                             created1darray = true;
                             let arrindsdiv = document.querySelector("#arrinds");
                             arrindsdiv.innerHTML = "";
@@ -1406,8 +1393,7 @@ seatMatrix[0,0]
                             let arrdiv = document.querySelector("#arrdivs");
                             arrdiv.innerHTML = "";
                             n = Number(document.querySelector("#sizetext").value);
-                            for (let i = 0; i < n; i++)
-                            {
+                            for (let i = 0; i < n; i++) {
                                 let newdiv = document.createElement("div");
                                 newdiv.classList.add("eleDiv");
                                 newdiv.classList.add("st1");
@@ -1420,12 +1406,10 @@ seatMatrix[0,0]
 
                         }
 
-                        function indexBtnClicked()
-                        {
+                        function indexBtnClicked() {
                             let arrindsdiv = document.querySelector("#arrinds");
                             //arrindsdiv.innerHTML="";
-                            for (let i = 0; i < n; i++)
-                            {
+                            for (let i = 0; i < n; i++) {
                                 let newdiv = document.createElement("div");
                                 newdiv.classList.add("indDiv");
                                 newdiv.setAttribute("id", "inddiv" + i);
@@ -1434,22 +1418,18 @@ seatMatrix[0,0]
                             }
                         }
 
-                        function setvalueBtnClicked()
-                        {
-                            if (created1darray == false)
-                            {
+                        function setvalueBtnClicked() {
+                            if (created1darray == false) {
                                 let arrayw1d = document.querySelector("#arrayw1d");
                                 anime({
                                     targets: arrayw1d,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         arrayw1d.innerHTML = `&#10060; Array is not created!!!`;
                                         arrayw1d.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         arrayw1d.style.display = "none";
                                     }
                                 });
@@ -1458,20 +1438,17 @@ seatMatrix[0,0]
 
                             let i = Number(document.querySelector("#indextext").value);
 
-                            if (i >= n)
-                            {
+                            if (i >= n) {
                                 let arrayw1d = document.querySelector("#arrayw1d");
                                 anime({
                                     targets: arrayw1d,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         arrayw1d.innerHTML = `&#10060; There are only ${n} elements!!!<br/>The max index is ${n - 1}!!!<br/>Index ${i} is out of boundary!!!`;
                                         arrayw1d.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         arrayw1d.style.display = "none";
                                     }
                                 });
@@ -1553,22 +1530,19 @@ seatMatrix[0,0]
 
                         let array2dCreated = false;
 
-                        function createArr2DBtnClicked(e)
-                        {
+                        function createArr2DBtnClicked(e) {
                             array2dCreated = true;
 
                             let arrdiv = document.querySelector("#arrdivs2d");
                             arrdiv.innerHTML = "";
                             nRows = Number(document.querySelector("#rowstext").value);
                             nCols = Number(document.querySelector("#colstext").value);
-                            for (let i = 0; i < nRows; i++)
-                            {
+                            for (let i = 0; i < nRows; i++) {
 
                                 let newrowdiv = document.createElement("div");
                                 newrowdiv.classList.add("arrRow");
                                 arrdiv.append(newrowdiv);
-                                for (let j = 0; j < nCols; j++)
-                                {
+                                for (let j = 0; j < nCols; j++) {
                                     let newdiv = document.createElement("div");
                                     newdiv.classList.add("eleDiv");
                                     newdiv.classList.add("st1");
@@ -1585,23 +1559,19 @@ seatMatrix[0,0]
                         }
 
 
-                        function setvalue2dBtnClicked()
-                        {
+                        function setvalue2dBtnClicked() {
                             //alert("OK")
-                            if (array2dCreated == false)
-                            {
+                            if (array2dCreated == false) {
                                 let arrayw2d = document.querySelector("#arrayw2d");
                                 anime({
                                     targets: arrayw2d,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         arrayw2d.innerHTML = `&#10060; Array is not created!!!`;
                                         arrayw2d.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         arrayw2d.style.display = "none";
                                     }
                                 });
@@ -1611,40 +1581,34 @@ seatMatrix[0,0]
                             let rowI = Number(document.querySelector("#indexrowtext").value);
                             let colI = Number(document.querySelector("#indexcoltext").value);
 
-                            if (rowI >= nRows)
-                            {
+                            if (rowI >= nRows) {
                                 let arrayw2d = document.querySelector("#arrayw2d");
                                 anime({
                                     targets: arrayw2d,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         arrayw2d.innerHTML = `&#10060; There are only ${nRows} rows!!!<br/>The max row index is ${nRows - 1}!!!<br/>Index ${rowI} is out of boundary!!!`;
                                         arrayw2d.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         arrayw2d.style.display = "none";
                                     }
                                 });
                                 return;
                             }
 
-                            if (colI >= nCols)
-                            {
+                            if (colI >= nCols) {
                                 let arrayw2d = document.querySelector("#arrayw2d");
                                 anime({
                                     targets: arrayw2d,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         arrayw2d.innerHTML = `&#10060; There are only ${nCols} columns!!!<br/>The max column index is ${nCols - 1}!!!<br/>Index ${colI} is out of boundary!!!`;
                                         arrayw2d.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         arrayw2d.style.display = "none";
                                     }
                                 });
@@ -1766,8 +1730,7 @@ gradesList[0]// grades.Count
 
                         let listCreated = false;
 
-                        function createListBtnClicked(e)
-                        {
+                        function createListBtnClicked(e) {
                             isShowIndex = false;
                             listCreated = true;
 
@@ -1783,22 +1746,18 @@ gradesList[0]// grades.Count
                         }
 
 
-                        function addListItemBtnClicked(e)
-                        {
-                            if (listCreated == false)
-                            {
+                        function addListItemBtnClicked(e) {
+                            if (listCreated == false) {
                                 let listw = document.querySelector("#listw");
                                 anime({
                                     targets: listw,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         listw.innerHTML = `&#10060; List is not created!!!`;
                                         listw.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         listw.style.display = "none";
                                     }
                                 });
@@ -1823,8 +1782,7 @@ gradesList[0]// grades.Count
                             });
 
 
-                            if (isShowIndex == true)
-                            {
+                            if (isShowIndex == true) {
                                 let listindsdiv = document.querySelector("#listinds");
 
 
@@ -1849,15 +1807,13 @@ gradesList[0]// grades.Count
                         }
 
 
-                        function listIndexBtnClicked()
-                        {
+                        function listIndexBtnClicked() {
 
 
                             isShowIndex = true;
                             let listindsdiv = document.querySelector("#listinds");
                             listindsdiv.innerHTML = "";
-                            for (let i = 0; i < n; i++)
-                            {
+                            for (let i = 0; i < n; i++) {
                                 let newdiv = document.createElement("div");
                                 newdiv.classList.add("indDiv");
                                 newdiv.setAttribute("id", "listinddiv" + i);
@@ -1866,22 +1822,18 @@ gradesList[0]// grades.Count
                             }
                         }
 
-                        function setListValueBtnClicked()
-                        {
-                            if (listCreated == false)
-                            {
+                        function setListValueBtnClicked() {
+                            if (listCreated == false) {
                                 let listw = document.querySelector("#listw");
                                 anime({
                                     targets: listw,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         listw.innerHTML = `&#10060; List is not created!!!`;
                                         listw.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         listw.style.display = "none";
                                     }
                                 });
@@ -1890,20 +1842,17 @@ gradesList[0]// grades.Count
 
                             let i = Number(document.querySelector("#listindextext").value);
 
-                            if (i >= n)
-                            {
+                            if (i >= n) {
                                 let listw = document.querySelector("#listw");
                                 anime({
                                     targets: listw,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         listw.innerHTML = `&#10060; There are only ${n} elements!!!<br/>The max index is ${n - 1}!!!<br/>Index ${i} is out of boundary!!!`;
                                         listw.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         listw.style.display = "none";
                                     }
                                 });
@@ -2179,8 +2128,7 @@ foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
                         //     scale: [{value: 0}]
                         // });
 
-                        function createDictBtnClicked(e)
-                        {
+                        function createDictBtnClicked(e) {
                             keys = [];
 
                             isShowIndex = true;
@@ -2201,42 +2149,35 @@ foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
                         }
 
 
-                        function addDcitItemBtnClicked(e)
-                        {
+                        function addDcitItemBtnClicked(e) {
                             let newindex = document.querySelector("#newkeytext").value;
 
-                            if (dictCreated == false)
-                            {
+                            if (dictCreated == false) {
                                 //alert("OK")
                                 anime({
                                     targets: dictw1,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
                                         dictw1.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         dictw1.style.display = "none";
                                     }
                                 });
                                 return;
                             }
 
-                            if (keys.includes(newindex))
-                            {
+                            if (keys.includes(newindex)) {
                                 //alert("OK")
                                 anime({
                                     targets: dictw2,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         dictw2.innerHTML = `&#10060; key ${newindex} already exists!!!`;
                                         dictw2.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         dictw2.style.display = "none";
                                     }
                                 });
@@ -2261,8 +2202,7 @@ foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
                             });
 
 
-                            if (isShowIndex == true)
-                            {
+                            if (isShowIndex == true) {
                                 let dictinds = document.querySelector("#dictinds");
 
 
@@ -2289,19 +2229,15 @@ foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
                         }
 
 
-                        function setDictValueBtnClicked()
-                        {
-                            if (dictCreated == false)
-                            {
+                        function setDictValueBtnClicked() {
+                            if (dictCreated == false) {
                                 anime({
                                     targets: dictw1,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
                                         dictw1.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         dictw1.style.display = "none";
                                     }
                                 });
@@ -2310,20 +2246,17 @@ foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
 
                             let newindex = document.querySelector("#dictkeytext").value;
 
-                            if (!keys.includes(newindex))
-                            {
+                            if (!keys.includes(newindex)) {
                                 //alert("OK")
                                 anime({
                                     targets: dictw2,
                                     scale: [{value: 3, duration: 6000}, {value: 0}],
-                                    begin: function (anim)
-                                    {
+                                    begin: function (anim) {
 
                                         dictw2.innerHTML = `&#10060; key ${newindex} DOES NOT exist!!!`;
                                         dictw2.style.display = "block";
                                     },
-                                    complete: function (anim)
-                                    {
+                                    complete: function (anim) {
                                         dictw2.style.display = "none";
                                     }
                                 });
@@ -2488,7 +2421,6 @@ Average grade: 79.77</code></pre>
             </div>
 
 
-
             <!--insert new div here-->
         </div>
         <div class="mb-3"></div>
@@ -2614,9 +2546,12 @@ Console.WriteLine(tempDate.ToString("MMMM dd, yyyy")); //December 08, 2105.
             <table border="1" cellspacing="0" style="border-collapse:collapse; width:100%">
                 <tbody>
                 <tr>
-                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span style="color:#ffffff">Specifier</span></td>
-                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span style="color:#ffffff">Description</span></td>
-                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span style="color:#ffffff">Output</span></td>
+                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                            style="color:#ffffff">Specifier</span></td>
+                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                            style="color:#ffffff">Description</span></td>
+                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                            style="color:#ffffff">Output</span></td>
                 </tr>
                 <tr>
                     <td style="border-style:dashed; border-width:1px">d</td>
@@ -2760,19 +2695,21 @@ Console.WriteLine(tempDate.ToString("MMMM dd, yyyy")); //December 08, 2105.
                 </tr>
                 <tr>
                     <td style="border-style:dashed; border-width:1px">:</td>
-                    <td style="border-style:dashed; border-width:1px">Hours, minutes, seconds separator, e.g. {0:hh:mm:ss}</td>
+                    <td style="border-style:dashed; border-width:1px">Hours, minutes, seconds separator, e.g.
+                        {0:hh:mm:ss}
+                    </td>
                     <td style="border-style:dashed; border-width:1px">9:08:59</td>
                 </tr>
                 <tr>
                     <td style="border-style:dashed; border-width:1px">/</td>
-                    <td style="border-style:dashed; border-width:1px">Year, month , day separator, e.g. {0:dd/MM/yyyy}</td>
+                    <td style="border-style:dashed; border-width:1px">Year, month , day separator, e.g. {0:dd/MM/yyyy}
+                    </td>
                     <td style="border-style:dashed; border-width:1px">8/4/2007</td>
                 </tr>
                 </tbody>
             </table>
             </p>
         </div>
-
 
 
         <div class="mb-3"></div>
@@ -2782,44 +2719,67 @@ Console.WriteLine(tempDate.ToString("MMMM dd, yyyy")); //December 08, 2105.
             <p>
             <div class="fw-bold">
                 <ul>
-                    <li>get, set <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/properties"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <li>get, set <a target="_blank"
+                                    href="https://docs.microsoft.com/en-us/dotnet/csharp/properties"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
                         <ul>
                             <li>public string FirstName { get; set; }</li>
                             <li>public string FirstName
                                 {
                                 get { return _firstName; }
                                 set { _firstName = value; }
-                                }</li>
+                                }
+                            </li>
                         </ul>
                     </li>
 
-                    <li>class inherit <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <li>class inherit <a target="_blank"
+                                         href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
                         <ul>
-                            <li>Object datatype(class) <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>Object datatype(class) <a target="_blank"
+                                                          href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a></li>
                         </ul>
                     </li>
 
                     <li>base: (parent)</li>
-                    <li>class inherit <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <li>class inherit <a target="_blank"
+                                         href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
                         <ul>
-                            <li>abstract for class and method <a target="_blank" href="https://www.c-sharpcorner.com/UploadFile/93126e/importance-and-use-of-versioning-in-C-Sharp/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <li>abstract for class and method <a target="_blank"
+                                                                 href="https://www.c-sharpcorner.com/UploadFile/93126e/importance-and-use-of-versioning-in-C-Sharp/"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
                             </li>
-                            <li>virtual for method only <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <li>virtual for method only <a target="_blank"
+                                                           href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
                             </li>
                         </ul>
                     </li>
                     <li>override, overload functions
                         <ul>
-                            <li>overload <a target="_blank" href="https://www.geeksforgeeks.org/c-sharp-method-overloading/"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                            <li>ToString() function <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                            <li>Equals() function <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-6.0"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>overload <a target="_blank"
+                                            href="https://www.geeksforgeeks.org/c-sharp-method-overloading/"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>ToString() function <a target="_blank"
+                                                       href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>Equals() function <a target="_blank"
+                                                     href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-6.0"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a></li>
                         </ul>
                     </li>
                     <li>
                         interface (a concept in OOP, it is like a tag, not the user interface)
-                        <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
-                        <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
-                        <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank"
+                           href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
 
                     </li>
                     <li>Terminology: polymorphism
@@ -2853,9 +2813,13 @@ members accessibility (public, private)
             <p>
             <div class="fw-bold">
                 interface (a concept in OOP, it is like a tag, not the user interface)
-                <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
-                <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
-                <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank"
+                   href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
                 <br/>
                 <span class="text-danger">Ctrl + . </span> to auto implement interface
             </div>
@@ -2925,7 +2889,6 @@ public class Student:Person
         </div>
 
 
-
         <div class="mb-3"></div>
 
         <div class="h4 text-danger border-bottom border-danger fw-bold border-2">More about C#</div>
@@ -2936,9 +2899,12 @@ public class Student:Person
             <div class="fw-bold">
 
                 Data structure & algorithms
-                (A good course on LinkedInLearning <a target="_blank" href="https://www.linkedin.com/learning/c-sharp-algorithms/reverse-an-array-in-c-sharp"><span class="bi bi-box-arrow-up-right text-primary"></span></a>)<br/>
+                (A good course on LinkedInLearning <a target="_blank"
+                                                      href="https://www.linkedin.com/learning/c-sharp-algorithms/reverse-an-array-in-c-sharp"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>)<br/>
                 Big tech company interview questions: https://leetcode.com/problemset/all/
-                <a target="_blank" href="https://leetcode.com/problemset/all/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://leetcode.com/problemset/all/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
             </div>
             <pre><code class="language-csharp"></code></pre>
             </p>
