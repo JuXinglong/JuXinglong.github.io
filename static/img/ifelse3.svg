@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.8.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1"
-	 id="svg165" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg"
+	 id="svg165"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 458.2 439.2"
 	 style="enable-background:new 0 0 458.2 439.2;" xml:space="preserve">
 <style type="text/css">
@@ -14,8 +14,7 @@
 	.st6{fill:#3D64AC;}
 	.st7{font-family:'Calibri';}
 </style>
-<sodipodi:namedview  bordercolor="#000000" borderopacity="0.25" id="namedview167" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" inkscape:pagecheckerboard="0" inkscape:pageopacity="0.0" inkscape:showpageshadow="2" pagecolor="#ffffff">
-	</sodipodi:namedview>
+
 <path id="path5" class="st0" d="M15.8,175.6L59,143.8l43.2,31.7L59,207.3L15.8,175.6z"/>
 <text transform="matrix(1 0 0 1 29.8361 179.5889)" class="st1 st2">Condition 1</text>
 <path id="path13" class="st0" d="M0.8,287.4h116.4v-30.9H0.8V287.4z"/>
