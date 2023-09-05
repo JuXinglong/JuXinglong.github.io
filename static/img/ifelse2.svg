@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.8.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg101" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 255.5 425.3"
+	 style="enable-background:new 0 0 255.5 425.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#0070C0;stroke-width:1.5795;stroke-linecap:square;stroke-miterlimit:2;}
+	.st1{font-family:'ArialMT';}
+	.st2{font-size:12.3125px;}
+	.st3{fill:none;stroke:#4672C4;stroke-width:1.5795;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#4672C4;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st6{fill:#3D64AC;}
+	.st7{font-family:'Calibri';}
+</style>
+<sodipodi:namedview  bordercolor="#000000" borderopacity="0.25" id="namedview103" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" inkscape:pagecheckerboard="0" inkscape:pageopacity="0.0" inkscape:showpageshadow="2" pagecolor="#ffffff">
+	</sodipodi:namedview>
+<path id="path5" class="st0" d="M15.8,176.2L59,144.5l43.2,31.7L59,208L15.8,176.2z"/>
+<text transform="matrix(1 0 0 1 29.8361 180.2539)" class="st1 st2">Condition 1</text>
+<path id="path13" class="st0" d="M0.8,288h116.4v-30.9H0.8V288z"/>
+<text transform="matrix(1 0 0 1 26.5146 276.6518)" class="st1 st2">Code Block 1</text>
+<path id="path21" class="st0" d="M0.8,382.2h116.4v-45H0.8V382.2z"/>
+<text transform="matrix(1 0 0 1 7.4419 356.2706)" class="st1 st2">Code Block after the </text>
+<text transform="matrix(1 0 0 1 16.6343 371.3159)" class="st1 st2">if else statement</text>
+<path id="path35" class="st3" d="M59,95.1v39.7"/>
+<path id="path37" class="st4" d="M64.5,133.4L59,144.5l-5.5-11.1H64.5z"/>
+<path id="path39" class="st3" d="M59,208v39.6"/>
+<path id="path41" class="st4" d="M64.5,246.2l-5.5,11l-5.5-11H64.5z"/>
+<path id="path43" class="st5" d="M47.3,225v15.1h23.3V225H47.3z"/>
+<text transform="matrix(1 0 0 1 47.5898 236.6077)" class="st6 st7 st2">True</text>
+<path id="path51" class="st3" d="M59,288v39.6"/>
+<path id="path53" class="st4" d="M64.5,326.2l-5.5,11l-5.5-11H64.5z"/>
+<path id="path55" class="st3" d="M102.2,176.2h94.3V245"/>
+<path id="path57" class="st4" d="M202,243.6l-5.5,11.1l-5.5-11.1H202z"/>
+<path id="path59" class="st5" d="M175.7,168.7v15.1h25.8v-15.1H175.7z"/>
+<text transform="matrix(1 0 0 1 175.9416 180.2541)" class="st6 st7 st2">False</text>
+<path id="path67" class="st3" d="M58.3,382.2h1.4v33.4"/>
+<path id="path69" class="st4" d="M65.2,414.2l-5.5,11l-5.5-11H65.2z"/>
+<path id="path71" class="st0" d="M138.3,285.5h116.4v-30.9H138.3V285.5z"/>
+<text transform="matrix(1 0 0 1 164.0402 274.1416)" class="st1 st2">Code Block 2</text>
+<path id="path79" class="st3" d="M196.5,285.5V309H59v18.6"/>
+<path id="path81" class="st4" d="M64.5,326.2l-5.5,11l-5.5-11H64.5z"/>
+<path id="path83" class="st0" d="M0.8,95.1h116.4v-45H0.8V95.1z"/>
+<text transform="matrix(1 0 0 1 12.7555 69.1461)" class="st1 st2">Code Block before </text>
+<text transform="matrix(1 0 0 1 6.7045 84.1914)" class="st1 st2">the if else statement</text>
+<path id="path97" class="st3" d="M59.4,0.8L59,40.5"/>
+<path id="path99" class="st4" d="M64.6,39.2l-5.6,11l-5.4-11.1L64.6,39.2z"/>
+</svg>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.8.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg165" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 458.2 439.2"
+	 style="enable-background:new 0 0 458.2 439.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#0070C0;stroke-width:1.5795;stroke-linecap:square;stroke-miterlimit:2;}
+	.st1{font-family:'ArialMT';}
+	.st2{font-size:12.3125px;}
+	.st3{fill:none;stroke:#4672C4;stroke-width:1.5795;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#4672C4;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st6{fill:#3D64AC;}
+	.st7{font-family:'Calibri';}
+</style>
+<sodipodi:namedview  bordercolor="#000000" borderopacity="0.25" id="namedview167" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" inkscape:pagecheckerboard="0" inkscape:pageopacity="0.0" inkscape:showpageshadow="2" pagecolor="#ffffff">
+	</sodipodi:namedview>
+<path id="path5" class="st0" d="M15.8,175.6L59,143.8l43.2,31.7L59,207.3L15.8,175.6z"/>
+<text transform="matrix(1 0 0 1 29.8361 179.5889)" class="st1 st2">Condition 1</text>
+<path id="path13" class="st0" d="M0.8,287.4h116.4v-30.9H0.8V287.4z"/>
+<text transform="matrix(1 0 0 1 26.5146 275.9869)" class="st1 st2">Code Block 1</text>
+<path id="path21" class="st0" d="M0.8,396.2h116.4v-45H0.8V396.2z"/>
+<text transform="matrix(1 0 0 1 7.4419 370.2039)" class="st1 st2">Code Block after the </text>
+<text transform="matrix(1 0 0 1 16.6343 385.2492)" class="st1 st2">if else statement</text>
+<path id="path35" class="st3" d="M59,95.1v39"/>
+<path id="path37" class="st4" d="M64.5,132.8L59,143.8l-5.5-11.1H64.5z"/>
+<path id="path39" class="st3" d="M59,207.3v39.6"/>
+<path id="path41" class="st4" d="M64.5,245.5l-5.5,11l-5.5-11H64.5z"/>
+<path id="path43" class="st5" d="M47.3,224.4v15.1h23.3v-15.1H47.3z"/>
+<text transform="matrix(1 0 0 1 47.5898 235.9428)" class="st6 st7 st2">True</text>
+<path id="path51" class="st3" d="M59,287.4v54.2"/>
+<path id="path53" class="st4" d="M64.5,340.2L59,351.2l-5.5-11.1H64.5z"/>
+<path id="path55" class="st3" d="M58.3,396.2h1.4v33.4"/>
+<path id="path57" class="st4" d="M65.2,428.2l-5.5,11l-5.5-11H65.2z"/>
+<path id="path59" class="st0" d="M0.8,95.1h116.4v-45H0.8V95.1z"/>
+<text transform="matrix(1 0 0 1 12.7555 69.1461)" class="st1 st2">Code Block before </text>
+<text transform="matrix(1 0 0 1 6.7045 84.1914)" class="st1 st2">the if else statement</text>
+<path id="path73" class="st3" d="M59.4,0.8L59,40.5"/>
+<path id="path75" class="st4" d="M64.6,39.2l-5.6,11l-5.4-11.1L64.6,39.2z"/>
+<path id="path77" class="st0" d="M192.1,175.5l43.2-31.7l43.2,31.7l-43.2,31.7L192.1,175.5z"/>
+<text transform="matrix(1 0 0 1 206.1511 179.5067)" class="st1 st2">Condition 2</text>
+<path id="path85" class="st0" d="M177.1,287.3h116.4v-30.9H177.1V287.3z"/>
+<text transform="matrix(1 0 0 1 202.8295 275.9047)" class="st1 st2">Code Block 2</text>
+<path id="path93" class="st3" d="M235.3,207.2v39.6"/>
+<path id="path95" class="st4" d="M240.8,245.4l-5.5,11.1l-5.5-11.1H240.8z"/>
+<path id="path97" class="st5" d="M223.6,224.3v15h23.3v-15H223.6z"/>
+<text transform="matrix(1 0 0 1 223.9048 235.8605)" class="st6 st7 st2">True</text>
+<path id="path105" class="st3" d="M235.3,287.3V323H68.6"/>
+<path id="path107" class="st4" d="M70,328.5L59,323l11-5.5V328.5z"/>
+<path id="path109" class="st3" d="M102.2,175.6h28.2v-60.1h104.9v18.6"/>
+<path id="path111" class="st4" d="M240.8,132.7l-5.5,11l-5.5-11H240.8z"/>
+<path id="path113" class="st5" d="M139.9,108v15h25.8v-15H139.9z"/>
+<text transform="matrix(1 0 0 1 140.1967 119.56)" class="st6 st7 st2">False</text>
+<path id="path121" class="st0" d="M356.1,175.5l43.2-31.7l43.2,31.7l-43.2,31.7L356.1,175.5z"/>
+<text transform="matrix(1 0 0 1 370.124 179.5067)" class="st1 st2">Condition 3</text>
+<path id="path129" class="st0" d="M341.1,287.3h116.4v-30.9H341.1V287.3z"/>
+<text transform="matrix(1 0 0 1 366.8025 275.9047)" class="st1 st2">Code Block 3</text>
+<path id="path137" class="st3" d="M399.3,207.2v39.6"/>
+<path id="path139" class="st4" d="M404.8,245.4l-5.5,11.1l-5.5-11.1H404.8z"/>
+<path id="path141" class="st5" d="M387.6,224.3v15h23.3v-15H387.6z"/>
+<text transform="matrix(1 0 0 1 387.8777 235.8605)" class="st6 st7 st2">True</text>
+<path id="path149" class="st3" d="M399.3,287.3V323H244.9"/>
+<path id="path151" class="st4" d="M246.3,328.5l-11-5.5l11-5.5V328.5z"/>
+<path id="path153" class="st3" d="M278.5,175.5h28.2v-59.9h92.6v18.6"/>
+<path id="path155" class="st4" d="M404.8,132.7l-5.5,11l-5.5-11H404.8z"/>
+<path id="path157" class="st5" d="M310.1,108v15h25.8v-15H310.1z"/>
+<text transform="matrix(1 0 0 1 310.3818 119.56)" class="st6 st7 st2">False</text>
+</svg>

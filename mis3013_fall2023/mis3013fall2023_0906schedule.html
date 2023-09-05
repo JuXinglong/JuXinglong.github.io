@@ -67,22 +67,22 @@
         <div class="border-1 border border-dark rounded-3 mb-3">
             <ul style="font-weight: bold;">
 
-<!--                <li class="list-group-item"><span class="text-danger">Sign the attendance sheet</span></li>-->
-
+                <!--                <li class="list-group-item"><span class="text-danger">Sign the attendance sheet</span></li>-->
 
 
                 <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>
-                <li><span class="text-primary h5 fw-bold">Create a C# console app: MIS3013_005_LC_0906_YourName</span></li>
+                <li><span class="text-primary h5 fw-bold">Create a C# console app: MIS3013_005_LC_0906_YourName</span>
+                </li>
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <li class="text-primary">HW2 due September 15, 2023, 5:00 PM</li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
-<!--                <li>Exercise 2 September 28, 2022, Lecture Time-->
-<!--                    <ul>-->
-<!--                        <li>if else conditional</li>-->
-<!--                        <li>loops</span></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
+                <!--                <li>Exercise 2 September 28, 2022, Lecture Time-->
+                <!--                    <ul>-->
+                <!--                        <li>if else conditional</li>-->
+                <!--                        <li>loops</span></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
                 <li><a class="btn btn-sm btn-outline-primary" target="_blank" href="https://git-scm.com/">Git</a></li>
 
 
@@ -383,6 +383,10 @@ x < 5 || x < 4
                     class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
                                                                                  href="https://www.w3schools.com/cs/cs_conditions.php"><span
                     class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div class="text-dark fw-bold">if else statement format 1</div>
+            <div>
+                <img src="../static/img/ifelse1.svg" style="height: 400px;"/>
+            </div>
             <pre><code class="language-csharp">// format 1 Syntax
 if (condition)
 {
@@ -401,7 +405,12 @@ if (x > y)
 {
   Console.WriteLine("x is greater than y");
 }
-
+            </code></pre>
+            <div class="text-dark fw-bold">if else statement format 2</div>
+            <div>
+                <img src="../static/img/ifelse2.svg" style="height: 400px;"/>
+            </div>
+            <pre><code class="language-csharp">
 // format 2 Syntax
 if (condition)
 {
@@ -423,7 +432,12 @@ else
   Console.WriteLine("Good evening.");
 }
 // Outputs "Good evening."
-
+            </code></pre>
+            <div class="text-dark fw-bold">if else statement format 3</div>
+            <div>
+                <img src="../static/img/ifelse3.svg" style="height: 400px;"/>
+            </div>
+            <pre><code class="language-csharp">
 // format 3 Syntax
 if (condition1)
 {
@@ -465,11 +479,11 @@ else
             <p class="admonition-title">counter, accumulator</p>
             <p>
             <div class="fw-bold">
-            int counter=0;<br/>
-            double accumulator=0;
-            <br/>
-            ++ operator
-        </div>
+                int counter=0;<br/>
+                double accumulator=0;
+                <br/>
+                ++ operator
+            </div>
             <pre><code class="language-csharp">
 int i=0;
 i=i+1;
@@ -502,39 +516,45 @@ double aveGrade=sumOfGrade/counter;            </code></pre>
         <div class="mb-3"></div>
 
 
-
         <div class="admonition note">
             <p class="admonition-title">Coin Toss Example</p>
             <p>
             <div>
-            Prompt the user to pick heads or tails, and then generate a random number, using the Random  class <a target="_blank" href="https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp"><span class="bi bi-box-arrow-up-right text-primary"></span></a>, generate a random number that has a range of just two numbers (e.g. it should just be random between 0 and 1 or 1 and 2 so that you have two options, heads or tails).<br/>
-            <br/>
+                Prompt the user to pick heads or tails, and then generate a random number, using the Random class <a
+                    target="_blank"
+                    href="https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>, generate a random number that has a range
+                of just two numbers (e.g. it should just be random between 0 and 1 or 1 and 2 so that you have two
+                options, heads or tails).<br/>
+                <br/>
 
-            Tell the user what side the coin landed on (heads or tails) and then whether or not their guess was right or wrong.<br/><br/>
+                Tell the user what side the coin landed on (heads or tails) and then whether or not their guess was
+                right or wrong.<br/><br/>
 
-            Repeat the process 3 times, store the number of right guesses and calculate the right guess percentage. Print out these information.<br/><br/>
+                Repeat the process 3 times, store the number of right guesses and calculate the right guess percentage.
+                Print out these information.<br/><br/>
 
-            Example code how to generate a random integer number:<br/><br/>
-            Random rnd = new Random();
-            int randomNum = rnd.Next(3, 5); // Generate a random integer and store it into variable randomNum.<br/><br/>
-            // rnd.Next(3, 5); will result only result in 3 or 4<br/>
-            // rnd.Next(0, 2); will result only result in 0 or 1<br/>
-            // rnd.Next(0, 3); will result only result in 0, 1, or 2<br/>
-            Console.WriteLine(randomNum);<br/><br/>
-            <p>Please take a guess (Head or Tail): H<br/>
-                Your guess is wrong!<br/>
-                Please take a guess (Head or Tail): T<br/>
-                Your guess is correct!<br/>
-                Please take a guess (Head or Tail): T<br/>
-                Your guess is correct!<br/>
-                2 out of 3 are correct!<br/>
-                The correct percentage is 66.67%</p>
-        </div>
+                Example code how to generate a random integer number:<br/><br/>
+                Random rnd = new Random();
+                int randomNum = rnd.Next(3, 5); // Generate a random integer and store it into variable
+                randomNum.<br/><br/>
+                // rnd.Next(3, 5); will result only result in 3 or 4<br/>
+                // rnd.Next(0, 2); will result only result in 0 or 1<br/>
+                // rnd.Next(0, 3); will result only result in 0, 1, or 2<br/>
+                Console.WriteLine(randomNum);<br/><br/>
+                <p>Please take a guess (Head or Tail): H<br/>
+                    Your guess is wrong!<br/>
+                    Please take a guess (Head or Tail): T<br/>
+                    Your guess is correct!<br/>
+                    Please take a guess (Head or Tail): T<br/>
+                    Your guess is correct!<br/>
+                    2 out of 3 are correct!<br/>
+                    The correct percentage is 66.67%</p>
+            </div>
             <div class="fw-bold"></div>
             <pre><code class="language-csharp"></code></pre>
             </p>
         </div>
-
 
 
         <div class="mb-3"></div>
@@ -544,17 +564,18 @@ double aveGrade=sumOfGrade/counter;            </code></pre>
         <div class="admonition note">
             <p class="admonition-title">loops</p>
             <p>
-            <div class="fw-bold">loops (break continue <a target="_blank" href="https://www.w3schools.com/cs/cs_break.php"><span
-                class="bi bi-box-arrow-up-right text-primary"></span></a>)
-            <ul>
-                <li>for(;;){} <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-                <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
-                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
-            </ul>
-        </div>
+            <div class="fw-bold">loops (break continue <a target="_blank"
+                                                          href="https://www.w3schools.com/cs/cs_break.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>)
+                <ul>
+                    <li>for(;;){} <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                </ul>
+            </div>
             <pre><code class="language-csharp">Loops
 int i;
 for(int i=0;i<10;i++;)
