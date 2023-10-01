@@ -26,12 +26,29 @@
     <script src="../static/highlight/highlight.min.js"></script>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"></script>
+
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
     <script src="../static/site.js"></script>
     <script>
         function initPro()
         {
             hljs.highlightAll();
+            let floatpanel = document.querySelector("#floatpanel");
+            anime({
+                targets: floatpanel,
+                scale: {
+                    value: 0.5,
+                }
 
+            });
 
         }
 
@@ -119,9 +136,87 @@
                                                                                                         class="btn btn-sm btn-success">JavaScript
                     Tutorial</a>
                 </li>
+                <li class="list-group-item"><span class="text-danger"></span></li>
+                <li class="list-group-item"><span class="text-danger">You need to know:</span>
+                <ul>
+                    <li><a href="#knowhtml" style="margin-bottom: 1px;" class="btn  btn-sm btn-danger">✅ HTML</a></li>
+
+                    <li><a href="#knowcss" style="" class="btn btn-sm btn-warning">✅ CSS </a></li>
+                    <li><a href="#knowflex" style="" class="btn btn-sm btn-primary">✅ Use display:flex to design a webpage layout</a></li>
+                </ul>
+                </li>
 
 
             </ul>
+
+            <div id="floatpanel"
+                 style="position: fixed;right:0px;top:50px;display: flex;flex-direction: column;align-items: end;justify-content: start;">
+                <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
+                </button>
+                <script>
+                    {
+                        "use strict";
+                        var m = 1;
+                        let foldbtn = document.querySelector("#foldbtn");
+                        foldbtn.addEventListener("click", (e) =>
+                        {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 0.0,
+                                }
+                            });
+                            //floatmenu.style.display = "none";
+                            let expandbtn = document.querySelector("#expandbtn");
+                            expandbtn.style.display = "block";
+                            foldbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <button id="expandbtn" class="btn btn-sm btn-outline-secondary" style="display: none;"><i
+                        class="bi bi-chevron-double-down"></i></button>
+                <script>
+                    {
+                        "use strict";
+                        let expandbtn = document.querySelector("#expandbtn");
+
+                        expandbtn.addEventListener("click", (e) =>
+                        {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 1.0,
+                                }
+                            });
+                            //floatmenu.style.display = "block";
+                            let foldbtn = document.querySelector("#foldbtn");
+                            foldbtn.style.display = "block";
+                            expandbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <div id="floatmenu" style="display: flex;flex-direction: column;">
+                    <a href="#top" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-dark">Go to Top</a>
+
+
+                    <a href="#html" style="margin-bottom: 1px;" class="btn  btn-sm btn-primary">HTML</a>
+                    <a href="#css" style="margin-bottom: 1px;" class="btn  btn-sm btn-info">CSS</a>
+                    <a href="#flex" style="margin-bottom: 1px;" class="btn  btn-sm btn-success"
+                       >Layout</a>
+                    <a href="#knowhtml" style="margin-bottom: 1px;" class="btn  btn-sm btn-danger">✅ HTML</a>
+
+                    <a href="#knowcss" style="" class="btn btn-sm btn-warning">✅ CSS&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                    <a href="#knowflex" style="" class="btn btn-sm btn-primary">✅ Layout</a>
+<!--                    <a href="#exam1endshere" style="" class="btn btn-sm btn-dark">Exam 1 Ends</a>-->
+                    <!--                    <a href="#linq" style="" class="btn btn-sm btn-danger">LINQ</a>-->
+
+
+                </div>
+                <!--                <a href="#list" style=""  class="btn btn-sm btn-outline-danger">List</a><br/>-->
+                <!--                <a href="#dictionary" style="width: 100px;"  class="btn btn-sm btn-outline-info">Dictionary</a>-->
+            </div>
         </div>
 
         <div>
@@ -280,47 +375,7 @@
 &lt;/html&gt;
 </code></pre>
 
-                <div class="text-success fw-bold h3">Important Tags</div>
 
-                <script type="text/babel">
-                    function Highlighter({content, language})
-                    {
-                        const highlighted = hljs.highlight(content, {language: language,}, false);
-
-                        // console.log(highlighted.value);
-                        return (
-                            <pre className={`hljs`}>
-          <code dangerouslySetInnerHTML={{__html: highlighted.value}}/>
-        </pre>
-                        );
-                    }
-                </script>
-
-                <div id="ra1"></div>
-                <script type="text/babel">
-                    const root1 = ReactDOM.createRoot(
-                        document.getElementById('ra1')
-                    );
-                    const element = <Highlighter content={`// single line comment
-// MIS 3013 First Program
-Console.WriteLine("Welcome to MIS 3013!");
-
-/* This is a multiple-line
- comment.*/
-/*This is another example.*/
-Console.WriteLine("Let's start C# programming journey.");`} language={"csharp"}/>;
-                    root1.render(element);
-                </script>
-
-
-                <div id="ra2"></div>
-                <script type="text/babel">
-                    const root2 = ReactDOM.createRoot(
-                        document.getElementById('ra2')
-                    );
-                    const element = <h1>Hello, world</h1>;
-                    root2.render(element);
-                </script>
 
 
                 <h4>Common Tags for Blogs</h4>
@@ -812,7 +867,7 @@ Console.WriteLine("Let's start C# programming journey.");`} language={"csharp"}/
 
             <div class="mb-3"></div>
 
-            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">CSS-display:flex; to design layout
+            <div id="flex" class="h4 text-danger border-bottom border-danger fw-bold border-2">CSS-display:flex; to design layout
             </div>
 
             <div class="admonition note">
@@ -850,7 +905,197 @@ Console.WriteLine("Let's start C# programming journey.");`} language={"csharp"}/
             </div>
             <!--            <div class="mb-3"></div>-->
 
+            <div class="mb-3"></div>
 
+            <div id="know" class="h4 text-danger border-bottom border-danger fw-bold border-2">You need to know
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">You need to know</p>
+                <p>
+
+
+
+                <script type="text/babel">
+                    function Highlighter({content, language})
+                    {
+                        const highlighted = hljs.highlight(content, {language: language,}, false);
+
+                        // console.log(highlighted.value);
+                        return (
+                            <pre className={`hljs`}>
+          <code dangerouslySetInnerHTML={{__html: highlighted.value}}/>
+        </pre>
+                        );
+                    }
+                </script>
+
+
+                <div id="knowhtml" class="text-danger fw-bold h4 uppercase">HTML Tags</div>
+                <div id="ra1"></div>
+                <script type="text/babel">
+                    const root1 = ReactDOM.createRoot(
+                        document.getElementById('ra1')
+                    );
+                    const element = <Highlighter content={`
+Space in thml
+
+<html></html>
+<head></head>
+<title></title>
+
+
+<body></body>
+<p></p>
+<div></div>
+<span></span>
+<br/>
+<hr/>
+&nbsp;
+<img src="img/csharp.png"/>
+<a href="index.html" target="_blank"></a>
+
+Ordered list:
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+
+Unordered list:
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+Button
+<button>Submit</button>
+
+Textbox
+<label for="studentID">Student ID:</label>
+<input id="studentID" type="text" value="123"/>
+
+Checkbox
+<input type="checkbox" id="MIS3033-005" value="MIS3033-005" />
+<label for="MIS3033-005"> MIS3013-005</label><br>
+<input type="checkbox" id="Junior" value="Junior" />
+<label for="Junior">Junior Student</label><br>
+<input type="button" value="Submit" />
+
+Radio button: name value
+<input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css">CSS</label><br>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript">JavaScript</label>
+
+
+
+Table:
+<table>
+<tr>
+    <th>Col1</th>
+    <th>Col2</th>
+</tr>
+<tr>
+    <td>data1</td>
+    <td>data2</td>
+</tr>
+<tr>
+    <td>data1</td>
+    <td>data2</td>
+</tr>
+</table>
+`} language={"html"}/>;
+                    root1.render(element);
+                </script>
+
+
+                <div id="knowcss" class="text-danger fw-bold h4 uppercase">CSS</div>
+                <div id="ra2"></div>
+                <script type="text/babel">
+                    const root1 = ReactDOM.createRoot(
+                        document.getElementById('ra2')
+                    );
+                    const element = <Highlighter content={`
+<tagName style="style1:value1;style2:value2;">"" or ''
+contents
+</tagName>
+
+color:
+<div style="color:red;">
+    Text
+</div>
+
+font-size, font-weight
+<div style="color:red;font-size:20px;font-weight:bold;">
+    Text
+</div>
+
+width, height, background-color
+<div style="width:300px;height:400px;background-color:azure;">
+    Text
+</div>
+
+border-style, border-color, border-width, border-radius
+<div style="border-style:dashed;border-color:dodgerblue;border-width:2px;border-radius:20px; width:200px;height:200px;">
+    Text
+</div>
+
+padding-left, padding-top, padding-right, padding-bottom
+<div style="padding-left:10px;padding-top:50px;padding-right:5px;padding-bottom:5px;background-color:lightblue;width:200px;height:200px;">
+    Text
+</div>
+
+margin-left, margin-top, margin-right, margin-bottom
+<div style="margin-left: 10px; margin-top: 50px; margin-right: 5px; margin-bottom: 5px; background-color: lightblue; width: 200px; height: 200px; ">
+    Text
+</div>
+
+<html>
+<head>
+    <title></title>
+    <link rel="icon" href="MIS3033.png">
+    <link rel="stylesheet" href="static/css/site.css"/>
+    <style>
+    .style1{color: red;font-size: 30pt;}
+    .style2{background-color: azure;}
+    *{color: darkgoldenrod;}
+    #p1{color:green;}
+    </style>
+</head>
+<body>
+    <div> </div>
+    <p class="style1 style2">Founded in 1890, the University of Oklahoma is.</p>
+    <p id="p1">Founded in 1890,.</p>
+    <p>Founded in 1890, the overseas.</p>
+    <div>
+</div>
+</body>
+</html>
+
+
+`} language={"html"}/>;
+                    root1.render(element);
+                </script>
+
+                <div id="knowflex" class="text-danger fw-bold h4 uppercase">Use display:flex to design layout of a web page</div>
+                <div id="ra3"></div>
+                <script type="text/babel">
+                    const root1 = ReactDOM.createRoot(
+                        document.getElementById('ra3')
+                    );
+                    const element = <Highlighter content={`
+
+
+`} language={"html"}/>;
+                    root1.render(element);
+                </script>
+                <!--                <pre><code class="code"></code>-->
+                <!--                </pre>-->
+            </div>
             <!--            Add things here-->
         </div>
     </div>
