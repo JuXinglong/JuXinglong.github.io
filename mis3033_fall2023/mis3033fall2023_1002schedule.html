@@ -241,6 +241,20 @@
 
         <div>
 
+            <div id="ratext"></div>
+            <script type="text/babel">
+                const root1 = ReactDOM.createRoot(
+                    document.getElementById('ratext')
+                );
+                const element = <Highlighter content={`
+Founded in 1890, the University of Oklahoma was actually established 17 years prior to Oklahoma’s statehood. So, while this venerable institution is, of course, dedicated to the success of its students, the university has always focused on contributing to the advancement of the entire state. This mindset is reflected in our official mission:
+
+The mission of the University of Oklahoma is to provide the best possible educational experience for our students through excellence in teaching, research and creative activity, and service to the state and society.
+
+`} language={"plaintext"}/>;
+                root1.render(element);
+            </script>
+
 
             <h3 class="text-danger mb-3">Exam 2 Contents Start</h3>
 
