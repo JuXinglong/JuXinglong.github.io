@@ -36,7 +36,24 @@
 
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
+
+
     <script src="../static/site.js"></script>
+
+    <script type="text/babel">
+        function Highlighter({content, language})
+        {
+            const highlighted = hljs.highlight(content, {language: language,}, false);
+
+            // console.log(highlighted.value);
+            return (
+                <pre className={`hljs`}>
+          <code dangerouslySetInnerHTML={{__html: highlighted.value}}/>
+        </pre>
+            );
+        }
+    </script>
+
     <script>
         function initPro()
         {
@@ -80,6 +97,9 @@
                     <a class="btn btn-sm btn-warning" target="_blank" href="https://desktop.github.com/">Github
                         Desktop</a>
                     <a class="btn btn-sm btn-outline-primary" target="_blank" href="https://github.com/">GitHub</a></li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li><a class="btn btn-sm btn-danger" target="_blank" href="https://canvas.ou.edu/courses/297786/assignments/2387547?module_item_id=5733831">3 Retakes</a></li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
 
@@ -895,9 +915,18 @@
 
                     <br/>
                 </div>
-                <pre><code class="language-csharp">
+                <div id="ra4"></div>
+                <script type="text/babel">
+                    const root1 = ReactDOM.createRoot(
+                        document.getElementById('ra4')
+                    );
+                    const element = <Highlighter content={`
+style="position:sticky;top:20px;"
+left,right,top,bottom
 
-                </code></pre>
+`} language={"css"}/>;
+                    root1.render(element);
+                </script>
 
 
                 <!--                <pre><code class="code"></code>-->
@@ -916,19 +945,6 @@
 
 
 
-                <script type="text/babel">
-                    function Highlighter({content, language})
-                    {
-                        const highlighted = hljs.highlight(content, {language: language,}, false);
-
-                        // console.log(highlighted.value);
-                        return (
-                            <pre className={`hljs`}>
-          <code dangerouslySetInnerHTML={{__html: highlighted.value}}/>
-        </pre>
-                        );
-                    }
-                </script>
 
 
                 <div id="knowhtml" class="text-danger fw-bold h4 uppercase">HTML Tags</div>
@@ -991,6 +1007,11 @@ Radio button: name value
 <input type="radio" id="javascript" name="fav_language" value="JavaScript">
 <label for="javascript">JavaScript</label>
 
+Drop down list
+<select>
+    <option value="mis3013">MIS3013</option>
+    <option value="3033">MIS3033</option>
+</select>
 
 
 Table:
@@ -1088,9 +1109,12 @@ margin-left, margin-top, margin-right, margin-bottom
                         document.getElementById('ra3')
                     );
                     const element = <Highlighter content={`
+display:flex;
+flex-direction:row;column;
+align-items:end;start; center;
+justify-content:center;start;end;
 
-
-`} language={"html"}/>;
+`} language={"css"}/>;
                     root1.render(element);
                 </script>
                 <!--                <pre><code class="code"></code>-->
