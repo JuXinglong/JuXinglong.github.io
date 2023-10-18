@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>October 18 Lecture Schedule MIS 3033: JavaScript 2</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
     <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
     <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
@@ -31,6 +36,20 @@
 
 
     <script src="../static/site.js"></script>
+
+    <script type="text/babel">
+        function Highlighter({content, language})
+        {
+            const highlighted = hljs.highlight(content, {language: language,}, false);
+
+            // console.log(highlighted.value);
+            return (
+                <pre className={`hljs`}>
+          <code dangerouslySetInnerHTML={{__html: highlighted.value}}/>
+        </pre>
+            );
+        }
+    </script>
     <script>
         function initPro()
         {
@@ -310,12 +329,12 @@
 
 // define a variable
 const age = 10;// constant
-let weight = 128.8;// local variable
-var name = "Aiden";// global variable
+let weight = 128.8;// local variable ******IMPORTANT******
+var name = "Aiden";// global variable ******IMPORTANT******
 
 
 // define a function
-//
+//  ******IMPORTANT******
 function f1 (n1,n2)
 {
     let n = n1 + n2;
@@ -323,17 +342,27 @@ function f1 (n1,n2)
 }
 console.log( f1( 20, 30 ) );
 
+//  ******IMPORTANT******
+let f4 = (n1,n2)=>
+{
+    let n = n1 + n2;
+    return n;
+};
+console.log( f4( 20, 30 ) );
+
+//  ******IMPORTANT******
 let f2 = function ( n1, n2 )
 {
     return n1 * n2;
 }
 console.log( f2( 3.0, 4.0 ) );
 
+//  ******IMPORTANT******
 let f3 = ( n1, n2 ) => n1 - n2;
 console.log( f3( 6, 2 ) );
 
 
-// object
+// object //  ******IMPORTANT******
 let stu1 = {
     name: "aiden", age: 19,
     getInfor: function () { return `Name:${ this.name },Age${ this.age }`; }
@@ -347,19 +376,20 @@ console.log( dt1 );
 
 
 // string
-
+//  ******IMPORTANT******
 let str1 = "aiden";
 let str2 = "hello";
 let str3 = str2 + str1;
 
 // `${var}`
+//  ******IMPORTANT******
 let str4 = `Name is ${ str1 } ${ weight.toFixed( 2 ) }`;
 console.log( str3 );
 console.log( str4 );
 
 
 // array
-let ages = [ 18, 19, 22, 36 ];
+let ages = [ 18, 19, 22, 36 ]; //  ******IMPORTANT******
 console.log( ages[ 1 ] );
 ages.push( 26, 27 ); // add to the end of the array
 ages.pop();// remove the last element of the array
@@ -372,6 +402,7 @@ console.log( ages );
 
 ages.forEach( ( item ) => { console.log( `After one year, age is ${ item + 1 }` ); } );
 
+//  ******IMPORTANT******
 let r = ages.map(
     function( item )
     {
@@ -380,6 +411,7 @@ let r = ages.map(
 )
 console.log( r );
 
+//  ******IMPORTANT******
 // if(){}
 // if(){} else{}
 // if(){} else if(){} else{}
@@ -394,10 +426,10 @@ else
 }
 
 
-// for(;;){}
+// for(;;){} //  ******IMPORTANT******
 // for(of){}// array
 // for(in){}// object
-for ( let i = 0; i < ages.length; i++ )
+for ( let i = 0; i < ages.length; i++ )//  ******IMPORTANT******
 {
     console.log( ages[ i ] );
 }
@@ -425,16 +457,16 @@ console.log('Hello world');
                         Document Object Model</a>
                     <ul>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
-                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector()</a>
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector()</a>
                         </li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
                                target="_blank"
                                style="margin-bottom: 8px;margin-top: 8px;">document.querySelectorAll()</a></li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank"
-                               style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector("#main").classList.add("style1")</a>
+                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector("#main").classList.add("style1")</a>
                         </li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank"
-                               style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector("#main").classList.remove("style1")</a>
+                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector("#main").classList.remove("style1")</a>
                         </li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank"
                                style="margin-bottom: 8px;margin-top: 8px;" class="">document.querySelector("#main").classList.toggle("style1")</a>
@@ -452,16 +484,25 @@ console.log('Hello world');
                                target="_blank" style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main2").removeAttribute("id")</a>
                         </li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank"
-                               style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main").style.color="red";</a>
+                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector("#main").style.color="red";</a>
                         </li>
+
+                        <li><span
+                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector("#text").value;</span>
+                        </li>
+
+                        <li><span
+                                style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector("#text").value="New value";</span>
+                        </li>
+
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
                                target="_blank" style="margin-bottom: 8px;margin-top: 8px;">let
                             newEle=document.createElement("div");</a></li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank"
-                               style="margin-bottom: 8px;margin-top: 8px;">newEle.innerHTML="<b>Hello</b>";</a></li>
+                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">newEle.innerHTML="<b>Hello</b>";</a></li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText"
                                target="_blank"
-                               style="margin-bottom: 8px;margin-top: 8px;">newEle.innerText="<b>Hello</b>";</a></li>
+                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">newEle.innerText="<b>Hello</b>";</a></li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append" target="_blank"
                                style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main").append(newEle);</a>
                         </li>
@@ -476,14 +517,49 @@ console.log('Hello world');
                         Listenser</a>
                     <ul>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
-                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main").addEventListener("click",(e)=>{alert(e);console.log(e);});</a>
+                               target="_blank" style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector("#main").addEventListener("click",(e)=>{alert(e);console.log(e);});</a>
                         </li>
 
                     </ul>
                 </div>
 
-                <!--                <pre><code class="code"></code>-->
-                <!--                </pre>-->
+                <span class="badge bg-primary h3" style="">fetch() function to call web api</span>
+
+                <div>
+                    <a href="https://excuser-three.vercel.app/" target="_blank">https://excuser-three.vercel.app/</a><br/>
+                    <a href="https://excuser-three.vercel.app/v1/excuse/family/" target="_blank">https://excuser-three.vercel.app/v1/excuse/family/</a><br/>
+                    <a href="https://catfact.ninja/fact" target="_blank">https://catfact.ninja/fact</a><br/>
+                    <a href="https://api.agify.io/?name=tom" target="_blank">https://api.agify.io/?name=tom</a><br/>
+                </div>
+                <div id="fetchapidiv"></div>
+                <script type="text/babel">
+                    {const root1 = ReactDOM.createRoot(
+                        document.getElementById('fetchapidiv')
+                    );
+                    const element = <Highlighter content={`
+async function GetAge ()
+{
+    let name = document.querySelector( "#name" ).value;
+    //let r = await fetch( 'https://excuser-three.vercel.app/v1/excuse/family/' );
+    //let r = await fetch( 'https://api.agify.io/?name='+name );
+    let r = await fetch( 'https://catfact.ninja/fact' );
+    let rj = await r.json();
+
+    //document.querySelector( "#d1" ).innerHTML = rj[ 0 ].excuse;
+    document.querySelector( "#d1" ).innerHTML = rj.fact;
+    //alert( name );
+}
+
+document.querySelector( "#getBtn" ).addEventListener( "click", ( e ) =>
+{
+    GetAge();
+} );
+
+`} language={"javascript"}/>;
+                    root1.render(element);}
+                </script>
+
+
             </div>
 
 
