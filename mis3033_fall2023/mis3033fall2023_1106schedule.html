@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>November 6 Lecture Schedule MIS 3033: MVC 1</title>
+    <title>November 6 Lecture Schedule MIS 3033: ASP.NET MVC (Model View Controller)</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -73,7 +73,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            November 1, 2023 Lecture Schedule for MIS 3033
+            November 6, 2023 Lecture Schedule for MIS 3033
         </div>
 
         <div class="border-1 border border-dark rounded-3 mb-3">
@@ -81,22 +81,23 @@
                 <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
                 <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
                 <!--                </li>-->
-<!--                <li class="fw-bold text-danger h5">We are using the new classroom: Devon Energy Hall 130-->
-<!--                </li>-->
+                <!--                <li class="fw-bold text-danger h5">We are using the new classroom: Devon Energy Hall 130-->
+                <!--                </li>-->
 
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
 
-<!--                <li><span class="text-primary fw-bold h4">HW 4 HTML CSS - Design A Static Webpage 1, Due at 5:00 PM on October 13, 2023</span></li>-->
-<!--                <li><span class="text-primary fw-bold h4">HW 5 HTML CSS - Design A Static Webpage 2, Due at 5:00 PM on October 20, 2023</span></li>-->
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-<!--                <li><span class="text-primary fw-bold h4">October 23, 2023, Lecture - Exam 2 Practice</span></li>-->
+                <!--                <li><span class="text-primary fw-bold h4">HW 4 HTML CSS - Design A Static Webpage 1, Due at 5:00 PM on October 13, 2023</span></li>-->
+                <!--                <li><span class="text-primary fw-bold h4">HW 5 HTML CSS - Design A Static Webpage 2, Due at 5:00 PM on October 20, 2023</span></li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li><span class="text-primary fw-bold h4">October 23, 2023, Lecture - Exam 2 Practice</span></li>-->
 
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
 
-<!--                <li><span class="text-danger fw-bold h3">Exam 2 on October 25, 2023, 10:30 AM to 11:45 AM, close on 11:50 AM.</span></li>-->
+                <!--                <li><span class="text-danger fw-bold h3">Exam 2 on October 25, 2023, 10:30 AM to 11:45 AM, close on 11:50 AM.</span></li>-->
 
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <li><span class="text-primary h6 fw-bold">Create a C# ASP.NET MVC Project: MIS3033_LC_1106_YourName</span>
+                </li>
                 <li class="list-group-item"><span class="text-danger">Exam 3 Contents</span></li>
 
                 <li>JavaScript &nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -108,12 +109,54 @@
                         <li><a href="#javascriptbasics">JavaScript Basics</a></li>
                         <li><a href="#dom">DOM: Document Object Model</a></li>
                         <li><a href="#event">Event & Event Listener</a></li>
-                        <li><a href="#fetch">fetch()</a></li>
+                        <li><a href="#fetch">fetch()</a>.filter(), .toLowerCase()</li>
+                        <li><a href="#gridjs">grid js (Table)</a></li>
+                        <li><a href="#chartjs">Chart.js (Chart)</a></li>
+                        <li>sweetalert2 pop up winddow <a target="_blank" href="https://sweetalert2.github.io/#examples">https://sweetalert2.github.io/#examples</a></li>
+
                     </ul>
                 </li>
 
-                <li>ASP.NET MVC</li>
+                <div id="sweetalertdemo"></div>
+                <script type="text/babel">
+                    {const root1 = ReactDOM.createRoot(
+                        document.getElementById('sweetalertdemo')
+                    );
+                        const element = <Highlighter content={`
+Swal.fire({
+  icon: 'error',//success warning info question
+  title: 'Oops...',
+  text: 'Something went wrong!',
+})
+`} language={"javascript"}/>;
+                        root1.render(element);}
+                </script>
 
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li>
+                    <a href="#famous">Famous CSS & JavaScript libraries</a>
+                    <ul>
+                        <li><a href="#bbtn">Bootstrap: button</a></li>
+                        <li><a href="#balert">Bootstrap: alert</a></li>
+                        <li><a href="#bcard">Bootstrap: card</a></li>
+                        <li><a href="#bbadge">Bootstrap: badge</a></li>
+                        <li><a href="#bd-callout">bd-callout</a></li>
+                        <li class="list-group-item"><span>&nbsp;</span></li></ul>
+
+                </li>
+
+                <li>ASP.NET MVC
+                    <ul>
+                        <li><a href="#mvc">MVC</a></li>
+                        <li><a href="#razor">Razor</a></li>
+
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#sql">PostgreSQL</a>
+                </li>
 
             </ul>
             <div>
@@ -135,12 +178,17 @@
 &lt;!-- Map --&gt;
 &lt;link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/&gt;
 &lt;script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"&gt;&lt;/script&gt;
+
+&lt;!-- sweetalert2 --&gt;
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.all.min.js"&gt;&lt;/script&gt;
+
             </code></pre>
             </div>
         </div>
 
         <div id="floatpanel"
-             style="position:fixed;top: 50px;right:10px;display: flex;flex-direction: column;align-items: end;">
+             style="position:fixed;top: 1px;right:1px;display: flex;flex-direction: column;align-items: end;">
             <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
             </button>
             <script>
@@ -188,12 +236,34 @@
                 }
             </script>
             <div id="floatmenu" style="display: flex;flex-direction: column;">
+                <a href="#top" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-primary">TOP</a>
+                <a href="#top" class="btn btn-sm btn-primary">CSS JS Libs</a>
+                <a style="margin-bottom: 1px;" class="btn btn-sm btn-info" href="#mvc">MVC</a>
+                <a style="margin-bottom: 1px;" class="btn btn-sm btn-warning" href="#razor">Razor</a>
+                <a  style="margin-bottom: 1px;" class="btn btn-sm btn-success" href="#sql">PostgreSQL</a>
+
+
                 <a href="#js" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-primary">JavaScript</a>
                 <a href="#dom" style="margin-bottom: 1px;" class="btn btn-sm btn-primary">DOM</a>
                 <a href="#event" style="margin-bottom: 1px;" class="btn btn-sm btn-success">Event Listener</a>
                 <a href="#fetch" style="margin-bottom: 1px;" class="btn btn-sm btn-warning">fetch()</a>
-                <a href="#bootstrap" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-danger">Bootstrap</a>
-                <a href="#anime" class="btn btn-sm btn-outline-warning">anime</a>
+
+
+                <a href="#bootstrap" style="margin-bottom: 1px;" class="btn btn-sm btn-danger">Famous Libs</a>
+                <a href="#gridjs" style="margin-bottom: 1px;" class="btn btn-sm btn-success">grid js (Table)</a>
+                <a href="#chartjs" style="margin-bottom: 1px;" class="btn btn-sm btn-primary">Chart.js (Chart)</a>
+
+                <a href="#anime" class="btn btn-sm btn-warning">anime</a>
+                <a href="#bbtn" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-primary">Bootstrap:
+                    button</a>
+                <a href="#balert" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-warning">Bootstrap:
+                    alert</a>
+                <a href="#bcard" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-info">Bootstrap:
+                    card</a>
+                <a href="#bbadge" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-success">Bootstrap:
+                    badge</a>
+                <a href="#bd-callout" style="margin-bottom: 1px;display: block;"
+                   class="btn btn-sm btn-secondary">bd-callout style</a>
             </div>
         </div>
 
@@ -202,6 +272,14 @@
 
             <h3 class="text-danger mb-3">Exam 3 Contents</h3>
 
+            <div>
+                <img src="../static/img/mvc1.png" style="width: 800px;"/>
+            </div>
+            <div>
+                <span class="fw-bold h6 text-danger">
+                    &lt;AspNetCoreHostingModel&gt;OutOfProcess&lt;/AspNetCoreHostingModel&gt;
+                </span>
+            </div>
 
             <!--            Precedence (Order of operators) starts-->
 
@@ -492,7 +570,7 @@ console.log('Hello world');
                         </li>
 
                         <li><span
-                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector("#text").value;</span>
+                                style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">document.querySelector("#text").value;</span>
                         </li>
 
                         <li><span
@@ -535,12 +613,20 @@ console.log('Hello world');
                     <a href="https://catfact.ninja/fact" target="_blank">https://catfact.ninja/fact</a><br/>
                     <a href="https://api.agify.io/?name=tom" target="_blank">https://api.agify.io/?name=tom</a><br/>
                 </div>
+                <br/>
+                <span class="badge text-bg-primary">For November 1, 2023</span>
+                <div>
+                    <a href="https://juxinglong.github.io/static/data/cities.json" target="_blank">https://juxinglong.github.io/static/data/cities.json</a><br/>
+                    <a href="https://juxinglong.github.io/static/data/states.json" target="_blank">https://juxinglong.github.io/static/data/states.json</a><br/>
+
+                </div>
+
                 <div id="fetchapidiv"></div>
                 <script type="text/babel">
                     {const root1 = ReactDOM.createRoot(
                         document.getElementById('fetchapidiv')
                     );
-                    const element = <Highlighter content={`
+                        const element = <Highlighter content={`
 async function GetAge ()
 {
     let name = document.querySelector( "#name" ).value;
@@ -559,8 +645,41 @@ document.querySelector( "#getBtn" ).addEventListener( "click", ( e ) =>
     GetAge();
 } );
 
+
+async function addbtnClicked ( e )
+{
+    let fd = new FormData();
+    fd.append( "sid", document.querySelector( "#ss" ).value );
+    fd.append( "weight", document.querySelector( "#weight" ).value );
+    fd.append( "height", document.querySelector( "#height" ).value );
+    fd.append( "color", document.querySelector( "#color" ).value );
+    fd.append( "ha", document.querySelector( "#ha" ).value );
+    fd.append( "lat", document.querySelector( "#lat" ).value );
+    fd.append( "lon", document.querySelector( "#lon" ).value );
+
+    let r = await fetch( "/home/addprofile", { method: "post", cache: "no-store", body: fd } );
+
+    let rj = await r.json();
+
+    let status = document.querySelector( "#status" );
+    if ( rj.status == "success" )
+    {
+        status.classList.remove( "text-bg-danger" );
+        status.classList.add( "text-bg-success" );
+        status.innerHTML = rj.mes;
+
+        getStus();
+    }
+    else
+    {
+        status.classList.remove( "text-bg-success" );
+        status.classList.add( "text-bg-danger" );
+        status.innerHTML = "Failed to add student!!!";
+    }
+
+}
 `} language={"javascript"}/>;
-                    root1.render(element);}
+                        root1.render(element);}
                 </script>
 
 
@@ -591,17 +710,9 @@ document.querySelector( "#getBtn" ).addEventListener( "click", ( e ) =>
                 <pre><code class="language-html" data-lang="html">btn btn-sm btn-primary
 alert alert-primary
 badge rounded-pill text-bg-primary
-<span class="line"><span class="cl"><span class="c">&lt;!-- CSS only --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span
-                            class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"</span> <span
-                            class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span
-                            class="p">/&gt;</span>
-</span></span>
-<span class="line"><span class="cl"><span class="c">&lt;!-- JavaScript Bundle with Popper --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span
-                            class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"</span><span
-                            class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code>
+&lt;!-- Bootstrap --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code>
                 </pre>
 
 
@@ -654,7 +765,7 @@ badge rounded-pill text-bg-primary
                 </pre>
 
 
-                <div class="fw-bold">
+                <div id="chartjs" class="fw-bold">
                     <span class="">Chart.js (Show charts)
 </span>
                     <a target="_blank" class="btn btn-sm btn-primary"
@@ -709,6 +820,26 @@ badge rounded-pill text-bg-primary
             options: {}
         });
     }
+
+&lt;canvas id="c1"&gt;&lt;/canvas&gt;
+
+if(chart1!=null)
+{
+    chart1.destroy();
+}
+
+chart1=new Chart(c1,{
+type:"pie",
+data:{
+        labels: rj.map(x=>x.lg),
+        datasets:[
+            {
+                label:`Number`,
+                data:rj.map(x=>x.n),
+            },
+        ],
+}
+});
 &lt;/script&gt;
 </code></pre>
 
@@ -747,6 +878,10 @@ badge rounded-pill text-bg-primary
                             options: {}
                         });
                     }
+
+
+
+
                 </script>
 
                 <div class="fw-bold">
@@ -772,7 +907,7 @@ badge rounded-pill text-bg-primary
                 </pre>
 
 
-                <div class="fw-bold">
+                <div id="gridjs" class="fw-bold">
                     <span class="">Grid.js table library
 </span>
                     <a target="_blank" class="btn btn-sm btn-primary"
@@ -812,7 +947,33 @@ badge rounded-pill text-bg-primary
             ]
         }).render(document.querySelector("#tbl1"));
     }
-&lt;/script&gt;</code></pre>
+
+
+
+
+
+
+
+let tbl = document.querySelector( "#tbl" );
+if ( grid != null )
+{
+    grid.destroy();
+}
+tbl.innerHTML = "";
+grid = new gridjs.Grid( {
+    columns: [ { id: "id", name: "Student ID" }, { id: "name", name: "Name" }, { id: "dob", name: "Date of birth" }, { id: "fn", name: "Favorite place" }, { id: "lat", name: "Latitude" }, { id: "lon", name: "Longidue" } ],
+    data: rj,
+    width: 1200,
+    sort: true,
+    search: true,
+    pagination: { limit: 10, },
+} );
+
+grid.render( tbl );
+
+grid.on("rowClick",(...args)=>{gridRowClicked(args);});
+&lt;/script&gt;
+                </code></pre>
 
 
                 <button id="tblbtn" class="btn btn-sm btn-danger">Show Table</button>
@@ -980,7 +1141,7 @@ badge rounded-pill text-bg-primary
 
                 <button id="showmap" class="btn btn-sm btn-danger">Show Map</button>
 
-                <div style="height: 100px;width: 200px" id="mapdiv"></div>
+                <div style="height: 300px;width: 600px" id="mapdiv"></div>
                 <script>
                     document.querySelector("#showmap").addEventListener("click", (e) =>
                     {
@@ -1011,6 +1172,539 @@ badge rounded-pill text-bg-primary
 
         </div>
         <!--            Add things here-->
+
+
+        <div id="bbtn">
+            <div><span class="badge text-bg-danger fs-6">Bootstrap: button </span></div>
+            <div class="m-bd-callout m-bd-callout-danger">
+                <a class="btn btn-outline-danger btn-sm"
+                   href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank"><span>Bootstrap: button</span></a>
+                <pre><code class="language-html">&lt;button class="btn"&gt;
+  base button
+&lt;/button&gt;</code></pre>
+
+                <div>
+
+                    <div class="bd-example m-0 border-0">
+
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+
+                        <button type="button" class="btn btn-link">Link</button>
+                    </div>
+                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary"</span><span class="p">&gt;</span>Primary<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-secondary"</span><span class="p">&gt;</span>Secondary<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-success"</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-danger"</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-warning"</span><span class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-info"</span><span class="p">&gt;</span>Info<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-light"</span><span class="p">&gt;</span>Light<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-dark"</span><span class="p">&gt;</span>Dark<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-link"</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="balert">
+            <div><span class="badge text-bg-primary fs-6">Bootstrap: alert </span></div>
+            <div class="m-bd-callout m-bd-callout-primary">
+                <a class="btn btn-outline-primary btn-sm"
+                   href="https://getbootstrap.com/docs/5.2/components/alerts/" target="_blank"><span>Bootstrap: alert</span></a>
+                <pre><code class="language-html">&lt;div class="alert alert-primary"&gt;
+  A simple primary alert—check it out!
+&lt;/div&gt;</code></pre>
+
+                <div>
+
+                    <div class="alert alert-primary" role="alert">
+                        A simple primary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        A simple secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        A simple success alert—check it out!
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        A simple danger alert—check it out!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        A simple warning alert—check it out!
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        A simple info alert—check it out!
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                        A simple light alert—check it out!
+                    </div>
+                    <div class="alert alert-dark" role="alert">
+                        A simple dark alert—check it out!
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="bcard">
+            <div><span class="badge text-bg-success fs-6">Bootstrap: card</span></div>
+            <div class="m-bd-callout m-bd-callout-success">
+                <a class="btn btn-outline-success btn-sm" href="https://getbootstrap.com/docs/5.2/components/card/"
+                   target="_blank"><span>Bootstrap: card</span></a>
+                <pre><code class="language-html">&lt;div class="card text-white bg-secondary border-primary" &gt;
+  &lt;div class="card-header"&gt;Header&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Secondary card title&lt;/h5&gt;
+    &lt;h5 class="card-subtitle"&gt;Secondary card title&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer bg-transparent border-success"&gt;Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="">
+
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-primary">
+                            <h5 class="card-title">Primary card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-secondary">
+                            <h5 class="card-title">Secondary card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Success card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card border-danger mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-danger">
+                            <h5 class="card-title">Danger card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card border-warning mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Warning card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card border-info mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Info card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card border-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">Dark card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="bbadge">
+            <div><span class="badge text-bg-warning fs-6">Bootstrap: badge</span></div>
+            <div class="m-bd-callout m-bd-callout-warning">
+                <a class="btn btn-outline-warning btn-sm" href="https://getbootstrap.com/docs/5.2/components/badge/"
+                   target="_blank"><span>Bootstrap: badge</span></a>
+                <pre><code class="language-html">&lt;span class="badge bg-primary rounded-pill"&gt;+@ViewBag.students.Count&lt;/span&gt;</code></pre>
+
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example">
+
+                            <span class="badge text-bg-primary">Primary</span>
+                            <span class="badge text-bg-secondary">Secondary</span>
+                            <span class="badge text-bg-success">Success</span>
+                            <span class="badge text-bg-danger">Danger</span>
+                            <span class="badge text-bg-warning">Warning</span>
+                            <span class="badge text-bg-info">Info</span>
+                            <span class="badge text-bg-light">Light</span>
+                            <span class="badge text-bg-dark">Dark</span>
+                        </div>
+                        <div class="d-flex align-items-center highlight-toolbar bg-light ps-3 pe-2 py-1">
+                        </div>
+                        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html"
+                                                                                      data-lang="html"><span
+                                class="line"><span class="cl"><span class="p">&lt;</span><span
+                                class="nt">span</span> <span class="na">class</span><span class="o">=</span><span
+                                class="s">"badge text-bg-primary"</span><span class="p">&gt;</span>Primary<span
+                                class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-secondary"</span><span
+                                class="p">&gt;</span>Secondary<span class="p">&lt;/</span><span
+                                class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-success"</span><span
+                                class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">span</span><span
+                                class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-danger"</span><span
+                                class="p">&gt;</span>Danger<span class="p">&lt;/</span><span
+                                class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-warning"</span><span
+                                class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">span</span><span
+                                class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                class="na">class</span><span class="o">=</span><span
+                                class="s">"badge text-bg-info"</span><span class="p">&gt;</span>Info<span class="p">&lt;/</span><span
+                                class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                class="na">class</span><span class="o">=</span><span
+                                class="s">"badge text-bg-light"</span><span class="p">&gt;</span>Light<span
+                                class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
+                                class="na">class</span><span class="o">=</span><span
+                                class="s">"badge text-bg-dark"</span><span class="p">&gt;</span>Dark<span class="p">&lt;/</span><span
+                                class="nt">span</span><span class="p">&gt;</span></span></span></code></pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="bd-callout">
+            <div><span class="badge text-bg-info fs-6">bd-callout style class</span></div>
+            <div class="m-bd-callout m-bd-callout-info">
+                <a class="btn btn-outline-info btn-sm" href="https://bootsnipp.com/snippets/yNK5E "
+                   target="_blank"><span>Bootstrap: badge</span></a>
+                <pre><code class="language-css hljs">.m-bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.m-bd-callout-secondary
+{
+    border-left-color: #6c757d;
+}
+
+.m-bd-callout-primary
+{
+    border-left-color:#007bff ;
+}
+
+.m-bd-callout-success
+{
+    border-left-color:#28a745 ;
+}
+
+.m-bd-callout-info
+{
+    border-left-color:#5bc0de ;
+}
+
+.m-bd-callout-warning
+{
+    border-left-color:#f0ad4e ;
+}
+
+.m-bd-callout-danger
+{
+    border-left-color:#d9534f ;
+}
+
+.m-bd-callout-light
+{
+    border-left-color:#f8f9fa ;
+}
+
+.m-bd-callout-dark
+{
+    border-left-color:#212529 ;
+}</code></pre>
+                <div class="mt-3"></div>
+                <pre><code class="language-css hljs"></code></pre>
+
+                <div>
+                    <div class="container">
+
+                        <div class="m-bd-callout m-bd-callout-secondary">
+                            <h4>Secondary Callout</h4>
+                            This is a secondary callout.
+                        </div>
+
+                        <div class="m-bd-callout m-bd-callout-primary">
+                            <h4>Primary Callout</h4>
+                            This is a primary callout.
+                        </div>
+
+                        <div class="m-bd-callout m-bd-callout-success">
+                            <h4>Success Callout</h4>
+                            This is a success callout.
+                        </div>
+
+                        <div class="m-bd-callout m-bd-callout-info">
+                            <h4>Info Callout</h4>
+                            This is an info callout.
+                        </div>
+
+                        <div class="m-bd-callout m-bd-callout-warning">
+                            <h4>Warning Callout</h4>
+                            This is a warning callout.
+                        </div>
+
+                        <div class="m-bd-callout m-bd-callout-danger">
+                            <h4>Danger Callout</h4>
+                            This is a danger callout.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">ASP.NET MVC
+        </div>
+
+        <div class="admonition note" id="mvc">
+            <p class="admonition-title">ASP.NET MVC (Model View Controller)</p>
+            <p>
+            <div class="fw-bold">
+                    <span class="">static VS dynamic webpage
+<a target="_blank"
+   href="https://www.javatpoint.com/website-static-vs-dynamic"><span
+        class="bi bi-box-arrow-up-right text-primary"></span></a>
+</span>
+                <br/>
+                MVC <a class="btn btn-sm btn-danger"
+                       href="https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-6.0&tabs=visual-studio"
+                       target="_blank">MVC Tutorial</a><br/>
+                M: model<br/>
+                V:view<br/>
+                C:controller
+            </div>
+            <pre><code class="language-csharp">Default page
+return new ContentResult{Content="..."};
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+[Route("...")]
+&lt;a href="@Url.Action("Index","Second")" class="link-danger"&gt;second page&lt;/a&gt;
+ViewBag.Name = "Xinglong Ju";
+ViewBag.Weight = "130";
+@ViewBag.Name
+@model WebApplication7.Models.Student
+@Model.CreatedDate
+@RenderBody()
+@{
+    Layout = "_Layout";
+}
+Body
+@RenderSection("header",false)
+@section header
+{
+    &lt;div class="alert alert-warning"&gt;
+        This is header
+        &lt;p&gt;
+            @ViewBag.Name @Model.CreatedDate
+        &lt;/p&gt;
+    &lt;/div&gt;
+}</code></pre>
+
+
+            <!--                <div class="fw-bold">-->
+            <!--                    <span class="">static VS dynamic webpage-->
+            <!--<a target="_blank"-->
+            <!--   href="https://www.javatpoint.com/website-static-vs-dynamic"><span-->
+            <!--        class="bi bi-box-arrow-up-right text-primary"></span></a>-->
+            <!--</span>-->
+
+            <!--                </div>-->
+            <!--                <pre><code class="language-html" data-lang="html">btn btn-sm btn-primary-->
+            <!--alert alert-primary-->
+            <!--badge rounded-pill text-bg-primary-->
+            <!--<span class="line"><span class="cl"><span class="c">&lt;!&#45;&#45; CSS only &#45;&#45;&gt;</span>-->
+            <!--</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span-->
+            <!--                            class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"</span> <span-->
+            <!--                            class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span-->
+            <!--                            class="p">/&gt;</span>-->
+            <!--</span></span>-->
+            <!--<span class="line"><span class="cl"><span class="c">&lt;!&#45;&#45; JavaScript Bundle with Popper &#45;&#45;&gt;</span>-->
+            <!--</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span-->
+            <!--                            class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"</span><span-->
+            <!--                            class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>-->
+            <!--</span></span></code>-->
+            <!--                </pre>-->
+
+
+            <!--                <pre><code class="code"></code>-->
+            <!--                </pre>-->
+        </div>
+
+
+        <div id="razor">
+            <div><span class="badge text-bg-danger fs-6">Razor syntax</span></div>
+            <div class="m-bd-callout m-bd-callout-danger">
+                <a class="btn btn-outline-danger btn-sm"
+                   href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-6.0"
+                   target="_blank"><span>Razor syntax</span></a>
+                <pre><code class="language-csharp">
+&lt;a href="@Url.Action("Index","Second",new{id=123,name="aiden"})" class="link-danger"&gt;second page&lt;/a&gt;
+
+@foreach (Student stu in ViewBag.students)
+{
+    &lt;div class="bd-callout"&gt;Grade: @stu.Grade.ToString("F2")&lt;/div&gt;
+}
+
+@if (false)
+{
+    &lt;span class="badge bg-warning rounded-pill"&gt;True&lt;/span&gt;
+}
+else
+{
+    &lt;span class="badge bg-primary rounded-pill"&gt;False&lt;/span&gt;
+}
+
+@{
+    string filename = "Data/students.json";
+    List&lt;Student&gt; students = new List&lt;Student&gt;();
+    string jsonStr;
+    if (System.IO.File.Exists(filename))
+    {
+        jsonStr = System.IO.File.ReadAllText(filename);
+        students = JsonSerializer.Deserialize&lt;List&lt;Student&gt;&gt;(jsonStr);
+    }
+}
+[HttpGet]
+public IActionResult Index()
+{
+    return View();
+}
+
+
+[HttpPost]
+public IActionResult Index(Student stu)
+{
+    return View();
+}
+
+
+public class Student
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public double Grade { get; set; }
+}
+
+
+&lt;fieldset&gt;
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+    @Html.LabelFor(x=&gt;x.Id)
+    @Html.TextBoxFor(x=&gt;x.Id)
+    &lt;br /&gt;
+    @Html.LabelFor(x=&gt;x.Name)
+    @Html.TextBoxFor(x=&gt;x.Name)
+    &lt;br /&gt;
+    @Html.LabelFor(x=&gt;x.Grade)
+    @Html.TextBoxFor(x=&gt;x.Grade)
+    &lt;br /&gt;
+    &lt;input type="submit" name="Add" /&gt;
+    }
+&lt;/fieldset&gt;
+
+</code></pre>
+
+                <div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="mb-3"></div>
+        <div id="sql" class="admonition note">
+            <p class="admonition-title">PostgreSQL</p>
+            <p>
+            <div class="fw-bold">
+                <span >Use the email that you received!</span>
+                <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                <pre><code class="language-csharp">Nuget packages:
+Microsoft.EntityFrameworkCore.Design 7.0.13
+Microsoft.EntityFrameworkCore.Tools 7.0.13
+Npgsql.EntityFrameworkCore.PostgreSQL 7.0.11
+
+[Key]
+[DatabaseGenerated(DatabaseGeneratedOption.Identity)]// Auto increment
+public int ID { get;set; }
+
+public class DbCon:DbContext// Change DbCon to your own database connect class name
+{
+        public DbSet&lt;Student&gt; Students { get; set; }// Define a table in the database. The table name here is: Students
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+                optionsBuilder.UseNpgsql("Host=******;Database=YOUR_DATABASE_NAME_HERE;Port=5432;Username=*******;Password=*****");
+        }
+}
+
+add-migration initdb -context DbCon
+update-database -context DbCon
+</code></pre>
+            </div>
+        </div>
+
+
+
     </div>
 </div>
 

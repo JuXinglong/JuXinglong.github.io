@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>November 1 Lecture Schedule MIS 3033: ASP.NET MVC (Model View Controller)</title>
+    <title>November 8 Lecture Schedule MIS 3033: ASP.NET MVC (Model View Controller)</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -73,7 +73,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            November 1, 2023 Lecture Schedule for MIS 3033
+            November 8, 2023 Lecture Schedule for MIS 3033
         </div>
 
         <div class="border-1 border border-dark rounded-3 mb-3">
@@ -96,7 +96,8 @@
                 <!--                <li><span class="text-danger fw-bold h3">Exam 2 on October 25, 2023, 10:30 AM to 11:45 AM, close on 11:50 AM.</span></li>-->
 
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-
+                <li><span class="text-primary h6 fw-bold">Create a C# ASP.NET MVC Project: MIS3033_LC_1108_YourName</span>
+                </li>
                 <li class="list-group-item"><span class="text-danger">Exam 3 Contents</span></li>
 
                 <li>JavaScript &nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -108,9 +109,7 @@
                         <li><a href="#javascriptbasics">JavaScript Basics</a></li>
                         <li><a href="#dom">DOM: Document Object Model</a></li>
                         <li><a href="#event">Event & Event Listener</a></li>
-                        <li><a href="#fetch">fetch()</a>
-                            .filter(), .toLowerCase()
-                        </li>
+                        <li><a href="#fetch">fetch()</a>.filter(), .toLowerCase()</li>
                         <li><a href="#gridjs">grid js (Table)</a></li>
                         <li><a href="#chartjs">Chart.js (Chart)</a></li>
                         <li>sweetalert2 pop up winddow <a target="_blank" href="https://sweetalert2.github.io/#examples">https://sweetalert2.github.io/#examples</a></li>
@@ -146,8 +145,18 @@ Swal.fire({
 
                 </li>
 
-                <li>ASP.NET MVC</li>
+                <li>ASP.NET MVC
+                    <ul>
+                        <li><a href="#mvc">MVC</a></li>
+                        <li><a href="#razor">Razor</a></li>
 
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#sql">PostgreSQL</a>
+                </li>
 
             </ul>
             <div>
@@ -229,6 +238,11 @@ Swal.fire({
             <div id="floatmenu" style="display: flex;flex-direction: column;">
                 <a href="#top" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-primary">TOP</a>
                 <a href="#top" class="btn btn-sm btn-primary">CSS JS Libs</a>
+                <a style="margin-bottom: 1px;" class="btn btn-sm btn-info" href="#mvc">MVC</a>
+                <a style="margin-bottom: 1px;" class="btn btn-sm btn-warning" href="#razor">Razor</a>
+                <a  style="margin-bottom: 1px;" class="btn btn-sm btn-success" href="#sql">PostgreSQL</a>
+
+
                 <a href="#js" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-primary">JavaScript</a>
                 <a href="#dom" style="margin-bottom: 1px;" class="btn btn-sm btn-primary">DOM</a>
                 <a href="#event" style="margin-bottom: 1px;" class="btn btn-sm btn-success">Event Listener</a>
@@ -258,6 +272,14 @@ Swal.fire({
 
             <h3 class="text-danger mb-3">Exam 3 Contents</h3>
 
+            <div>
+                <img src="../static/img/mvc1.png" style="width: 800px;"/>
+            </div>
+            <div>
+                <span class="fw-bold h6 text-danger">
+                    &lt;AspNetCoreHostingModel&gt;OutOfProcess&lt;/AspNetCoreHostingModel&gt;
+                </span>
+            </div>
 
             <!--            Precedence (Order of operators) starts-->
 
@@ -1484,6 +1506,204 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
             </div>
 
         </div>
+
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">ASP.NET MVC
+        </div>
+
+        <div class="admonition note" id="mvc">
+            <p class="admonition-title">ASP.NET MVC (Model View Controller)</p>
+            <p>
+            <div class="fw-bold">
+                    <span class="">static VS dynamic webpage
+<a target="_blank"
+   href="https://www.javatpoint.com/website-static-vs-dynamic"><span
+        class="bi bi-box-arrow-up-right text-primary"></span></a>
+</span>
+                <br/>
+                MVC <a class="btn btn-sm btn-danger"
+                       href="https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-6.0&tabs=visual-studio"
+                       target="_blank">MVC Tutorial</a><br/>
+                M: model<br/>
+                V:view<br/>
+                C:controller
+            </div>
+            <pre><code class="language-csharp">Default page
+return new ContentResult{Content="..."};
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+[Route("...")]
+&lt;a href="@Url.Action("Index","Second")" class="link-danger"&gt;second page&lt;/a&gt;
+ViewBag.Name = "Xinglong Ju";
+ViewBag.Weight = "130";
+@ViewBag.Name
+@model WebApplication7.Models.Student
+@Model.CreatedDate
+@RenderBody()
+@{
+    Layout = "_Layout";
+}
+Body
+@RenderSection("header",false)
+@section header
+{
+    &lt;div class="alert alert-warning"&gt;
+        This is header
+        &lt;p&gt;
+            @ViewBag.Name @Model.CreatedDate
+        &lt;/p&gt;
+    &lt;/div&gt;
+}</code></pre>
+
+
+            <!--                <div class="fw-bold">-->
+            <!--                    <span class="">static VS dynamic webpage-->
+            <!--<a target="_blank"-->
+            <!--   href="https://www.javatpoint.com/website-static-vs-dynamic"><span-->
+            <!--        class="bi bi-box-arrow-up-right text-primary"></span></a>-->
+            <!--</span>-->
+
+            <!--                </div>-->
+            <!--                <pre><code class="language-html" data-lang="html">btn btn-sm btn-primary-->
+            <!--alert alert-primary-->
+            <!--badge rounded-pill text-bg-primary-->
+            <!--<span class="line"><span class="cl"><span class="c">&lt;!&#45;&#45; CSS only &#45;&#45;&gt;</span>-->
+            <!--</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span-->
+            <!--                            class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"</span> <span-->
+            <!--                            class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span-->
+            <!--                            class="p">/&gt;</span>-->
+            <!--</span></span>-->
+            <!--<span class="line"><span class="cl"><span class="c">&lt;!&#45;&#45; JavaScript Bundle with Popper &#45;&#45;&gt;</span>-->
+            <!--</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span-->
+            <!--                            class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"</span><span-->
+            <!--                            class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>-->
+            <!--</span></span></code>-->
+            <!--                </pre>-->
+
+
+            <!--                <pre><code class="code"></code>-->
+            <!--                </pre>-->
+        </div>
+
+
+        <div id="razor">
+            <div><span class="badge text-bg-danger fs-6">Razor syntax</span></div>
+            <div class="m-bd-callout m-bd-callout-danger">
+                <a class="btn btn-outline-danger btn-sm"
+                   href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-6.0"
+                   target="_blank"><span>Razor syntax</span></a>
+                <pre><code class="language-csharp">
+&lt;a href="@Url.Action("Index","Second",new{id=123,name="aiden"})" class="link-danger"&gt;second page&lt;/a&gt;
+
+@foreach (Student stu in ViewBag.students)
+{
+    &lt;div class="bd-callout"&gt;Grade: @stu.Grade.ToString("F2")&lt;/div&gt;
+}
+
+@if (false)
+{
+    &lt;span class="badge bg-warning rounded-pill"&gt;True&lt;/span&gt;
+}
+else
+{
+    &lt;span class="badge bg-primary rounded-pill"&gt;False&lt;/span&gt;
+}
+
+@{
+    string filename = "Data/students.json";
+    List&lt;Student&gt; students = new List&lt;Student&gt;();
+    string jsonStr;
+    if (System.IO.File.Exists(filename))
+    {
+        jsonStr = System.IO.File.ReadAllText(filename);
+        students = JsonSerializer.Deserialize&lt;List&lt;Student&gt;&gt;(jsonStr);
+    }
+}
+[HttpGet]
+public IActionResult Index()
+{
+    return View();
+}
+
+
+[HttpPost]
+public IActionResult Index(Student stu)
+{
+    return View();
+}
+
+
+public class Student
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public double Grade { get; set; }
+}
+
+
+&lt;fieldset&gt;
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+    @Html.LabelFor(x=&gt;x.Id)
+    @Html.TextBoxFor(x=&gt;x.Id)
+    &lt;br /&gt;
+    @Html.LabelFor(x=&gt;x.Name)
+    @Html.TextBoxFor(x=&gt;x.Name)
+    &lt;br /&gt;
+    @Html.LabelFor(x=&gt;x.Grade)
+    @Html.TextBoxFor(x=&gt;x.Grade)
+    &lt;br /&gt;
+    &lt;input type="submit" name="Add" /&gt;
+    }
+&lt;/fieldset&gt;
+
+</code></pre>
+
+                <div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="mb-3"></div>
+        <div id="sql" class="admonition note">
+            <p class="admonition-title">PostgreSQL</p>
+            <p>
+            <div class="fw-bold">
+                <span >Use the email that you received!</span>
+                <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                <pre><code class="language-csharp">Nuget packages:
+Microsoft.EntityFrameworkCore.Design 7.0.13
+Microsoft.EntityFrameworkCore.Tools 7.0.13
+Npgsql.EntityFrameworkCore.PostgreSQL 7.0.11
+
+[Key]
+[DatabaseGenerated(DatabaseGeneratedOption.Identity)]// Auto increment
+public int ID { get;set; }
+
+public class DbCon:DbContext// Change DbCon to your own database connect class name
+{
+        public DbSet&lt;Student&gt; Students { get; set; }// Define a table in the database. The table name here is: Students
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+                optionsBuilder.UseNpgsql("Host=******;Database=YOUR_DATABASE_NAME_HERE;Port=5432;Username=*******;Password=*****");
+        }
+}
+
+add-migration initdb -context DbCon
+update-database -context DbCon
+</code></pre>
+            </div>
+        </div>
+
+
 
     </div>
 </div>
