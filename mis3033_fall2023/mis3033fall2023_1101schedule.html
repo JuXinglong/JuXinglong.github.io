@@ -786,6 +786,20 @@ badge rounded-pill text-bg-primary
         ca = ctx.getContext('2d');
         ca.clearRect(0, 0, ctx.width, ctx.height);
         // ctx.innerHTML="";
+
+        let params=
+        {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [
+                {
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3]
+                }]
+            }
+        };
+
         mychart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -806,6 +820,20 @@ if(chart1!=null)
 {
     chart1.destroy();
 }
+
+let params=
+{
+    type: "pie",
+    data:
+    {
+        labels: rj.map(x => x.lg),
+        datasets: [
+        {
+            label: `Number`,
+            data: rj.map(x => x.n)
+        }]
+    }
+};
 
 chart1=new Chart(c1,{
 type:"pie",
