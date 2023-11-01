@@ -109,6 +109,9 @@
                         <li><a href="#dom">DOM: Document Object Model</a></li>
                         <li><a href="#event">Event & Event Listener</a></li>
                         <li><a href="#fetch">fetch()</a></li>
+                        <li><a href="#gridjs">grid js (Table)</a></li>
+                        <li><a href="#chartjs">Chart.js (Chart)</a></li>
+
                     </ul>
                 </li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
@@ -211,7 +214,12 @@
                 <a href="#dom" style="margin-bottom: 1px;" class="btn btn-sm btn-primary">DOM</a>
                 <a href="#event" style="margin-bottom: 1px;" class="btn btn-sm btn-success">Event Listener</a>
                 <a href="#fetch" style="margin-bottom: 1px;" class="btn btn-sm btn-warning">fetch()</a>
+
+
                 <a href="#bootstrap" style="margin-bottom: 1px;" class="btn btn-sm btn-danger">Famous Libs</a>
+                <a href="#gridjs" style="margin-bottom: 1px;" class="btn btn-sm btn-success">grid js (Table)</a>
+                <a href="#chartjs" style="margin-bottom: 1px;" class="btn btn-sm btn-primary">Chart.js (Chart)</a>
+
                 <a href="#anime" class="btn btn-sm btn-warning">anime</a>
                 <a href="#bbtn" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-primary">Bootstrap:
                     button</a>
@@ -564,6 +572,13 @@ console.log('Hello world');
                     <a href="https://catfact.ninja/fact" target="_blank">https://catfact.ninja/fact</a><br/>
                     <a href="https://api.agify.io/?name=tom" target="_blank">https://api.agify.io/?name=tom</a><br/>
                 </div>
+                <span class="badge text-bd-primary">For November 1, 2023</span>
+                <div>
+                    <a href="https://juxinglong.github.io/static/data/cities.json" target="_blank">https://juxinglong.github.io/static/data/cities.json</a><br/>
+                    <a href="https://juxinglong.github.io/static/data/states.json" target="_blank">https://juxinglong.github.io/static/data/states.json</a><br/>
+
+                </div>
+
                 <div id="fetchapidiv"></div>
                 <script type="text/babel">
                     {const root1 = ReactDOM.createRoot(
@@ -708,7 +723,7 @@ badge rounded-pill text-bg-primary
                 </pre>
 
 
-                <div class="fw-bold">
+                <div id="chartjs" class="fw-bold">
                     <span class="">Chart.js (Show charts)
 </span>
                     <a target="_blank" class="btn btn-sm btn-primary"
@@ -763,6 +778,26 @@ badge rounded-pill text-bg-primary
             options: {}
         });
     }
+
+&lt;canvas id="c1"&gt;&lt;/canvas&gt;
+
+if(chart1!=null)
+{
+    chart1.destroy();
+}
+
+chart1=new Chart(c1,{
+type:"pie",
+data:{
+        labels: rj.map(x=>x.lg),
+        datasets:[
+            {
+                label:`Number`,
+                data:rj.map(x=>x.n),
+            },
+        ],
+}
+});
 &lt;/script&gt;
 </code></pre>
 
@@ -801,6 +836,10 @@ badge rounded-pill text-bg-primary
                             options: {}
                         });
                     }
+
+
+
+
                 </script>
 
                 <div class="fw-bold">
@@ -826,7 +865,7 @@ badge rounded-pill text-bg-primary
                 </pre>
 
 
-                <div class="fw-bold">
+                <div id="gridjs" class="fw-bold">
                     <span class="">Grid.js table library
 </span>
                     <a target="_blank" class="btn btn-sm btn-primary"
@@ -866,7 +905,33 @@ badge rounded-pill text-bg-primary
             ]
         }).render(document.querySelector("#tbl1"));
     }
-&lt;/script&gt;</code></pre>
+
+
+
+
+
+
+
+let tbl = document.querySelector( "#tbl" );
+if ( grid != null )
+{
+    grid.destroy();
+}
+tbl.innerHTML = "";
+grid = new gridjs.Grid( {
+    columns: [ { id: "id", name: "Student ID" }, { id: "name", name: "Name" }, { id: "dob", name: "Date of birth" }, { id: "fn", name: "Favorite place" }, { id: "lat", name: "Latitude" }, { id: "lon", name: "Longidue" } ],
+    data: rj,
+    width: 1200,
+    sort: true,
+    search: true,
+    pagination: { limit: 10, },
+} );
+
+grid.render( tbl );
+
+grid.on("rowClick",(...args)=>{gridRowClicked(args);});
+&lt;/script&gt;
+                </code></pre>
 
 
                 <button id="tblbtn" class="btn btn-sm btn-danger">Show Table</button>
