@@ -111,9 +111,26 @@
                         <li><a href="#fetch">fetch()</a></li>
                         <li><a href="#gridjs">grid js (Table)</a></li>
                         <li><a href="#chartjs">Chart.js (Chart)</a></li>
+                        <li>sweetalert2 pop up winddow <a target="_blank" href="https://sweetalert2.github.io/#examples">https://sweetalert2.github.io/#examples</a></li>
 
                     </ul>
                 </li>
+
+                <div id="sweetalertdemo"></div>
+                <script type="text/babel">
+                    {const root1 = ReactDOM.createRoot(
+                        document.getElementById('sweetalertdemo')
+                    );
+                        const element = <Highlighter content={`
+Swal.fire({
+  icon: 'error',//success warning info question
+  title: 'Oops...',
+  text: 'Something went wrong!',
+})
+`} language={"javascript"}/>;
+                        root1.render(element);}
+                </script>
+
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <li>
                     <a href="#famous">Famous CSS & JavaScript libraries</a>
