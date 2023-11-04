@@ -1636,7 +1636,24 @@ Body
             @ViewBag.Name @Model.CreatedDate
         &lt;/p&gt;
     &lt;/div&gt;
-}</code></pre>
+}
+
+public IActionResult Index()
+{
+    return View();
+}
+
+public JsonResult DeleteEnroll(string sid, string cid)
+{
+    return Json(new { status = "success", mes = "Enrollment deleted successfully!" });
+}
+
+public JsonResult GetStus()
+{
+    var r = db1.Students.Select(s => new { id = s.Id, name = s.Name, dob = s.DOB.ToLocalTime().ToString("MM/dd/yyyy"), entrolls = s.entrollments, fn = s.favPlace, lat = s.lat, lon = s.lon });
+    return Json(r);
+}
+            </code></pre>
 
 
             <!--                <div class="fw-bold">-->
