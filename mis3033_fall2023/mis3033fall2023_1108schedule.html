@@ -1612,7 +1612,13 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
                 V:view<br/>
                 C:controller
             </div>
-            <pre><code class="language-csharp">Default page
+            <pre><code class="language-csharp">
+&lt;script&gt;
+    "use strict";
+    var rootPath = '@Url.Content("~/")';
+&lt;/script&gt;
+
+Default page
 return new ContentResult{Content="..."};
 app.MapControllerRoute(
     name: "default",
