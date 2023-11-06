@@ -1618,6 +1618,7 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
 &lt;script&gt;
     "use strict";
     var rootPath = '@Url.Content("~/")';
+    console.log(crypto.randomUUID());// cf6bfa51-2e27-408f-b50c-705500ff1298
 &lt;/script&gt;
 
 Default page
@@ -1629,6 +1630,7 @@ app.MapControllerRoute(
 &lt;a href="@Url.Action("Index","Second")" class="link-danger"&gt;second page&lt;/a&gt;
 ViewBag.Name = "Xinglong Ju";
 ViewBag.Weight = "130";
+ViewData["Name"] = "Xinglong Ju";
 @ViewBag.Name
 @model WebApplication7.Models.Student
 @Model.CreatedDate
