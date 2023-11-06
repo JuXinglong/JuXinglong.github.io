@@ -38,8 +38,7 @@
     <script src="../static/site.js"></script>
 
     <script type="text/babel">
-        function Highlighter({content, language})
-        {
+        function Highlighter({content, language}) {
             const highlighted = hljs.highlight(content, {language: language,}, false);
 
             // console.log(highlighted.value);
@@ -51,8 +50,7 @@
         }
     </script>
     <script>
-        function initPro()
-        {
+        function initPro() {
             hljs.highlightAll();
             let floatpanel = document.querySelector("#floatpanel");
             anime({
@@ -86,7 +84,8 @@
 
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
 
-                                     <!--                <li><span class="text-primary fw-bold h4">HW 5 HTML CSS - Design A Static Webpage 2, Due at 5:00 PM on October 20, 2023</span></li>-->
+                <!--                <li><span class="text-primary fw-bold h4">HW 4 HTML CSS - Design A Static Webpage 1, Due at 5:00 PM on October 13, 2023</span></li>-->
+                <!--                <li><span class="text-primary fw-bold h4">HW 5 HTML CSS - Design A Static Webpage 2, Due at 5:00 PM on October 20, 2023</span></li>-->
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
                 <!--                <li><span class="text-primary fw-bold h4">October 23, 2023, Lecture - Exam 2 Practice</span></li>-->
 
@@ -95,7 +94,8 @@
                 <!--                <li><span class="text-danger fw-bold h3">Exam 2 on October 25, 2023, 10:30 AM to 11:45 AM, close on 11:50 AM.</span></li>-->
 
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-                <li><span class="text-primary h6 fw-bold">Create a C# ASP.NET MVC Project: MIS3033_LC_1106_YourName</span>
+                <li><span
+                        class="text-primary h6 fw-bold">Create a C# ASP.NET MVC Project: MIS3033_LC_1106_YourName</span>
                 </li>
                 <li class="list-group-item"><span class="text-danger">Exam 3 Contents</span></li>
 
@@ -111,16 +111,19 @@
                         <li><a href="#fetch">fetch()</a>.filter(), .toLowerCase()</li>
                         <li><a href="#gridjs">grid js (Table)</a></li>
                         <li><a href="#chartjs">Chart.js (Chart)</a></li>
-                        <li>sweetalert2 pop up winddow <a target="_blank" href="https://sweetalert2.github.io/#examples">https://sweetalert2.github.io/#examples</a></li>
+                        <li>sweetalert2 pop up winddow <a target="_blank"
+                                                          href="https://sweetalert2.github.io/#examples">https://sweetalert2.github.io/#examples</a>
+                        </li>
 
                     </ul>
                 </li>
 
                 <div id="sweetalertdemo"></div>
                 <script type="text/babel">
-                    {const root1 = ReactDOM.createRoot(
-                        document.getElementById('sweetalertdemo')
-                    );
+                    {
+                        const root1 = ReactDOM.createRoot(
+                            document.getElementById('sweetalertdemo')
+                        );
                         const element = <Highlighter content={`
 Swal.fire({
   icon: 'error',//success warning info question
@@ -128,7 +131,8 @@ Swal.fire({
   text: 'Something went wrong!',
 })
 `} language={"javascript"}/>;
-                        root1.render(element);}
+                        root1.render(element);
+                    }
                 </script>
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
@@ -140,7 +144,9 @@ Swal.fire({
                         <li><a href="#bcard">Bootstrap: card</a></li>
                         <li><a href="#bbadge">Bootstrap: badge</a></li>
                         <li><a href="#bd-callout">bd-callout</a></li>
-                        <li class="list-group-item"><span>&nbsp;</span></li></ul>
+                        <li><a href="#icard">Bootstrap: icons</a></li>
+                        <li class="list-group-item"><span>&nbsp;</span></li>
+                    </ul>
 
                 </li>
 
@@ -163,6 +169,9 @@ Swal.fire({
 &lt;!-- Bootstrap --&gt;
 &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- Bootstrap icons --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/&gt;
 
 &lt;!-- charts --&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
@@ -188,7 +197,7 @@ Swal.fire({
         </div>
 
         <div id="floatpanel"
-             style="position:fixed;top: 1px;right:1px;display: flex;flex-direction: column;align-items: end;">
+             style="position:fixed;top: -165px;right:1px;display: flex;flex-direction: column;align-items: end;">
             <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
             </button>
             <script>
@@ -196,8 +205,7 @@ Swal.fire({
                     "use strict";
                     var m = 1;
                     let foldbtn = document.querySelector("#foldbtn");
-                    foldbtn.addEventListener("click", (e) =>
-                    {
+                    foldbtn.addEventListener("click", (e) => {
                         let floatmenu = document.querySelector("#floatmenu");
                         anime({
                             targets: floatmenu,
@@ -219,8 +227,7 @@ Swal.fire({
                     "use strict";
                     let expandbtn = document.querySelector("#expandbtn");
 
-                    expandbtn.addEventListener("click", (e) =>
-                    {
+                    expandbtn.addEventListener("click", (e) => {
                         let floatmenu = document.querySelector("#floatmenu");
                         anime({
                             targets: floatmenu,
@@ -237,10 +244,12 @@ Swal.fire({
             </script>
             <div id="floatmenu" style="display: flex;flex-direction: column;">
                 <a href="#top" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-primary">TOP</a>
+                <a href="#init" style="margin-bottom: 1px;display: block;"
+                   class="btn btn-sm btn-danger">Settings</a>
                 <a href="#top" class="btn btn-sm btn-primary">CSS JS Libs</a>
                 <a style="margin-bottom: 1px;" class="btn btn-sm btn-info" href="#mvc">MVC</a>
                 <a style="margin-bottom: 1px;" class="btn btn-sm btn-warning" href="#razor">Razor</a>
-                <a  style="margin-bottom: 1px;" class="btn btn-sm btn-success" href="#sql">PostgreSQL</a>
+                <a style="margin-bottom: 1px;" class="btn btn-sm btn-success" href="#sql">PostgreSQL</a>
 
 
                 <a href="#js" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-primary">JavaScript</a>
@@ -264,6 +273,9 @@ Swal.fire({
                     badge</a>
                 <a href="#bd-callout" style="margin-bottom: 1px;display: block;"
                    class="btn btn-sm btn-secondary">bd-callout style</a>
+                <a href="#icard" style="margin-bottom: 1px;display: block;"
+                   class="btn btn-sm btn-danger">Bootstrap: icons</a>
+
             </div>
         </div>
 
@@ -271,7 +283,8 @@ Swal.fire({
 
 
             <h3 class="text-danger mb-3">Exam 3 Contents</h3>
-
+            <div id="init" class="h4 text-danger border-bottom border-danger fw-bold border-2">Initial Settings
+            </div>
             <div>
                 <img src="../static/img/mvc1.png" style="width: 800px;"/>
             </div>
@@ -280,6 +293,19 @@ Swal.fire({
                     &lt;AspNetCoreHostingModel&gt;OutOfProcess&lt;/AspNetCoreHostingModel&gt;
                 </span>
             </div>
+            <div class="admonition note">
+                <p id="programcs" class="admonition-title">Program.cs</p>
+                <p>
+                <div class="fw-bold">
+                    <img src="../static/img/programcs.png" style="width: 800px;"/>
+                    <pre><code class="language-csharp">
+builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+                    </code></pre>
+
+
+                </div>
+            </div>
+
 
             <!--            Precedence (Order of operators) starts-->
 
@@ -581,10 +607,12 @@ console.log('Hello world');
                                target="_blank" style="margin-bottom: 8px;margin-top: 8px;">let
                             newEle=document.createElement("div");</a></li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank"
-                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">newEle.innerHTML="<b>Hello</b>";</a></li>
+                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">newEle.innerHTML="<b>Hello</b>";</a>
+                        </li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText"
                                target="_blank"
-                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">newEle.innerText="<b>Hello</b>";</a></li>
+                               style="margin-bottom: 8px;margin-top: 8px;" class="fw-bold text-danger">newEle.innerText="<b>Hello</b>";</a>
+                        </li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append" target="_blank"
                                style="margin-bottom: 8px;margin-top: 8px;">document.querySelector("#main").append(newEle);</a>
                         </li>
@@ -608,7 +636,8 @@ console.log('Hello world');
                 <span id="fetch" class="badge bg-primary h3" style="">fetch() function to call web api</span>
 
                 <div>
-                    <a href="https://excuser-three.vercel.app/" target="_blank">https://excuser-three.vercel.app/</a><br/>
+                    <a href="https://excuser-three.vercel.app/"
+                       target="_blank">https://excuser-three.vercel.app/</a><br/>
                     <a href="https://excuser-three.vercel.app/v1/excuse/college/" target="_blank">https://excuser-three.vercel.app/v1/excuse/college/</a><br/>
                     <a href="https://catfact.ninja/fact" target="_blank">https://catfact.ninja/fact</a><br/>
                     <a href="https://api.agify.io/?name=tom" target="_blank">https://api.agify.io/?name=tom</a><br/>
@@ -623,9 +652,10 @@ console.log('Hello world');
 
                 <div id="fetchapidiv"></div>
                 <script type="text/babel">
-                    {const root1 = ReactDOM.createRoot(
-                        document.getElementById('fetchapidiv')
-                    );
+                    {
+                        const root1 = ReactDOM.createRoot(
+                            document.getElementById('fetchapidiv')
+                        );
                         const element = <Highlighter content={`
 async function GetAge ()
 {
@@ -679,7 +709,8 @@ async function addbtnClicked ( e )
 
 }
 `} language={"javascript"}/>;
-                        root1.render(element);}
+                        root1.render(element);
+                    }
                 </script>
 
 
@@ -850,16 +881,13 @@ data:{
                 </div>
                 <script>
                     var mychart = null;
-                    document.querySelector("#addchart").addEventListener("click", (e) =>
-                    {
+                    document.querySelector("#addchart").addEventListener("click", (e) => {
                         AddChart();
                     });
 
-                    function AddChart()
-                    {
+                    function AddChart() {
                         const ctx = document.querySelector('#myChart');
-                        if (mychart != null)
-                        {
+                        if (mychart != null) {
                             mychart.destroy();
                         }
                         ca = ctx.getContext('2d');
@@ -878,8 +906,6 @@ data:{
                             options: {}
                         });
                     }
-
-
 
 
                 </script>
@@ -980,13 +1006,11 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
                 <div id="tbl1"></div>
 
                 <script>
-                    document.querySelector("#tblbtn").addEventListener("click", (e) =>
-                    {
+                    document.querySelector("#tblbtn").addEventListener("click", (e) => {
                         showTbl();
                     });
 
-                    function showTbl()
-                    {
+                    function showTbl() {
                         new gridjs.Grid({
                             sort: true,
                             search: true,
@@ -1073,25 +1097,21 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
                 <script>
 
                     "use strict";
-                    document.querySelector("#moveChart").addEventListener("click", (e) =>
-                    {
+                    document.querySelector("#moveChart").addEventListener("click", (e) => {
                         move();
                     });
-                    document.querySelector("#moveMap").addEventListener("click", (e) =>
-                    {
+                    document.querySelector("#moveMap").addEventListener("click", (e) => {
                         moveMap();
                     });
 
-                    function move()
-                    {
+                    function move() {
                         anime({
                             targets: document.querySelector("#chartdiv"),
                             translateX: 270
                         });
                     }
 
-                    function moveMap()
-                    {
+                    function moveMap() {
                         anime({
                             targets: document.querySelector("#mapdiv"),
                             translateX: 270
@@ -1143,13 +1163,11 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
 
                 <div style="height: 300px;width: 600px" id="mapdiv"></div>
                 <script>
-                    document.querySelector("#showmap").addEventListener("click", (e) =>
-                    {
+                    document.querySelector("#showmap").addEventListener("click", (e) => {
                         drawmap();
                     });
 
-                    function drawmap()
-                    {
+                    function drawmap() {
                         let map = L.map('mapdiv', {attributionControl: false,}).setView([35.33443889141701, -97.07270547900498], 12);
                         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             maxZoom: 19,
@@ -1178,7 +1196,8 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
             <div><span class="badge text-bg-danger fs-6">Bootstrap: button </span></div>
             <div class="m-bd-callout m-bd-callout-danger">
                 <a class="btn btn-outline-danger btn-sm"
-                   href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank"><span>Bootstrap: button</span></a>
+                   href="https://getbootstrap.com/docs/5.3/components/buttons/"
+                   target="_blank"><span>Bootstrap: button</span></a>
                 <pre><code class="language-html">&lt;button class="btn"&gt;
   base button
 &lt;/button&gt;</code></pre>
@@ -1198,16 +1217,55 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
 
                         <button type="button" class="btn btn-link">Link</button>
                     </div>
-                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary"</span><span class="p">&gt;</span>Primary<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-secondary"</span><span class="p">&gt;</span>Secondary<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-success"</span><span class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-danger"</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-warning"</span><span class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-info"</span><span class="p">&gt;</span>Info<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-light"</span><span class="p">&gt;</span>Light<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-dark"</span><span class="p">&gt;</span>Dark<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html"
+                                                                                  data-lang="html"><span
+                            class="line"><span class="cl"><span class="p">&lt;</span><span
+                            class="nt">button</span> <span class="na">type</span><span class="o">=</span><span
+                            class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span
+                            class="s">"btn btn-primary"</span><span class="p">&gt;</span>Primary<span
+                            class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span
+                            class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span
+                            class="na">class</span><span class="o">=</span><span
+                            class="s">"btn btn-secondary"</span><span class="p">&gt;</span>Secondary<span class="p">&lt;/</span><span
+                            class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span
+                            class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span
+                            class="na">class</span><span class="o">=</span><span class="s">"btn btn-success"</span><span
+                            class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">button</span><span
+                            class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span
+                            class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span
+                            class="na">class</span><span class="o">=</span><span class="s">"btn btn-danger"</span><span
+                            class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">button</span><span
+                            class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span
+                            class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span
+                            class="na">class</span><span class="o">=</span><span class="s">"btn btn-warning"</span><span
+                            class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">button</span><span
+                            class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span
+                            class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span
+                            class="na">class</span><span class="o">=</span><span class="s">"btn btn-info"</span><span
+                            class="p">&gt;</span>Info<span class="p">&lt;/</span><span class="nt">button</span><span
+                            class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span
+                            class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span
+                            class="na">class</span><span class="o">=</span><span class="s">"btn btn-light"</span><span
+                            class="p">&gt;</span>Light<span class="p">&lt;/</span><span class="nt">button</span><span
+                            class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span
+                            class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span
+                            class="na">class</span><span class="o">=</span><span class="s">"btn btn-dark"</span><span
+                            class="p">&gt;</span>Dark<span class="p">&lt;/</span><span class="nt">button</span><span
+                            class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-link"</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span
+                            class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span
+                            class="na">class</span><span class="o">=</span><span class="s">"btn btn-link"</span><span
+                            class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">button</span><span
+                            class="p">&gt;</span></span></span></code></pre>
+                    </div>
 
                 </div>
             </div>
@@ -1218,7 +1276,8 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
             <div><span class="badge text-bg-primary fs-6">Bootstrap: alert </span></div>
             <div class="m-bd-callout m-bd-callout-primary">
                 <a class="btn btn-outline-primary btn-sm"
-                   href="https://getbootstrap.com/docs/5.2/components/alerts/" target="_blank"><span>Bootstrap: alert</span></a>
+                   href="https://getbootstrap.com/docs/5.2/components/alerts/"
+                   target="_blank"><span>Bootstrap: alert</span></a>
                 <pre><code class="language-html">&lt;div class="alert alert-primary"&gt;
   A simple primary alert—check it out!
 &lt;/div&gt;</code></pre>
@@ -1345,6 +1404,23 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
 
         </div>
 
+        <div id="icard">
+            <div><span class="badge text-bg-success fs-6">Bootstrap: icons</span></div>
+            <div class="m-bd-callout m-bd-callout-success">
+                <a class="btn btn-outline-success btn-sm" href="https://icons.getbootstrap.com/"
+                   target="_blank"><span>Bootstrap: icons</span></a>
+                <pre><code class="language-html">
+&lt;span style="font-size:20px;color:dodgerblue;"&gt;&lt;i class="bi bi-trash3"&gt;&lt;/i&gt;&lt;/span&gt;
+</code></pre>
+
+
+                <div>
+                    <span style="font-size:20px;color:dodgerblue;"><i class="bi bi-trash3"></i></span>
+
+                </div>
+            </div>
+
+        </div>
 
         <div id="bbadge">
             <div><span class="badge text-bg-warning fs-6">Bootstrap: badge</span></div>
@@ -1376,20 +1452,26 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
                                 class="s">"badge text-bg-primary"</span><span class="p">&gt;</span>Primary<span
                                 class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
-                                class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-secondary"</span><span
+                                class="na">class</span><span class="o">=</span><span
+                                class="s">"badge text-bg-secondary"</span><span
                                 class="p">&gt;</span>Secondary<span class="p">&lt;/</span><span
                                 class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
-                                class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-success"</span><span
-                                class="p">&gt;</span>Success<span class="p">&lt;/</span><span class="nt">span</span><span
+                                class="na">class</span><span class="o">=</span><span
+                                class="s">"badge text-bg-success"</span><span
+                                class="p">&gt;</span>Success<span class="p">&lt;/</span><span
+                                class="nt">span</span><span
                                 class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
-                                class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-danger"</span><span
+                                class="na">class</span><span class="o">=</span><span
+                                class="s">"badge text-bg-danger"</span><span
                                 class="p">&gt;</span>Danger<span class="p">&lt;/</span><span
                                 class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
-                                class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-warning"</span><span
-                                class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">span</span><span
+                                class="na">class</span><span class="o">=</span><span
+                                class="s">"badge text-bg-warning"</span><span
+                                class="p">&gt;</span>Warning<span class="p">&lt;/</span><span
+                                class="nt">span</span><span
                                 class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span
                                 class="na">class</span><span class="o">=</span><span
@@ -1508,7 +1590,6 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
         </div>
 
 
-
         <div class="mb-3"></div>
 
         <div class="h4 text-danger border-bottom border-danger fw-bold border-2">ASP.NET MVC
@@ -1531,7 +1612,13 @@ grid.on("rowClick",(...args)=>{gridRowClicked(args);});
                 V:view<br/>
                 C:controller
             </div>
-            <pre><code class="language-csharp">Default page
+            <pre><code class="language-csharp">
+&lt;script&gt;
+    "use strict";
+    var rootPath = '@Url.Content("~/")';
+&lt;/script&gt;
+
+Default page
 return new ContentResult{Content="..."};
 app.MapControllerRoute(
     name: "default",
@@ -1557,7 +1644,26 @@ Body
             @ViewBag.Name @Model.CreatedDate
         &lt;/p&gt;
     &lt;/div&gt;
-}</code></pre>
+}
+
+Guid.NewGuid().ToString();// 7f98fae2-147c-448e-a47e-c865701b177a
+
+public IActionResult Index()
+{
+    return View();
+}
+
+public JsonResult DeleteEnroll(string sid, string cid)
+{
+    return Json(new { status = "success", mes = "Enrollment deleted successfully!" });
+}
+
+public JsonResult GetStus()
+{
+    var r = db1.Students.Select(s => new { id = s.Id, name = s.Name, dob = s.DOB.ToLocalTime().ToString("MM/dd/yyyy"), entrolls = s.entrollments, fn = s.favPlace, lat = s.lat, lon = s.lon });
+    return Json(r);
+}
+            </code></pre>
 
 
             <!--                <div class="fw-bold">-->
@@ -1677,7 +1783,7 @@ public class Student
             <p class="admonition-title">PostgreSQL</p>
             <p>
             <div class="fw-bold">
-                <span >Use the email that you received!</span>
+                <span>Use the email that you received!</span>
                 <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
                 <pre><code class="language-csharp">Nuget packages:
 Microsoft.EntityFrameworkCore.Design 7.0.13
@@ -1700,9 +1806,53 @@ public class DbCon:DbContext// Change DbCon to your own database connect class n
 add-migration initdb -context DbCon
 update-database -context DbCon
 </code></pre>
-            </div>
-        </div>
 
+                <a class="btn btn-primary" href="mis3033fall2023_0920schedule.html#datetime" target="_blank">DateTime
+                    Data type</a>
+
+                <pre><code class="language-csharp">
+created.ToUniversalTime();
+
+s.DOB.ToLocalTime().ToString("MM/dd/yyyy")
+
+db1.Enrollments.Include(e => e.Course).Include(e => e.Student);
+
+db1.Enrollments.Where(x => x.CourseId == cid).GroupBy(x => x.LetterGrade).Select(x => new { lg = x.Key, n = x.Count() }).OrderBy(x => x.lg);
+
+public class Passport
+{
+    [Key]
+    [Column(Order=1)]
+    public int PassportNumber { get; set; }
+    [Key]
+    [Column(Order = 2)]
+    public string IssuingCountry { get; set; }
+    public DateTime Issued { get; set; }
+    public DateTime Expires { get; set; }
+}
+
+public class PassportStamp
+    {
+        [Key]
+        public int StampId { get; set; }
+        public DateTime Stamped { get; set; }
+        public string StampingCountry { get; set; }
+
+        [ForeignKey("Passport")]
+        [Column(Order = 1)]
+        public int PassportNumber { get; set; }
+
+        [ForeignKey(nameof(Passport))]
+        [Column(Order = 2)]
+        public string IssuingCountry { get; set; }
+
+        public Passport Passport { get; set; }
+    }
+            </code></pre>
+            </div>
+
+
+        </div>
 
 
     </div>
