@@ -828,6 +828,21 @@ badge rounded-pill text-bg-primary
 &lt;/div&gt;
 
 &lt;script&gt;
+     params = {
+        type: "line",
+        data: {
+            labels: rj.map( x => x.level ),
+            datasets: [
+                {
+                    label: `Number`,
+                    data: rj.map( x => x.n ),
+                },
+            ],
+        }
+    };
+
+    c3 = new Chart( chart, params );
+
     var mychart = null;
     document.querySelector("#addchart").addEventListener("click", (e) =&gt;
     {
@@ -964,6 +979,21 @@ data:{
 &lt;div id="tbl1"&gt;&lt;/div&gt;
 
 &lt;script&gt;
+    let params = {
+            data: rj,
+            search:true,
+            sort:true,
+            pagination: {limit:5},
+            width:1000,
+            columns: [ {id:"id",name:"ID"},
+            { id: "name", name: "Name" },]
+          };
+
+    grid = new gridjs.Grid( params );
+    grid.render( table );
+
+
+
     document.querySelector("#tblbtn").addEventListener("click",(e)=&gt;{showTbl();});
 
     function showTbl()
