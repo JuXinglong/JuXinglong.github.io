@@ -174,6 +174,10 @@ Swal.fire({
 
                 <li>
                     <a href="#sql">PostgreSQL</a>
+
+                </li>
+                <li>
+                    <a href="#linq" style="" class="btn btn-sm btn-dark">LINQ</a>
                 </li>
 
             </ul>
@@ -268,6 +272,7 @@ Swal.fire({
                 <a style="margin-bottom: 1px;" class="btn btn-sm btn-info" href="#mvc">MVC</a>
                 <a style="margin-bottom: 1px;" class="btn btn-sm btn-warning" href="#razor">Razor</a>
                 <a style="margin-bottom: 1px;" class="btn btn-sm btn-success" href="#sql">PostgreSQL</a>
+                <a href="#linq" style="" class="btn btn-sm btn-dark">LINQ</a>
 
 
                 <a href="#js" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-primary">JavaScript</a>
@@ -1971,6 +1976,62 @@ public class PassportStamp
 
         </div>
 
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">collection extension functions
+        </div>
+
+        <div class="admonition note" id="linq">
+            <p class="admonition-title">collection extension functions</p>
+            <p>
+            <div class="fw-bold">
+                collection extension methods <a target="_blank"
+                                                href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <br/>
+                These methods can help you to avoid writing loop to find min, max value, to order and to select,
+                from a collection.
+                <br/>
+                Min()<br/>
+                Max()<br/>
+                MinBy()<br/>
+                MaxBy()<br/>
+                Average()<br/>
+                OrderBy() Ascending order<br/>
+                OrderByDescending()<br/>
+                Where()<br/>
+                Select()
+            </div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Language-Integrated Query (LINQ)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">LINQ</p>
+            <p>
+            <div class="fw-bold">Language-Integrated Query (LINQ) <a target="_blank"
+                                                                     href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank"
+                   href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                <br/>
+            <a class="btn btn-danger" target="_blank" href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/standard-query-operators-overview">LINQ Tutorial</a>
+            </div>
+            <pre><code class="language-csharp">var result = from s in students
+             where s.name == "xinglong3" & s.age == 22
+             orderby s.name descending
+             //select s;
+             select new {n=s.name,};</code></pre>
+            </p>
+        </div>
 
     </div>
 </div>
