@@ -308,6 +308,7 @@ Swal.fire({
                    class="btn btn-sm btn-danger">Bootstrap: icons</a>
                 <a href="#tabs" class="btn btn-sm btn-dark">Tab Navigation</a>
                 <a href="#forminput" class="btn btn-sm btn-outline-dark">Form Inputs</a>
+                <a href="#formselect" class="btn btn-sm btn-primary">Form Select</a>
 
             </div>
         </div>
@@ -1723,7 +1724,56 @@ map.addLayer(streets);
             </div>
         </div>
 
+        <div class="mb-3"></div>
+        <div class="admonition note">
+            <p class="admonition-title">Form Select</p>
+            <p>
+            <div id="formselect" class="fw-bold">
 
+                <a class="btn btn-sm btn-warning" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" target="_blank">Select dropdown</a>
+                <!--                    <span>Use the email that you received!</span>-->
+                <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
+                <pre><code class="language-html">&lt;select id="stuid" class="form-select"&gt;
+    &lt;option value="S101"&gt;STU: S101, Name: Xinglong Ju&lt;/option&gt;
+    &lt;option value="S102"&gt;STU: S102, Name: Tom Tom&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;div class="input-group"&gt;
+    &lt;label class="input-group-text"&gt;Fav Color&lt;/label&gt;
+    &lt;input id="color" type="color" class="form-control form-control-color"/&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+let ss = document.querySelector( "#stuid" ).value;
+
+async function GetOptions ()
+{
+    let ss = document.querySelector( "#stuid" );
+    ss.innerHTML = "";
+
+    let r = await fetch( rootPath + "profile/getstuids" );
+    let rj = await r.json();
+
+    for ( let i = 0; i < rj.length; i++ )
+    {
+        let opt = document.createElement( "option" );
+        opt.value = rj[ i ].value;
+        opt.text = rj[ i ].text;
+
+        ss.options.add( opt );
+    }
+}
+
+GetOptions();// call the function
+&lt;/script&gt;
+
+let ss = document.querySelector( "#stuid" );
+ss.addEventListener( "change", () => {
+    valueChanged();
+} );
+                </code></pre>
+            </div>
+        </div>
 
 
         <div id="bd-callout">
