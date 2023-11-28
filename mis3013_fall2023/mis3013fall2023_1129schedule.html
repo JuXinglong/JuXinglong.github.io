@@ -44,6 +44,7 @@
                 }
 
             });
+            fun_coursereflection();
             // var i;
             // var n_review_ques = 0;
             // for (i = 1; i <= n_review_ques; i++)
@@ -125,6 +126,27 @@
         <!--        table of contents start-->
         <div id="top" class="border-1 border border-dark rounded-3 mb-3">
             <ul style="font-weight: bold;">
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <div id="coursereflection"><a  class="text-danger fw-bold h4" href="https://coursereflection.ou.edu/" target="_blank">Finish course feedback survey: https://coursereflection.ou.edu/</a></div>
+                <script>
+                    function fun_coursereflection()
+                    {
+                        //alert("OK");
+                        let coursereflection=document.querySelector("#coursereflection");
+                        anime( {
+                            targets: coursereflection,
+
+                            keyframes: [
+                                {  scale: 2 },
+                                {  scale: 1 },
+                            ],
+                            duration: 4000,
+                            //loop: true,
+                        } );
+                    }
+                </script>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
 
                 <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
                 <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->

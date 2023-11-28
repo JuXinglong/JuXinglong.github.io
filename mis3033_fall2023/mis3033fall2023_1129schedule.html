@@ -60,7 +60,7 @@
                 }
 
             });
-
+            fun_coursereflection();
         }
 
 
@@ -94,6 +94,28 @@
                 <!--                <li><span class="text-danger fw-bold h3">Exam 2 on October 25, 2023, 10:30 AM to 11:45 AM, close on 11:50 AM.</span></li>-->
 
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <div id="coursereflection"><a  class="text-danger fw-bold h4" href="https://coursereflection.ou.edu/" target="_blank">Finish course feedback survey: https://coursereflection.ou.edu/</a></div>
+                <script>
+                    function fun_coursereflection()
+                    {
+                        //alert("OK");
+                        let coursereflection=document.querySelector("#coursereflection");
+                        anime( {
+                            targets: coursereflection,
+
+                            keyframes: [
+                                {  scale: 2 },
+                                {  scale: 1 },
+                            ],
+                            duration: 4000,
+                            //loop: true,
+                        } );
+                    }
+                </script>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+
                 <li><span
                         class="text-primary h6 fw-bold">Create a C# ASP.NET MVC Project: MIS3033_LC_1129_YourName</span>
                 </li>
