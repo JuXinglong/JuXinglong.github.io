@@ -38,7 +38,8 @@
     <script src="../static/site.js"></script>
 
     <script type="text/babel">
-        function Highlighter({content, language}) {
+        function Highlighter({content, language})
+        {
             const highlighted = hljs.highlight(content, {language: language,}, false);
 
             // console.log(highlighted.value);
@@ -50,7 +51,8 @@
         }
     </script>
     <script>
-        function initPro() {
+        function initPro()
+        {
             hljs.highlightAll();
             let floatpanel = document.querySelector("#floatpanel");
             anime({
@@ -95,22 +97,24 @@
 
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
                 <li class="list-group-item"><span>&nbsp;</span></li>
-                <div id="coursereflection"><a  class="text-danger fw-bold h4" href="https://coursereflection.ou.edu/" target="_blank">Finish course feedback survey: https://coursereflection.ou.edu/</a></div>
+                <div id="coursereflection"><a class="text-danger fw-bold h4" href="https://coursereflection.ou.edu/"
+                                              target="_blank">Finish course feedback survey:
+                    https://coursereflection.ou.edu/</a></div>
                 <script>
                     function fun_coursereflection()
                     {
                         //alert("OK");
-                        let coursereflection=document.querySelector("#coursereflection");
-                        anime( {
+                        let coursereflection = document.querySelector("#coursereflection");
+                        anime({
                             targets: coursereflection,
 
                             keyframes: [
-                                {  scale: 2 },
-                                {  scale: 1 },
+                                {scale: 2},
+                                {scale: 1},
                             ],
                             duration: 4000,
                             //loop: true,
-                        } );
+                        });
                     }
                 </script>
                 <li class="list-group-item"><span>&nbsp;</span></li>
@@ -120,17 +124,19 @@
                         class="text-primary h6 fw-bold">Create a C# ASP.NET MVC Project: MIS3033_LC_1129_YourName</span>
                 </li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
-                <li><span class="text-danger fw-bold h4">Exam 3: 8:00 AM - 10:00 AM, Wednesday, December 13, 2023, at Adams Hall 3109</span></li>
+                <li><span class="text-danger fw-bold h4">Exam 3: 8:00 AM - 10:00 AM, Wednesday, December 13, 2023, at Adams Hall 3109</span>
+                </li>
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
 
-<!--                 <li><span class="text-danger fw-bold h4">HW 7 ASP.NET MVC Order Web App, Due at 5:00 PM on November 20, 2023</span></li>-->
-                <li><span class="text-danger fw-bold h4">HW 8 ASP.NET MVC Patient Web App, Due at 5:00 PM on December 1, 2023</span></li>
+                <!--                 <li><span class="text-danger fw-bold h4">HW 7 ASP.NET MVC Order Web App, Due at 5:00 PM on November 20, 2023</span></li>-->
+                <li><span class="text-danger fw-bold h4">HW 8 ASP.NET MVC Patient Web App, Due at 5:00 PM on December 1, 2023</span>
+                </li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <!--                <li><span class="text-primary h-1 fw-bold">One handout (3 pages) Exam 2 Practice 1</span></li>-->
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
-<!--                <li  class="text-danger h6 fw-bold">HW6-JavaScript due November 10, 2023, 5:00 PM</li>-->
-<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li  class="text-danger h6 fw-bold">HW6-JavaScript due November 10, 2023, 5:00 PM</li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
                 <li class="list-group-item"><span class="text-danger">Exam 3 Contents</span></li>
 
                 <li>JavaScript &nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -245,51 +251,13 @@ Swal.fire({
         </div>
 
         <div id="floatpanel"
-             style="position:fixed;top: -205px;right:1px;display: flex;flex-direction: column;align-items: end;">
+             style="position:fixed;top: -210px;right:1px;display: flex;flex-direction: column;align-items: end;">
             <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
             </button>
-            <script>
-                {
-                    "use strict";
-                    var m = 1;
-                    let foldbtn = document.querySelector("#foldbtn");
-                    foldbtn.addEventListener("click", (e) => {
-                        let floatmenu = document.querySelector("#floatmenu");
-                        anime({
-                            targets: floatmenu,
-                            scale: {
-                                value: 0.0,
-                            }
-                        });
-                        //floatmenu.style.display = "none";
-                        let expandbtn = document.querySelector("#expandbtn");
-                        expandbtn.style.display = "block";
-                        foldbtn.style.display = "none";
-                    });
-                }
-            </script>
+
             <button id="expandbtn" class="btn btn-sm btn-outline-secondary" style="display: none;"><i
                     class="bi bi-chevron-double-down"></i></button>
-            <script>
-                {
-                    "use strict";
-                    let expandbtn = document.querySelector("#expandbtn");
 
-                    expandbtn.addEventListener("click", (e) => {
-                        let floatmenu = document.querySelector("#floatmenu");
-                        anime({
-                            targets: floatmenu,
-                            scale: {
-                                value: 1.0,
-                            }
-                        });
-                        //floatmenu.style.display = "block";
-                        let foldbtn = document.querySelector("#foldbtn");
-                        foldbtn.style.display = "block";
-                        expandbtn.style.display = "none";
-                    });
-                }
-            </script>
             <div id="floatmenu" style="display: flex;flex-direction: column;">
                 <a href="#top" style="margin-bottom: 1px;display: block;" class="btn btn-sm btn-outline-primary">TOP</a>
                 <a href="#init" style="margin-bottom: 1px;display: block;"
@@ -297,6 +265,7 @@ Swal.fire({
                 <a href="#top" class="btn btn-sm btn-primary">CSS JS Libs</a>
                 <a style="margin-bottom: 1px;" class="btn btn-sm btn-info" href="#mvc">MVC</a>
                 <a style="margin-bottom: 1px;" class="btn btn-sm btn-warning" href="#razor">Razor</a>
+                <a style="margin-bottom: 1px;" class="btn btn-sm btn-danger" href="#failtobind">Failed to bind</a>
                 <a style="margin-bottom: 1px;" class="btn btn-sm btn-success" href="#sql">PostgreSQL</a>
                 <a href="#linq" style="" class="btn btn-sm btn-dark">LINQ</a>
 
@@ -311,8 +280,6 @@ Swal.fire({
                 <a href="#gridjs" style="margin-bottom: 1px;" class="btn btn-sm btn-success">grid js (Table)</a>
                 <a href="#chartjs" style="margin-bottom: 1px;" class="btn btn-sm btn-primary">Chart.js (Chart)</a>
                 <a href="#leafletjsmap" style="margin-bottom: 1px;" class="btn btn-sm btn-dark">leaflet.js (Map)</a>
-
-
 
 
                 <a href="#anime" class="btn btn-sm btn-warning">anime</a>
@@ -334,13 +301,56 @@ Swal.fire({
 
             </div>
         </div>
+        <script>
+            {
+                "use strict";
+                var m = 1;
+                let foldbtn = document.querySelector("#foldbtn");
+                foldbtn.addEventListener("click", (e) =>
+                {
+                    let floatmenu = document.querySelector("#floatmenu");
+                    anime({
+                        targets: floatmenu,
+                        scale: {
+                            value: 0.0,
+                        }
+                    });
+                    //floatmenu.style.display = "none";
+                    let expandbtn = document.querySelector("#expandbtn");
+                    expandbtn.style.display = "block";
+                    foldbtn.style.display = "none";
+                });
+            }
+        </script>
+        <script>
+            {
+                "use strict";
+                let expandbtn = document.querySelector("#expandbtn");
+
+                expandbtn.addEventListener("click", (e) =>
+                {
+                    let floatmenu = document.querySelector("#floatmenu");
+                    anime({
+                        targets: floatmenu,
+                        scale: {
+                            value: 1.0,
+                        }
+                    });
+                    //floatmenu.style.display = "block";
+                    let foldbtn = document.querySelector("#foldbtn");
+                    foldbtn.style.display = "block";
+                    expandbtn.style.display = "none";
+                });
+            }
+        </script>
 
         <div>
 
 
             <h3 class="text-danger mb-3">Exam 3 Contents</h3>
 
-            <a href="https://learn.microsoft.com/en-us/ef/core/modeling/relationships/one-to-one" target="_blank" class="btn btn-lg btn-danger">Entity Framework Table Relationships Tutorial</a>
+            <a href="https://learn.microsoft.com/en-us/ef/core/modeling/relationships/one-to-one" target="_blank"
+               class="btn btn-lg btn-danger">Entity Framework Table Relationships Tutorial</a>
             <br/>
             <img id="demo" src="../static/img/Demo.gif" style="width: 1000px;"/>
             <img id="er" src="../static/img/ER2.png" style="width: 800px;"/>
@@ -959,13 +969,16 @@ data:{
                 </div>
                 <script>
                     var mychart = null;
-                    document.querySelector("#addchart").addEventListener("click", (e) => {
+                    document.querySelector("#addchart").addEventListener("click", (e) =>
+                    {
                         AddChart();
                     });
 
-                    function AddChart() {
+                    function AddChart()
+                    {
                         const ctx = document.querySelector('#myChart');
-                        if (mychart != null) {
+                        if (mychart != null)
+                        {
                             mychart.destroy();
                         }
                         ca = ctx.getContext('2d');
@@ -1101,11 +1114,13 @@ grid.on("rowClick",(...args)=>{
                 <div id="tbl1"></div>
 
                 <script>
-                    document.querySelector("#tblbtn").addEventListener("click", (e) => {
+                    document.querySelector("#tblbtn").addEventListener("click", (e) =>
+                    {
                         showTbl();
                     });
 
-                    function showTbl() {
+                    function showTbl()
+                    {
                         new gridjs.Grid({
                             sort: true,
                             search: true,
@@ -1192,21 +1207,25 @@ grid.on("rowClick",(...args)=>{
                 <script>
 
                     "use strict";
-                    document.querySelector("#moveChart").addEventListener("click", (e) => {
+                    document.querySelector("#moveChart").addEventListener("click", (e) =>
+                    {
                         move();
                     });
-                    document.querySelector("#moveMap").addEventListener("click", (e) => {
+                    document.querySelector("#moveMap").addEventListener("click", (e) =>
+                    {
                         moveMap();
                     });
 
-                    function move() {
+                    function move()
+                    {
                         anime({
                             targets: document.querySelector("#chartdiv"),
                             translateX: 270
                         });
                     }
 
-                    function moveMap() {
+                    function moveMap()
+                    {
                         anime({
                             targets: document.querySelector("#mapdiv"),
                             translateX: 270
@@ -1283,7 +1302,7 @@ marker.openPopup();
                     </div>
                 </div>
 
-                <span  class="badge text-bg-secondary">leafletjs map</span>
+                <span class="badge text-bg-secondary">leafletjs map</span>
                 <pre><code>var map = L.map( 'mapdiv', { attributionControl: false, } ).setView( [ 35.33443889141701, -97.07270547900498 ], 4 );
 L.tileLayer( 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -1359,11 +1378,13 @@ map.addLayer(streets);
 
                 <div style="height: 300px;width: 600px" id="mapdiv"></div>
                 <script>
-                    document.querySelector("#showmap").addEventListener("click", (e) => {
+                    document.querySelector("#showmap").addEventListener("click", (e) =>
+                    {
                         drawmap();
                     });
 
-                    function drawmap() {
+                    function drawmap()
+                    {
                         let map = L.map('mapdiv', {attributionControl: false,}).setView([35.33443889141701, -97.07270547900498], 12);
                         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             maxZoom: 19,
@@ -1611,7 +1632,7 @@ map.addLayer(streets);
 
 
                 <div>
-                <span style="font-size:20px;color:dodgerblue;"><i class="bi bi-trash3"></i></span>
+                    <span style="font-size:20px;color:dodgerblue;"><i class="bi bi-trash3"></i></span>
 
                 </div>
             </div>
@@ -1696,7 +1717,8 @@ map.addLayer(streets);
             <p>
             <div class="fw-bold">
 
-                <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank">Bootstrap Tabs and Navs</a>
+                <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/"
+                   target="_blank">Bootstrap Tabs and Navs</a>
                 <!--                    <span>Use the email that you received!</span>-->
                 <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
                 <pre><code class="language-html">&lt;ul class="nav nav-tabs"&gt;
@@ -1720,7 +1742,8 @@ map.addLayer(streets);
             <p>
             <div id="forminput" class="fw-bold">
 
-                <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/forms/input-group/" target="_blank">Bootstrap Input group</a>
+                <a class="btn btn-sm btn-warning" href="https://getbootstrap.com/docs/5.3/forms/input-group/"
+                   target="_blank">Bootstrap Input group</a>
                 <!--                    <span>Use the email that you received!</span>-->
                 <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
                 <pre><code class="language-html">&lt;div class="input-group"&gt;
@@ -1752,7 +1775,9 @@ map.addLayer(streets);
             <p>
             <div id="formselect" class="fw-bold">
 
-                <a class="btn btn-sm btn-warning" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" target="_blank">Select dropdown</a>
+                <a class="btn btn-sm btn-warning"
+                   href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" target="_blank">Select
+                    dropdown</a>
                 <!--                    <span>Use the email that you received!</span>-->
                 <!--                    <img src="../static/img/programcs.png" style="width: 800px;"/>-->
                 <pre><code class="language-html">&lt;select id="stuid" class="form-select"&gt;
@@ -2082,6 +2107,21 @@ public class Student
 
         </div>
 
+        <div id="failtobind" class="admonition note">
+            <p class="admonition-title">Failed to bind to address</p>
+            <p>
+            <div class="fw-bold">asp.net mvc Unhandled exception. System.IO.IOException: Failed to bind to address <a
+                    target="_blank"
+                    href="https://stackoverflow.com/questions/55143246/unable-to-start-kestrel-system-io-ioexception-failed-to-bind-to-address-http"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+            </div>
+            <pre><code class="language-csharp">Open CMD Prompt as Administrator and run
+net stop hns
+net start hns</code></pre>
+            </p>
+        </div>
 
         <div class="mb-3"></div>
         <div id="sql" class="admonition note">
@@ -2206,7 +2246,9 @@ public class PassportStamp
 
 
                 <br/>
-            <a class="btn btn-danger" target="_blank" href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/standard-query-operators-overview">LINQ Tutorial</a>
+                <a class="btn btn-danger" target="_blank"
+                   href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/standard-query-operators-overview">LINQ
+                    Tutorial</a>
             </div>
             <pre><code class="language-csharp">var result = from s in students
              where s.name == "xinglong3" & s.age == 22
