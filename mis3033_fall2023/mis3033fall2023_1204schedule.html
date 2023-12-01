@@ -2119,6 +2119,13 @@ public class Student
             <div class="m-bd-callout m-bd-callout-danger">
                 <img src="../static/img/authenauthor.jpg" style="width: 800px;"/>
                 <pre><code class="language-csharp">
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.Name = "MIS3033_YOUR_NETID_1204";
+});
+
 
 builder.Services.AddDbContext&lt;AuthenDbConnect&gt;(options =&gt;
     options.UseNpgsql(connectionString));
