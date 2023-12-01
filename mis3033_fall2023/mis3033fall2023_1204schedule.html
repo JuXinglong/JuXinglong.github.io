@@ -2147,6 +2147,48 @@ public IActionResult All()//action
     return View(stuList);
 }
 
+Areas=&gt;Identity=&gt;Pages=&gt;Account=&gt;Login.cshtml=&gt;Login.cshtml.cs
+
+private readonly UserManager&lt;AuthenUser&gt; _userManager;// dependency injection
+
+var authenUser= await _userManager.FindByNameAsync(Input.Email);
+if (await _userManager.IsInRoleAsync(authenUser, "S"))//role is student
+{
+    returnUrl = Url.Content("~/Stu/Index");
+}
+else if (await _userManager.IsInRoleAsync(authenUser, "T"))// role is teacher
+{
+    returnUrl = Url.Content("~/Stu/Chart");
+}
+
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager&lt;AuthenUser&gt; _singManager
+@inject UserManager&lt;AuthenUser&gt; _userManager
+
+@{
+    var user = await _userManager.FindByNameAsync(User.Identity.Name);
+    if (await _userManager.IsInRoleAsync(user,"S"))
+    {
+
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link active" href="~/stu/index" target="_self"&gt;Student&lt;/a&gt;
+        &lt;/li&gt;
+    }
+}
+
+@{
+    user = await _userManager.FindByNameAsync(User.Identity.Name);
+    if (await _userManager.IsInRoleAsync(user, "T"))
+    {
+
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="~/stu/chart" target="_self"&gt;Chart&lt;/a&gt;
+        &lt;/li&gt;
+    }
+}
+
+
 </code></pre>
 
                 <div>
