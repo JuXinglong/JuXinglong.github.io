@@ -1,0 +1,2936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>October 30 Lecture Schedule MIS 3013: Array</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <!--    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <!--    <script src="../static/jquery-ui.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"></script>
+
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro() {
+            hljs.highlightAll();
+            let floatpanel = document.querySelector("#floatpanel");
+            anime({
+                targets: floatpanel,
+                scale: {
+                    value: 0.5,
+                }
+
+            });
+            // var i;
+            // var n_review_ques = 0;
+            // for (i = 1; i <= n_review_ques; i++)
+            // {
+            //     $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            // }
+
+        }
+
+        function questionBtnClicked(event) {
+            var sBtn = $("#q" + event.data.i + "btn");
+            var sAns = $("#q" + event.data.i + "ans");
+            if (sBtn.text() == "Show Answer") {
+                sBtn.text("Hide Answer");
+                // sAns.show();
+                sAns.removeClass("invisible");
+            } else {
+                sBtn.text("Show Answer");
+                // sAns.hide();
+                sAns.addClass("invisible");
+            }
+        }
+
+        $(document).ready(initPro);
+    </script>
+
+
+    <style>
+        .eleDiv {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            background-color: dodgerblue;
+        }
+
+        .indDiv {
+            display: flex;
+            flex-direction: row;
+            width: 30px;
+            height: 30px;
+            border: 1px solid grey;
+            background-color: lightskyblue;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .st1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arrRow {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .listDiv {
+            border: 2px dashed #841617;
+            height: 30px;
+            margin-top: 20px;
+        }
+
+        .dictDiv {
+            border: 2px dashed #841617;
+            height: 64px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            October 30, 2023 Lecture Schedule for MIS 3013
+        </div>
+
+        <!--        table of contents start-->
+        <div id="top" class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+
+                <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
+                <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
+                <!--                </li>-->
+                <li><span class="text-primary h6 fw-bold">Create a C# console app: MIS3013_LC_1030_YourName</span>
+                </li>
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li><span class="text-primary h-1 fw-bold">One handout (3 pages) Exam 2 Practice 1</span></li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--                <li>HW8-List due April 17, 2023, 5:00 PM</li>-->
+                <!--                                <li>HW5-Functions due March 10, 2023, 5:00 PM</li>-->
+                <!--                                <li>HW6-class-string due March 27, 2023, 5:00 PM (Exam 3 contents)</li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                                <li>Exam 2: March 29, 2023, 8:00 AM - 9:15 AM</li>-->
+                <!--                <li>Exam 2 Contents: Functions (HW4&5)</li>-->
+
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li>March 22, Exam 2 Review and Practice 1</li>-->
+                <!--                <li>March 27, Exam 2 Review and Practice 2</li>-->
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+
+                <li class="list-group-item"><span class="text-danger">EXAM 3 Contents</span></li>
+                <!--                <li>HW4 due October 7, 2022, 5:00 PM</li>-->
+                <!--                <li>Exercise 3 October 19, 2022, Lecture Time-->
+                <!--                    <ul>-->
+                <!--                        <li>function/method</li>-->
+                <!--                        <li>use class to define a complex datatype</li>-->
+                <!--                        <li>string manipulation ???</li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+                <!--                <li><a href="#funs"> function & method</a></li>-->
+                <!--                <li><a href="#funcprac"> function & method example</a></li>-->
+
+                <li><a href="#simplevscomplex"> The differences: Simple datatype VS. Complex datatype</a></li>
+                <li><a href="#defineclass"> Use class to define a complex datatype</a></li>
+                <li><a href="#stringmani" class=""> string manipulations</a></li>
+                <li><a href="#collections" class="btn btn-sm btn-primary">Collections</a>
+                    <ul>
+                        <li><a href="#array" class="btn btn-sm btn-warning">Array</a></li>
+                        <li><a href="#list" class="btn btn-sm btn-danger">List</a></li>
+                        <li><a href="#dictionary" class="btn btn-sm btn-info">Dictionary</a></li>
+                    </ul>
+                </li>
+                <li><a class="btn btn-sm btn-success" href="#class">Class</a><a class="btn btn-sm btn-primary" href="#moreclass">More about Class</a>
+                    <ul>
+                        <li>namespace</li>
+                        <li>keyword: new</li>
+                        <li>constructor function</li>
+                        <li>member data fields</li>
+                        <li>member function</li>
+                        <li>static function</li>
+                        <li>inherit</li>
+                        <li>override</li>
+                        <li>overload</li>
+                        <li><a class="btn btn-sm btn-secondary" href="#interface">interface</a></li>
+                        <li><a class="btn btn-sm btn-dark" href="#dt">DateTime & TimeSpane</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <div id="floatpanel"
+                 style="position: fixed;right:0px;top:50px;display: flex;flex-direction: column;align-items: end;justify-content: start;">
+                <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
+                </button>
+                <script>
+                    {
+                        "use strict";
+                        var m = 1;
+                        let foldbtn = document.querySelector("#foldbtn");
+                        foldbtn.addEventListener("click", (e) =>
+                        {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 0.0,
+                                }
+                            });
+                            //floatmenu.style.display = "none";
+                            let expandbtn = document.querySelector("#expandbtn");
+                            expandbtn.style.display = "block";
+                            foldbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <button id="expandbtn" class="btn btn-sm btn-outline-secondary" style="display: none;"><i
+                        class="bi bi-chevron-double-down"></i></button>
+                <script>
+                    {
+                        "use strict";
+                        let expandbtn = document.querySelector("#expandbtn");
+
+                        expandbtn.addEventListener("click", (e) =>
+                        {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 1.0,
+                                }
+                            });
+                            //floatmenu.style.display = "block";
+                            let foldbtn = document.querySelector("#foldbtn");
+                            foldbtn.style.display = "block";
+                            expandbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <div id="floatmenu" style="display: flex;flex-direction: column;">
+                    <a href="#top" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-dark">Go to Top</a>
+                    <a href="#collections" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-primary">Collections</a>
+                    <a href="#array" style="" class="btn btn-sm btn-outline-warning">Array</a>
+                    <a href="#list" style="" class="btn btn-sm btn-danger">List</a>
+                    <a href="#dictionary" style="" class="btn btn-sm btn-info">Dictionary</a>
+                    <a class="btn btn-sm btn-success" href="#class">Class</a>
+
+                </div>
+                <!--                <a href="#list" style=""  class="btn btn-sm btn-outline-danger">List</a><br/>-->
+                <!--                <a href="#dictionary" style="width: 100px;"  class="btn btn-sm btn-outline-info">Dictionary</a>-->
+            </div>
+
+        </div>
+<!--        <img style="width:100%" src="../static/img/getaddress.png"/>-->
+        <!--        <img style="width:100%" src="../static/img/getaddress.png"/>-->
+        <!--        table of contents end-->
+
+
+        <div class="mb-3"></div>
+
+
+        <!--            Precedence (Order of operators) starts-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">[] () .</span> -> ++ −− (used as prefixes) + – (unary),
+                        <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                        <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                    </th>
+                    <td><span class="text-danger fw-bold h5">* / %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+ –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><< >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">< > <= >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">== !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">=</span> *= /= %= += −= <<= >>= &= ^= |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++ ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <h3 class="text-danger mb-3">EXAM 2 Contents</h3>
+
+        <div id="funs" class="h4 text-danger border-bottom border-danger fw-bold border-2">function & method</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">function & method</p>
+            <div>
+                <img src="../static/img/kitchen.jpg" style="height: 300px;"/>
+                <img src="../static/img/pancake.jpg" style="height: 300px;"/>
+                <img src="../static/img/cookmachine.jpg" style="height: 300px;"/>
+                <img src="../static/img/coffeeMaker.webp" style="height: 300px;"/>
+            </div>
+            <div class="fw-bold h2 text-danger">
+                Programming language terms:<br/>
+                Encapsulation<br/>Reuse
+            </div>
+            <div>Raise power function practice, two integer parameters, return an integer</div>
+            <p>
+            <pre><code class="language-csharp">Basic syntax to define a function
+//function is self-enclosed. Variables defined inside it are not visible to the outside scope (world).
+// variables can be redefined inside a function
+datatype function_name(datatype1 var1,datatype var2)// (*) are called parameters
+{
+  ……
+return datatype_variable;
+}
+
+void
+
+char GetLetterGrade(double grade)
+{
+char letterGrade=‘G’;
+if(grade>90)
+{
+	letterGrade=‘A’;
+}
+else
+{
+	letterGrade=‘B’;
+}
+return letterGrade;
+}
+
+How to use it?
+function_name(…);
+
+
+char lg1=GetLetterGrade(90.6);
+double grade2=96.9;
+char lg2=GetLetterGrade(grade2);
+Console.Write(GetLetterGrade(70.6));
+</code></pre>
+            </p>
+
+        </div>
+
+        <div class="mb-3"></div>
+
+
+        <div id="funcprac" class="h4 text-danger border-bottom border-danger fw-bold border-2">function/method practice</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">function/method practice</p>
+            <p>
+            <div class="fw-bold"></div>
+
+            <ol>
+                <li> Define a function named "<span class="fw-bold">SumOfOddNumbers</span>" to calculate the summation of odd numbers. This function has <span class="fw-bold">two parameters (both are integers)</span>. This function will <span class="fw-bold">return an integer</span>.
+                    <br/>
+                    For example, if the two parameters are 2 and 8, this function will return <span class="fw-bold">15</span>, because the odd number between 2 and 8 are 3, 5 and 7, and \(3+5+7=15\)
+
+                </li>
+
+                <li> Define a function named "<span class="fw-bold">SumOfOddNumbersFormula</span>" to get the formula of the summation of odd numbers. This function has <span class="fw-bold">two parameters (both are integers)</span>. This function will <span class="fw-bold">return a formula string</span>.
+                    <br/>
+                    For example, if the two parameters are 2 and 8, this function will return \(3+5+7\), because the odd number between 2 and 8 are 3, 5 and 7.
+
+                </li>
+
+
+                <li> Define a function named "<span class="fw-bold">ProductOfEvenNumbers</span>" to calculate the product of even numbers. This function has <span class="fw-bold">two parameters (both are integers)</span>. This function will <span class="fw-bold">return an integer</span>.
+                    <br/>
+                    For example, if the two parameters are 2 and 8, this function will return <span class="fw-bold">384</span>, because the even number between 2 and 8 are 2, 4, 6 and 8, and \(2\times4\times6\times8=384\)
+
+                </li>
+
+                <li> Define a function named "<span class="fw-bold">ProductOfEvenNumbersFormula</span>" to get the formula of the product of even numbers. This function has <span class="fw-bold">two parameters (both are integers)</span>. This function will <span class="fw-bold">return a string</span>.
+                    <br/>
+                    For example, if the two parameters are 2 and 8, this function will return <span class="fw-bold text-danger">\(2\times4\times6\times8\)</span>, because the even number between 2 and 8 are 2, 4, 6 and 8.
+
+                </li>
+            </ol>
+
+
+
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+        <h3 class="text-danger mb-3">EXAM 3 Contents Continue</h3>
+        <div class="mb-3"></div>
+        <div id="simplevscomplex" class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables
+            VS. complex
+            variables
+        </div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">Simple VS. Complex</p>
+            <p>
+            <div class="fw-bold">
+                <img src="../static/img/room_card.jpg" style="height: 300px;"/>
+                <img src="../static/img/roomaccess.jpg" style="height: 300px;"/>
+                <img src="../static/img/cards.jpg" style="height: 300px;"/>
+                <ul>
+                    <li>Simple variable
+                        <ol>
+                            <li class="list-group-item">int i;</li>
+                            <li>The computer created a simple room card i. The card type is int.</li>
+                            <li>The computer automatically created an int space (room) in the computer memory. The
+                                space address (room number is stored in this card.)
+                            </li>
+                            <li>The room number in this card is unchangeable (immutable).</li>
+                            <li>assignment operation. The value in this space (room) is changed.</li>
+                        </ol>
+                    </li>
+                    <li>Complex variable
+                        <ol>
+                            <li class="list-group-item">DateTime j;</li>
+                            <li>The computer created a complex room card j. The card type is DateTime.</li>
+                            <li>The computer did NOT create any space (room) in computer memory. The space address
+                                (room number) in this card is null.
+                            </li>
+                            <li>The room number in this card is changeable (mutable).</li>
+                            <li>assignment operation. The address (room number) in this card is changed.</li>
+                            <li class="list-group-item text-danger">The only way to create a complex variable in the
+                                memory is to call the new Datatype(...) constructor function.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <pre><code class="language-csharp">Simple: int double bool char
+Complex: string and all data types defined by key word class…
+
+1 int age; // room number 101
+2 string name1; // room number 0. Not a valid room number in computer
+A room card age is created.
+A room number is assigned to card age.
+A room card name1 is created.
+No room number is assigned to card name1 yet.
+
+3 age=20; // room number on card age is still 101
+4 name1=new string(“Xinglong Ju”); // room number 102
+The value 20 is copied (stored) to age room (room 101).
+new string(“Xinglong Ju”) // A room is created with content “Xinglong Ju” in it. Room number 103
+Room number 103 is copied to card name1.
+5 string name2=“James Brodie”;// name2=new string(“James Brodie”); // Room number 104
+6 name1=name2;// copy the room number 104 to card nam1
+                                // Now both cards nam1 and name2 have access to the same room 104
+</code></pre>
+        </div>
+
+
+        <div class="mb-3"></div>
+        <div id="defineclass" class="h4 text-danger border-bottom border-danger fw-bold border-2">Use class to define a
+            complex datatype
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Define a complex datatype using class keyword</p>
+            <p>
+            <div class="fw-bold">
+                class <a target="_blank"
+                         href="https://www.w3schools.com/cs/cs_oop.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_classes.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_class_members.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_constructors.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_access_modifiers.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_properties.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_inheritance.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_polymorphism.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_abstract.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_interface.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+            </div>
+            <pre><code class="language-csharp">Define a new complex data type Student using class
+class member
+class NewDataTypeName
+{
+}
+Member functions
+static
+this
+namespace
+
+Data fields in the new data type
+. : new operator, member access operator
+Public: access modifier
+
+
+Student xingStu=new Student();
+xingStu.name = "Xinglong Ju";
+xingStu.finalGrade = 90.6;
+double fg = xingStu.CalFinalGrade();
+class Student
+{
+    public string name;
+    public string id;
+    public int age;
+    public double finalGrade;
+    public double exam1Grade;
+    public double exam2Grade;
+    public double exam3Grade;
+
+    public char CalLetterGrade()
+    {
+        return 'A';
+    }
+
+    public double CalFinalGrade()
+    {
+        return finalGrade;
+    }
+}</code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+        <div id="stringmani" class="h4 text-danger border-bottom border-danger fw-bold border-2">string manipulation
+        </div>
+        <div class="admonition note">
+            <p class="admonition-title">string (String): a complex datatype</p>
+            <p>
+            <div class="fw-bold">
+                string (String) <a target="_blank"
+                                   href="https://witscad.com/course/csharp-basics/chapter/string-manipulations"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+            </div>
+            <pre><code class="language-csharp">String manipulation
+In C#, String and string are the same
+@: a verbatim string literal, escape sequence is ignored
+[]: indexer operator []
+Property: Length
+Functions(Methods)
+String.Format()
+Substring(startIndex, count)
+ToUpper()
+ToLower()
+Trim()
+Split()
+Replace()
+IndexOf()
+LastIndexOf()
+Contains()
++ operator
+</code></pre>
+            </p>
+        </div>
+        <div class="h4 text-success border-bottom border-success fw-bold border-2">Escape Sequences</div>
+        <div class="admonition note">
+            <p class="admonition-title">Escape Sequences (Special Characters)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ESCAPE SEQUENCE
+                    </th>
+                    <th scope="col">CHARACTER PRODUCED
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">\’
+                    </th>
+                    <td>Single quotation mark
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\”
+                    </th>
+                    <td>Double quotation mark
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\\
+                    </th>
+                    <td>Backslash
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\b
+                    </th>
+                    <td>Backspace
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="text-danger">\n
+                    </th>
+                    <td>New line
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-danger">\t
+                    </th>
+                    <td>Horizontal tab
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\v
+                    </th>
+                    <td>Vertical tab
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">\r
+                    </th>
+                    <td>Carriage return
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            </p>
+        </div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">ASCII Table</p>
+            <p>
+            <div class="fw-bold">
+                ASCII Table <a target="_blank" href="https://en.wikipedia.org/wiki/ASCII"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                 href="https://ascii.cl/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+            </div>
+            <div>
+                <table class="table table-striped ">
+                    <thead>
+                    <tr>
+                        <th><strong>Character</strong></th>
+                        <th><strong>Character Name</strong></th>
+                        <th><strong>ASCII code</strong></th>
+                        <th>&nbsp;</th>
+                        <th><strong>Character</strong></th>
+                        <th><strong>Character Name</strong></th>
+                        <th><strong>ASCII code</strong></th>
+                        <th>&nbsp;</th>
+                        <th><strong>Character</strong></th>
+                        <th><strong>Character Name</strong></th>
+                        <th><strong>ASCII code</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>!</td>
+                        <td>Exclamation point</td>
+                        <td>33</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>A</td>
+                        <td>Uppercase a</td>
+                        <td>65</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>a</td>
+                        <td>Lowercase a</td>
+                        <td>97</td>
+                    </tr>
+                    <tr>
+                        <td>“</td>
+                        <td>Double quotation</td>
+                        <td>34</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>B</td>
+                        <td>Uppercase b</td>
+                        <td>66</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>b</td>
+                        <td>Lowercase b</td>
+                        <td>98</td>
+                    </tr>
+                    <tr>
+                        <td>#</td>
+                        <td>Number sign</td>
+                        <td>35</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>C</td>
+                        <td>Uppercase c</td>
+                        <td>67</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>c</td>
+                        <td>Lowercase c</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>$</td>
+                        <td>Dollar sign</td>
+                        <td>36</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>D</td>
+                        <td>Uppercase d</td>
+                        <td>68</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>d</td>
+                        <td>Lowercase d</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Percent sign</td>
+                        <td>37</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>E</td>
+                        <td>Uppercase e</td>
+                        <td>69</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>e</td>
+                        <td>Lowercase e</td>
+                        <td>101</td>
+                    </tr>
+                    <tr>
+                        <td>&amp;</td>
+                        <td>ampersand</td>
+                        <td>38</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>F</td>
+                        <td>Uppercase f</td>
+                        <td>70</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>f</td>
+                        <td>Lowercase f</td>
+                        <td>102</td>
+                    </tr>
+                    <tr>
+                        <td>‘</td>
+                        <td>apostrophe</td>
+                        <td>39</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>G</td>
+                        <td>Uppercase g</td>
+                        <td>71</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>g</td>
+                        <td>Lowercase g</td>
+                        <td>103</td>
+                    </tr>
+                    <tr>
+                        <td>(</td>
+                        <td>Left parenthesis</td>
+                        <td>40</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>H</td>
+                        <td>Uppercase h</td>
+                        <td>72</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>h</td>
+                        <td>Lowercase h</td>
+                        <td>104</td>
+                    </tr>
+                    <tr>
+                        <td>)</td>
+                        <td>Right parenthesis</td>
+                        <td>41</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>I</td>
+                        <td>Uppercase i</td>
+                        <td>73</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>i</td>
+                        <td>Lowercase i</td>
+                        <td>105</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>asterisk</td>
+                        <td>42</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>J</td>
+                        <td>Uppercase j</td>
+                        <td>74</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>j</td>
+                        <td>Lowercase j</td>
+                        <td>106</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Plus sign</td>
+                        <td>43</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>K</td>
+                        <td>Uppercase k</td>
+                        <td>75</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>k</td>
+                        <td>Lowercase k</td>
+                        <td>107</td>
+                    </tr>
+                    <tr>
+                        <td>,</td>
+                        <td>comma</td>
+                        <td>44</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>L</td>
+                        <td>Uppercase l</td>
+                        <td>76</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>l</td>
+                        <td>Lowercase l</td>
+                        <td>108</td>
+                    </tr>
+                    <tr>
+                        <td>–</td>
+                        <td>hyphen</td>
+                        <td>45</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>M</td>
+                        <td>Uppercase m</td>
+                        <td>77</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>m</td>
+                        <td>Lowercase m</td>
+                        <td>109</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>period</td>
+                        <td>46</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>N</td>
+                        <td>Uppercase n</td>
+                        <td>78</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>n</td>
+                        <td>Lowercase n</td>
+                        <td>110</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>slash</td>
+                        <td>47</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>O</td>
+                        <td>Uppercase o</td>
+                        <td>79</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>o</td>
+                        <td>Lowercase o</td>
+                        <td>111</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>zero</td>
+                        <td>48</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>P</td>
+                        <td>Uppercase p</td>
+                        <td>80</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>p</td>
+                        <td>Lowercase p</td>
+                        <td>112</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>one</td>
+                        <td>49</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>Q</td>
+                        <td>Uppercase q</td>
+                        <td>81</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>q</td>
+                        <td>Lowercase q</td>
+                        <td>113</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>two</td>
+                        <td>50</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>R</td>
+                        <td>Uppercase r</td>
+                        <td>82</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>r</td>
+                        <td>Lowercase r</td>
+                        <td>114</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>three</td>
+                        <td>51</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>S</td>
+                        <td>uppercases</td>
+                        <td>83</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>s</td>
+                        <td>Lowercase s</td>
+                        <td>115</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>four</td>
+                        <td>52</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>T</td>
+                        <td>Uppercase t</td>
+                        <td>84</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>t</td>
+                        <td>Lowercase t</td>
+                        <td>116</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>five</td>
+                        <td>53</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>U</td>
+                        <td>Uppercase u</td>
+                        <td>85</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>u</td>
+                        <td>Lowercase u</td>
+                        <td>117</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>six</td>
+                        <td>54</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>V</td>
+                        <td>Uppercase v</td>
+                        <td>86</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>v</td>
+                        <td>Lowercase v</td>
+                        <td>118</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>seven</td>
+                        <td>55</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>W</td>
+                        <td>Uppercase w</td>
+                        <td>87</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>w</td>
+                        <td>Lowercase w</td>
+                        <td>119</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>eight</td>
+                        <td>56</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>X</td>
+                        <td>Uppercase x</td>
+                        <td>88</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>x</td>
+                        <td>Lowercase x</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>nine</td>
+                        <td>57</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>Y</td>
+                        <td>Uppercase y</td>
+                        <td>89</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>y</td>
+                        <td>Lowercase y</td>
+                        <td>121</td>
+                    </tr>
+                    <tr>
+                        <td>:</td>
+                        <td>colon</td>
+                        <td>58</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>Z</td>
+                        <td>Uppercase z</td>
+                        <td>90</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>z</td>
+                        <td>Lowercase z</td>
+                        <td>122</td>
+                    </tr>
+                    <tr>
+                        <td>;</td>
+                        <td>semi-colon</td>
+                        <td>59</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>[</td>
+                        <td>Left square bracket</td>
+                        <td>91</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>{</td>
+                        <td>Left curly brace</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>Less-than sign</td>
+                        <td>60</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>\</td>
+                        <td>backslash</td>
+                        <td>92</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>|</td>
+                        <td>Vertical bar</td>
+                        <td>124</td>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>Equals sign</td>
+                        <td>61</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>]</td>
+                        <td>Right square bracket</td>
+                        <td>93</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>}</td>
+                        <td>Right curly brace</td>
+                        <td>125</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Greater-than sign</td>
+                        <td>62</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>^</td>
+                        <td>caret</td>
+                        <td>94</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>~</td>
+                        <td>tilde</td>
+                        <td>126</td>
+                    </tr>
+                    <tr>
+                        <td>?</td>
+                        <td>Question mark</td>
+                        <td>63</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>_</td>
+                        <td>underscore</td>
+                        <td>95</td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>@</td>
+                        <td>At sign</td>
+                        <td>64</td>
+                        <td>
+                            <div class="bg-success">&nbsp;</div>
+                        </td>
+                        <td>`</td>
+                        <td>Grave accent</td>
+                        <td>96</td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="">&nbsp;</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <pre><code class="language-csharp">
+</code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div id="collections" class="h4 text-danger border-bottom border-danger fw-bold border-2">Collections</div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">Collections</p>
+            <p>
+            <div class="fw-bold">int i;<br/>String name;<br/>
+                double stu1Grade;<br/>
+                double stu2Grade;<br/>
+                double stu3Grade;<br/>
+                ...
+            </div>
+            <div>
+                <img src="../static/img/onebox.jpg" style="height: 300px;"/>
+
+            </div>
+
+            <div class="fw-bold">Collections: array, list, dictionary
+                <br/>
+                double[] stuGrades;<br/>
+                stuGrades=new double[29];
+            </div>
+
+            <div>
+
+                <img src="../static/img/warehouse.jpg" style="height: 300px;"/>
+            </div>
+            </p>
+        </div>
+
+
+        <div id="array" class="admonition note">
+            <p class="admonition-title">Array</p>
+            <p>
+            <div class="fw-bold">Array <a target="_blank"
+                                          href="https://www.c-sharpcorner.com/article/working-with-arrays-in-C-Sharp/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                 href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <pre><code class="language-csharp">Array (Fixed size, N)
+datatype[] arrayName;
+arrayName=new datatype[N]; // create 10 room cards
+double[] grades;
+grades=new double[10];
+grades[0]=90.6;
+grades[9]=80.6;// grades.Length  grades.GetLength(0)
+
+int[,] seatMatrix=new int[3,4];
+seatMatrix[0,0]
+</code></pre>
+            </p>
+            <div class="h6 text-danger border-bottom border-danger fw-bold border-2">1D Array</div>
+
+            <div class="m-bd-callout m-bd-callout-danger">
+                <div class="">
+                    <div id="arrayw1d" style="display:none;text-align: center;" class="alert alert-danger fw-bold h6">
+
+                    </div>
+                    Array size: <input id="sizetext" type="text" value="10" class="" style="width: 50px;"
+                                       placeholder="10"/>
+                    <button id="createArrBtn" class="btn btn-sm btn-primary">Create array int[] arr</button>
+                    <button id="indexBtn" class="btn btn-sm btn-success">Show index</button>
+
+                    Index: <input id="indextext" type="text" value="2" class="" style="width: 50px;" placeholder="10"/>
+                    Value: <input id="newvaluetext" type="text" value="6" class="" style="width: 50px;"
+                                  placeholder="10"/>
+                    <button id="setValueBtn" class="btn btn-sm btn-warning">Set value</button>
+
+                </div>
+                <div>
+                    <div id="arrdivs" style="display: flex;"></div>
+                    <div id="arrinds" style="display: flex;"></div>
+                    <div>
+                        <pre><code id="arrcode" class="language-csharp"></code></pre>
+                    </div>
+                </div>
+                <script>
+                    {
+                        "use strict;"
+                        let n = 0;
+
+                        let created1darray = false;
+
+                        function createArrBtnClicked(e) {
+                            created1darray = true;
+                            let arrindsdiv = document.querySelector("#arrinds");
+                            arrindsdiv.innerHTML = "";
+
+                            let arrdiv = document.querySelector("#arrdivs");
+                            arrdiv.innerHTML = "";
+                            n = Number(document.querySelector("#sizetext").value);
+                            for (let i = 0; i < n; i++) {
+                                let newdiv = document.createElement("div");
+                                newdiv.classList.add("eleDiv");
+                                newdiv.classList.add("st1");
+                                newdiv.setAttribute("id", "arrdiv" + i);
+                                arrdiv.append(newdiv);
+                            }
+
+                            let arrcode = document.querySelector("#arrcode");
+                            arrcode.innerHTML = `int[] arr;<br/>arr=new int[${n}];`;
+
+                        }
+
+                        function indexBtnClicked() {
+                            let arrindsdiv = document.querySelector("#arrinds");
+                            //arrindsdiv.innerHTML="";
+                            for (let i = 0; i < n; i++) {
+                                let newdiv = document.createElement("div");
+                                newdiv.classList.add("indDiv");
+                                newdiv.setAttribute("id", "inddiv" + i);
+                                newdiv.innerText = String(i);
+                                arrindsdiv.append(newdiv);
+                            }
+                        }
+
+                        function setvalueBtnClicked() {
+                            if (created1darray == false) {
+                                let arrayw1d = document.querySelector("#arrayw1d");
+                                anime({
+                                    targets: arrayw1d,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        arrayw1d.innerHTML = `&#10060; Array is not created!!!`;
+                                        arrayw1d.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        arrayw1d.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+                            let i = Number(document.querySelector("#indextext").value);
+
+                            if (i >= n) {
+                                let arrayw1d = document.querySelector("#arrayw1d");
+                                anime({
+                                    targets: arrayw1d,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        arrayw1d.innerHTML = `&#10060; There are only ${n} elements!!!<br/>The max index is ${n - 1}!!!<br/>Index ${i} is out of boundary!!!`;
+                                        arrayw1d.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        arrayw1d.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+
+                            let divid = "arrdiv" + i;
+                            let selecteddiv = document.querySelector("#" + divid);
+                            let val = document.querySelector("#newvaluetext").value;
+                            selecteddiv.innerText = val;
+                            anime({
+                                targets: selecteddiv,
+                                scale: [{value: 1.2, duration: 5000}, {value: 1.0, duration: 5000}],
+                                rotate: [{value: 360, duration: 5000}]
+                            });
+
+                            let inddivid = "inddiv" + i;
+                            let selectedinddiv = document.querySelector("#" + inddivid);
+                            anime({
+                                targets: selectedinddiv,
+                                scale: [{value: 0.8, duration: 5000}, {value: 1.0, duration: 5000}],
+                                rotate: [{value: 360, duration: 5000}]
+                            });
+
+                            let arrcode = document.querySelector("#arrcode");
+                            arrcode.innerHTML = `int[] arr;<br/>arr=new int[${n}];<br/>arr[${i}]=${val};`;
+                        }
+
+                        let createArrBtn = document.querySelector("#createArrBtn");
+                        createArrBtn.addEventListener("click", createArrBtnClicked);
+
+                        let indexBtn = document.querySelector("#indexBtn");
+                        indexBtn.addEventListener("click", indexBtnClicked);
+
+                        let setvalueBtn = document.querySelector("#setValueBtn");
+                        setvalueBtn.addEventListener("click", setvalueBtnClicked);
+
+
+                    }
+                </script>
+
+            </div>
+
+
+            <div class="h6 text-success border-bottom border-success fw-bold border-2">2D Array</div>
+            <div class="m-bd-callout m-bd-callout-success">
+                <div class="">
+                    <div id="arrayw2d" style="display:none;text-align: center;" class="alert alert-danger fw-bold h6">
+
+                    </div>
+                    Array Size:
+                    Rows<input id="rowstext" type="text" value="6" class="" style="width: 50px;" placeholder="10"/>
+                    Columns<input id="colstext" type="text" value="4" class="" style="width: 50px;" placeholder="10"/>
+                    <button id="create2dArrBtn" class="btn btn-sm btn-primary">Create 2D array int[,] arr2d</button>
+                    <!--                    <button id="indexBtn" class="btn btn-sm btn-success">Show index</button>-->
+
+                    Index:
+                    Row<input id="indexrowtext" type="text" value="2" class="" style="width: 50px;" placeholder="10"/>
+                    Column<input id="indexcoltext" type="text" value="3" class="" style="width: 50px;"
+                                 placeholder="10"/>
+                    Value: <input id="newvaluetext2d" type="text" value="5" class="" style="width: 50px;"
+                                  placeholder="10"/>
+                    <button id="setValueBtn2d" class="btn btn-sm btn-warning">Set value</button>
+
+                </div>
+                <div>
+                    <div id="arrdivs2d" style="display: flex;flex-direction: column;"></div>
+
+                    <div>
+                        <pre><code id="arrcode2d" class="language-csharp"></code></pre>
+                    </div>
+                </div>
+                <script>
+                    {
+                        "use strict;"
+                        let nRows = 0;
+                        let nCols = 0;
+
+                        let array2dCreated = false;
+
+                        function createArr2DBtnClicked(e) {
+                            array2dCreated = true;
+
+                            let arrdiv = document.querySelector("#arrdivs2d");
+                            arrdiv.innerHTML = "";
+                            nRows = Number(document.querySelector("#rowstext").value);
+                            nCols = Number(document.querySelector("#colstext").value);
+                            for (let i = 0; i < nRows; i++) {
+
+                                let newrowdiv = document.createElement("div");
+                                newrowdiv.classList.add("arrRow");
+                                arrdiv.append(newrowdiv);
+                                for (let j = 0; j < nCols; j++) {
+                                    let newdiv = document.createElement("div");
+                                    newdiv.classList.add("eleDiv");
+                                    newdiv.classList.add("st1");
+                                    newdiv.setAttribute("id", "arr2dcelldiv" + 'r' + i + 'c' + j);
+                                    newrowdiv.append(newdiv);
+                                }
+
+
+                            }
+
+                            let arrcode = document.querySelector("#arrcode2d");
+                            arrcode.innerHTML = `int[] arr2d;<br/>arr2d=new int[${nRows},${nCols}];`;
+
+                        }
+
+
+                        function setvalue2dBtnClicked() {
+                            //alert("OK")
+                            if (array2dCreated == false) {
+                                let arrayw2d = document.querySelector("#arrayw2d");
+                                anime({
+                                    targets: arrayw2d,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        arrayw2d.innerHTML = `&#10060; Array is not created!!!`;
+                                        arrayw2d.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        arrayw2d.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+                            let rowI = Number(document.querySelector("#indexrowtext").value);
+                            let colI = Number(document.querySelector("#indexcoltext").value);
+
+                            if (rowI >= nRows) {
+                                let arrayw2d = document.querySelector("#arrayw2d");
+                                anime({
+                                    targets: arrayw2d,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        arrayw2d.innerHTML = `&#10060; There are only ${nRows} rows!!!<br/>The max row index is ${nRows - 1}!!!<br/>Index ${rowI} is out of boundary!!!`;
+                                        arrayw2d.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        arrayw2d.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+                            if (colI >= nCols) {
+                                let arrayw2d = document.querySelector("#arrayw2d");
+                                anime({
+                                    targets: arrayw2d,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        arrayw2d.innerHTML = `&#10060; There are only ${nCols} columns!!!<br/>The max column index is ${nCols - 1}!!!<br/>Index ${colI} is out of boundary!!!`;
+                                        arrayw2d.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        arrayw2d.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+
+                            let divid = "arr2dcelldiv" + 'r' + rowI + 'c' + colI;
+                            let selecteddiv = document.querySelector("#" + divid);
+                            let val = document.querySelector("#newvaluetext2d").value;
+                            selecteddiv.innerText = val;
+                            anime({
+                                targets: selecteddiv,
+                                scale: [{value: 1.2, duration: 5000}, {value: 1.0, duration: 5000}],
+                                rotate: [{value: 360, duration: 5000}]
+                            });
+
+
+                            let arrcode = document.querySelector("#arrcode2d");
+                            arrcode.innerHTML = `int[] arr2d;<br/>arr2d=new int[${nRows},${nCols}];<br/>arr2d[${nRows},${nCols}]=${val};`;
+
+                        }
+
+                        let createArrBtn = document.querySelector("#create2dArrBtn");
+                        createArrBtn.addEventListener("click", createArr2DBtnClicked);
+
+
+                        let setvalueBtn = document.querySelector("#setValueBtn2d");
+                        setvalueBtn.addEventListener("click", setvalue2dBtnClicked);
+
+
+                    }
+                </script>
+
+            </div>
+
+            <span class="fw-bold">In-class practice</span><br/>
+            1. Create arrays, one will have the course subject (e.g. MIS, MATH, etc.), one will hold course numbers
+            (e.g. 3033, 3013, etc.) and the third one will host the grades. Ask the user to input 3 for each, store them
+            in the array. Then use a different loop to output the results to the user concatenated together (e.g.
+            MIS3033, MATH3013) and print out the grade level.
+
+            <pre><code class="language-csharp">Grade	            Level
+Grade>=80	    Level 1
+80>Grade>=60        Level 2
+60>Grade	    Level 3
+
+</code></pre>
+            2. Ask the user to enter all of their exam grades. There are 10 grades. Once they are done, calculate the
+            minimum score, the maximum score and the average score for all of their scores. Perform this using at least
+            2 Loops (can be the same type of loop) and not any built-in functions.
+            <br/>
+            <br/>
+            96.6<br/>
+            86.6<br/>
+            76.6<br/>
+            66.6<br/>
+            56.6<br/>
+            60<br/>
+            80<br/>
+            90<br/>
+            70<br/>
+            100<br/>
+
+        </div>
+
+        <div id="list" class="admonition note">
+            <p class="admonition-title">List</p>
+            <p>
+            <div class="fw-bold">List <a target="_blank"
+                                         href="https://www.c-sharpcorner.com/article/c-sharp-list/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <pre><code class="language-csharp">List (Flexible size)
+List&#60;datatype&#62; listName;
+listName=new List&#60;datatype&#62;();// 0 null empty
+List&#60;double&#62; gradesList;
+gradesList=new List&#60;double&#62;();// we created an empty list, each element is double
+gradeList.Add(90.6);// when Add(), we did an assignment operation
+double g=80.6;
+gradesList.Add(g);
+gradesList[0]// grades.Count
+</code></pre>
+
+            <div class="h6 text-danger border-bottom border-danger fw-bold border-2">List</div>
+
+            <div class="m-bd-callout m-bd-callout-danger">
+                <div class="">
+                    <div id="listw" style="display:none;text-align: center;"
+                         class="alert alert-danger fw-bold h6"></div>
+
+                    <button id="createListBtn" class="btn btn-sm btn-primary">Create list
+                    </button>
+                    Value: <input id="newListValueText" type="text" value="19" class="" style="width: 50px;"
+                                  placeholder="19"/>
+                    <button id="addListItemBtn" class="btn btn-sm btn-danger">Add</button>
+                    <button id="listIndexBtn" class="btn btn-sm btn-success">Show index</button>
+
+                    Index: <input id="listindextext" type="text" value="2" class="" style="width: 50px;"
+                                  placeholder="10"/>
+                    Value: <input id="listnewvaluetext" type="text" value="6" class="" style="width: 50px;"
+                                  placeholder="10"/>
+                    <button id="setListValueBtn" class="btn btn-sm btn-warning">Set value</button>
+
+                </div>
+                <div>
+                    <div id="listdivs" style="display: flex;height: 30px;"></div>
+                    <div id="listinds" style="display: flex;height: 30px;border: 2px solid white;"></div>
+                    <div>
+                        <pre><code id="listcode" class="language-csharp"></code></pre>
+                    </div>
+                </div>
+                <script>
+                    {
+                        "use strict;"
+                        let n = 0;
+                        let isShowIndex = false;
+                        let listcode = document.querySelector("#listcode");
+                        listcode.innerHTML = `List&lt;int&gt; ageList;`;
+
+                        let listCreated = false;
+
+                        function createListBtnClicked(e) {
+                            isShowIndex = false;
+                            listCreated = true;
+
+                            let listindsdiv = document.querySelector("#listinds");
+                            listindsdiv.innerHTML = "";
+
+                            let listdiv = document.querySelector("#listdivs");
+                            listdiv.innerHTML = "";
+                            listdiv.classList.add("listDiv");
+                            n = 0;
+                            let listcode = document.querySelector("#listcode");
+                            listcode.innerHTML = `List&lt;int&gt; ageList;<br/>ageList=new List&lt;int&gt;();`;
+                        }
+
+
+                        function addListItemBtnClicked(e) {
+                            if (listCreated == false) {
+                                let listw = document.querySelector("#listw");
+                                anime({
+                                    targets: listw,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        listw.innerHTML = `&#10060; List is not created!!!`;
+                                        listw.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        listw.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+
+                            let listdiv = document.querySelector("#listdivs");
+
+                            let newdiv = document.createElement("div");
+                            newdiv.classList.add("eleDiv");
+                            newdiv.classList.add("st1");
+                            newdiv.setAttribute("id", "listdiv" + n);
+                            newvalue = document.querySelector("#newListValueText").value;
+                            newdiv.innerText = newvalue;
+                            listdiv.append(newdiv);
+
+
+                            anime({
+                                targets: newdiv,
+                                scale: [{value: 2, duration: 1000}, {value: 1.0, duration: 1000}],
+                            });
+
+
+                            if (isShowIndex == true) {
+                                let listindsdiv = document.querySelector("#listinds");
+
+
+                                newdiv = document.createElement("div");
+                                newdiv.classList.add("indDiv");
+                                newdiv.setAttribute("id", "listinddiv" + n);
+                                newdiv.innerText = String(n);
+                                listindsdiv.append(newdiv);
+
+
+                                anime({
+                                    targets: newdiv,
+                                    scale: [{value: 0.8, duration: 1000}, {value: 1.0, duration: 1000}],
+                                });
+
+                            }
+
+                            n++;
+                            let listcode = document.querySelector("#listcode");
+                            listcode.innerHTML = listcode.innerHTML + `<br/>ageList.add(${newvalue});`;
+
+                        }
+
+
+                        function listIndexBtnClicked() {
+
+
+                            isShowIndex = true;
+                            let listindsdiv = document.querySelector("#listinds");
+                            listindsdiv.innerHTML = "";
+                            for (let i = 0; i < n; i++) {
+                                let newdiv = document.createElement("div");
+                                newdiv.classList.add("indDiv");
+                                newdiv.setAttribute("id", "listinddiv" + i);
+                                newdiv.innerText = String(i);
+                                listindsdiv.append(newdiv);
+                            }
+                        }
+
+                        function setListValueBtnClicked() {
+                            if (listCreated == false) {
+                                let listw = document.querySelector("#listw");
+                                anime({
+                                    targets: listw,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        listw.innerHTML = `&#10060; List is not created!!!`;
+                                        listw.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        listw.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+                            let i = Number(document.querySelector("#listindextext").value);
+
+                            if (i >= n) {
+                                let listw = document.querySelector("#listw");
+                                anime({
+                                    targets: listw,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        listw.innerHTML = `&#10060; There are only ${n} elements!!!<br/>The max index is ${n - 1}!!!<br/>Index ${i} is out of boundary!!!`;
+                                        listw.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        listw.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+                            let divid = "listdiv" + i;
+                            let selecteddiv = document.querySelector("#" + divid);
+                            let val = document.querySelector("#listnewvaluetext").value;
+                            selecteddiv.innerText = val;
+                            anime({
+                                targets: selecteddiv,
+                                scale: [{value: 1.2, duration: 5000}, {value: 1.0, duration: 5000}],
+                                rotate: [{value: 360, duration: 5000}]
+                            });
+
+                            let inddivid = "listinddiv" + i;
+                            let selectedinddiv = document.querySelector("#" + inddivid);
+                            anime({
+                                targets: selectedinddiv,
+                                scale: [{value: 0.8, duration: 5000}, {value: 1.0, duration: 5000}],
+                                rotate: [{value: 360, duration: 5000}]
+                            });
+
+                            let listcode = document.querySelector("#listcode");
+                            listcode.innerHTML = listcode.innerHTML + `<br/>ageList[${i}]=${val};`;
+
+
+                        }
+
+                        let createListBtn = document.querySelector("#createListBtn");
+                        createListBtn.addEventListener("click", createListBtnClicked);
+
+                        let addListItemBtn = document.querySelector("#addListItemBtn");
+                        addListItemBtn.addEventListener("click", addListItemBtnClicked);
+
+
+                        let listIndexBtn = document.querySelector("#listIndexBtn");
+                        listIndexBtn.addEventListener("click", listIndexBtnClicked);
+
+                        let setListValueBtn = document.querySelector("#setListValueBtn");
+                        setListValueBtn.addEventListener("click", setListValueBtnClicked);
+
+
+                    }
+                </script>
+
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                In-class problem<br/>
+                1. Define a Student class. The Student class has three data fields:<br/>
+                ID: string<br/>
+                name: string<br/>
+                grade: double<br/>
+                2. Keep prompting the user if they have another student's information to enter until they say 'no'.
+                Ask the user to enter all of students' information, ID, name and grade.<br/>
+                3. Ask the user whose information the user would like to see (ask for the ID not the name), and output
+                the name and the grade for that student.
+                <br/>
+                4. Once they are done, calculate the student with the minimum score, the student with the maximum score
+                and the average score for all of
+                their
+                scores. Perform this using at least 2 Loops (can be the same type of loop) and not any built in
+                functions.<br/>
+                5. Output the list in the normal order. Output the list in the reverse order. Output every other entry
+                in
+                the list (ex: 1, 3)
+            </div>
+
+            <div class="card">
+                <div class="card-header">Input</div>
+                <div class="card-body"><pre><code>yes
+s123
+tom
+96.6
+yes
+s126
+kelly
+98.8
+yes
+s129
+TJ
+86.6
+yes
+s130
+jim
+76.6
+yes
+s131
+ryan
+66.6
+yes
+s132
+kevin
+56.6
+yes
+s133
+andrew
+76.6
+no
+s131</code></pre>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="card-header">Sample Run</div>
+                <div class="card-body">
+                        <pre><code>Another student's information? (Yes/No) yes
+Student 1 ID: s123
+Student 1 name: tom
+Student 1 grade: 96.6
+Another student's information? (Yes/No) yes
+Student 2 ID: s126
+Student 2 name: kelly
+Student 2 grade: 98.8
+Another student's information? (Yes/No) yes
+Student 3 ID: s129
+Student 3 name: TJ
+Student 3 grade: 86.6
+Another student's information? (Yes/No) yes
+Student 4 ID: s130
+Student 4 name: jim
+Student 4 grade: 76.6
+Another student's information? (Yes/No) yes
+Student 5 ID: s131
+Student 5 name: ryan
+Student 5 grade: 66.6
+Another student's information? (Yes/No) yes
+Student 6 ID: s132
+Student 6 name: kevin
+Student 6 grade: 56.6
+Another student's information? (Yes/No) yes
+Student 7 ID: s133
+Student 7 name: andrew
+Student 7 grade: 76.6
+Another student's information? (Yes/No) no
+
+Input the student ID to search: s131
+ID: s131, Name: ryan, Grade: 66.60
+
+Normal order:
+ID: s123, Name: tom, Grade: 96.60
+ID: s126, Name: kelly, Grade: 98.80
+ID: s129, Name: TJ, Grade: 86.60
+ID: s130, Name: jim, Grade: 76.60
+ID: s131, Name: ryan, Grade: 66.60
+ID: s132, Name: kevin, Grade: 56.60
+ID: s133, Name: andrew, Grade: 76.60
+
+Reverse order:
+ID: s133, Name: andrew, Grade: 76.60
+ID: s132, Name: kevin, Grade: 56.60
+ID: s131, Name: ryan, Grade: 66.60
+ID: s130, Name: jim, Grade: 76.60
+ID: s129, Name: TJ, Grade: 86.60
+ID: s126, Name: kelly, Grade: 98.80
+ID: s123, Name: tom, Grade: 96.60
+
+Every other order:
+ID: s123, Name: tom, Grade: 96.60
+ID: s129, Name: TJ, Grade: 86.60
+ID: s131, Name: ryan, Grade: 66.60
+ID: s133, Name: andrew, Grade: 76.60
+
+Minimum grade: 56.60
+
+Maximum grade: 96.60
+
+Average grade: 79.77</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="dictionary" class="admonition note">
+            <p class="admonition-title">Dictionary</p>
+            <p>
+            <div class="fw-bold">Dictionary <a target="_blank"
+                                               href="https://www.c-sharpcorner.com/UploadFile/mahesh/dictionary-in-C-Sharp/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <pre><code class="language-csharp">Dictionary (Flexible size)
+Dictionary&#60;TKey, TValue&#62; dict;
+dict=new Dictionary&#60;TKey, TValue&#62;();
+
+dict.Add(key,value);// Add new element, Again the dictionary created two cards, key and value, then assignment operation
+
+dict[key]=newValue;// Access value
+dict[“xinglongJU”] arr[0]
+dict.ContainsKey(key);// return true or false
+
+dict.Count// number of elements in the dictionary
+
+dict.Keys
+dict.Values
+dict.ElementAt(i).Key
+dict.ElementAt(i).Value
+
+dict.Keys.ElementAt(i)
+dict.Values.ElementAt(i)
+
+For list and dictionary:// remove elements
+dict.Remove(key)
+list.Remove(value)
+list.RemoveAt(i)//
+
+A special for loop:
+foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
+{
+    ele.Key;
+    ele.Value;
+}
+</code></pre>
+
+            <div class="h6 text-danger border-bottom border-danger fw-bold border-2">Dictionary</div>
+
+            <div class="m-bd-callout m-bd-callout-danger">
+                <div class="">
+                    <div id="dictw1" style="display:none;text-align: center;" class="alert alert-danger fw-bold h6">
+                        &#10060; Dictionary
+                        is not created!!!
+                    </div>
+
+                    <div id="dictw2" style="display:none;text-align: center;" class="alert alert-danger fw-bold h6">
+
+                    </div>
+
+                    <button id="createDictBtn" class="btn btn-sm btn-primary">Create dictionary
+                    </button>
+                    Key: <input id="newkeytext" type="text" value="tom" class="" style="width: 50px;"
+                                placeholder="tom"/>
+                    Value: <input id="newDictValueText" type="text" value="96.6" class="" style="width: 50px;"
+                                  placeholder="96.6"/>
+                    <button id="addDcitItemBtn" class="btn btn-sm btn-danger">Add</button>
+
+
+                    Key: <input id="dictkeytext" type="text" value="tom" class="" style="width: 50px;"
+                                placeholder="tom"/>
+                    Value: <input id="dictnewvaluetext" type="text" value="96" class="" style="width: 50px;"
+                                  placeholder="96"/>
+                    <button id="setDictValueBtn" class="btn btn-sm btn-warning">Set value</button>
+
+                </div>
+                <div>
+                    <div id="dictMainDiv" style="margin-top: 10px;">
+                        <div id="dictdivs" style="display: flex;height: 30px;"></div>
+                        <div id="dictinds" style="display: flex;height: 30px;"></div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <pre><code id="dictcode" class="language-csharp"></code></pre>
+                    </div>
+                </div>
+                <script>
+                    {
+                        "use strict;"
+                        let n = 0;
+                        let isShowIndex = true;
+                        let listcode = document.querySelector("#listcode");
+                        listcode.innerHTML = `List&lt;int&gt; ageList;`;
+
+                        let dictCreated = false;
+
+                        let dictw1 = document.querySelector("#dictw1");
+                        let dictw2 = document.querySelector("#dictw2");
+
+                        let dictcode = document.querySelector("#dictcode");
+                        dictcode.innerHTML = `Dictioanry&lt;string,double&gt; stuDict;`;
+
+                        let keys = [];
+                        // anime({
+                        //     targets: dictw1,
+                        //     scale: [{value: 0}]
+                        // });
+
+                        function createDictBtnClicked(e) {
+                            keys = [];
+
+                            isShowIndex = true;
+                            dictCreated = true;
+
+                            let dictMainDiv = document.querySelector("#dictMainDiv");
+                            dictMainDiv.classList.add("dictDiv");
+
+                            let dictdivs = document.querySelector("#dictdivs");
+                            dictdivs.innerHTML = "";
+
+                            let dictinds = document.querySelector("#dictinds");
+                            dictinds.innerHTML = "";
+
+                            n = 0;
+
+                            dictcode.innerHTML = `Dictioanry&lt;string,double&gt; stuDict;<br/>stuDict=new Dictioanry&lt;string,double&gt;();`;
+                        }
+
+
+                        function addDcitItemBtnClicked(e) {
+                            let newindex = document.querySelector("#newkeytext").value;
+
+                            if (dictCreated == false) {
+                                //alert("OK")
+                                anime({
+                                    targets: dictw1,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+                                        dictw1.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        dictw1.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+                            if (keys.includes(newindex)) {
+                                //alert("OK")
+                                anime({
+                                    targets: dictw2,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        dictw2.innerHTML = `&#10060; key ${newindex} already exists!!!`;
+                                        dictw2.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        dictw2.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+
+                            let dictdivs = document.querySelector("#dictdivs");
+
+                            let newdiv = document.createElement("div");
+                            newdiv.classList.add("eleDiv");
+                            newdiv.classList.add("st1");
+                            newdiv.setAttribute("id", "dictdiv" + newindex);
+                            let newvalue = document.querySelector("#newDictValueText").value;
+                            newdiv.innerText = newvalue;
+                            dictdivs.append(newdiv);
+
+
+                            anime({
+                                targets: newdiv,
+                                scale: [{value: 2, duration: 1000}, {value: 1.0, duration: 1000}],
+                            });
+
+
+                            if (isShowIndex == true) {
+                                let dictinds = document.querySelector("#dictinds");
+
+
+                                newdiv = document.createElement("div");
+                                newdiv.classList.add("indDiv");
+                                newdiv.setAttribute("id", "dictinddiv" + newindex);
+                                newdiv.innerText = newindex;
+                                dictinds.append(newdiv);
+
+
+                                anime({
+                                    targets: newdiv,
+                                    scale: [{value: 0.8, duration: 1000}, {value: 1.0, duration: 1000}],
+                                });
+
+                            }
+
+                            keys.push(newindex);
+
+                            n++;
+
+                            dictcode.innerHTML = dictcode.innerHTML + `<br/>stuDict.add("${newindex}",${newvalue});`;
+
+                        }
+
+
+                        function setDictValueBtnClicked() {
+                            if (dictCreated == false) {
+                                anime({
+                                    targets: dictw1,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+                                        dictw1.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        dictw1.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+                            let newindex = document.querySelector("#dictkeytext").value;
+
+                            if (!keys.includes(newindex)) {
+                                //alert("OK")
+                                anime({
+                                    targets: dictw2,
+                                    scale: [{value: 3, duration: 6000}, {value: 0}],
+                                    begin: function (anim) {
+
+                                        dictw2.innerHTML = `&#10060; key ${newindex} DOES NOT exist!!!`;
+                                        dictw2.style.display = "block";
+                                    },
+                                    complete: function (anim) {
+                                        dictw2.style.display = "none";
+                                    }
+                                });
+                                return;
+                            }
+
+
+                            let divid = "dictdiv" + newindex;
+                            let selecteddiv = document.querySelector("#" + divid);
+                            let val = document.querySelector("#dictnewvaluetext").value;
+                            selecteddiv.innerText = val;
+                            anime({
+                                targets: selecteddiv,
+                                scale: [{value: 1.2, duration: 5000}, {value: 1.0, duration: 5000}],
+                                rotate: [{value: 360, duration: 5000}]
+                            });
+
+                            let inddivid = "dictinddiv" + newindex;
+                            let selectedinddiv = document.querySelector("#" + inddivid);
+                            anime({
+                                targets: selectedinddiv,
+                                scale: [{value: 0.8, duration: 5000}, {value: 1.0, duration: 5000}],
+                                rotate: [{value: 360, duration: 5000}]
+                            });
+
+
+                            dictcode.innerHTML = dictcode.innerHTML + `<br/>stuDict["${newindex}"]=${val};`;
+
+
+                        }
+
+                        let createDictBtn = document.querySelector("#createDictBtn");
+                        createDictBtn.addEventListener("click", createDictBtnClicked);
+
+                        let addDcitItemBtn = document.querySelector("#addDcitItemBtn");
+                        addDcitItemBtn.addEventListener("click", addDcitItemBtnClicked);
+
+
+                        let setDictValueBtn = document.querySelector("#setDictValueBtn");
+                        setDictValueBtn.addEventListener("click", setDictValueBtnClicked);
+
+
+                    }
+                </script>
+
+            </div>
+
+            <div>
+                In-class problem<br/>
+
+                1. Define a Student class. The Student class has three data fields:<br/>
+                ID: string<br/>
+                name: string<br/>
+                grade: double<br/>
+
+                2. Keep prompting the user if the user has another student's information to enter until the user types
+                in
+                'no'.
+                Ask the user to enter all of students' information, ID, name and grade.<br/>
+
+                3. Then your application should output all of the students' names.<br/>
+
+                4. Ask the user whose information the user would like to see (ask for the ID not the name), and output
+                the
+                name and the grade for that student.<br/>
+
+                5. Find the student with the minimum score, the student with the maximum score and the average score for
+                all of the students’ scores.
+                Perform this using at least 2 Loops (can be the same type of loop) and not any built-in functions.<br/>
+
+            </div>
+
+            <div class="card">
+                <div class="card-header">Input</div>
+                <div class="card-body"><pre><code>yes
+s123
+tom
+96.6
+yes
+s126
+kelly
+98.8
+yes
+s129
+TJ
+86.6
+yes
+s130
+jim
+76.6
+yes
+s131
+ryan
+66.6
+yes
+s132
+kevin
+56.6
+yes
+s133
+andrew
+76.6
+no
+s131</code></pre>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="card-header">Sample Run</div>
+                <div class="card-body">
+                        <pre><code>Another student's information? (Yes/No) yes
+Student 1 ID: s123
+Student 1 name: tom
+Student 1 grade: 96.6
+Another student's information? (Yes/No) yes
+Student 2 ID: s126
+Student 2 name: kelly
+Student 2 grade: 98.8
+Another student's information? (Yes/No) yes
+Student 3 ID: s129
+Student 3 name: TJ
+Student 3 grade: 86.6
+Another student's information? (Yes/No) yes
+Student 4 ID: s130
+Student 4 name: jim
+Student 4 grade: 76.6
+Another student's information? (Yes/No) yes
+Student 5 ID: s131
+Student 5 name: ryan
+Student 5 grade: 66.6
+Another student's information? (Yes/No) yes
+Student 6 ID: s132
+Student 6 name: kevin
+Student 6 grade: 56.6
+Another student's information? (Yes/No) yes
+Student 7 ID: s133
+Student 7 name: andrew
+Student 7 grade: 76.6
+Another student's information? (Yes/No) no
+
+ALL names:
+tom
+kelly
+TJ
+jim
+ryan
+kevin
+andrew
+
+Input the student ID to search: s131
+ID: s131, Name: ryan, Grade: 66.60
+
+Minimum grade student:
+ID: s132, Name: kevin, Grade: 56.60
+
+Maximum grade student:
+ID: s126, Name: kelly, Grade: 98.80
+
+Average grade: 79.77</code></pre>
+                </div>
+            </div>
+
+
+            <!--insert new div here-->
+        </div>
+        <div class="mb-3"></div>
+
+
+        <div class="admonition note" id="class">
+            <p class="admonition-title">Define a complex datatype using class keyword</p>
+            <p>
+            <div class="fw-bold">
+                class <a target="_blank"
+                         href="https://www.w3schools.com/cs/cs_oop.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_classes.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_class_members.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_constructors.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_access_modifiers.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_properties.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_inheritance.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_polymorphism.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_abstract.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                <a target="_blank"
+                   href="https://www.w3schools.com/cs/cs_interface.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+            </div>
+            <pre><code class="language-csharp">Define a new complex data type Student using class
+class member
+class NewDataTypeName
+{
+}
+Member functions
+static
+this
+namespace
+
+Data fields in the new data type
+. : new operator, member access operator
+Public: access modifier
+
+
+Student xingStu=new Student();
+xingStu.name = "Xinglong Ju";
+xingStu.finalGrade = 90.6;
+double fg = xingStu.CalFinalGrade();
+class Student
+{
+    public string name;
+    public string id;
+    public int age;
+    public double finalGrade;
+    public double exam1Grade;
+    public double exam2Grade;
+    public double exam3Grade;
+
+    public char CalLetterGrade()
+    {
+        return 'A';
+    }
+
+    public double CalFinalGrade()
+    {
+        return finalGrade;
+    }
+}</code></pre>
+            </p>
+        </div>
+
+        <div class="admonition note" id="datetime">
+            <p class="admonition-title">DateTime & TimeSpan</p>
+            <p>
+            <div class="fw-bold">
+                DateTime & TimeSpan <a target="_blank"
+                                       href="https://www.c-sharpcorner.com/article/datetime-in-c-sharp/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank"
+                   href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+            </div>
+            <pre><code class="language-csharp">DateTime dt1 = new DateTime(2022, 5, 4, 13, 20, 0);
+DateTime dt2 = new DateTime(2022, 1, 18, 12, 30, 0);
+
+Console.WriteLine(dt1.Year);
+Console.WriteLine(dt1.Day);
+
+Console.WriteLine(dt2);
+Console.WriteLine(dt2.ToString());
+Console.WriteLine(dt1.ToString("MMMM dd, yyyy"));
+
+
+TimeSpan ts=dt1 - dt2;
+ts.Days // int
+ts.Minutes // int
+ts.TotalDays // double
+
+DateTime tempDate = new DateTime(2015, 12, 08); // creating date object with 8th December 2015
+Console.WriteLine(tempDate.ToString("MMMM dd, yyyy")); //December 08, 2105.
+</code></pre>
+            <table border="1" cellspacing="0" style="border-collapse:collapse; width:100%">
+                <tbody>
+                <tr>
+                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                            style="color:#ffffff">Specifier</span></td>
+                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                            style="color:#ffffff">Description</span></td>
+                    <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                            style="color:#ffffff">Output</span></td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">d</td>
+                    <td style="border-style:dashed; border-width:1px">Short Date</td>
+                    <td style="border-style:dashed; border-width:1px">12/8/2015</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">D</td>
+                    <td style="border-style:dashed; border-width:1px">Long Date</td>
+                    <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">t</td>
+                    <td style="border-style:dashed; border-width:1px">Short Time</td>
+                    <td style="border-style:dashed; border-width:1px">3:15 PM</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">T</td>
+                    <td style="border-style:dashed; border-width:1px">Long Time</td>
+                    <td style="border-style:dashed; border-width:1px">3:15:19 PM</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">f</td>
+                    <td style="border-style:dashed; border-width:1px">Full date and time</td>
+                    <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015 3:15 PM</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">F</td>
+                    <td style="border-style:dashed; border-width:1px">Full date and time (long)</td>
+                    <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015 3:15:19 PM</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">g</td>
+                    <td style="border-style:dashed; border-width:1px">Default date and time</td>
+                    <td style="border-style:dashed; border-width:1px">12/8/2015 15:15</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">G</td>
+                    <td style="border-style:dashed; border-width:1px">Default date and time (long)</td>
+                    <td style="border-style:dashed; border-width:1px">12/8/2015 15:15</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">M</td>
+                    <td style="border-style:dashed; border-width:1px">Day / Month</td>
+                    <td style="border-style:dashed; border-width:1px">8-Dec</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">r</td>
+                    <td style="border-style:dashed; border-width:1px">RFC1123 date</td>
+                    <td style="border-style:dashed; border-width:1px">Tue, 08 Dec 2015 15:15:19 GMT</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">s</td>
+                    <td style="border-style:dashed; border-width:1px">Sortable date/time</td>
+                    <td style="border-style:dashed; border-width:1px">2015-12-08T15:15:19</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">u</td>
+                    <td style="border-style:dashed; border-width:1px">Universal time, local timezone</td>
+                    <td style="border-style:dashed; border-width:1px">2015-12-08 15:15:19Z</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">Y</td>
+                    <td style="border-style:dashed; border-width:1px">Month / Year</td>
+                    <td style="border-style:dashed; border-width:1px">December, 2015</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">dd</td>
+                    <td style="border-style:dashed; border-width:1px">Day</td>
+                    <td style="border-style:dashed; border-width:1px">8</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">ddd</td>
+                    <td style="border-style:dashed; border-width:1px">Short Day Name</td>
+                    <td style="border-style:dashed; border-width:1px">Tue</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">dddd</td>
+                    <td style="border-style:dashed; border-width:1px">Full Day Name</td>
+                    <td style="border-style:dashed; border-width:1px">Tuesday</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">hh</td>
+                    <td style="border-style:dashed; border-width:1px">2 digit hour</td>
+                    <td style="border-style:dashed; border-width:1px">3</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">HH</td>
+                    <td style="border-style:dashed; border-width:1px">2 digit hour (24 hour)</td>
+                    <td style="border-style:dashed; border-width:1px">15</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">mm</td>
+                    <td style="border-style:dashed; border-width:1px">2 digit minute</td>
+                    <td style="border-style:dashed; border-width:1px">15</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">MM</td>
+                    <td style="border-style:dashed; border-width:1px">Month</td>
+                    <td style="border-style:dashed; border-width:1px">12</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">MMM</td>
+                    <td style="border-style:dashed; border-width:1px">Short Month name</td>
+                    <td style="border-style:dashed; border-width:1px">Dec</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">MMMM</td>
+                    <td style="border-style:dashed; border-width:1px">Month name</td>
+                    <td style="border-style:dashed; border-width:1px">December</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">ss</td>
+                    <td style="border-style:dashed; border-width:1px">seconds</td>
+                    <td style="border-style:dashed; border-width:1px">19</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">fff</td>
+                    <td style="border-style:dashed; border-width:1px">milliseconds</td>
+                    <td style="border-style:dashed; border-width:1px">120</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">FFF</td>
+                    <td style="border-style:dashed; border-width:1px">milliseconds without trailing zero</td>
+                    <td style="border-style:dashed; border-width:1px">12</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">tt</td>
+                    <td style="border-style:dashed; border-width:1px">AM/PM</td>
+                    <td style="border-style:dashed; border-width:1px">PM</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">yy</td>
+                    <td style="border-style:dashed; border-width:1px">2 digit year</td>
+                    <td style="border-style:dashed; border-width:1px">15</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">yyyy</td>
+                    <td style="border-style:dashed; border-width:1px">4 digit year</td>
+                    <td style="border-style:dashed; border-width:1px">2015</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">:</td>
+                    <td style="border-style:dashed; border-width:1px">Hours, minutes, seconds separator, e.g.
+                        {0:hh:mm:ss}
+                    </td>
+                    <td style="border-style:dashed; border-width:1px">9:08:59</td>
+                </tr>
+                <tr>
+                    <td style="border-style:dashed; border-width:1px">/</td>
+                    <td style="border-style:dashed; border-width:1px">Year, month , day separator, e.g. {0:dd/MM/yyyy}
+                    </td>
+                    <td style="border-style:dashed; border-width:1px">8/4/2007</td>
+                </tr>
+                </tbody>
+            </table>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="admonition note" id="moreclass">
+            <p class="admonition-title">More about class</p>
+            <p>
+            <div class="fw-bold">
+                <ul>
+                    <li>get, set <a target="_blank"
+                                    href="https://docs.microsoft.com/en-us/dotnet/csharp/properties"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <ul>
+                            <li>public string FirstName { get; set; }</li>
+                            <li>public string FirstName
+                                {
+                                get { return _firstName; }
+                                set { _firstName = value; }
+                                }
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>class inherit <a target="_blank"
+                                         href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <ul>
+                            <li>Object datatype(class) <a target="_blank"
+                                                          href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        </ul>
+                    </li>
+
+                    <li>base: (parent)</li>
+                    <li>class inherit <a target="_blank"
+                                         href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <ul>
+                            <li>abstract for class and method <a target="_blank"
+                                                                 href="https://www.c-sharpcorner.com/UploadFile/93126e/importance-and-use-of-versioning-in-C-Sharp/"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            </li>
+                            <li>virtual for method only <a target="_blank"
+                                                           href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>override, overload functions
+                        <ul>
+                            <li>overload <a target="_blank"
+                                            href="https://www.geeksforgeeks.org/c-sharp-method-overloading/"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>ToString() function <a target="_blank"
+                                                       href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            <li>Equals() function <a target="_blank"
+                                                     href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-6.0"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        interface (a concept in OOP, it is like a tag, not the user interface)
+                        <a target="_blank"
+                           href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                        <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    </li>
+                    <li>Terminology: polymorphism
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <pre><code class="language-csharp">Terminology:
+Encapsulation
+Object-oriented programming (OOP) vs Procedural Programming
+Member functions:
+static:
+this
+Constructor function
+overload: https://www.geeksforgeeks.org/c-sharp-method-overloading/
+Namespace
+Unified Modeling Language (UML)
+members accessibility (public, private)
+
+</code></pre>
+            </p>
+        </div>
+        <div class="mb-3"></div>
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">interface
+        </div>
+
+        <div class="admonition note" id="interface">
+            <p class="admonition-title">interface</p>
+            <p>
+            <div class="fw-bold">
+                interface (a concept in OOP, it is like a tag, not the user interface)
+                <a target="_blank"
+                   href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                <br/>
+                <span class="text-danger">Ctrl + . </span> to auto implement interface
+            </div>
+            <pre><code class="language-csharp">public interface IMIS3033
+{
+    public double finalGrade { get; set; }
+    public double finishHomeWorkOne();
+    public char mis3013LGCh { get; set; }
+}
+
+public class Student : IMIS3033
+{
+    public string name { get; set; }
+    public double finalGrade { get; set; }
+    public char mis3013LGCh { get; set; }
+
+    public double finishHomeWorkOne()
+    {
+        // finish homework
+        Console.WriteLine(this.name + "is finishing MIS 3033 homework");
+        return 80;
+    }
+}</code></pre>
+
+        </div>
+
+
+        <div class="mb-3"></div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">extra syntax</p>
+            <p>
+            <div class="fw-bold">
+            </div>
+            <pre><code class="language-csharp">Person p1;
+Student stu1;
+
+p1=new Person() { age=20, name="xinglong ju"};
+
+stu1 = new Student() { age=20,name="aiden tom",stuID="at2145"};
+
+Person p2;
+
+p2 = stu1;
+
+Student stu2;
+stu2 = (Student)p2;
+
+stu2=(Student)p1;// Error
+
+string numStr = "123";
+int numInt=Convert.ToInt32(numStr);
+
+
+public class Person
+{
+    public string name { get; set; }
+    public int age { get; set; }
+}
+
+public class Student:Person
+{
+    public string stuID { get; set; }
+}</code></pre>
+
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">More about C#</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">More about C#</p>
+            <p>
+            <div class="fw-bold">
+
+                Data structure & algorithms
+                (A good course on LinkedInLearning <a target="_blank"
+                                                      href="https://www.linkedin.com/learning/c-sharp-algorithms/reverse-an-array-in-c-sharp"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>)<br/>
+                Big tech company interview questions: https://leetcode.com/problemset/all/
+                <a target="_blank" href="https://leetcode.com/problemset/all/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+            </div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+
+
+</html>

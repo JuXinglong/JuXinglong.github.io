@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>February 27 Lecture Schedule MIS 3033: html & css</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+
+
+        }
+
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            February 27, 2023 Lecture Schedule for MIS 3033
+        </div>
+
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+                <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
+                <!--                <li class=""><span class="text-danger">Attendance from October 3 will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span>-->
+                <!--                </li>-->
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+<!--                <li class="alert alert-info"><span class="">Price Programming Competition</span>-->
+<!--                    <ul>-->
+<!--                        <li class="h5 fw-bold text-danger">If you register and attend the round 1, 1 bonus point to your final grade.</li>-->
+
+<!--                        <li>Round 1: October 21 from 9:00 AM to 11:00 AM</li>-->
+<!--                        <li><a class="btn btn-sm fw-bold btn-danger" target="_blank"-->
+<!--                                                           href="https://mispb.price.ou.edu/accounts/register/">Click Here-->
+<!--                            to Register</a></li>-->
+<!--                        <li>After you register, you should receive an activation email. Click the link in the email to activate you account and <a class="btn btn-sm btn-danger fw-bold" target="_blank" href="https://mispb.price.ou.edu/problems/">practice the problems</a> on the to be familiar with this contest.</li>-->
+<!--                        <li>Website: <a target="_blank" href="https://mispb.price.ou.edu/">mispb.price.ou.edu</a></li>-->
+
+<!--                        <li>If you have any questions, find anything wrong with the website, contact Xinglong Ju-->
+<!--                            (xinglong.ju@ou.edu)-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+
+
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+
+
+
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+
+                <li class="list-group-item"><span class="text-danger">Exam 2 Contents Start</span></li>
+
+<!--                <li>HW4 is due 5:00 PM, October 28, 2022</li>-->
+                <li><a href="#html">HTML (HyperText Markup Language)</a>&nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="btn btn-sm btn-primary">HTML Reference</a>&nbsp;<a target="_blank" href="https://www.linkedin.com/learning/html-essential-training-4/" class="btn btn-sm btn-success">HTML Tutorial</a>
+                </li>
+                <li><a href="#css">CSS (Cascading Style Sheets)</a> &nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="btn btn-sm btn-primary">CSS Reference</a>&nbsp;<a target="_blank" href="https://www.linkedin.com/learning/css-essential-training-3" class="btn btn-sm btn-success">CSS Tutorial</a>
+                </li>
+                <li>JavaScript &nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="btn btn-sm btn-primary">JavaScript Reference</a>&nbsp;<a target="_blank" href="https://www.linkedin.com/learning/javascript-essential-training" class="btn btn-sm btn-success">JavaScript Tutorial</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <div>
+
+
+            <h3 class="text-danger mb-3">Exam 2 Contents Start</h3>
+
+
+            <!--            Precedence (Order of operators) starts-->
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Precedence (Order of operators)</p>
+                <p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">PRECEDENCE
+                        </th>
+                        <th scope="col">OPERATORS
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Highest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">[] () .</span> -> ++ −− (used as prefixes) + – (unary),
+                            <span class="text-danger fw-bold h5">!</span>,
+                            ˜
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="11" class="align-middle">
+                            <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                            <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                        </th>
+                        <td><span class="text-danger fw-bold h5">* / %</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">+ –</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><< >>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">< > <= >=
+                        </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">== !=</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>^
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>|
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">&&</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">||</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">=</span> *= /= %= += −= <<= >>= &= ^= |=
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Lowest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">++ ––</span> (used as suffixes)
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <!--            Precedence (Order of operators) ends-->
+
+
+            <div class="mb-3"></div>
+
+            <div id="html" class="h4 text-danger border-bottom border-danger fw-bold border-2">HTML (HyperText Markup Language)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">HTML (HyperText Markup Language)</p>
+                <p>
+                <div class="fw-bold">
+                    HTML (HyperText Markup Language)<br/>
+                    tag based language
+                    <br/>The notes for today:
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="http://www.simplehtmlguide.com/cheatsheet.php/"><span>HTML Guide</span></a>
+                    <a target="_blank" class="btn btn-sm btn-success"
+                       href="https://htmlcheatsheet.com/"><span>HTML Cheatsheet</span></a>
+                    <a target="_blank" class="btn btn-sm btn-info"
+                       href="https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet"><span
+                            class="">HTML</span></a>
+                    <a target="_blank" class="btn btn-sm btn-info"
+                       href="https://www.w3schools.com/html/default.asp"><span
+                            class="">HTML Tutorial</span></a>
+                    <br/>
+                </div>
+                <h4>Basic syntax</h4>
+                <pre><code class="language-csharp">basic syntax
+&lt;tagname>&lt;/tagname&gt;
+&lt;tagname/&gt;</code></pre>
+                <h4>Basic HTML Structure</h4>
+                <pre class="code"><code style="line-height:1.4em">&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;website title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  content of website ...
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <h4>Common Tags for Blogs</h4>
+                <div class="chapter">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td class="code">&lt;h?&gt; heading &lt;/h?&gt;</td>
+                            <td>Heading (h1 for largest to h6 for smallest)</td>
+                        </tr>
+                        <tr>
+                            <td class="code">&lt;p&gt; paragraph &lt;/p&gt;</td>
+                            <td>Paragraph of Text</td>
+                        </tr>
+                        <tr>
+                            <td class="code">&lt;b&gt; bold &lt;/b&gt;</td>
+                            <td>Make text between tags <b>bold</b></td>
+                        </tr>
+                        <tr>
+                            <td class="code">&lt;i&gt; italic &lt;/i&gt;</td>
+                            <td>Make text between tags <i>italic</i></td>
+                        </tr>
+                        <tr>
+                            <td class="code">&lt;a href="<i>url</i>"&gt; link name &lt;/a&gt;</td>
+                            <td>Create a link to another page or website</td>
+                        </tr>
+                        <tr>
+                            <td class="code">&lt;div&gt; ... &lt;/div&gt;</td>
+                            <td>Divide up page content into sections, and applying styles</td>
+                        </tr>
+                        <tr>
+                            <td class="code">&lt;img src="<i>filename.jpg</i>"&gt;</td>
+                            <td>Show an image</td>
+                        </tr>
+                        <tr>
+
+
+                        <td class="code">&lt;img src="<i>url</i>" alt="<i>text</i>"&gt;</td>
+                        </tr>
+                        <tr>
+                        <tr><td class="code">&lt;a href="<i>url</i>"&gt; <i>link text</i> &lt;/a&gt;</td><td>Basic Link</td></tr>
+
+                        <tr>
+                            <td class="code">&lt;ul&gt; &lt;li&gt; list &lt;/li&gt; &lt;/ul&gt;</td>
+                            <td>Unordered, bullet-point list</td>
+                        </tr>
+                        <tr>
+                            <td class="code">&lt;br&gt;</td>
+                            <td>Line Break (force a new line)</td>
+                        </tr>
+                        <tr>
+                            <td class="code">&lt;span &gt; <i> </i> &lt;/span&gt;</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mb-3"></div>
+                <h4> Text Formatting</h4>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="code">&lt;h?&gt; ... &lt;/h?&gt;</td>
+                        <td>Heading (?= 1 for largest to 6 for smallest, eg h1)</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;b&gt; ... &lt;/b&gt;</td>
+                        <td>Bold Text</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;i&gt; ... &lt;/i&gt;</td>
+                        <td>Italic Text</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;u&gt; ... &lt;/u&gt;</td>
+                        <td>Underline Text</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;strike&gt; ... &lt;/strike&gt;</td>
+                        <td>Strikeout</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;sup&gt; ... &lt;/sup&gt;</td>
+                        <td>Superscript - Smaller text placed below normal text</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;sub&gt; ... &lt;/sub&gt;</td>
+                        <td>Subscript - Smaller text placed below normal text</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;small&gt; ... &lt;/small&gt;</td>
+                        <td>Small - Fineprint size text</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;tt&gt; ... &lt;/tt&gt;</td>
+                        <td>Typewriter Text</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;pre&gt; ... &lt;/pre&gt;</td>
+                        <td>Pre-formatted Text</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;blockquote&gt; ... &lt;/blockquote&gt;</td>
+                        <td>Text Block Quote</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;strong&gt; ... &lt;/strong&gt;</td>
+                        <td>Strong - Shown as Bold in most browsers</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;em&gt; ... &lt;/em&gt;</td>
+                        <td>Emphasis - Shown as Italics in most browsers</td>
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;font&gt; ... &lt;/font&gt;</td>
+                        <td>Font tag obsolete</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+
+
+                <div class="mb-3"></div>
+                <h4>Section Divisions</h4>
+                <table>
+                    <tbody><tr><td class="code">&lt;div&gt; ... &lt;/div&gt;</td><td>Division or Section of Page Content</td></tr>
+                    <tr><td class="code">&lt;span&gt; ... &lt;/span&gt;</td><td>Section of text within other content</td></tr>
+                    <tr><td class="code">&lt;p&gt; ... &lt;/p&gt;</td><td>Paragraph of Text</td></tr>
+                    <tr><td class="code">&lt;br&gt;</td> <td>Line Break</td></tr>
+                    <tr><td class="code">&lt;hr&gt;</td> <td>Basic Horizontal Line</td></tr>
+                    <tr><td class="attrhead">&lt;hr&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+                    <tr><td class="codeindt">size="?"</td><td>Line Thickness in pixels</td></tr>
+                    <tr><td class="codeindt">width="?"</td><td>Line Width in pixels</td></tr>
+                    <tr><td class="codeindt">width="??%"</td><td>Line Width as a percentage</td></tr>
+                    <tr><td class="codeindt">color="#??????"</td> <td>Line Colour</td></tr>
+                    <tr><td class="codeindt">align="?"</td> <td>Horizontal Alignment: <code>left, center, right</code> </td></tr>
+                    <tr><td class="codeindt">noshade</td><td>No 3D cut-out</td></tr>
+                    <tr><td class="code">&lt;nobr&gt; ... &lt;/nobr&gt;</td> <td>Line Break</td></tr>
+                    </tbody></table>
+
+                <div class="mb-3"></div>
+                <h4>Tables</h4>
+                <table>
+                    <tbody><tr><td class="code">&lt;table&gt; ... &lt;/table&gt;</td><td>Define a Table</td></tr>
+                    <tr><td class="attrhead">&lt;table&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+                    <tr><td class="codeindt">border="?"</td>	<td>Thickness of outside border</td></tr>
+                    <tr><td class="codeindt">bordercolor="#??????"</td> <td>Border Colour</td></tr>
+                    <tr><td class="codeindt">cellspacing="?"</td>	<td>Space between cells (pixels)</td></tr>
+                    <tr><td class="codeindt">cellpadding="?"</td>	<td>Space between cell wall and content</td></tr>
+                    <tr><td class="codeindt">align="??"</td>	<td>Horizontal Alignment: <code>left, center, right</code> </td></tr>
+                    <tr><td class="codeindt">bgcolor="#??????"</td> <td>Background Colour </td></tr>
+                    <tr><td class="codeindt">width="??"</td>	<td>Table Width (pixels or %) </td></tr>
+                    <tr><td class="codeindt">height="??"</td>	<td>Table Height (pixels or %) </td></tr>
+                    <tr><td class="code">&lt;tr&gt; ... &lt;/tr&gt;</td><td>Table Row within table</td></tr>
+                    <tr><td class="code">&lt;th&gt; ... &lt;/th&gt;</td><td>Header Cell within table row</td></tr>
+                    <tr><td class="code">&lt;td&gt; ... &lt;/td&gt;</td><td>Table Cell within table row</td></tr>
+                    <tr><td class="attrhead">&lt;td&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+                    <tr><td class="codeindt">colspan="?"</td>	<td>Number of columns the cell spans across (cell merge)</td></tr>
+                    <tr><td class="codeindt">rowspan="?"</td>	<td>Number of row a cell spans across (cell merge)</td></tr>
+                    <tr><td class="codeindt">width="??"</td>	<td>Cell Width (pixels or %) </td></tr>
+                    <tr><td class="codeindt">height="??"</td>	<td>Cell Height (pixels or %) </td></tr>
+                    <tr><td class="codeindt">bgcolor="#??????"</td> <td>Background Colour</td></tr>
+                    <tr><td class="codeindt">align="??"</td>	<td>Horizontal Alignment: <code>left, center, right</code> </td></tr>
+                    <tr><td class="codeindt">valign="??"</td>	<td>Vertical Alignment: <code>top, middle, bottom</code> </td></tr>
+                    <tr><td class="codeindt">nowrap</td>			<td>Force no line breaks in a particular cell</td></tr>
+                    </tbody></table>
+
+
+                <div class="mb-3"></div>
+                <h4>Lists</h4>
+                    <table>
+                        <tbody> <tr><td class="code">&lt;ol&gt; ... &lt;/ol&gt;</td><td>Ordered List</td></tr>
+                        <tr><td class="code">&lt;ul&gt; ... &lt;/ul&gt;</td><td>Un-ordered List</td></tr>
+                        <tr><td class="code">&lt;li&gt; ... &lt;/li&gt;</td><td>List Item (within ordered or unordered)</td></tr>
+                        <tr><td class="code">&lt;ol type="<i>?</i>"&gt;</td>	<td>Ordered list type: <code> A, a, I, i, 1</code></td></tr>
+                        <tr><td class="code">&lt;ol start="??"&gt;</td>	<td>Ordered list starting value</td></tr>
+                        <tr><td class="code">&lt;ul type="<i>?</i>"&gt;</td>	<td>Unordered list bullet type: <code> disc, circle, square</code></td></tr>
+                        <tr><td class="code">&lt;li value="??"&gt;</td>	<td>List Item Value (changes current and subsequent items)</td></tr>
+                        <tr><td class="code">&lt;li type="??"&gt;</td>	<td>List Item Type (changes only current item)</td></tr>
+                        <tr><td class="code">&lt;dl&gt; ... &lt;/dl&gt;</td><td>Definition List</td></tr>
+                        <tr><td class="code">&lt;dt&gt; ... &lt;/dt&gt;</td><td>Term or phrase being defined</td></tr>
+                        <tr><td class="code">&lt;dd&gt; ... &lt;/dd&gt;</td><td>Detailed Definition of term</td></tr>
+                        </tbody></table>
+
+
+
+                <div class="mb-3"></div>
+                <h4>Forms</h4>
+                <table>
+                    <tbody><tr><td class="code">&lt;form&gt; ... &lt;/form&gt;</td><td>Form input group decleration</td></tr>
+                    <tr><td class="attrhead">&lt;form&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+                    <tr><td class="codeindt">action="url"</td>	<td>URL of Form Script</td></tr>
+                    <tr><td class="codeindt">method="***"</td>	<td>Method of Form: <code>get, post</code></td></tr>
+                    <tr><td class="codeindt">enctype="***"</td>	<td>For File Upload: <code>enctype="multipart/form-data"</code></td></tr>
+                    <tr><td class="code">&lt;input&gt; ... &lt;/input&gt;</td><td>Input field within form</td></tr>
+                    <tr><td class="attrhead">&lt;input&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+                    <tr><td class="codeindt">type="***"</td>	<td>Input Field Type: <code>text, password, checkbox, submit</code> etc.</td></tr>
+                    <tr><td class="codeindt">name="***"</td>	<td>Form Field Name (for form processing script)</td></tr>
+                    <tr><td class="codeindt">value="***"</td>	<td>Value of Input Field</td></tr>
+                    <tr><td class="codeindt">size="***"</td>	<td>Field Size</td></tr>
+                    <tr><td class="codeindt">maxlength="?"</td>	<td>Maximum Length of Input Field Data</td></tr>
+                    <tr><td class="codeindt">checked</td>	<td>Mark selected field in radio button group or checkbox</td></tr>
+
+                    <tr><td class="code">&lt;select&gt; ... &lt;/select&gt;</td><td>Select options from drop down list</td></tr>
+                    <tr><td class="attrhead">&lt;select&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+                    <tr><td class="codeindt">name="***"</td>	<td>Drop Down Combo-Box Name (for form processing script)</td></tr>
+                    <tr><td class="codeindt">size="?"</td>	<td>Number of selectable options</td></tr>
+                    <tr><td class="codeindt">multiple</td>	<td>Allow multiple selections</td></tr>
+
+                    <tr><td class="code">&lt;option&gt; ... &lt;/option&gt;</td><td>Option (item) within drop down list</td></tr>
+                    <tr><td class="attrhead">&lt;option&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+                    <tr><td class="codeindt">value="***"</td>	<td>Option Value</td></tr>
+                    <tr><td class="codeindt">selected</td>	<td>Set option as default selected option</td></tr>
+
+                    <tr><td class="code">&lt;textarea&gt; ... &lt;/textarea&gt;</td><td>Large area for text input</td></tr>
+                    <tr><td class="attrhead">&lt;textarea&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+                    <tr><td class="codeindt">name="***"</td>	<td>Text Area Name (for form processing script)</td></tr>
+                    <tr><td class="codeindt">rows="?"</td>	<td>Number of rows of text shown</td></tr>
+                    <tr><td class="codeindt">cols="?"</td>	<td>Number of columns (characters per rows)</td></tr>
+                    <tr><td class="codeindt">wrap="***"</td>	<td>Word Wrapping: <code>off, hard, soft</code></td></tr>
+                    </tbody></table>
+
+                <!--                <pre><code class="code"></code>-->
+                <!--                </pre>-->
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div id="css" class="h4 text-danger border-bottom border-danger fw-bold border-2">CSS (Cascading Style Sheets)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">CSS (Cascading Style Sheets)</p>
+                <p>
+                <div class="fw-bold">
+                    CSS (Cascading Style Sheets)
+                    <br/>The notes for today:
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://www.w3schools.com/css/default.asp"><span>CSS Tutorial</span></a>
+                    <a target="_blank" class="btn btn-sm btn-success"
+                       href="https://www.tutorialspoint.com/css/index.htm"><span>CSS Guide</span></a>
+
+
+                    <br/>
+                </div>
+                <pre><code class="language-csharp">
+
+                </code></pre>
+
+
+                <!--                <pre><code class="code"></code>-->
+                <!--                </pre>-->
+            </div>
+
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">CSS-display:flex; to design layout
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">CSS-display:flex; to design layout</p>
+                <p>
+                <div class="fw-bold">
+                    CSS (Cascading Style Sheets)
+                <br/><span class="text-danger fw-bold">display:flex</span> (a good tutorial)
+                    <a target="_blank" class="btn btn-sm btn-primary"
+                       href="https://www.youtube.com/watch?v=fYq5PXgSsbE"><span>CSS display:flex; Tutorial</span></a>
+
+                <a target="_blank" class="btn btn-sm btn-primary"
+                   href="https://blog.webdevsimplified.com/2021-11/flexbox/"><span>CSS display:flex; Notes</span></a>
+
+
+
+                <br/>
+                display: inline,block,inline-block,none,flex
+                <a target="_blank" class="btn btn-sm btn-success"
+                       href="https://www.youtube.com/watch?v=Qf-wVa9y9V4"><span>CSS display: inline, block, inline-block, none</span></a>
+                <br/>
+                position:static,relative,absolute,fixed,sticky
+                <a target="_blank" class="btn btn-sm btn-info"
+                   href="https://www.youtube.com/watch?v=jx5jmI0UlXU&t=338s"><span>position:static,relative,absolute,fixed,sticky</span></a>
+
+
+                    <br/>
+                </div>
+                <pre><code class="language-csharp">
+
+                </code></pre>
+
+
+                <!--                <pre><code class="code"></code>-->
+                <!--                </pre>-->
+            </div>
+            <!--            <div class="mb-3"></div>-->
+
+
+            <!--            Add things here-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

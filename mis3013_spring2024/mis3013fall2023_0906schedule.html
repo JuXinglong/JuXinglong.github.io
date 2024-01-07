@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>September 6 Lecture Schedule MIS 3013: if else conditional statement</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+            var i;
+            var n_review_ques = 0;
+            for (i = 1; i <= n_review_ques; i++)
+            {
+                $("#q" + i + "btn").click({i: i}, questionBtnClicked);
+            }
+
+        }
+
+        function questionBtnClicked(event)
+        {
+            var sBtn = $("#q" + event.data.i + "btn");
+            var sAns = $("#q" + event.data.i + "ans");
+            if (sBtn.text() == "Show Answer")
+            {
+                sBtn.text("Hide Answer");
+                // sAns.show();
+                sAns.removeClass("invisible");
+            }
+            else
+            {
+                sBtn.text("Show Answer");
+                // sAns.hide();
+                sAns.addClass("invisible");
+            }
+        }
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            September 6, 2023 Lecture Schedule for MIS 3013
+        </div>
+
+        <!--        table of contents start-->
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+
+                <!--                <li class="list-group-item"><span class="text-danger">Sign the attendance sheet</span></li>-->
+
+
+                <li class="list-group-item"><span class="text-danger">EXAM 1 Contents Continue</span></li>
+                <li><span class="text-primary h5 fw-bold">Create a C# console app: MIS3013_005_LC_0906_YourName</span>
+                </li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li class="text-primary">HW2 due September 15, 2023, 5:00 PM</li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+                <li>From September 6, lecture code prepare due and closed at 3:00 PM on each lecture day</li>
+                <li>From September 6, lecture code due at 4:30 PM and closed at 5:00 PM on each lecture day</li>
+                <li>TA grades the HW</li>
+                <li class="text-danger">Lecture Codes Prepare, Lecture Codes, Homework, and Exams must be taken individually, with no help from other individuals. DO NOT SHARE YOUR CODE WITH OTHER PEOPLE.</li>
+                <li>Plagiarism check for each assignment</li>
+                <li class="list-group-item"><br/></li>
+                <!--                <li>Exercise 2 September 28, 2022, Lecture Time-->
+                <!--                    <ul>-->
+                <!--                        <li>if else conditional</li>-->
+                <!--                        <li>loops</span></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+                <li><a class="btn btn-sm btn-outline-primary" target="_blank" href="https://git-scm.com/">Git</a></li>
+
+
+                <li>The differences: Simple datatype VS. Complex datatype</li>
+                <li>Operator: %</li>
+                <li>Comparison operators: >,>=,<,<=,==,!=</li>
+                <li>Logical operators: !,&&,||</li>
+                <li>Conditional statement: if else</li>
+
+
+            </ul>
+        </div>
+        <!--        table of contents end-->
+
+
+        <h3 class="text-danger mb-3">Exam 1 Contents Continue</h3>
+
+
+        <h4 class="text-primary mb-3">&bull; if else conditional statement</h4>
+
+
+        <div class="mb-3"></div>
+
+
+        <!--            Precedence (Order of operators) starts-->
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Precedence (Order of operators)</p>
+            <p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">PRECEDENCE
+                    </th>
+                    <th scope="col">OPERATORS
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Highest
+                    </th>
+                    <td>++, −− (used as prefixes); (), +, – (unary), <span class="text-danger fw-bold h5">!</span>,
+                        ˜
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" rowspan="11" class="align-middle">
+                        <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                        <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                    </th>
+                    <td><span class="text-danger fw-bold h5">*, /, %</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">+, –</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><<, >>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4"><, >, <=, >=
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">==, !=</span>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>&
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>^
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>|
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">&&</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">||</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="text-danger fw-bold h4">=</span>, *=, /=, %=, +=, −=, <<=, >>=, &=, ^=, |=
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Lowest
+                    </th>
+                    <td><span class="text-danger fw-bold h4">++, ––</span> (used as suffixes)
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            </p>
+
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">simple variables VS. complex
+            variables
+        </div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Simple VS. Complex</p>
+            <p>
+            <div class="fw-bold">
+                <ul>
+                    <li>Simple variable
+                        <ol>
+                            <li class="list-group-item">int i;</li>
+                            <li>The computer created a simple room card i. The card type is int.</li>
+                            <li>The computer automatically created an int space (room) in the computer memory. The space
+                                address (room number is stored in this card.)
+                            </li>
+                            <li>The room number in this card is unchangeable (immutable).</li>
+                            <li>assignment operation. The value in this space (room) is changed.</li>
+                        </ol>
+                    </li>
+                    <li>Complex variable
+                        <ol>
+                            <li class="list-group-item">DateTime j;</li>
+                            <li>The computer created a complex room card j. The card type is DateTime.</li>
+                            <li>The computer did NOT create any space (room) in computer memory. The space address (room
+                                number) in this card is null.
+                            </li>
+                            <li>The room number in this card is changeable (mutable).</li>
+                            <li>assignment operation. The address (room number) in this card is changed.</li>
+                            <li class="list-group-item text-danger">The only way to create a complex variable in the
+                                memory is to call the new Datatype(...) constructor function.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">if else conditional statement</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">Operator %</p>
+            <p>
+            <div class="fw-bold">%: Modulo <a target="_blank" href="https://www.dotnetperls.com/modulo"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div>Apply the modulo division operator to get remainders from dividing numbers.</div>
+            <pre><code class="language-csharp">// When 5 is divided by 3, the remainder is 2.
+Console.WriteLine(5 % 3);
+
+// When 1000 is divided by 90, the remainder is 10.
+Console.WriteLine(1000 % 90);
+
+// When 100 is divided by 90, the remainder is also 10.
+Console.WriteLine(100 % 90);
+
+// When 81 is divided by 80, the remainder is 1.
+Console.WriteLine(81 % 80);
+
+// When 1 is divided by 1, the remainder is zero.
+Console.WriteLine(1 % 1);
+    </code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">Comparison operators >,<,>=,<=,==,!=</p>
+            <p>
+            <div class="fw-bold">Comparison operators >,<,>=,<=,==,!= <a target="_blank"
+                                                                         href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                 href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                 href="https://www.completecsharptutorial.com/basic/comparison-operators.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div class="fw-bold">Less than operator <</div>
+            <div class="fw-bold">Greater than operator ></div>
+            <div class="fw-bold">Less than or equal operator <=</div>
+            <div class="fw-bold">Greater than or equal operator >=</div>
+            <div class="fw-bold">Equality operator ==</div>
+            <div class="fw-bold">Inequality operator !=</div>
+            <div>They will result in a boolean data.</div>
+            <pre><code class="language-csharp">Console.WriteLine(7.0 < 5.1);   // output: False
+Console.WriteLine(5.1 < 5.1);   // output: False
+Console.WriteLine(0.0 < 5.1);   // output: True
+
+Console.WriteLine(7.0 > 5.1);   // output: True
+Console.WriteLine(5.1 > 5.1);   // output: False
+Console.WriteLine(0.0 > 5.1);   // output: False
+
+Console.WriteLine(7.0 <= 5.1);   // output: False
+Console.WriteLine(5.1 <= 5.1);   // output: True
+Console.WriteLine(0.0 <= 5.1);   // output: True
+
+Console.WriteLine(7.0 >= 5.1);   // output: True
+Console.WriteLine(5.1 >= 5.1);   // output: True
+Console.WriteLine(0.0 >= 5.1);   // output: False
+
+int a = 1 + 2 + 3;
+int b = 6;
+Console.WriteLine(a == b);  // output: True
+
+char c1 = 'a';
+char c2 = 'A';
+Console.WriteLine(c1 == c2);  // output: False
+Console.WriteLine(c1 == char.ToLower(c2));  // output: True
+
+
+a = 1 + 1 + 2 + 3;
+b = 6;
+Console.WriteLine(a != b);  // output: True
+
+string s1 = "Hello";
+string s2 = "Hello";
+Console.WriteLine(s1 != s2);  // output: False</code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="admonition note">
+            <p class="admonition-title">logical operators: &&, ||, !</p>
+            <p>
+            <div class="fw-bold">logical operators: &&, ||, ! <a target="_blank"
+                                                                 href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                 href="https://www.w3schools.com/cs/cs_operators.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div class="fw-bold">Logical negation operator !</div>
+            The unary prefix ! operator computes logical negation of its operand. That is, it produces true, if the
+            operand evaluates to false, and false, if the operand evaluates to true.
+            <div class="fw-bold">Conditional logical AND operator &&</div>
+            The conditional logical AND operator &&, also known as the "short-circuiting" logical AND operator, computes
+            the logical AND of its operands. The result of x && y is true if both x and y evaluate to true. Otherwise,
+            the result is false. If x evaluates to false, y is not evaluated.
+            <div class="fw-bold">Conditional logical OR operator ||</div>
+            The conditional logical OR operator ||, also known as the "short-circuiting" logical OR operator, computes
+            the logical OR of its operands. The result of x || y is true if either x or y evaluates to true. Otherwise,
+            the result is false. If x evaluates to true, y is not evaluated.
+            <pre><code class="language-csharp">bool passed = false;
+Console.WriteLine(!passed);  // output: True
+Console.WriteLine(!true);    // output: False
+x < 5 &&  x < 10
+x < 5 || x < 4
+!(x < 5 && x < 10)</code></pre>
+            </p>
+        </div>
+
+        <div class="mb-3"></div>
+
+        <div class="admonition note">
+            <p class="admonition-title">if else conditional statement</p>
+            <p>
+            <div class="fw-bold">if else conditional statement <a target="_blank"
+                                                                  href="https://www.c-sharpcorner.com/article/c-sharp-if-else-statement/"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                 href="https://www.w3schools.com/cs/cs_conditions.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+            <div class="text-dark fw-bold">if else statement format 1</div>
+            <div>
+                <img src="../static/img/ifelse1.svg" style="height: 400px;"/>
+            </div>
+            <pre><code class="language-csharp">// format 1 Syntax
+if (condition)
+{
+  // block of code to be executed if the condition is True
+}
+
+// format 1 example
+if (20 > 18)
+{
+  Console.WriteLine("20 is greater than 18");
+}
+
+int x = 20;
+int y = 18;
+if (x > y)
+{
+  Console.WriteLine("x is greater than y");
+}
+            </code></pre>
+            <div class="text-dark fw-bold">if else statement format 2</div>
+            <div>
+                <img src="../static/img/ifelse2.svg" style="height: 400px;"/>
+            </div>
+            <pre><code class="language-csharp">
+// format 2 Syntax
+if (condition)
+{
+  // block of code to be executed if the condition is True
+}
+else
+{
+  // block of code to be executed if the condition is False
+}
+
+// format 2 example
+int time = 20;
+if (time < 18)
+{
+  Console.WriteLine("Good day.");
+}
+else
+{
+  Console.WriteLine("Good evening.");
+}
+// Outputs "Good evening."
+            </code></pre>
+            <div class="text-dark fw-bold">if else statement format 3</div>
+            <div>
+                <img src="../static/img/ifelse3.svg" style="height: 400px;"/>
+            </div>
+            <pre><code class="language-csharp">
+// format 3 Syntax
+if (condition1)
+{
+  // block of code to be executed if condition1 is True
+}
+else if (condition2)
+{
+  // block of code to be executed if the condition1 is false and condition2 is True
+}
+else
+{
+  // block of code to be executed if the condition1 is false and condition2 is False
+}
+
+// format 3 example
+int time = 22;
+if (time < 10)
+{
+  Console.WriteLine("Good morning.");
+}
+else if (time < 20)
+{
+  Console.WriteLine("Good day.");
+}
+else
+{
+  Console.WriteLine("Good evening.");
+}
+// Result Outputs "Good evening."            </code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">counter, accumulator</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">counter, accumulator</p>
+            <p>
+            <div class="fw-bold">
+                int counter=0;<br/>
+                double accumulator=0;
+                <br/>
+                ++ operator
+            </div>
+            <pre><code class="language-csharp">
+int i=0;
+i=i+1;
+i++;
+i=i+2;
+
+int counter=0;
+double sumOfGrade=0;
+
+double grade1=89.9;
+counter++;
+sumOfGrade=sumOfGrade+grade1;
+
+double grade2=70.9;
+counter++;
+sumOfGrade=sumOfGrade+grade2;
+
+double grade3=80.9;
+counter++;
+sumOfGrade=sumOfGrade+grade3;
+
+double grade4=90.9;
+counter++;
+sumOfGrade=sumOfGrade+grade4;
+
+double aveGrade=sumOfGrade/counter;            </code></pre>
+            </p>
+        </div>
+
+        <div class="mb-3"></div>
+
+
+        <div class="admonition note">
+            <p class="admonition-title">Coin Toss Example</p>
+            <p>
+            <div>
+                Prompt the user to pick heads or tails, and then generate a random number, using the Random class <a
+                    target="_blank"
+                    href="https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>, generate a random number that has a range
+                of just two numbers (e.g. it should just be random between 0 and 1 or 1 and 2 so that you have two
+                options, heads or tails).<br/>
+                <br/>
+
+                Tell the user what side the coin landed on (heads or tails) and then whether or not their guess was
+                right or wrong.<br/><br/>
+
+                Repeat the process 3 times, store the number of right guesses and calculate the right guess percentage.
+                Print out these information.<br/><br/>
+
+                Example code how to generate a random integer number:<br/><br/>
+                Random rnd = new Random();
+                int randomNum = rnd.Next(3, 5); // Generate a random integer and store it into variable
+                randomNum.<br/><br/>
+                // rnd.Next(3, 5); will result only result in 3 or 4<br/>
+                // rnd.Next(0, 2); will result only result in 0 or 1<br/>
+                // rnd.Next(0, 3); will result only result in 0, 1, or 2<br/>
+                Console.WriteLine(randomNum);<br/><br/>
+                <p>Please take a guess (Head or Tail): H<br/>
+                    Your guess is wrong!<br/>
+                    Please take a guess (Head or Tail): T<br/>
+                    Your guess is correct!<br/>
+                    Please take a guess (Head or Tail): T<br/>
+                    Your guess is correct!<br/>
+                    2 out of 3 are correct!<br/>
+                    The correct percentage is 66.67%</p>
+            </div>
+            <div class="fw-bold"></div>
+            <pre><code class="language-csharp"></code></pre>
+            </p>
+        </div>
+
+
+        <div class="mb-3"></div>
+
+        <div class="h4 text-danger border-bottom border-danger fw-bold border-2">loops</div>
+
+        <div class="admonition note">
+            <p class="admonition-title">loops</p>
+            <p>
+            <div class="fw-bold">loops (break continue <a target="_blank"
+                                                          href="https://www.w3schools.com/cs/cs_break.php"><span
+                    class="bi bi-box-arrow-up-right text-primary"></span></a>)
+                <ul>
+                    <li>for(;;){} <a target="_blank" href="https://www.w3schools.com/cs/cs_for_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>while(){} <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                    <li>do{}while(); <a target="_blank" href="https://www.w3schools.com/cs/cs_while_loop.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                </ul>
+            </div>
+            <pre><code class="language-csharp">Loops
+int i;
+for(int i=0;i<10;i++;)
+{
+    //loop body
+}
+
+while(i<10)
+{
+    //loop body
+    i++;// may vary
+}
+
+do
+{
+    //loop body
+    i++;// may vary
+}
+while(i<10);
+</code></pre>
+            </p>
+        </div>
+        <!--insert new div here-->
+    </div>
+</div>
+
+</body>
+</html>

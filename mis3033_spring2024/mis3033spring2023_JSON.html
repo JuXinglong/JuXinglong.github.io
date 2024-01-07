@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MIS 3033 Spring 2023: JSON (JavaScript Object Notation)</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <script src="../static/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro() {
+            hljs.highlightAll();
+
+
+        }
+
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            MIS 3033: JSON (JavaScript Object Notation)
+        </div>
+
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+
+
+<!--                <li class="list-group-item"><span class="text-danger">EXERCISE 3 Contents Continue</span></li>-->
+
+
+<!--                <li>HW2 due September 14, 2022, 5:00 PM</li>-->
+
+
+
+
+
+
+
+<!--                <li>collection extension functions & LINQ</li>-->
+                <li><a href="#json">JSON: JavaScript Object Notation</a></li>
+<!--                <li>Entity framework</li>-->
+
+
+            </ul>
+        </div>
+
+        <div>
+
+
+<!--            <h3 class="text-danger mb-3">EXERCISE 3 Contents Continue</h3>-->
+
+
+            <div class="admonition note">
+                <p class="admonition-title">Pre</p>
+                <p>
+                <div class="fw-bold">
+
+                </div>
+                <pre><code class="language-csharp">&lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;
+string str=System.IO.File.ReadAllText("dt.txt");
+</code></pre>
+                </p>
+            </div>
+
+
+
+            <div id="json" class="h4 text-danger border-bottom border-danger fw-bold border-2">JSON: JavaScript Object Notation
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">JSON</p>
+                <p>
+                <div class="fw-bold">
+                    JSON: JavaScript Object Notation
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"><span class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+
+                </div>
+                <pre><code class="language-json">
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+
+                </code></pre>
+
+
+                <pre><code class="language-csharp">
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+File.Exists()
+
+// save to json file
+JsonSerializerOptions serialOption = new JsonSerializerOptions();
+serialOption.WriteIndented=true;
+string jsonStr = JsonSerializer.Serialize(students, serialOption);
+string filename = "students.json";
+File.WriteAllText(filename,jsonStr);
+
+// read from json file
+String filename = "students.json";
+string jsonStr=File.ReadAllText(filename);
+List&#60;Student&#62; stu = JsonSerializer.Deserialize&#60;List&#60;Student&#62;&#62;(jsonStr);
+
+
+                </code>
+                </pre>
+
+            </div>
+
+
+
+            <!--            Add things here-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
