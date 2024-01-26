@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>January 29 Lecture Schedule MIS 3033: var, anonymous type, collection extension functions</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <!--    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <!--    <script src="../static/jquery-ui.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"></script>
+
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro() {
+            hljs.highlightAll();
+            let floatpanel = document.querySelector("#floatpanel");
+            anime({
+                targets: floatpanel,
+                scale: {
+                    value: 0.5,
+                }
+
+            });
+
+
+        }
+
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            January 29, 2024 Lecture Schedule for MIS 3033
+        </div>
+
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+
+                <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
+                <!--                <li class=""><span class="text-danger">Attendance from next week will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span></li>-->
+
+
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+
+                <li class="list-group-item"><span class="text-danger">EXAM 1 Contents</span></li>
+                <li><span class="text-primary h6 fw-bold">Create a C# console app: LC0129</span>
+                </li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li><span class="text-primary h6 fw-bold">HW2 due February 2, 2024, 5:00 PM</span></li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+
+<!--                <li>From September 6, lecture code prepare due and closed at 10:30 AM on each lecture day</li>-->
+<!--                <li>From September 6, lecture code due at 12:00 PM and closed at 12:30 PM on each lecture day</li>-->
+<!--                <li>TA grades the HW</li>-->
+                <li>Plagiarism check for each assignment</li>
+                <li class="list-group-item"><br/></li>
+                <li>Start Database manipulation from next week</li>
+<!--                <li>Lecture code prepare for next week is long. Start early.</li>-->
+                <li class="list-group-item"><br/></li>
+                <li><a class="btn btn-sm btn-outline-primary" target="_blank" href="https://git-scm.com/">Git</a></li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <!--                <li><span class="text-danger">Exam 1 February 22, 2023, 1:00 PM to 2:45 PM</span>-->
+                <!--                    <ul>-->
+                <!--&lt;!&ndash;                        <li>variables, operators, expressions</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <li>if else conditional</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <li>loops</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <li class="list-group-item"><span>&nbsp;</span> </li>&ndash;&gt;-->
+                <!--                        <li>Closed-book and closed-notes</li>-->
+                <!--                        <li>Problems similar to HW3 (Coding problems)</li>-->
+                <!--                        <li>Assigned Seats</li>-->
+                <!--                        <li>Bring your own computer (Bring the charger)</li>-->
+
+                <!--                        &lt;!&ndash;                        <li>ONE coding problem in Exercise 1 on Variables, Expressions & Statements.</li>&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                        <li>The problems or questions will be similar to Homework 1 Problem and Exercise 1 Practice Problem</li>&ndash;&gt;-->
+
+
+                <!--                        <li>Photo ID (OU student ID, driver license, or other photo ID with date birth)</li>-->
+                <!--                        <li>On campus only</li>-->
+                <!--                        <li>No website exploring other than this Exam Canvas page</li>-->
+                <!--                        <li>No electronic materials (You could NOT look at your previous code on your computer)</li>-->
+
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+                <!--                <li>HW2 due September 14, 2022, 5:00 PM</li>-->
+
+
+                <li><a href="#class" class="btn btn-sm btn-primary">Class</a>
+                    <ul>
+                        <li>constructor function</li>
+                        <li>Key word: this, base</li>
+                        <li>get, set</li>
+                        <li>namespace</li>
+                        <li>inherit</li>
+                        <li>override: ToString() function</li>
+                        <li>overload</li>
+                        <li><a href="#interface" class="btn btn-sm btn-outline-success">interface</a></li>
+                    </ul>
+                </li>
+
+
+                <li><a href="#delegate" class="btn btn-sm btn-outline-primary">delegate, lambda expression</a></li>
+                <li><a href="#extensionfun" class="btn btn-sm btn-outline-dark">keyword: var</a></li>
+                <li><a href="#extensionfun" class="btn btn-sm btn-warning">anonymous class type (anonymous data type)</a></li>
+                <li><a href="#linq" class="btn btn-sm btn-danger">collection extension functions & LINQ</a></li>
+                <!--                <li>JSON: JavaScript Object Notation</li>-->
+                <!--                <li>Entity framework</li>-->
+
+
+            </ul>
+
+            <div id="floatpanel"
+                 style="position: fixed;right:0px;top:50px;display: flex;flex-direction: column;align-items: end;justify-content: start;">
+                <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
+                </button>
+                <script>
+                    {
+                        "use strict";
+                        var m = 1;
+                        let foldbtn = document.querySelector("#foldbtn");
+                        foldbtn.addEventListener("click", (e) => {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 0.0,
+                                }
+                            });
+                            //floatmenu.style.display = "none";
+                            let expandbtn = document.querySelector("#expandbtn");
+                            expandbtn.style.display = "block";
+                            foldbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <button id="expandbtn" class="btn btn-sm btn-outline-secondary" style="display: none;"><i
+                        class="bi bi-chevron-double-down"></i></button>
+                <script>
+                    {
+                        "use strict";
+                        let expandbtn = document.querySelector("#expandbtn");
+
+                        expandbtn.addEventListener("click", (e) => {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 1.0,
+                                }
+                            });
+                            //floatmenu.style.display = "block";
+                            let foldbtn = document.querySelector("#foldbtn");
+                            foldbtn.style.display = "block";
+                            expandbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <div id="floatmenu" style="display: flex;flex-direction: column;">
+                    <a href="#top" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-dark">Go to Top</a>
+
+                    <a href="#class" style="margin-bottom: 1px;" class="btn  btn-sm btn-primary"> Class</a>
+                    <a href="#interface" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-success"
+                       class="">interface</a>
+                    <a href="#delegate" style="margin-bottom: 1px;" class="btn  btn-sm btn-outline-primary">lamda expression</a>
+
+                    <a href="#extensionfun" style="" class="btn btn-sm btn-warning">extension function</a>
+                    <a href="#linq" style="" class="btn btn-sm btn-danger">LINQ</a>
+
+
+                </div>
+                <!--                <a href="#list" style=""  class="btn btn-sm btn-outline-danger">List</a><br/>-->
+                <!--                <a href="#dictionary" style="width: 100px;"  class="btn btn-sm btn-outline-info">Dictionary</a>-->
+            </div>
+        </div>
+
+        <div>
+
+
+            <h3 class="text-danger mb-3">EXAM 1 Contents</h3>
+
+
+            <!--            Precedence (Order of operators) starts-->
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Precedence (Order of operators)</p>
+                <p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">PRECEDENCE
+                        </th>
+                        <th scope="col">OPERATORS
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Highest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">[] () .</span> -> ++ −− (used as prefixes) + – (unary),
+                            <span class="text-danger fw-bold h5">!</span>,
+                            ˜
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="11" class="align-middle">
+                            <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                            <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                        </th>
+                        <td><span class="text-danger fw-bold h5">* / %</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">+ –</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><< >>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">< > <= >=
+                        </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">== !=</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>^
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>|
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">&&</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">||</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">=</span> *= /= %= += −= <<= >>= &= ^= |=
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Lowest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">++ ––</span> (used as suffixes)
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <!--            Precedence (Order of operators) ends-->
+
+
+            <div class="mb-3"></div>
+
+
+            <div class="admonition note" id="class">
+                <p class="admonition-title">Define a complex datatype using class keyword</p>
+                <p>
+                <div class="fw-bold">
+                    class <a target="_blank"
+                             href="https://www.w3schools.com/cs/cs_oop.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_classes.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_class_members.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_constructors.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_access_modifiers.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_properties.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_inheritance.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_polymorphism.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_abstract.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_interface.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                </div>
+                <pre><code class="language-csharp">Define a new complex data type Student using class
+class member
+class NewDataTypeName
+{
+}
+Member functions
+static
+this
+namespace
+
+Data fields in the new data type
+. : new operator, member access operator
+Public: access modifier
+
+
+Student xingStu=new Student();
+xingStu.name = "Xinglong Ju";
+xingStu.finalGrade = 90.6;
+double fg = xingStu.CalFinalGrade();
+class Student
+{
+    public string name;
+    public string id;
+    public int age;
+    public double finalGrade;
+    public double exam1Grade;
+    public double exam2Grade;
+    public double exam3Grade;
+
+    public char CalLetterGrade()
+    {
+        return 'A';
+    }
+
+    public double CalFinalGrade()
+    {
+        return finalGrade;
+    }
+}</code></pre>
+                </p>
+            </div>
+
+            <div class="admonition note" id="datetime">
+                <p class="admonition-title">DateTime & TimeSpan</p>
+                <p>
+                <div class="fw-bold">
+                    DateTime & TimeSpan <a target="_blank"
+                                           href="https://www.c-sharpcorner.com/article/datetime-in-c-sharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank"
+                       href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                </div>
+                <pre><code class="language-csharp">DateTime dt1 = new DateTime(2022, 5, 4, 13, 20, 0);
+DateTime dt2 = new DateTime(2022, 1, 18, 12, 30, 0);
+
+Console.WriteLine(dt1.Year);
+Console.WriteLine(dt1.Day);
+
+Console.WriteLine(dt2);
+Console.WriteLine(dt2.ToString());
+Console.WriteLine(dt1.ToString("MMMM dd, yyyy"));
+
+
+TimeSpan ts=dt1 - dt2;
+ts.Days // int
+ts.Minutes // int
+ts.TotalDays // double
+
+DateTime tempDate = new DateTime(2015, 12, 08); // creating date object with 8th December 2015
+Console.WriteLine(tempDate.ToString("MMMM dd, yyyy")); //December 08, 2105.
+</code></pre>
+                <table border="1" cellspacing="0" style="border-collapse:collapse; width:100%">
+                    <tbody>
+                    <tr>
+                        <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                                style="color:#ffffff">Specifier</span></td>
+                        <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                                style="color:#ffffff">Description</span></td>
+                        <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                                style="color:#ffffff">Output</span></td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">d</td>
+                        <td style="border-style:dashed; border-width:1px">Short Date</td>
+                        <td style="border-style:dashed; border-width:1px">12/8/2015</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">D</td>
+                        <td style="border-style:dashed; border-width:1px">Long Date</td>
+                        <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">t</td>
+                        <td style="border-style:dashed; border-width:1px">Short Time</td>
+                        <td style="border-style:dashed; border-width:1px">3:15 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">T</td>
+                        <td style="border-style:dashed; border-width:1px">Long Time</td>
+                        <td style="border-style:dashed; border-width:1px">3:15:19 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">f</td>
+                        <td style="border-style:dashed; border-width:1px">Full date and time</td>
+                        <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015 3:15 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">F</td>
+                        <td style="border-style:dashed; border-width:1px">Full date and time (long)</td>
+                        <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015 3:15:19 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">g</td>
+                        <td style="border-style:dashed; border-width:1px">Default date and time</td>
+                        <td style="border-style:dashed; border-width:1px">12/8/2015 15:15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">G</td>
+                        <td style="border-style:dashed; border-width:1px">Default date and time (long)</td>
+                        <td style="border-style:dashed; border-width:1px">12/8/2015 15:15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">M</td>
+                        <td style="border-style:dashed; border-width:1px">Day / Month</td>
+                        <td style="border-style:dashed; border-width:1px">8-Dec</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">r</td>
+                        <td style="border-style:dashed; border-width:1px">RFC1123 date</td>
+                        <td style="border-style:dashed; border-width:1px">Tue, 08 Dec 2015 15:15:19 GMT</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">s</td>
+                        <td style="border-style:dashed; border-width:1px">Sortable date/time</td>
+                        <td style="border-style:dashed; border-width:1px">2015-12-08T15:15:19</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">u</td>
+                        <td style="border-style:dashed; border-width:1px">Universal time, local timezone</td>
+                        <td style="border-style:dashed; border-width:1px">2015-12-08 15:15:19Z</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">Y</td>
+                        <td style="border-style:dashed; border-width:1px">Month / Year</td>
+                        <td style="border-style:dashed; border-width:1px">December, 2015</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">dd</td>
+                        <td style="border-style:dashed; border-width:1px">Day</td>
+                        <td style="border-style:dashed; border-width:1px">8</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">ddd</td>
+                        <td style="border-style:dashed; border-width:1px">Short Day Name</td>
+                        <td style="border-style:dashed; border-width:1px">Tue</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">dddd</td>
+                        <td style="border-style:dashed; border-width:1px">Full Day Name</td>
+                        <td style="border-style:dashed; border-width:1px">Tuesday</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">hh</td>
+                        <td style="border-style:dashed; border-width:1px">2 digit hour</td>
+                        <td style="border-style:dashed; border-width:1px">3</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">HH</td>
+                        <td style="border-style:dashed; border-width:1px">2 digit hour (24 hour)</td>
+                        <td style="border-style:dashed; border-width:1px">15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">mm</td>
+                        <td style="border-style:dashed; border-width:1px">2 digit minute</td>
+                        <td style="border-style:dashed; border-width:1px">15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">MM</td>
+                        <td style="border-style:dashed; border-width:1px">Month</td>
+                        <td style="border-style:dashed; border-width:1px">12</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">MMM</td>
+                        <td style="border-style:dashed; border-width:1px">Short Month name</td>
+                        <td style="border-style:dashed; border-width:1px">Dec</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">MMMM</td>
+                        <td style="border-style:dashed; border-width:1px">Month name</td>
+                        <td style="border-style:dashed; border-width:1px">December</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">ss</td>
+                        <td style="border-style:dashed; border-width:1px">seconds</td>
+                        <td style="border-style:dashed; border-width:1px">19</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">fff</td>
+                        <td style="border-style:dashed; border-width:1px">milliseconds</td>
+                        <td style="border-style:dashed; border-width:1px">120</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">FFF</td>
+                        <td style="border-style:dashed; border-width:1px">milliseconds without trailing zero</td>
+                        <td style="border-style:dashed; border-width:1px">12</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">tt</td>
+                        <td style="border-style:dashed; border-width:1px">AM/PM</td>
+                        <td style="border-style:dashed; border-width:1px">PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">yy</td>
+                        <td style="border-style:dashed; border-width:1px">2 digit year</td>
+                        <td style="border-style:dashed; border-width:1px">15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">yyyy</td>
+                        <td style="border-style:dashed; border-width:1px">4 digit year</td>
+                        <td style="border-style:dashed; border-width:1px">2015</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">:</td>
+                        <td style="border-style:dashed; border-width:1px">Hours, minutes, seconds separator, e.g.
+                            {0:hh:mm:ss}
+                        </td>
+                        <td style="border-style:dashed; border-width:1px">9:08:59</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">/</td>
+                        <td style="border-style:dashed; border-width:1px">Year, month , day separator, e.g.
+                            {0:dd/MM/yyyy}
+                        </td>
+                        <td style="border-style:dashed; border-width:1px">8/4/2007</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </p>
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="admonition note" id="moreclass">
+                <p class="admonition-title">More about class</p>
+                <p>
+                <div class="fw-bold">
+                    <ul>
+                        <li>get, set <a target="_blank"
+                                        href="https://docs.microsoft.com/en-us/dotnet/csharp/properties"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <ul>
+                                <li>public string FirstName { get; set; }</li>
+                                <li>public string FirstName
+                                    {
+                                    get { return _firstName; }
+                                    set { _firstName = value; }
+                                    }
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>class inherit <a target="_blank"
+                                             href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <ul>
+                                <li>Object datatype(class) <a target="_blank"
+                                                              href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            </ul>
+                        </li>
+
+                        <li>base: (parent)</li>
+                        <li>class inherit <a target="_blank"
+                                             href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <ul>
+                                <li>abstract for class and method <a target="_blank"
+                                                                     href="https://www.c-sharpcorner.com/UploadFile/93126e/importance-and-use-of-versioning-in-C-Sharp/"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                                </li>
+                                <li>virtual for method only <a target="_blank"
+                                                               href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>override, overload functions
+                            <ul>
+                                <li>overload <a target="_blank"
+                                                href="https://www.geeksforgeeks.org/c-sharp-method-overloading/"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                                <li>ToString() function <a target="_blank"
+                                                           href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                                <li>Equals() function <a target="_blank"
+                                                         href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-6.0"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            interface (a concept in OOP, it is like a tag, not the user interface)
+                            <a target="_blank"
+                               href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                        </li>
+                        <li>Terminology: polymorphism
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <pre><code class="language-csharp">Terminology:
+Encapsulation
+Object-oriented programming (OOP) vs Procedural Programming
+Member functions:
+static:
+this
+Constructor function
+overload: https://www.geeksforgeeks.org/c-sharp-method-overloading/
+Namespace
+Unified Modeling Language (UML)
+members accessibility (public, private)
+
+</code></pre>
+                </p>
+            </div>
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">interface
+            </div>
+
+            <div class="admonition note" id="interface">
+                <p class="admonition-title">interface</p>
+                <p>
+                <div class="fw-bold">
+                    interface (a concept in OOP, it is like a tag, not the user interface)
+                    <a target="_blank"
+                       href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    <span class="text-danger">Ctrl + . </span> to auto implement interface
+                </div>
+                <pre><code class="language-csharp">public interface IMIS3033
+{
+    public double finalGrade { get; set; }
+    public double finishHomeWorkOne();
+    public char mis3013LGCh { get; set; }
+}
+
+public class Student : IMIS3033
+{
+    public string name { get; set; }
+    public double finalGrade { get; set; }
+    public char mis3013LGCh { get; set; }
+
+    public double finishHomeWorkOne()
+    {
+        // finish homework
+        Console.WriteLine(this.name + "is finishing MIS 3033 homework");
+        return 80;
+    }
+}</code></pre>
+
+            </div>
+
+
+            <div class="mb-3"></div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">extra syntax</p>
+                <p>
+                <div class="fw-bold">
+                </div>
+                <pre><code class="language-csharp">Person p1;
+Student stu1;
+
+p1=new Person() { age=20, name="xinglong ju"};
+
+stu1 = new Student() { age=20,name="aiden tom",stuID="at2145"};
+
+Person p2;
+
+p2 = stu1;
+
+Student stu2;
+stu2 = (Student)p2;
+
+stu2=(Student)p1;// Error
+
+string numStr = "123";
+int numInt=Convert.ToInt32(numStr);
+
+
+public class Person
+{
+    public string name { get; set; }
+    public int age { get; set; }
+}
+
+public class Student:Person
+{
+    public string stuID { get; set; }
+}</code></pre>
+
+            </div>
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">delegate, lambda expression, event
+            </div>
+
+
+            <div class="admonition note" id="delegate">
+                <p class="admonition-title">delegate, lambda expression, event</p>
+                <p>
+                <div class="fw-bold">
+                    delegate, lambda expression, event<br/>
+                    Watch the following video tutorial<br/>
+                    <span class="text-danger">A very good tutorial on these three topics, about 30 minutes</span>
+
+
+                    <a target="_blank"
+                       href="https://www.linkedin.com/learning/c-sharp-delegates-events-and-lambdas-14503458/using-lambdas-as-delegates"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    delegate
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/delegates-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    event
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/events-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    <span class="text-danger">lambda expression</span>
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-csharp"> </code></pre>
+
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">delegate</p>
+                <p>
+                <div class="fw-bold">
+
+                    delegate
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/delegates-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-csharp">delegate
+// a delegate a blueprint for a function
+//This delegate can point to any method,
+//taking two integers and returning an
+//integer.
+MyDelegateName del1 = new MyDelegateName(Add);
+del1 = Add;
+
+Console.WriteLine(del1(3,4));
+
+del1 = new MyDelegateName(Multiply);
+del1 = Multiply;
+
+Console.WriteLine(del1(3, 4));
+
+
+int Add(int x, int y)
+{
+    return x + y;
+}
+int Multiply(int x, int y)
+{
+    return x * y;
+}
+
+public delegate int MyDelegateName(int x, int y);               </code></pre>
+
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">lambda expression</p>
+                <p>
+                <div class="fw-bold">
+
+                    <span class="text-danger">lambda expression</span>
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-csharp">lambda expression
+// Lambda expression is one way to create anonymous functions (usually short functions).
+Parameter => expression
+Parameter-list => expression
+Count => count + 2;
+Sum => sum + 2;
+n => n % 2 == 0
+
+MyDelegateName del1;
+
+del1 = x => x +2;
+
+
+Console.WriteLine(del1(3));
+
+
+public delegate int MyDelegateName(int x);                </code></pre>
+
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">event</p>
+                <p>
+                <div class="fw-bold">
+
+                    event
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/events-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                </div>
+                <pre><code class="language-csharp">event
+// Events enable a class or object to notify other classes or objects when something of interest occurs.
+public class MyClass
+{
+    public delegate void MyDelegate(string message);
+    public event MyDelegate MyEvent;
+}
+
+if (MyEvent != null)
+    MyEvent(message);
+
+MyClass myClass1 = new MyClass();
+MyClass.MyDelegate del = new MyClass.MyDelegate(myClass1_MyEvent);
+
+// you need to know how to add an event handler function as follows
+myClass1.MyEvent += del;
+                </code></pre>
+
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">example</p>
+                <p>
+                <div class="fw-bold">
+                    IComparer.Compare <a target="_blank"
+                                         href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.icomparer.compare?view=net-6.0"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                </div>
+                <pre><code class="language-csharp">
+string longStr = @"stu1 = new Student() { age=20,name=""aiden tom"",stuID=""at2145""};";
+
+Console.WriteLine(longStr.Count((x) => { return 'a' == x; }));
+Console.WriteLine(longStr.Count((x) => { return "abcd".Contains(x); }));
+
+
+List&#60;double&#62; gradesList = new List&#60;double&#62;();
+gradesList.Add(96.6);
+gradesList.Add(80.6);
+gradesList.Add(79.6);
+gradesList.Add(90.6);
+gradesList.Add(86.0);
+gradesList.Add(70.6);
+
+// sort from the smallest to largest
+gradesList.Sort((a, b) =>
+{
+    if (a > b) { return 1; }
+    else if (a < b) { return -1; }
+    else { return 0; }
+}
+);
+
+foreach(var grade in gradesList)
+{
+    Console.WriteLine(grade);
+}
+
+Console.WriteLine(gradesList.Max(x => x));
+                </code></pre>
+
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">extension function, var, anonymous
+                type
+            </div>
+
+            <div class="admonition note" id="extensionfun">
+                <p class="admonition-title">extension function, var, anonymous type</p>
+                <p>
+                <div class="fw-bold">extension function <a target="_blank"
+                                                           href="https://dotnettutorials.net/lesson/extension-methods-csharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                    var <a target="_blank"
+                           href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/declarations#var"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                         href="https://www.c-sharpcorner.com/article/what-does-var-mean-in-c-sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                    anonymous type <a target="_blank"
+                                      href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+                <pre><code class="language-csharp">
+// extension function/method example
+string testStr = "xinglong Ju";
+var a =ExtString.firstletter(testStr);
+
+a = testStr.firstletter();
+
+
+Console.WriteLine(a);
+
+public static class ExtString
+{
+    public static char firstletter(this string s)
+    {
+        return s[0];
+    }
+}
+
+//anonymous type
+var test = new { first_name = "xinglong ju", age = 20 };
+Console.WriteLine(test.first_name);
+                </code></pre>
+
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Pre Code</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Pre Code</p>
+                <p>
+                <pre><code class="language-csharp">
+public class Student
+{
+    public string name { get; set; }
+    public int age { get; set; }
+    public double weight { get; set; }
+    public double grade { get; set; }
+}
+                </code></pre>
+
+                <pre><code class="language-csharp">
+List&lt;Student&gt; stuList;
+stuList = new List &lt;Student&gt;();
+Student stu;
+
+stu = new Student() { name="aiden",age=19,weight=120.8,grade=90.8};
+stuList.Add(stu);
+
+stu = new Student() { name = "tom", age = 25, weight = 130.8, grade = 69.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "rose", age = 28, weight = 160.8, grade = 70.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "emily", age = 18, weight = 110.8, grade = 80.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "jackie", age = 30, weight = 100.8, grade = 75.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "masha", age = 23, weight = 180.8, grade = 88.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "dav", age = 19, weight = 170.8, grade = 92.8 };
+stuList.Add(stu);
+                </code></pre>
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">collection extension functions
+            </div>
+
+            <div class="admonition note" id="linq">
+                <p class="admonition-title">collection extension functions</p>
+                <p>
+                <div class="fw-bold">
+                    collection extension methods <a target="_blank"
+                                                    href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    These methods can help you to avoid writing loop to find min, max value, to order and to select,
+                    from a collection.
+                    <br/>
+                    Min()<br/>
+                    Max()<br/>
+                    MinBy()<br/>
+                    MaxBy()<br/>
+                    OrderBy() Ascending order<br/>
+                    OrderByDescending()<br/>
+                    Where()<br/>
+                    Select()
+                </div>
+                <pre><code class="language-csharp"></code></pre>
+                </p>
+            </div>
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Language-Integrated Query (LINQ)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">LINQ</p>
+                <p>
+                <div class="fw-bold">Language-Integrated Query (LINQ) <a target="_blank"
+                                                                         href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank"
+                       href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                    <br/>
+                </div>
+                <pre><code class="language-csharp">var result = from s in students
+             where s.name == "xinglong3" & s.age == 22
+             orderby s.name descending
+             //select s;
+             select new {n=s.name,};</code></pre>
+                </p>
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">JSON: JavaScript Object Notation
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">JSON</p>
+                <p>
+                <div class="fw-bold">
+                    JSON: JavaScript Object Notation
+                    <a target="_blank"
+                       href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-json">
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+
+                </code></pre>
+
+
+                <pre><code class="language-csharp">
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+File.Exists()
+
+// save to json file
+JsonSerializerOptions serialOption = new JsonSerializerOptions();
+serialOption.WriteIndented=true;
+string jsonStr = JsonSerializer.Serialize(students, serialOption);
+string filename = "students.json";
+File.WriteAllText(filename,jsonStr);
+
+// read from json file
+String filename = "students.json";
+string jsonStr=File.ReadAllText(filename);
+List&#60;Student&#62; stu = JsonSerializer.Deserialize&#60;List&#60;Student&#62;&#62;(jsonStr);
+
+
+                </code>
+                </pre>
+
+            </div>
+
+
+            <!--            Add things here-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
