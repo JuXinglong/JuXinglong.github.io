@@ -165,6 +165,8 @@
 
                     </ul>
                 </li>
+                <li><a href="#existingDB" class="h3">Connect to existing DB</a></li>
+
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <li>Keyword: static (static vs member) <a target="_blank" href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
                 <li><a href="#extensionfun">anonymous class type (anonymous data
@@ -256,6 +258,7 @@
 
                     <a href="#extensionfun" style="" class="btn btn-sm btn-warning">extension function</a>
                     <a href="#linq" style="" class="btn btn-sm btn-secondary">LINQ</a>
+                    <a href="#existingDB" style="" class="btn btn-sm btn-danger">Existing DB</a>
                     <a href="#exam1endshere" style="" class="btn btn-sm btn-dark">Exam 1 Ends</a>
                     <!--                    <a href="#linq" style="" class="btn btn-sm btn-danger">LINQ</a>-->
 
@@ -1330,6 +1333,24 @@ List&#60;Student&#62; stu = JsonSerializer.Deserialize&#60;List&#60;Student&#62;
                 </p>
                 <p>
                 <div class="fw-bold">
+
+                <div class="border-1">
+                    6 Steps
+                    <ol>
+                        <li>Console.WriteLine("DB");</li>
+                        <li>&lt;StartWorkingDirectory&gt;&#36;(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;</li>
+                        <li>
+                            add 3 packages<br/>
+                            Microsoft.EntityFrameworkCore.Design<br/>
+                            Microsoft.EntityFrameworkCore.Tools<br/>
+                            Microsoft.EntityFrameworkCore.Sqlite
+                        </li>
+                        <li>Define Database table class</li>
+                        <li>Define Database connection class</li>
+                        <li>Implement database manipulations.</li>
+                    </ol>
+                </div>
+
                     Entity framework (EF)
                     <a target="_blank"
                        href="https://www.linkedin.com/learning/introducing-entity-framework/working-with-an-existing-database"><span
@@ -1494,11 +1515,10 @@ stuDB.SaveChanges();
 
                     </div>
                 </div>
-                <span id="exam1endshere" class="h1 fw-bold text-danger">Exam 1 Contents Ends Here.</span>
-                <hr style="border-width: 5px;"/>
+
                 <div style="height: 200px;"></div>
 
-                <div class="h3 fw-bold text-danger">How to connect to existing database</div>
+                <div id="existingDB" class="h3 fw-bold text-danger">How to connect to existing database</div>
                 <div class="alert-info alert fw-bold">
                     Create classes based on existing Databases <a target="_blank"
                                                                   href="https://learn.microsoft.com/en-us/ef/core/cli/powershell"><span
@@ -1516,9 +1536,16 @@ stuDB.SaveChanges();
                     <div class="bg-warning ui-corner-all p-3">
 
 
-                        Scaffold-DbContext "Data Source=J:\Fall2022MIS3033\HW3_Pre\HW3_Pre\HW3_PreStudents.db"
+                        Scaffold-DbContext "Data Source=HW3_PreStudents.db"
                         Microsoft.EntityFrameworkCore.Sqlite -OutputDir Models -ContextDir Data -Context
                         StudentDbContext -DataAnnotations
+
+                        <br/>
+                        <br/>
+                        <br/>
+                        Scaffold-DbContext "Data Source=path_to_database_file"
+                        Microsoft.EntityFrameworkCore.Sqlite -OutputDir database_models_folder -ContextDir database_connection_folder -Context
+                        database_connection_class_name -DataAnnotations
 
                     </div>
                 </div>
@@ -1628,7 +1655,8 @@ public class Database: DbContext
                 </code></pre>
                 </div>
 
-
+                <span id="exam1endshere" class="h1 fw-bold text-danger">Exam 1 Contents Ends Here.</span>
+                <hr style="border-width: 5px;"/>
             </div>
 
 
