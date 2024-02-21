@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EXAM 1 NOTES</title>
+    <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
+    <!--    <link rel="stylesheet" href="../static/jquery-ui.min.css"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="../static/highlight/styles/atom-one-light.min.css"/>
+
+    <link rel="stylesheet" href="../static/site.css"/>
+    <link rel="icon" type="image/png" href="../static/img/cs.png"/>
+
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/bootstrap5.2/bootstrap.bundle.min.js"></script>
+    <script id="MathJax-script" async src="../static/MathJax/tex-mml-chtml.js"></script>
+    <!--    <script src="../static/fontawesome/all.min.js"></script>-->
+    <!--    <script src="../static/jquery-ui.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="../static/highlight/highlight.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js"></script>
+
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+
+    <script src="../static/site.js"></script>
+    <script>
+        function initPro()
+        {
+            hljs.highlightAll();
+            let floatpanel = document.querySelector("#floatpanel");
+            anime({
+                targets: floatpanel,
+                scale: {
+                    value: 0.5,
+                }
+
+            });
+
+
+        }
+
+
+        $(document).ready(initPro);
+    </script>
+</head>
+<body>
+<div class="container-md">
+    <div class="container-md">
+        <div class=" h3 pb-2 text-dark border-dark border-bottom">
+            MIS 3033 Exam 1 Notes
+        </div>
+
+        <div class="border-1 border border-dark rounded-3 mb-3">
+            <ul style="font-weight: bold;">
+
+                <!--                <li class=""><span class="text-danger">Sign the attendance sheet</span></li>-->
+                <!--                <li class=""><span class="text-danger">Attendance from next week will count for 5 bonus (extra) points to your final grade. Attendance is a bonus part. In order to receive the attendance bonus,you need to be on-campus to attend the lecture. There is no exception for this.</span></li>-->
+
+
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+
+                <li class="list-group-item"><span class="text-danger h2 fw-bold">EXAM 1 Contents</span></li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <!--                <li class="text-primary">HW2 due September 15, 2023, 5:00 PM</li>-->
+<!--                <li ><span class="text-danger h1 fw-bold">HW4 due February 16, 2024, 5:00 PM</span></li>-->
+<!--                <li ><span class="text-danger h1 fw-bold">HW5 due February 23, 2024, 5:00 PM</span></li>-->
+                <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li><span class="text-primary h2 fw-bold">Create a C# console app: LC0207</span>-->
+                <!--                </li>-->
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--                <li><span class="text-danger h1 fw-bold">Exam 1 - March 1, 2024, 9:30 AM to 10:20 AM</span>-->
+<!--                </li>-->
+
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--                <img src="../static/img/vs_word_wrap.png" style="width: 800px;"/>-->
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--                <li><span class="text-danger h1 fw-bold">February 9 lecture => We have a database assignment.</span>-->
+<!--                </li>-->
+<!--                <li class="list-group-item"><span class="text-danger h1 fw-bold">The assignment is due at 5:00 PM, February 9.</span></li>-->
+<!--                <li class="list-group-item"><span class="text-danger h1 fw-bold">No lecture on February 9.</span></li>-->
+<!--                <li class="list-group-item"><span class="text-danger h1 fw-bold">It is long. Start early.</span></li>-->
+<!--                <li class="list-group-item"><span class="text-danger h1 fw-bold">No lecture code prepare for February 12. We are going to start from the assignment code on February 12.</span></li>-->
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--&lt;!&ndash;                <li class="list-group-item"><span>&nbsp;</span></li>&ndash;&gt;-->
+<!--                &lt;!&ndash;                <li><span class="text-primary h6 fw-bold">HW2 due September 15, 2023, 5:00 PM</span></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><span class="text-primary h6 fw-bold">HW3 due September 22, 2023, 5:00 PM</span></li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <li class="list-group-item"><span>&nbsp;</span></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><span class="text-success h3 fw-bold">One handout today. The handout is exam 1 practice. It is for next Monday.</span></li>&ndash;&gt;-->
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--                <li>-->
+<!--                    <span class="text-danger">Exam 1 on September 27, 2023, 10:30 AM to 11:45 AM, close on 11:50 AM.</span>-->
+<!--                    <ul>-->
+<!--                        <li>Assigned Seats</li>-->
+<!--                        <li><a target="_blank" href="https://juxinglong.github.io/mis3033_fall2023/mis3033fall2023_Exam1.html">The instructor provide notes (Click here for Exam 1 Notes).</a> <span class="text-danger">You are not allowed to use other notes.</span></li>-->
+<!--                        <li class="text-danger"> Bring your own computer  (Bring the charger)</li>-->
+<!--                        <li>ONE coding problem with multiple questions in Exam 1 on SQLite Database Manipulations.</li>-->
+<!--                        <li>The problems or questions will be similar to <a href="https://canvas.ou.edu/courses/297786/assignments/2384501?module_item_id=5745951" target="_blank">📙HW 3-SqliteDatabaseManipulations</a></li>-->
+<!--                        <li>Photo ID (OU student ID, driver license, or other photo ID with date birth)</li>-->
+<!--                        <li>On campus only</li>-->
+<!--                        <li>No website exploring other than this Exam Canvas page</li>-->
+<!--                        <li  class="text-danger">No electronic materials (You could NOT look at your previous code on your computer. No electronic files allowed, such as previous slides and previous codes.)</li>-->
+<!--                        <li>After the exam, you need to return the exam papers back to me.</li>-->
+
+<!--                        <li>When you leave, you need to write down the time you leave on the attendance sheet.</li>-->
+<!--                        <li>Exam 1 grades will be posted before Friday unless there are special situations. If you have any questions, please send me an email xinglong.ju@ou.edu .</li>-->
+
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--                <li><a target="_blank" href="https://juxinglong.github.io/mis3033_spring2023/mis3033spring2023_main.html">MIS 3033 Spring 2023 Schedule</a></li>-->
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--                <li><span class="text-danger">Schedule before Exam 1</span>-->
+<!--                    <ul>-->
+<!--                        <li>September 11: Create a Student database</li>-->
+<!--                        <li>September 13: Create an Order database  and database manipulations</li>-->
+<!--                        <li>September 18: Create a grade database and database manipulations</li>-->
+<!--                        <li>September 20: Create a city database and database manipulations</li>-->
+<!--                        <li>September 22: HW 3: Create a Receipt database and database manipulations </li>-->
+<!--                        <li>September 25: Exam 1 Practice: Create a student database and database manipulations</li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+<!--                <li><a class="btn btn-sm btn-outline-primary" target="_blank" href="https://github.com/">GitHub</a></li>-->
+<!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <!--                <li><span class="text-danger">Exam 1 February 22, 2023, 1:00 PM to 2:45 PM</span>-->
+                <!--                    <ul>-->
+                <!--&lt;!&ndash;                        <li>variables, operators, expressions</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <li>if else conditional</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <li>loops</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <li class="list-group-item"><span>&nbsp;</span> </li>&ndash;&gt;-->
+                <!--                        <li>Closed-book and closed-notes</li>-->
+                <!--                        <li>Problems similar to HW3 (Coding problems)</li>-->
+                <!--                        <li>Assigned Seats</li>-->
+                <!--                        <li>Bring your own computer (Bring the charger)</li>-->
+
+                <!--                        &lt;!&ndash;                        <li>ONE coding problem in Exercise 1 on Variables, Expressions & Statements.</li>&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                        <li>The problems or questions will be similar to Homework 1 Problem and Exercise 1 Practice Problem</li>&ndash;&gt;-->
+
+
+                <!--                        <li>Photo ID (OU student ID, driver license, or other photo ID with date birth)</li>-->
+                <!--                        <li>On campus only</li>-->
+                <!--                        <li>No website exploring other than this Exam Canvas page</li>-->
+                <!--                        <li>No electronic materials (You could NOT look at your previous code on your computer)</li>-->
+
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+                <!--                <li>HW2 due September 14, 2022, 5:00 PM</li>-->
+
+                <li><a href="#reviewa" class="h3">Review: lambda expression, list, simple vs complex</a></li>
+                <li><a href="#ef" class="h3">Entity framework (use C# to communicate with Database)</a>
+                    <ul>
+                        <li>persist: save to hard drive (files)</li>
+                        <li>SQLite database</li>
+                        <li>Design database tables (primary key)</li>
+                        <li>Database connection</li>
+                        <li>query, add, delete, modify records</li>
+
+
+                    </ul>
+                </li>
+                <li><a href="#existingDB" class="h3">Connect to existing DB</a></li>
+
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li>Keyword: static (static vs member) <a target="_blank" href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static"><span class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                <li><a href="#extensionfun">anonymous class type (anonymous data
+                    type)</a></li>
+
+                <li><a href="#json" class="h4">JSON</a></li>
+                <li><a href="#delegate" class="h4">delegate, lambda expression</a></li>
+                <li><a href="#linq" class="h4">collection extension functions & LINQ</a></li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li><a href="#class" class="btn btn-sm btn-primary">Class</a>
+                    <ul>
+                        <li>get, set</li>
+                        <li>namespace</li>
+                        <li>inherit</li>
+                        <li>override: ToString() function</li>
+                        <li>overload</li>
+                        <li><a href="#interface" class="btn btn-sm btn-outline-success">interface</a></li>
+                    </ul>
+                </li>
+
+
+                <li><a href="#extensionfun" class="btn btn-sm btn-outline-dark">keyword: var</a></li>
+                <li><a href="#extensionfun" class="btn btn-sm btn-warning">anonymous class type (anonymous data
+                    type)</a></li>
+
+                <!--                <li>JSON: JavaScript Object Notation</li>-->
+                <!--                <li>Entity framework</li>-->
+
+
+            </ul>
+
+            <div id="floatpanel"
+                 style="position: fixed;right:0px;top:-80px;display: flex;flex-direction: column;align-items: end;justify-content: start;">
+                <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
+                </button>
+                <script>
+                    {
+                        "use strict";
+                        var m = 1;
+                        let foldbtn = document.querySelector("#foldbtn");
+                        foldbtn.addEventListener("click", (e) =>
+                        {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 0.0,
+                                }
+                            });
+                            //floatmenu.style.display = "none";
+                            let expandbtn = document.querySelector("#expandbtn");
+                            expandbtn.style.display = "block";
+                            foldbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <button id="expandbtn" class="btn btn-sm btn-outline-secondary" style="display: none;"><i
+                        class="bi bi-chevron-double-down"></i></button>
+                <script>
+                    {
+                        "use strict";
+                        let expandbtn = document.querySelector("#expandbtn");
+
+                        expandbtn.addEventListener("click", (e) =>
+                        {
+                            let floatmenu = document.querySelector("#floatmenu");
+                            anime({
+                                targets: floatmenu,
+                                scale: {
+                                    value: 1.0,
+                                }
+                            });
+                            //floatmenu.style.display = "block";
+                            let foldbtn = document.querySelector("#foldbtn");
+                            foldbtn.style.display = "block";
+                            expandbtn.style.display = "none";
+                        });
+                    }
+                </script>
+                <div id="floatmenu" style="display: flex;flex-direction: column;">
+                    <a href="#top" style="margin-bottom: 1px;" class="btn btn-sm btn-outline-dark">Go to Top</a>
+
+                    <a href="#reviewa" style="margin-bottom: 1px;" class="btn  btn-sm btn-danger">Review</a>
+                    <a href="#ef" style="margin-bottom: 1px;" class="btn  btn-sm btn-primary">Entity framework</a>
+                    <a href="#json" style="margin-bottom: 1px;" class="btn  btn-sm btn-info">JSON</a>
+                    <a href="#interface" style="margin-bottom: 1px;" class="btn  btn-sm btn-success"
+                       class="">interface</a>
+                    <a href="#delegate" style="margin-bottom: 1px;" class="btn  btn-sm btn-danger">lamda expression</a>
+
+                    <a href="#extensionfun" style="" class="btn btn-sm btn-warning">extension function</a>
+                    <a href="#linq" style="" class="btn btn-sm btn-secondary">LINQ</a>
+                    <a href="#existingDB" style="" class="btn btn-sm btn-danger">Existing DB</a>
+                    <a href="#exam1endshere" style="" class="btn btn-sm btn-dark">Exam 1 Ends</a>
+                    <!--                    <a href="#linq" style="" class="btn btn-sm btn-danger">LINQ</a>-->
+
+
+                </div>
+                <!--                <a href="#list" style=""  class="btn btn-sm btn-outline-danger">List</a><br/>-->
+                <!--                <a href="#dictionary" style="width: 100px;"  class="btn btn-sm btn-outline-info">Dictionary</a>-->
+            </div>
+        </div>
+
+        <div>
+
+
+            <h3 class="text-danger mb-3">EXAM 1 Contents</h3>
+
+            <div id="reviewa" class="h4 text-danger border-bottom border-danger fw-bold border-2">Review
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Review a few concepts</p>
+                <div>
+                    <span class="fw-bold text-primary h5">What is lamda expression?</span><br/>
+                    <img src="../static/img/fasion.png" style="width: 400px;"/>
+                    <br/><br/>
+
+                    <span class="fw-bold text-primary h5">Where are the variables when we run the program/app? Simple? Complex?</span> <span class="fw-bold text-success h5">Computer memory</span><br/>
+                    <span class="fw-bold text-primary h5">Where will happen to the variables when we close the program/app? Simple? Complex?</span> <span class="fw-bold text-success h5">Gone</span><br/>
+                    <span class="fw-bold text-primary h5">When we save the variables to the files, what do we call this process?</span> <span class="fw-bold text-success h5">Persist</span><br/><br/>
+
+                    <span class="fw-bold text-primary h5">Simple VS Complex</span><br/>
+                    <span class="fw-bold text-primary h5">Simple variables:</span>  <span class="fw-bold text-success h5">int double bool char</span><br/>
+                    <span class="fw-bold text-primary h5">In programming, most of the variables are complex? Database table?</span><br/><br/>
+
+                    <span class="fw-bold text-primary h5">List of complex variables</span><br/>
+                    <img src="../static/img/class2.svg" style="width: 400px;"/>
+                    <hr/>
+                    <img src="../static/img/houses2.svg" style="width: 400px;"/>
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <!--            Precedence (Order of operators) ends-->
+
+
+            <div class="mb-3"></div>
+
+            <!--            Precedence (Order of operators) starts-->
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Precedence (Order of operators)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Precedence (Order of operators)</p>
+                <p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">PRECEDENCE
+                        </th>
+                        <th scope="col">OPERATORS
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Highest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">[] () .</span> -> ++ −− (used as prefixes) + – (unary),
+                            <span class="text-danger fw-bold h5">!</span>,
+                            ˜
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="11" class="align-middle">
+                            <i class="fas fa-arrows-alt-v fa-8x text-primary"></i>
+                            <!--                        <img src="../static/img/double-arrow.png" style="height: 200px;"/>-->
+                        </th>
+                        <td><span class="text-danger fw-bold h5">* / %</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">+ –</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><< >>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">< > <= >=
+                        </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">== !=</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>^
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>|
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">&&</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">||</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="text-danger fw-bold h4">=</span> *= /= %= += −= <<= >>= &= ^= |=
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Lowest
+                        </th>
+                        <td><span class="text-danger fw-bold h4">++ ––</span> (used as suffixes)
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <!--            Precedence (Order of operators) ends-->
+
+
+            <div class="mb-3"></div>
+
+
+            <div class="admonition note" id="class">
+                <p class="admonition-title">Define a complex datatype using class keyword</p>
+                <p>
+                <div class="fw-bold">
+                    class <a target="_blank"
+                             href="https://www.w3schools.com/cs/cs_oop.php"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_classes.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_class_members.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_constructors.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_access_modifiers.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_properties.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_inheritance.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_polymorphism.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_abstract.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.w3schools.com/cs/cs_interface.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                </div>
+                <pre><code class="language-csharp">Define a new complex data type Student using class
+class member
+class NewDataTypeName
+{
+}
+Member functions
+static
+this
+namespace
+
+Data fields in the new data type
+. : new operator, member access operator
+Public: access modifier
+
+
+Student xingStu=new Student();
+xingStu.name = "Xinglong Ju";
+xingStu.finalGrade = 90.6;
+double fg = xingStu.CalFinalGrade();
+class Student
+{
+    public string name;
+    public string id;
+    public int age;
+    public double finalGrade;
+    public double exam1Grade;
+    public double exam2Grade;
+    public double exam3Grade;
+
+    public char CalLetterGrade()
+    {
+        return 'A';
+    }
+
+    public double CalFinalGrade()
+    {
+        return finalGrade;
+    }
+}</code></pre>
+                </p>
+            </div>
+
+            <div class="admonition note" id="datetime">
+                <p class="admonition-title">DateTime & TimeSpan</p>
+                <p>
+                <div class="fw-bold">
+                    DateTime & TimeSpan <a target="_blank"
+                                           href="https://www.c-sharpcorner.com/article/datetime-in-c-sharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank"
+                       href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                </div>
+                <pre><code class="language-csharp">DateTime dt1 = new DateTime(2022, 5, 4, 13, 20, 0);
+DateTime dt2 = new DateTime(2022, 1, 18, 12, 30, 0);
+
+Console.WriteLine(dt1.Year);
+Console.WriteLine(dt1.Day);
+
+Console.WriteLine(dt2);
+Console.WriteLine(dt2.ToString());
+Console.WriteLine(dt1.ToString("MMMM dd, yyyy"));
+
+
+TimeSpan ts=dt1 - dt2;
+ts.Days // int
+ts.Minutes // int
+ts.TotalDays // double
+
+DateTime tempDate = new DateTime(2015, 12, 08); // creating date object with 8th December 2015
+Console.WriteLine(tempDate.ToString("MMMM dd, yyyy")); //December 08, 2105.
+</code></pre>
+                <table border="1" cellspacing="0" style="border-collapse:collapse; width:100%">
+                    <tbody>
+                    <tr>
+                        <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                                style="color:#ffffff">Specifier</span></td>
+                        <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                                style="color:#ffffff">Description</span></td>
+                        <td style="background-color:#0086dc; border-style:dashed; border-width:1px"><span
+                                style="color:#ffffff">Output</span></td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">d</td>
+                        <td style="border-style:dashed; border-width:1px">Short Date</td>
+                        <td style="border-style:dashed; border-width:1px">12/8/2015</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">D</td>
+                        <td style="border-style:dashed; border-width:1px">Long Date</td>
+                        <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">t</td>
+                        <td style="border-style:dashed; border-width:1px">Short Time</td>
+                        <td style="border-style:dashed; border-width:1px">3:15 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">T</td>
+                        <td style="border-style:dashed; border-width:1px">Long Time</td>
+                        <td style="border-style:dashed; border-width:1px">3:15:19 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">f</td>
+                        <td style="border-style:dashed; border-width:1px">Full date and time</td>
+                        <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015 3:15 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">F</td>
+                        <td style="border-style:dashed; border-width:1px">Full date and time (long)</td>
+                        <td style="border-style:dashed; border-width:1px">Tuesday, December 08, 2015 3:15:19 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">g</td>
+                        <td style="border-style:dashed; border-width:1px">Default date and time</td>
+                        <td style="border-style:dashed; border-width:1px">12/8/2015 15:15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">G</td>
+                        <td style="border-style:dashed; border-width:1px">Default date and time (long)</td>
+                        <td style="border-style:dashed; border-width:1px">12/8/2015 15:15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">M</td>
+                        <td style="border-style:dashed; border-width:1px">Day / Month</td>
+                        <td style="border-style:dashed; border-width:1px">8-Dec</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">r</td>
+                        <td style="border-style:dashed; border-width:1px">RFC1123 date</td>
+                        <td style="border-style:dashed; border-width:1px">Tue, 08 Dec 2015 15:15:19 GMT</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">s</td>
+                        <td style="border-style:dashed; border-width:1px">Sortable date/time</td>
+                        <td style="border-style:dashed; border-width:1px">2015-12-08T15:15:19</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">u</td>
+                        <td style="border-style:dashed; border-width:1px">Universal time, local timezone</td>
+                        <td style="border-style:dashed; border-width:1px">2015-12-08 15:15:19Z</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">Y</td>
+                        <td style="border-style:dashed; border-width:1px">Month / Year</td>
+                        <td style="border-style:dashed; border-width:1px">December, 2015</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">dd</td>
+                        <td style="border-style:dashed; border-width:1px">Day</td>
+                        <td style="border-style:dashed; border-width:1px">8</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">ddd</td>
+                        <td style="border-style:dashed; border-width:1px">Short Day Name</td>
+                        <td style="border-style:dashed; border-width:1px">Tue</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">dddd</td>
+                        <td style="border-style:dashed; border-width:1px">Full Day Name</td>
+                        <td style="border-style:dashed; border-width:1px">Tuesday</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">hh</td>
+                        <td style="border-style:dashed; border-width:1px">2 digit hour</td>
+                        <td style="border-style:dashed; border-width:1px">3</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">HH</td>
+                        <td style="border-style:dashed; border-width:1px">2 digit hour (24 hour)</td>
+                        <td style="border-style:dashed; border-width:1px">15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">mm</td>
+                        <td style="border-style:dashed; border-width:1px">2 digit minute</td>
+                        <td style="border-style:dashed; border-width:1px">15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">MM</td>
+                        <td style="border-style:dashed; border-width:1px">Month</td>
+                        <td style="border-style:dashed; border-width:1px">12</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">MMM</td>
+                        <td style="border-style:dashed; border-width:1px">Short Month name</td>
+                        <td style="border-style:dashed; border-width:1px">Dec</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">MMMM</td>
+                        <td style="border-style:dashed; border-width:1px">Month name</td>
+                        <td style="border-style:dashed; border-width:1px">December</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">ss</td>
+                        <td style="border-style:dashed; border-width:1px">seconds</td>
+                        <td style="border-style:dashed; border-width:1px">19</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">fff</td>
+                        <td style="border-style:dashed; border-width:1px">milliseconds</td>
+                        <td style="border-style:dashed; border-width:1px">120</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">FFF</td>
+                        <td style="border-style:dashed; border-width:1px">milliseconds without trailing zero</td>
+                        <td style="border-style:dashed; border-width:1px">12</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">tt</td>
+                        <td style="border-style:dashed; border-width:1px">AM/PM</td>
+                        <td style="border-style:dashed; border-width:1px">PM</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">yy</td>
+                        <td style="border-style:dashed; border-width:1px">2 digit year</td>
+                        <td style="border-style:dashed; border-width:1px">15</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">yyyy</td>
+                        <td style="border-style:dashed; border-width:1px">4 digit year</td>
+                        <td style="border-style:dashed; border-width:1px">2015</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">:</td>
+                        <td style="border-style:dashed; border-width:1px">Hours, minutes, seconds separator, e.g.
+                            {0:hh:mm:ss}
+                        </td>
+                        <td style="border-style:dashed; border-width:1px">9:08:59</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style:dashed; border-width:1px">/</td>
+                        <td style="border-style:dashed; border-width:1px">Year, month , day separator, e.g.
+                            {0:dd/MM/yyyy}
+                        </td>
+                        <td style="border-style:dashed; border-width:1px">8/4/2007</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </p>
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="admonition note" id="moreclass">
+                <p class="admonition-title">More about class</p>
+                <p>
+                <div class="fw-bold">
+                    <ul>
+                        <li>get, set <a target="_blank"
+                                        href="https://docs.microsoft.com/en-us/dotnet/csharp/properties"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <ul>
+                                <li>public string FirstName { get; set; }</li>
+                                <li>public string FirstName
+                                    {
+                                    get { return _firstName; }
+                                    set { _firstName = value; }
+                                    }
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>class inherit <a target="_blank"
+                                             href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <ul>
+                                <li>Object datatype(class) <a target="_blank"
+                                                              href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            </ul>
+                        </li>
+
+                        <li>base: (parent)</li>
+                        <li>class inherit <a target="_blank"
+                                             href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract"><span
+                                class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <ul>
+                                <li>abstract for class and method <a target="_blank"
+                                                                     href="https://www.c-sharpcorner.com/UploadFile/93126e/importance-and-use-of-versioning-in-C-Sharp/"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                                </li>
+                                <li>virtual for method only <a target="_blank"
+                                                               href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>override, overload functions
+                            <ul>
+                                <li>overload <a target="_blank"
+                                                href="https://www.geeksforgeeks.org/c-sharp-method-overloading/"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                                <li>ToString() function <a target="_blank"
+                                                           href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                                <li>Equals() function <a target="_blank"
+                                                         href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-6.0"><span
+                                        class="bi bi-box-arrow-up-right text-primary"></span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            interface (a concept in OOP, it is like a tag, not the user interface)
+                            <a target="_blank"
+                               href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+                            <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                        </li>
+                        <li>Terminology: polymorphism
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <pre><code class="language-csharp">Terminology:
+Encapsulation
+Object-oriented programming (OOP) vs Procedural Programming
+Member functions:
+static:
+this
+Constructor function
+overload: https://www.geeksforgeeks.org/c-sharp-method-overloading/
+Namespace
+Unified Modeling Language (UML)
+members accessibility (public, private)
+
+</code></pre>
+                </p>
+            </div>
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">interface
+            </div>
+
+            <div class="admonition note" id="interface">
+                <p class="admonition-title">interface</p>
+                <p>
+                <div class="fw-bold">
+                    interface (a concept in OOP, it is like a tag, not the user interface)
+                    <a target="_blank"
+                       href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank" href="https://www.w3schools.com/cs/cs_interface.php"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank" href="https://www.tutorialsteacher.com/csharp/csharp-interface"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    <span class="text-danger">Ctrl + . </span> to auto implement interface
+                </div>
+                <pre><code class="language-csharp">public interface IMIS3033
+{
+    public double finalGrade { get; set; }
+    public double finishHomeWorkOne();
+    public char mis3013LGCh { get; set; }
+}
+
+public class Student : IMIS3033
+{
+    public string name { get; set; }
+    public double finalGrade { get; set; }
+    public char mis3013LGCh { get; set; }
+
+    public double finishHomeWorkOne()
+    {
+        // finish homework
+        Console.WriteLine(this.name + "is finishing MIS 3033 homework");
+        return 80;
+    }
+}</code></pre>
+
+            </div>
+
+
+            <div class="mb-3"></div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">extra syntax</p>
+                <p>
+                <div class="fw-bold">
+                </div>
+                <pre><code class="language-csharp">Person p1;
+Student stu1;
+
+p1=new Person() { age=20, name="xinglong ju"};
+
+stu1 = new Student() { age=20,name="aiden tom",stuID="at2145"};
+
+Person p2;
+
+p2 = stu1;
+
+Student stu2;
+stu2 = (Student)p2;
+
+stu2=(Student)p1;// Error
+
+string numStr = "123";
+int numInt=Convert.ToInt32(numStr);
+
+
+public class Person
+{
+    public string name { get; set; }
+    public int age { get; set; }
+}
+
+public class Student:Person
+{
+    public string stuID { get; set; }
+}</code></pre>
+
+            </div>
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">delegate, lambda expression, event
+            </div>
+
+
+            <div class="admonition note" id="delegate">
+                <p class="admonition-title">delegate, lambda expression, event</p>
+                <p>
+                <div class="fw-bold">
+                    delegate, lambda expression, event<br/>
+                    Watch the following video tutorial<br/>
+                    <span class="text-danger">A very good tutorial on these three topics, about 30 minutes</span>
+
+
+                    <a target="_blank"
+                       href="https://www.linkedin.com/learning/c-sharp-delegates-events-and-lambdas-14503458/using-lambdas-as-delegates"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    delegate
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/delegates-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    event
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/events-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    <span class="text-danger">lambda expression</span>
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-csharp"> </code></pre>
+
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">delegate</p>
+                <p>
+                <div class="fw-bold">
+
+                    delegate
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/delegates-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-csharp">delegate
+// a delegate a blueprint for a function
+//This delegate can point to any method,
+//taking two integers and returning an
+//integer.
+MyDelegateName del1 = new MyDelegateName(Add);
+del1 = Add;
+
+Console.WriteLine(del1(3,4));
+
+del1 = new MyDelegateName(Multiply);
+del1 = Multiply;
+
+Console.WriteLine(del1(3, 4));
+
+
+int Add(int x, int y)
+{
+    return x + y;
+}
+int Multiply(int x, int y)
+{
+    return x * y;
+}
+
+public delegate int MyDelegateName(int x, int y);               </code></pre>
+
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">lambda expression</p>
+                <p>
+                <div class="fw-bold">
+
+                    <span class="text-danger">lambda expression</span>
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <a target="_blank"
+                       href="https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-csharp">lambda expression
+// Lambda expression is one way to create anonymous functions (usually short functions).
+Parameter => expression
+Parameter-list => expression
+Count => count + 2;
+Sum => sum + 2;
+n => n % 2 == 0
+
+MyDelegateName del1;
+
+del1 = x => x +2;
+
+
+Console.WriteLine(del1(3));
+
+
+public delegate int MyDelegateName(int x);                </code></pre>
+
+            </div>
+
+
+            <div class="admonition note">
+                <p class="admonition-title">event</p>
+                <p>
+                <div class="fw-bold">
+
+                    event
+                    <a target="_blank"
+                       href="https://www.c-sharpcorner.com/UploadFile/Ashush/events-in-C-Sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                </div>
+                <pre><code class="language-csharp">event
+// Events enable a class or object to notify other classes or objects when something of interest occurs.
+public class MyClass
+{
+    public delegate void MyDelegate(string message);
+    public event MyDelegate MyEvent;
+}
+
+if (MyEvent != null)
+    MyEvent(message);
+
+MyClass myClass1 = new MyClass();
+MyClass.MyDelegate del = new MyClass.MyDelegate(myClass1_MyEvent);
+
+// you need to know how to add an event handler function as follows
+myClass1.MyEvent += del;
+                </code></pre>
+
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">example</p>
+                <p>
+                <div class="fw-bold">
+                    IComparer.Compare <a target="_blank"
+                                         href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.icomparer.compare?view=net-6.0"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                </div>
+                <pre><code class="language-csharp">
+string longStr = @"stu1 = new Student() { age=20,name=""aiden tom"",stuID=""at2145""};";
+
+Console.WriteLine(longStr.Count((x) => { return 'a' == x; }));
+Console.WriteLine(longStr.Count((x) => { return "abcd".Contains(x); }));
+
+
+List&#60;double&#62; gradesList = new List&#60;double&#62;();
+gradesList.Add(96.6);
+gradesList.Add(80.6);
+gradesList.Add(79.6);
+gradesList.Add(90.6);
+gradesList.Add(86.0);
+gradesList.Add(70.6);
+
+// sort from the smallest to largest
+gradesList.Sort((a, b) =>
+{
+    if (a > b) { return 1; }
+    else if (a < b) { return -1; }
+    else { return 0; }
+}
+);
+
+foreach(var grade in gradesList)
+{
+    Console.WriteLine(grade);
+}
+
+Console.WriteLine(gradesList.Max(x => x));
+                </code></pre>
+
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">extension function, var, anonymous
+                type
+            </div>
+
+            <div class="admonition note" id="extensionfun">
+                <p class="admonition-title">extension function, var, anonymous type</p>
+                <p>
+                <div class="fw-bold">extension function <a target="_blank"
+                                                           href="https://dotnettutorials.net/lesson/extension-methods-csharp/"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                    var <a target="_blank"
+                           href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/declarations#var"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a> <a target="_blank"
+                                                                                         href="https://www.c-sharpcorner.com/article/what-does-var-mean-in-c-sharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                    anonymous type <a target="_blank"
+                                      href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a></div>
+                <pre><code class="language-csharp">
+// extension function/method example
+string testStr = "xinglong Ju";
+var a =ExtString.firstletter(testStr);
+
+a = testStr.firstletter();
+
+
+Console.WriteLine(a);
+
+public static class ExtString
+{
+    public static char firstletter(this string s)
+    {
+        return s[0];
+    }
+}
+
+//anonymous type
+var test = new { first_name = "xinglong ju", age = 20 };
+Console.WriteLine(test.first_name);
+                </code></pre>
+
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Pre Code</div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Pre Code</p>
+                <p>
+                <pre><code class="language-csharp">
+public class Student
+{
+    public string name { get; set; }
+    public int age { get; set; }
+    public double weight { get; set; }
+    public double grade { get; set; }
+}
+                </code></pre>
+
+                <pre><code class="language-csharp">
+List&lt;Student&gt; stuList;
+stuList = new List &lt;Student&gt;();
+Student stu;
+
+stu = new Student() { name="aiden",age=19,weight=120.8,grade=90.8};
+stuList.Add(stu);
+
+stu = new Student() { name = "tom", age = 25, weight = 130.8, grade = 69.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "rose", age = 28, weight = 160.8, grade = 70.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "emily", age = 18, weight = 110.8, grade = 80.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "jackie", age = 30, weight = 100.8, grade = 75.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "masha", age = 23, weight = 180.8, grade = 88.8 };
+stuList.Add(stu);
+
+stu = new Student() { name = "dav", age = 19, weight = 170.8, grade = 92.8 };
+stuList.Add(stu);
+                </code></pre>
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">collection extension functions
+            </div>
+
+            <div class="admonition note" id="linq">
+                <p class="admonition-title">collection extension functions</p>
+                <p>
+                <div class="fw-bold">
+                    collection extension methods <a target="_blank"
+                                                    href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    These methods can help you to avoid writing loop to find min, max value, to order and to select,
+                    from a collection.
+                    <br/>
+                    Min()<br/>
+                    Max()<br/>
+                    MinBy()<br/>
+                    MaxBy()<br/>
+                    Average()<br/>
+                    OrderBy() Ascending order<br/>
+                    OrderByDescending()<br/>
+                    Where()<br/>
+                    Select()
+                </div>
+                <pre><code class="language-csharp"></code></pre>
+                </p>
+            </div>
+
+            <div class="mb-3"></div>
+
+            <div class="h4 text-danger border-bottom border-danger fw-bold border-2">Language-Integrated Query (LINQ)
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">LINQ</p>
+                <p>
+                <div class="fw-bold">Language-Integrated Query (LINQ) <a target="_blank"
+                                                                         href="https://www.linkedin.com/learning/c-sharp-essential-training-2-generics-collections-and-linq"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank"
+                       href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                    <br/>
+                </div>
+                <pre><code class="language-csharp">var result = from s in students
+             where s.name == "xinglong3" & s.age == 22
+             orderby s.name descending
+             //select s;
+             select new {n=s.name,};</code></pre>
+                </p>
+            </div>
+
+
+            <div class="mb-3"></div>
+
+            <div id="json" class="h4 text-danger border-bottom border-danger fw-bold border-2">JSON: JavaScript Object Notation
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">JSON</p>
+                <p>
+                <div class="fw-bold">
+                    JSON: JavaScript Object Notation
+                    <a target="_blank"
+                       href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    C# text file manipulations
+                    <a target="_blank"
+                       href="https://www.techiedelight.com/append-text-to-existing-file-csharp/"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+
+                </div>
+                <pre><code class="language-json">
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+
+                </code></pre>
+
+
+                <pre><code class="language-csharp">
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+File.Exists()
+
+// save to json file
+JsonSerializerOptions serialOption = new JsonSerializerOptions();
+serialOption.WriteIndented=true;
+string jsonStr = JsonSerializer.Serialize(students, serialOption);
+string filename = "students.json";
+File.WriteAllText(filename,jsonStr);
+
+// read from json file
+String filename = "students.json";
+string jsonStr=File.ReadAllText(filename);
+List&#60;Student&#62; stu = JsonSerializer.Deserialize&#60;List&#60;Student&#62;&#62;(jsonStr);
+
+
+                </code>
+                </pre>
+
+            </div>
+
+            <div id="ef" class="h4 text-danger border-bottom border-danger fw-bold border-2">Entity framework
+            </div>
+
+            <div class="admonition note">
+                <p class="admonition-title">Entity framework
+                </p>
+                <p>
+                <div class="fw-bold">
+
+                <div class="border-1">
+                    6 Steps
+                    <ol>
+                        <li>Console.WriteLine("DB");</li>
+                        <li>&lt;StartWorkingDirectory&gt;&#36;(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;</li>
+                        <li>
+                            add 3 packages<br/>
+                            Microsoft.EntityFrameworkCore.Design<br/>
+                            Microsoft.EntityFrameworkCore.Tools<br/>
+                            Microsoft.EntityFrameworkCore.Sqlite
+                        </li>
+                        <li>Define Database table class</li>
+                        <li>Define Database connection class</li>
+                        <li>
+                            Create and update the database<br/>
+                            Package Manager Console<br/>
+                            <br/>
+                            add-migration any_valid_description -context StuDB<br/>
+                            update-database -context StuDB
+                        </li>
+                        <li>Implement database manipulations.</li>
+                    </ol>
+                </div>
+
+                    Entity framework (EF)
+                    <a target="_blank"
+                       href="https://www.linkedin.com/learning/introducing-entity-framework/working-with-an-existing-database"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <br/>
+                    A set of predefined classes to help to connect to and manipulate databases
+
+                    <div class="alert alert-info">
+                        SQLite is a light-weight database. <a target="_blank"
+                                                              href="https://www.sqlite.org/index.html"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a> <br/>
+                        <!--                        <br/>-->
+                        <!--                        DBeaver Community Version <a target="_blank" href="https://dbeaver.io/download/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>  <a class="btn btn-sm btn-primary" href="https://dbeaver.io/download/" target="_blank"> Download DBeaver</a>-->
+
+                        <!--                        <br/>-->
+                        <!--                        SQLiteStudio <a target="_blank" href="https://sqlitestudio.pl/"><span class="bi bi-box-arrow-up-right text-primary"></span></a>  <a class="btn btn-sm btn-primary" href="https://sqlitestudio.pl/" target="_blank"> Download SQLiteStudio</a>-->
+
+
+                        <div class="h5 fw-bold text-danger">
+                            DataGrip
+                            <a target="_blank" href="https://www.jetbrains.com/datagrip/"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a> <a
+                                class="btn btn-sm btn-primary" href="https://www.jetbrains.com/datagrip/download/"
+                                target="_blank"> Download DataGrip</a>
+                            <br/>
+                            How to get a free license? Use your OU email address to apply for a license.
+                            <a target="_blank" href="https://www.jetbrains.com/shop/eform/students"><span
+                                    class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                            <a class="btn btn-sm btn-primary" href="https://www.jetbrains.com/shop/eform/students"
+                               target="_blank">Get a free license</a>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="alert-info alert fw-bold">
+                    <ul>
+                        <li><span
+                                class="h5 fw-bold text-danger">Double-Left-Click the project name in Solution Explorer</span>
+                            <img src="../static/img/xml_i.jpg" style="width: 1000px;"/>
+                        </li>
+
+                    </ul>
+                    Add one line<br/>
+                    <div class="h5 fw-bold text-danger">
+                        &lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;
+                    </div>
+                </div>
+
+                <div class="alert-info alert fw-bold">
+                    Enable EF
+                    <ul>
+                        <li><span
+                                class="h5 fw-bold text-danger">Right click the project name->Manage NuGet Packages…</span>
+                            <img src="../static/img/ef1.png" style="width: 500px;"/>
+                        </li>
+                        <li><span class="h5 fw-bold text-danger">Browse-> microsoft.entityframeworkcore-></span>
+
+                            <img src="../static/img/sqlite_pks.jpg" style="width: 700px;"/>
+                            <!--                            <img src="../static/img/ef2.png" style="width: 500px;"/>-->
+                            <!--                            <img src="../static/img/ef3.png" style="width: 500px;"/>-->
+                        </li>
+                    </ul>
+                    SQLite packages (Nuget packages):<br/>
+                    <div class="h5 fw-bold text-danger">
+                        Microsoft.EntityFrameworkCore.Design<br/>
+                        Microsoft.EntityFrameworkCore.Tools<br/>
+                        Microsoft.EntityFrameworkCore.Sqlite
+                    </div>
+
+
+                </div>
+
+                <pre><code class="language-csharp">
+
+// define database tables
+namespace eftest
+{
+    public class Student
+    {
+        [Key]// syntax to define the primary in a database table
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]// Auto increment
+        public int Id { get; set; }
+        public string name { get; set; } = "";
+        public int age { get; set; } = 0;
+    }
+}
+
+
+// define database connect class
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace eftest
+{
+    public class StuDB:DbContext
+    {
+        public DbSet&#60;Student&#62; Students { get; set; }// This is going to be a table in the database.
+                    // You can add multiple database tables
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+
+            options.UseSqlite("Data Source=Students.db");// Data Source=path to the database file
+        }
+
+    }
+}
+
+
+                </code></pre>
+
+                <pre><code class="language-csharp">
+// Save to Database
+StuDB stuDB = new StuDB();
+Student stu = new Student() { name = "xinglong Ju", Id = 123, age = 35 };
+stuDB.Students.Add(stu);
+stuDB.SaveChanges();
+
+
+// Read from Database
+StuDB stuDB = new StuDB();// create a database connection
+Student[] stus = stuDB.Students.ToArray&#60;Student&#62;();
+
+// delete
+var r=stuDB.Students.Where(x => x.stuID == 1238).FirstOrDefault();
+stuDB.Remove(r);
+stuDB.SaveChanges();
+
+// modify
+var r=stuDB.Students.Where(x => x.stuID == 1238).FirstOrDefault();
+r.weight = 200;
+stuDB.SaveChanges();
+                </code></pre>
+
+                <div class="alert-info alert fw-bold">
+                    Create Databases based on defined classes
+                    <ul>
+
+                        <li><span class="h5 fw-bold text-danger">View->Other Windows->Package Manager Console</span>
+
+
+                            <img src="../static/img/ef4.png" style="width: 500px;"/>
+                        </li>
+                    </ul>
+                    Create and update the database
+                    <div class="bg-warning ui-corner-all p-3">
+
+                        Package Manager Console<br/>
+                        <div class="h5 fw-bold text-danger">
+                            add-migration any_valid_description -context StuDB<br/>
+                            update-database -context StuDB
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div style="height: 200px;"></div>
+
+                <div id="existingDB" class="h3 fw-bold text-danger">How to connect to existing database</div>
+                <div class="alert-info alert fw-bold">
+                    Create classes based on existing Databases <a target="_blank"
+                                                                  href="https://learn.microsoft.com/en-us/ef/core/cli/powershell"><span
+                        class="bi bi-box-arrow-up-right text-primary"></span></a>
+
+                    <ul>
+
+                        <li>View->Other Windows->Package Manager Console
+
+
+                            <img src="../static/img/ef4.png" style="width: 500px;"/>
+                        </li>
+                    </ul>
+                    Generate C# classes
+                    <div class="bg-warning ui-corner-all p-3">
+
+
+                        Scaffold-DbContext "Data Source=HW3_PreStudents.db"
+                        Microsoft.EntityFrameworkCore.Sqlite -OutputDir Models -ContextDir Data -Context
+                        StudentDbContext -DataAnnotations
+
+                        <br/>
+                        <br/>
+                        <br/>
+                        Scaffold-DbContext "Data Source=path_to_database_file"
+                        Microsoft.EntityFrameworkCore.Sqlite -OutputDir database_models_folder -ContextDir database_connection_folder -Context
+                        database_connection_class_name -DataAnnotations
+
+                    </div>
+                </div>
+
+                <div class="h3 text-danger fw-bold">Connect to other Databases</div>
+                <div class="alert-info alert fw-bold">
+                    Different DB provider connections strings
+                    <a target="_blank" href="https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a>
+                    <a target="_blank"
+                       href="https://khalidabuhakmeh.com/entity-framework-core-connectionstrings-for-dotnet-apps"><span
+                            class="bi bi-box-arrow-up-right text-primary"></span></a><br/>
+                    <div class="bg-warning ui-corner-all p-3">
+                        SQL Server Database
+                    </div>
+                    <pre><code class="language-csharp">
+//SQL Server Standard Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            .UseSqlServer("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
+}
+
+//SQL Server Connection With Port
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            // change the port number
+            .UseSqlServer("Server=myServerAddress,11433;Database=myDataBase;User Id=myUsername;Password=myPassword;");
+}
+
+//SQL Server LocalDB Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            .UseSqlServer("Server=(localdb)\v11.0;Initial Catalog=myDataBase;Integrated Security=true;");
+}
+
+                </code></pre>
+
+
+                    <div class="bg-warning ui-corner-all p-3">
+                        SQLite Data Provider
+                    </div>
+                    <pre><code class="language-csharp">
+// Microsoft.EntityFrameworkCore.Sqlite
+//SQLite Standard Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            .UseSqlite("Data Source=database.db");
+}
+
+//SQLite with Password Protection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder
+            .UseSqlite("Data Source=database.db; Password = securePassword");
+}
+                </code></pre>
+
+
+                    <div class="bg-warning ui-corner-all p-3">
+                        PostgreSQL Data Provider
+                    </div>
+                    <pre><code class="language-csharp">
+// Npgsql.EntityFrameworkCore.PostgreSQL
+// PostgreSQL Standard Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseNpgsql("Host=my_host;Database=my_db;Username=my_user;Password=my_pw");
+}
+
+// PostgreSQL with Port Connection
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseNpgsql("Host=my_host;Database=my_db;Port=5432;Username=my_user;Password=my_pw");
+}
+                </code></pre>
+
+
+                    <div class="bg-warning ui-corner-all p-3">
+                        MySQL Data Provider
+                    </div>
+                    <pre><code class="language-csharp">
+// Pomelo.EntityFrameworkCore.MySQL
+// MySQL Standard Connection
+// The Pomelo data provider supports both MySQL and MariaDB, and this means we need to tell it which database we are using through either MySqlServerVersion or MariaDbServerVersion.
+public class Database: DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        var serverVersion = new MySqlServerVersion(new Version(8, 0, 21));
+        optionsBuilder.UseMySql(
+            "Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;",
+            serverVersion
+        );
+    }
+}
+                </code></pre>
+                </div>
+
+                <span id="exam1endshere" class="h1 fw-bold text-danger">Exam 1 Contents Ends Here.</span>
+                <hr style="border-width: 5px;"/>
+            </div>
+
+
+            <!--            Add things here-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
