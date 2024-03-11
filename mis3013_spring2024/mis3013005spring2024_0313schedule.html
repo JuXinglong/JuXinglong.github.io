@@ -32,6 +32,11 @@
 
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
+    <!-- sweetalert2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.all.min.js"></script>
+
+
     <script src="../static/site.js"></script>
     <script>
         function initPro() {
@@ -158,8 +163,68 @@
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <li><span class="text-success h1 fw-bold">Exam 2 Practice II</span></li>
-                <li class="list-group-item"><span>&nbsp;</span></li>
-                <li class="list-group-item"><span>&nbsp;</span></li>
+                <div>
+                    <span id="testingcopy" style="padding-left: 10px;"><i class="fa-regular fa-clone fa-lg"></i> Click Here to Copy the Input</span>
+
+                    <pre><code class="language-html" data-lang="html" id="testing">1
+S101
+Tom
+128.8
+86
+96
+2
+1
+S102
+Rose
+110.1
+80.6
+60.6
+2
+1
+S103
+Bob
+136.6
+59.9
+56.6
+2
+1
+S104
+Kelly
+120.2
+89
+96
+2
+q</code></pre>
+                </div>
+                <script>
+                    "use strict";
+                    let testingcopy=document.querySelector("#testingcopy");
+                    let testing=document.querySelector("#testing");
+
+                    testingcopy.addEventListener( "click", () =>
+                    {
+                        navigator.clipboard.writeText( document.querySelector("#testing").textContent );
+                        Swal.fire({
+                            position: "top",
+                            icon: "success",
+                            title: "Input data copied to clipboard",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    } );
+                    testing.addEventListener( "click", () =>
+                    {
+                        navigator.clipboard.writeText( document.querySelector("#testing").textContent );
+                        Swal.fire({
+                            position: "top",
+                            icon: "success",
+                            title: "Input data copied to clipboard",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    } );
+
+                </script>
                 <li><span class="text-danger h1 fw-bold">Exam 2 - March 27, 2024, 8:00 AM to 9:15 AM</span>
 
                 <li class="list-group-item"><span>&nbsp;</span></li>
