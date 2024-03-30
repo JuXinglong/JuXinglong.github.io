@@ -1953,26 +1953,76 @@ ss.addEventListener( "change", () => {
         </div>
 
         <div>
-                <span class="fw-bold h6 text-danger">
-                    &lt;AspNetCoreHostingModel&gt;OutOfProcess&lt;/AspNetCoreHostingModel&gt;
 
-                </span>
-<br/>
-            <span class="fw-bold h6 text-danger">
 
-                    &lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;
-                </span>
+
+
+            <pre><code class="language-csharp" id="mvc_cp1">
+&lt;AspNetCoreHostingModel&gt;OutOfProcess&lt;/AspNetCoreHostingModel&gt;
+&lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;
+                  </code></pre>
+
+            <script>
+                {
+                    "use strict";
+
+                    let mvccopy = document.querySelector("#mvc_cp1");
+
+
+                    mvccopy.addEventListener("click", () =>
+                    {
+                        navigator.clipboard.writeText(document.querySelector("#mvc_cp1").textContent);
+                        Swal.fire({
+                            position: "top",
+                            icon: "success",
+                            title: "Contents copied to clipboard!",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    });
+
+                }
+            </script>
+
 
             <pre><code class="language-csharp">
-    Microsoft.EntityFrameworkCore.Design
-    Microsoft.EntityFrameworkCore.Tools
-    Microsoft.EntityFrameworkCore.Sqlite                   </code></pre>
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.EntityFrameworkCore.Sqlite
+            </code></pre>
 
-            <pre><code class="language-csharp">
+
+            <pre><code class="language-csharp" id="mvc_cp2">
 &lt;script&gt;
     "use strict";
     var rootPath = '@Url.Content("~/")';
-&lt;/script&gt;                    </code></pre>
+&lt;/script&gt;
+            </code></pre>
+
+            <script>
+                {
+                    "use strict";
+
+                    let mvccopy = document.querySelector("#mvc_cp2");
+
+
+                    mvccopy.addEventListener("click", () =>
+                    {
+                        navigator.clipboard.writeText(document.querySelector("#mvc_cp2").textContent);
+                        Swal.fire({
+                            position: "top",
+                            icon: "success",
+                            title: "Contents copied to clipboard!",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    });
+
+                }
+            </script>
+
+
+
         </div>
 
         <div>
@@ -1984,9 +2034,32 @@ ss.addEventListener( "change", () => {
             <p>
             <div class="fw-bold">
                 <img src="../static/img/programcs.png" style="width: 800px;"/>
-                <pre><code class="language-csharp">
+                <pre><code class="language-csharp" id="mvc_cp3">
 builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
                     </code></pre>
+
+
+                <script>
+                    {
+                        "use strict";
+
+                        let mvccopy = document.querySelector("#mvc_cp3");
+
+
+                        mvccopy.addEventListener("click", () =>
+                        {
+                            navigator.clipboard.writeText(document.querySelector("#mvc_cp3").textContent);
+                            Swal.fire({
+                                position: "top",
+                                icon: "success",
+                                title: "Contents copied to clipboard!",
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        });
+
+                    }
+                </script>
 
 
             </div>
