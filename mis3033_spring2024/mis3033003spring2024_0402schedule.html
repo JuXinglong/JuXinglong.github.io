@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>April 1 Lecture Schedule MIS 3033: ASP.NET MVC (Model View Controller)</title>
+    <title>April 2 Lecture Schedule MIS 3033: ASP.NET MVC (Model View Controller)</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -78,7 +78,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            April 1, 2024 Lecture Schedule for MIS 3033
+            April 2, 2024 Lecture Schedule for MIS 3033
         </div>
 
         <div class="border-1 border border-dark rounded-3 mb-3">
@@ -101,6 +101,9 @@
                 <!--                <li><span class="text-danger fw-bold h3">Exam 2 on October 25, 2023, 10:30 AM to 11:45 AM, close on 11:50 AM.</span></li>-->
 
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li class="list-group-item"><span class="text-danger h1 fw-bold">Exam 2 - April 4, 2024, 9:00 AM to 10:15 AM</span>
+                </li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <!--                <span class="text-danger fw-bold h4">First 10 minutes, </span>-->
                 <!--                <div id="coursereflection"><a class="text-danger fw-bold h4" href="https://coursereflection.ou.edu/"-->
@@ -289,7 +292,7 @@ Swal.fire({
         </script>
 
         <div id="floatpanel"
-             style="position:fixed;top: -220px;right:1px;display: flex;flex-direction: column;align-items: end;">
+             style="z-index: 99;position:fixed;top: -220px;right:1px;display: flex;flex-direction: column;align-items: end;">
             <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
             </button>
 
@@ -395,28 +398,7 @@ Swal.fire({
             <img id="er" src="../static/img/ER2.png" style="width: 800px;"/>
             <img src="../static/img/ER1.svg" style="width: 800px;"/>
 
-            <div id="init" class="h4 text-danger border-bottom border-danger fw-bold border-2">Initial Settings
-            </div>
-            <div>
-                <img src="../static/img/mvc1.png" style="width: 800px;"/>
-            </div>
-            <div>
-                <span class="fw-bold h6 text-danger">
-                    &lt;AspNetCoreHostingModel&gt;OutOfProcess&lt;/AspNetCoreHostingModel&gt;
-                </span>
-            </div>
-            <div class="admonition note">
-                <p id="programcs" class="admonition-title">Program.cs</p>
-                <p>
-                <div class="fw-bold">
-                    <img src="../static/img/programcs.png" style="width: 800px;"/>
-                    <pre><code class="language-csharp">
-builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-                    </code></pre>
 
-
-                </div>
-            </div>
 
 
             <!--            Precedence (Order of operators) starts-->
@@ -1963,6 +1945,48 @@ ss.addEventListener( "change", () => {
 
         <div class="h4 text-danger border-bottom border-danger fw-bold border-2">ASP.NET MVC
         </div>
+
+        <div id="init" class="h4 text-danger border-bottom border-danger fw-bold border-2">Initial Settings
+        </div>
+        <div>
+            <img src="../static/img/mvc24_1.png" style="width: 800px;"/>
+        </div>
+
+        <div>
+                <span class="fw-bold h6 text-danger">
+                    &lt;AspNetCoreHostingModel&gt;OutOfProcess&lt;/AspNetCoreHostingModel&gt;
+                    &lt;StartWorkingDirectory&gt;$(MSBuildProjectDirectory)&lt;/StartWorkingDirectory&gt;
+                </span>
+
+            <pre><code class="language-csharp">
+    Microsoft.EntityFrameworkCore.Design
+    Microsoft.EntityFrameworkCore.Tools
+    Microsoft.EntityFrameworkCore.Sqlite                   </code></pre>
+
+            <pre><code class="language-csharp">
+&lt;script&gt;
+    "use strict";
+    var rootPath = '@Url.Content("~/")';
+&lt;/script&gt;                    </code></pre>
+        </div>
+
+        <div>
+            <img src="../static/img/mvc24_2.png" style="width: 400px;"/>
+        </div>
+
+        <div class="admonition note">
+            <p id="programcs" class="admonition-title">Program.cs</p>
+            <p>
+            <div class="fw-bold">
+                <img src="../static/img/programcs.png" style="width: 800px;"/>
+                <pre><code class="language-csharp">
+builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+                    </code></pre>
+
+
+            </div>
+        </div>
+
 
         <div class="admonition note" id="mvc">
             <p class="admonition-title">ASP.NET MVC (Model View Controller)</p>
