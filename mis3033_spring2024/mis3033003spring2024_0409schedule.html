@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>April 3 Lecture Schedule MIS 3033: ASP.NET MVC (Model View Controller)</title>
+    <title>April 9 Lecture Schedule MIS 3033: ASP.NET MVC (Model View Controller)</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -35,9 +35,9 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
     <!-- sweetalert2 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.7/sweetalert2.min.css"
-          rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.7/sweetalert2.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.7/sweetalert2.all.min.js"></script>
+
 
 
     <script src="../static/site.js"></script>
@@ -78,7 +78,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            April 3, 2024 Lecture Schedule for MIS 3033
+            April 9, 2024 Lecture Schedule for MIS 3033
         </div>
 
         <div class="border-1 border border-dark rounded-3 mb-3">
@@ -102,7 +102,7 @@
 
                 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
                 <li class="list-group-item"><span>&nbsp;</span></li>
-                <li class="list-group-item"><span class="text-danger h2 fw-bold">Exam 2 - April 5, 2024, 9:30 AM to 10:20 AM</span>
+                <li class="list-group-item"><span class="text-danger h2 fw-bold">Exam 3 - May 10, 2024, Friday, 8:00 AM - 10:00 AM, AH 111</span>
                 </li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <!--                <span class="text-danger fw-bold h4">First 10 minutes, </span>-->
@@ -263,12 +263,12 @@ Swal.fire({
         </div>
         <script>
             "use strict";
-            let jscsslibscopy = document.querySelector("#jscsslibscopy");
-            let jscsslibs = document.querySelector("#jscsslibs");
+            let jscsslibscopy=document.querySelector("#jscsslibscopy");
+            let jscsslibs=document.querySelector("#jscsslibs");
 
-            jscsslibscopy.addEventListener("click", () =>
+            jscsslibscopy.addEventListener( "click", () =>
             {
-                navigator.clipboard.writeText(document.querySelector("#jscsslibs").textContent);
+                navigator.clipboard.writeText( document.querySelector("#jscsslibs").textContent );
                 Swal.fire({
                     position: "top",
                     icon: "success",
@@ -276,10 +276,10 @@ Swal.fire({
                     showConfirmButton: false,
                     timer: 1500
                 });
-            });
-            jscsslibs.addEventListener("click", () =>
+            } );
+            jscsslibs.addEventListener( "click", () =>
             {
-                navigator.clipboard.writeText(document.querySelector("#jscsslibs").textContent);
+                navigator.clipboard.writeText( document.querySelector("#jscsslibs").textContent );
                 Swal.fire({
                     position: "top",
                     icon: "success",
@@ -287,12 +287,12 @@ Swal.fire({
                     showConfirmButton: false,
                     timer: 1500
                 });
-            });
+            } );
 
         </script>
 
         <div id="floatpanel"
-             style="z-index: 99;;position:fixed;top: -220px;right:1px;display: flex;flex-direction: column;align-items: end;">
+             style="z-index: 99;position:fixed;top: -220px;right:1px;display: flex;flex-direction: column;align-items: end;">
             <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
             </button>
 
@@ -397,6 +397,8 @@ Swal.fire({
             <img id="demo" src="../static/img/Demo.gif" style="width: 1000px;"/>
             <img id="er" src="../static/img/ER2.png" style="width: 800px;"/>
             <img src="../static/img/ER1.svg" style="width: 800px;"/>
+
+
 
 
             <!--            Precedence (Order of operators) starts-->
@@ -2038,27 +2040,27 @@ builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.Re
                     </code></pre>
 
 
-            <script>
-                {
-                    "use strict";
-
-                    let mvccopy = document.querySelector("#mvc_cp3");
-
-
-                    mvccopy.addEventListener("click", () =>
+                <script>
                     {
-                        navigator.clipboard.writeText(document.querySelector("#mvc_cp3").textContent);
-                        Swal.fire({
-                            position: "top",
-                            icon: "success",
-                            title: "Contents copied to clipboard!",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                    });
+                        "use strict";
 
-                }
-            </script>
+                        let mvccopy = document.querySelector("#mvc_cp3");
+
+
+                        mvccopy.addEventListener("click", () =>
+                        {
+                            navigator.clipboard.writeText(document.querySelector("#mvc_cp3").textContent);
+                            Swal.fire({
+                                position: "top",
+                                icon: "success",
+                                title: "Contents copied to clipboard!",
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        });
+
+                    }
+                </script>
 
 
             </div>
@@ -2336,12 +2338,9 @@ else if (await _userManager.IsInRoleAsync(authenUser, "T"))// role is teacher
 
                 <div>
 
-                    <a class="text-primary h6 fw-bold" target="_blank" href="https://sendgrid.com/en-us/pricing">Send
-                        grid: Apply for a SendGrid account</a>
+                    <a class="text-primary h6 fw-bold" target="_blank" href="https://sendgrid.com/en-us/pricing">Send grid: Apply for a SendGrid account</a>
                     <br/>
-                    <a class="text-primary h6 fw-bold" target="_blank"
-                       href="https://learn.microsoft.com/en-us/aspnet/core/security/authentication/accconfirm?view=aspnetcore-8.0&tabs=visual-studio">Set
-                        up Send grid in Asp.NET</a>
+                    <a class="text-primary h6 fw-bold" target="_blank" href="https://learn.microsoft.com/en-us/aspnet/core/security/authentication/accconfirm?view=aspnetcore-8.0&tabs=visual-studio">Set up Send grid in Asp.NET</a>
                 </div>
 
                 <div>
