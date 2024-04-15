@@ -32,6 +32,11 @@
 
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
+    <!-- sweetalert2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.all.min.js"></script>
+
+
     <script src="../static/site.js"></script>
     <script>
         function initPro() {
@@ -44,7 +49,7 @@
                 }
 
             });
-            fun_coursereflection();
+            //fun_coursereflection();
             // var i;
             // var n_review_ques = 0;
             // for (i = 1; i <= n_review_ques; i++)
@@ -176,7 +181,14 @@
 <!--                <li class="list-group-item"><span>&nbsp;</span></li>-->
 
 
-                <li class="list-group-item"><span class="text-danger">EXAM 3 Contents</span></li>
+                <li class="list-group-item"><span class="text-danger h2 fw-bold">EXAM 3 Contents</span></li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
+                <li class="list-group-item">
+                    <span class="text-danger h3 fw-bold">
+                        HW8-List due April 19, 2024, 5:00 PM
+                    </span>
+                </li>
+                <li class="list-group-item"><span>&nbsp;</span></li>
                 <!--                <li>HW4 due October 7, 2022, 5:00 PM</li>-->
                 <!--                <li>Exercise 3 October 19, 2022, Lecture Time-->
                 <!--                    <ul>-->
@@ -2167,6 +2179,8 @@ gradesList[0]// grades.Count
 
             </div>
 
+
+
             <div style="margin-bottom: 20px;">
                 In-class problem<br/>
                 1. Define a Student class. The Student class has three data fields:<br/>
@@ -2188,9 +2202,11 @@ gradesList[0]// grades.Count
                 the list (ex: 1, 3)
             </div>
 
+            <span id="listtestingcopy" style="padding-left: 10px;"><i class="fa-regular fa-clone fa-lg"></i> Click Here to Copy the Input</span>
+
             <div class="card">
                 <div class="card-header">Input</div>
-                <div class="card-body"><pre><code>yes
+                <div  class="card-body"><pre><code id="listtestingcopycontent">yes
 s123
 tom
 96.6
@@ -2224,6 +2240,40 @@ s131</code></pre>
 
 
             </div>
+
+            <script>
+                "use strict";
+                {
+                let testingcopy=document.querySelector("#listtestingcopy");
+                let testing=document.querySelector("#listtestingcopycontent");
+
+                testingcopy.addEventListener( "click", () =>
+                {
+                    navigator.clipboard.writeText( document.querySelector("#listtestingcopycontent").textContent );
+                    Swal.fire({
+                        position: "top",
+                        icon: "success",
+                        title: "Input data copied to clipboard",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                } );
+                testing.addEventListener( "click", () =>
+                {
+                    navigator.clipboard.writeText( document.querySelector("#listtestingcopycontent").textContent );
+                    Swal.fire({
+                        position: "top",
+                        icon: "success",
+                        title: "Input data copied to clipboard",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                } );
+                }
+            </script>
+
+
+
             <div class="card">
                 <div class="card-header">Sample Run</div>
                 <div class="card-body">
