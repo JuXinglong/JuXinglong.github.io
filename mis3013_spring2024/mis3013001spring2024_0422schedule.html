@@ -2644,9 +2644,11 @@ foreach(var ele in dict)// KeyValuePair&#60;TKey, TValue&#62;
 
             </div>
 
+            <span id="dicttestingcopy" style="padding-left: 10px;"><i class="fa-regular fa-clone fa-lg"></i> Click Here to Copy the Input</span>
+
             <div class="card">
                 <div class="card-header">Input</div>
-                <div class="card-body"><pre><code>yes
+                <div class="card-body"><pre><code id="dicttestingcopycontent">yes
 s123
 tom
 96.6
@@ -2738,6 +2740,38 @@ Average grade: 79.77</code></pre>
 
             <!--insert new div here-->
         </div>
+
+
+        <script>
+            "use strict";
+            {
+                let testingcopy=document.querySelector("#dicttestingcopy");
+                let testing=document.querySelector("#dicttestingcopycontent");
+
+                testingcopy.addEventListener( "click", () =>
+                {
+                    navigator.clipboard.writeText( document.querySelector("#dicttestingcopycontent").textContent );
+                    Swal.fire({
+                        position: "top",
+                        icon: "success",
+                        title: "Input data copied to clipboard",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                } );
+                testing.addEventListener( "click", () =>
+                {
+                    navigator.clipboard.writeText( document.querySelector("#dicttestingcopycontent").textContent );
+                    Swal.fire({
+                        position: "top",
+                        icon: "success",
+                        title: "Input data copied to clipboard",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                } );
+            }
+        </script>
         <div class="mb-3"></div>
 
 
