@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>April 24 Lecture Schedule MIS 3013: Class</title>
+    <title>May 1 Lecture Schedule MIS 3013: Exam 3 Practice</title>
     <link rel="stylesheet" href="../static/bootstrap5.2/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/bootstrap-icons-1.91/bootstrap-icons.css"/>
     <link rel="stylesheet" href="../static/fontawesome/css/all.css"/>
@@ -125,7 +125,7 @@
 <div class="container-md">
     <div class="container-md">
         <div class=" h3 pb-2 text-dark border-dark border-bottom">
-            April 24, 2024 Lecture Schedule for MIS 3013
+            May 1, 2024 Lecture Schedule for MIS 3013
         </div>
 
         <!--        table of contents start-->
@@ -183,11 +183,11 @@
 
                 <li class="list-group-item"><span class="text-danger h2 fw-bold">EXAM 3 Contents</span></li>
                 <li class="list-group-item"><span>&nbsp;</span></li>
-                <li class="list-group-item">
-                    <span class="text-danger h3 fw-bold">
-                         HW9-Dictionary due April 26, 2024, 5:00 PM
-                    </span>
-                </li>
+                <!--                <li class="list-group-item">-->
+                <!--                    <span class="text-danger h3 fw-bold">-->
+                <!--                         HW9-Dictionary due April 26, 2024, 5:00 PM-->
+                <!--                    </span>-->
+                <!--                </li>-->
 
                 <li class="list-group-item">
                     <span class="text-danger h3 fw-bold">
@@ -202,6 +202,7 @@
                          Exam 3: May 7, 2024, Tuesday, 10:30 AM - 12:30 PM, PH 2020
                     </span>
                 </li>
+
                 <li class="list-group-item"><span>&nbsp;</span></li>
                 <!--                <li>HW4 due October 7, 2022, 5:00 PM</li>-->
                 <!--                <li>Exercise 3 October 19, 2022, Lecture Time-->
@@ -308,46 +309,77 @@
         <!--        <img style="width:100%" src="../static/img/getaddress.png"/>-->
         <!--        table of contents end-->
 
-        <!--        <div class="mb-3"></div>-->
-        <!--        <div style="border: 1px solid black;border-radius: 10px;padding: 10px;">-->
-        <!--            Input:-->
-        <!--            <pre><code class="language-csharp">1-->
-        <!--S123-->
-        <!--kelly-->
-        <!--35-->
-        <!--136.6-->
-        <!--1-->
-        <!--S136-->
-        <!--bob-->
-        <!--18-->
-        <!--146.6-->
-        <!--1-->
-        <!--S138-->
-        <!--tom-->
-        <!--22-->
-        <!--176.6-->
-        <!--2-->
-        <!--1-->
-        <!--S139-->
-        <!--james-->
-        <!--23-->
-        <!--120.6-->
-        <!--1-->
-        <!--S142-->
-        <!--macy-->
-        <!--20-->
-        <!--110.6-->
-        <!--2-->
-        <!--3-->
-        <!--S139-->
-        <!--4-->
-        <!--5-->
-        <!--q</code></pre>-->
-        <!--        </div>-->
+        <div class="mb-3"></div>
+        <div style="border: 1px solid black;border-radius: 10px;padding: 10px;">
+            <span id="exam3practicetestingcopy" style="padding-left: 10px;"><i class="fa-regular fa-clone fa-lg"></i> Click Here to Copy the Input</span>
+            <br/>
+            Input:
+            <pre><code class="language-csharp" id="exam3practicetestingcopycontent">1
+S123
+kelly
+35
+136.6
+1
+S136
+bob
+18
+146.6
+1
+S138
+tom
+22
+176.6
+2
+1
+S139
+james
+23
+120.6
+1
+S142
+macy
+20
+110.6
+2
+3
+S139
+4
+5
+q</code></pre>
+        </div>
 
+        <script>
+            "use strict";
+            {
+                let testingcopy=document.querySelector("#exam3practicetestingcopy");
+                let testing=document.querySelector("#exam3practicetestingcopycontent");
 
+                testingcopy.addEventListener( "click", () =>
+                {
+                    navigator.clipboard.writeText( document.querySelector("#exam3practicetestingcopycontent").textContent );
+                    Swal.fire({
+                        position: "top",
+                        icon: "success",
+                        title: "Input data copied to clipboard",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                } );
+                testing.addEventListener( "click", () =>
+                {
+                    navigator.clipboard.writeText( document.querySelector("#exam3practicetestingcopycontent").textContent );
+                    Swal.fire({
+                        position: "top",
+                        icon: "success",
+                        title: "Input data copied to clipboard",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                } );
+            }
+        </script>
 
-        <!--        <div class="mb-3"></div>-->
+        <div class="mb-3"></div>
 
         <!--        <div style="border: 1px solid black;border-radius: 10px;padding: 10px;">-->
         <!--            Output:-->
