@@ -304,6 +304,75 @@ Swal.fire({
 
         </script>
 
+        <div>
+            <span id="addpscopy" style="padding-left: 10px;"><i class="fa-regular fa-clone fa-lg"></i> Click Here to Copy the Code</span>
+
+            <pre><code class="language-cs" data-lang="cs" id="addps">public JsonResult AddPS()
+{
+    var r1 = db.Students.ToList();
+    for (int i = 0; i <= r1.Count - 1; i++)
+    {
+        var stu = r1[i];
+
+        var pro=db.Profiles.Where(x=>x.StudentId == stu.Id).FirstOrDefault();
+        if (pro == null)
+        {
+            pro = new Profile();
+
+            pro.StudentId = stu.Id;
+            pro.Height = -1;
+            pro.Weight = -1;
+
+            pro.Address = "Price Hall 3010";
+            pro.Fcolor = "#333333";
+            pro.Lat = -1;
+            pro.Lon = -1;
+            pro.Created = "";
+
+            db.Profiles.Add(pro);
+
+        }
+
+    }
+    db.SaveChanges();
+
+    var r = db.Profiles;
+    return Json(new {n=r.Count()});
+}
+            </code></pre>
+        </div>
+
+        <script>
+            {
+            "use strict";
+            let jscsslibscopy = document.querySelector("#addpscopy");
+            let jscsslibs = document.querySelector("#addps");
+
+            jscsslibscopy.addEventListener("click", () =>
+            {
+                navigator.clipboard.writeText(document.querySelector("#addps").textContent);
+                Swal.fire({
+                    position: "top",
+                    icon: "success",
+                    title: "Code copied to clipboard",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            });
+            jscsslibs.addEventListener("click", () =>
+            {
+                navigator.clipboard.writeText(document.querySelector("#addps").textContent);
+                Swal.fire({
+                    position: "top",
+                    icon: "success",
+                    title: "Code copied to clipboard",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            });
+            }
+        </script>
+
         <div id="floatpanel"
              style="z-index: 99;;position:fixed;top: -220px;right:1px;display: flex;flex-direction: column;align-items: end;">
             <button id="foldbtn" class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-double-up"></i>
